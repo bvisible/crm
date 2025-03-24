@@ -136,7 +136,7 @@ The script will set up a production-ready instance of Frappe CRM with all the ne
 1. Open a new terminal session and cd into `frappe-bench` directory and run following commands:
     ```sh
     $ bench get-app https://github.com/bvisible/crm.git
-    $ bench new-site sitename.localhost --install-app crm or bench --site prod.local --install-app crm
+    $ bench new-site sitename.localhost --install-app crm or bench --site prod.local install-app crm
     $ bench browse sitename.localhost --user Administrator
     ```
 1. Access the crm page at `sitename.localhost:8000/crm` in your web browser.
