@@ -15,7 +15,10 @@ export default defineConfig({
       buildConfig: {
         indexHtmlPath: '../crm/www/crm.html',
         emptyOutDir: true,
-        sourcemap: true,
+        sourcemap: false,
+        ollupOptions: {
+          maxParallelFileOps: 2,
+        },
       },
     }),
     vue(),
