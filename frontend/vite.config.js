@@ -74,8 +74,9 @@ export default defineConfig({
       'feather-icons',
       'showdown',
       'tailwind.config.js',
-      'engine.io-client',
       'prosemirror-state',
+      'prosemirror-view',
+      'lowlight',
     ],
   },
 })
