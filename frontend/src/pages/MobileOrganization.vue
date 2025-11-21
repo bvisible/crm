@@ -13,7 +13,7 @@
   <div v-if="organization.doc" class="flex flex-col h-full overflow-hidden">
     <FileUploader
       @success="changeOrganizationImage"
-      :validateFile="validateFile"
+      :validateFile="validateIsImageFile"
     >
       <template #default="{ openFileSelector, error }">
         <div class="flex flex-col items-start justify-start gap-4 p-4">
@@ -69,15 +69,13 @@
                   <FeatherIcon name="link" class="h-4 w-4" />
                 </Button>
                 <Button
+                  v-if="canDelete"
                   :label="__('Delete')"
                   theme="red"
                   size="sm"
+                  iconLeft="trash-2"
                   @click="deleteOrganization"
-                >
-                  <template #prefix>
-                    <FeatherIcon name="trash-2" class="h-4 w-4" />
-                  </template>
-                </Button>
+                />
               </div>
               <ErrorMessage :message="__(error)" />
             </div>
@@ -112,10 +110,9 @@
             class="flex flex-1 flex-col justify-between overflow-hidden"
           >
             <SidePanelLayout
-              v-model="organization.doc"
               :sections="sections.data"
               doctype="CRM Organization"
-              @update="updateField"
+              :docname="organization.doc.name"
               @reload="sections.reload"
             />
           </div>
@@ -146,27 +143,32 @@
       </TabPanel>
     </Tabs>
   </div>
-  <AddressModal v-model="showAddressModal" v-model:address="_address" />
 </template>
 
 <script setup>
 import SidePanelLayout from '@/components/SidePanelLayout.vue'
 import Icon from '@/components/Icon.vue'
 import LayoutHeader from '@/components/LayoutHeader.vue'
-import AddressModal from '@/components/Modals/AddressModal.vue'
 import DealsListView from '@/components/ListViews/DealsListView.vue'
 import ContactsListView from '@/components/ListViews/ContactsListView.vue'
 import DetailsIcon from '@/components/Icons/DetailsIcon.vue'
 import CameraIcon from '@/components/Icons/CameraIcon.vue'
 import DealsIcon from '@/components/Icons/DealsIcon.vue'
 import ContactsIcon from '@/components/Icons/ContactsIcon.vue'
+import { showAddressModal, addressProps } from '@/composables/modals'
+import { useDocument } from '@/data/document'
 import { getSettings } from '@/stores/settings'
 import { getMeta } from '@/stores/meta'
 import { globalStore } from '@/stores/global'
 import { usersStore } from '@/stores/users'
 import { statusesStore } from '@/stores/statuses'
 import { getView } from '@/utils/view'
-import { formatDate, timeAgo, createToast } from '@/utils'
+import {
+  formatDate,
+  timeAgo,
+  validateIsImageFile,
+  openWebsite as openExternalWebsite,
+} from '@/utils'
 import {
   Breadcrumbs,
   Avatar,
@@ -177,9 +179,9 @@ import {
   TabPanel,
   call,
   createListResource,
-  createDocumentResource,
   usePageMeta,
   createResource,
+  toast,
 } from 'frappe-ui'
 import { h, computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -200,24 +202,12 @@ const { doctypeMeta } = getMeta('CRM Organization')
 const route = useRoute()
 const router = useRouter()
 
-const organization = createDocumentResource({
-  doctype: 'CRM Organization',
-  name: props.organizationId,
-  cache: ['organization', props.organizationId],
-  fields: ['*'],
-  auto: true,
-})
+const { document: organization, permissions } = useDocument(
+  'CRM Organization',
+  props.organizationId,
+)
 
-async function updateField(fieldname, value) {
-  await organization.setValue.submit({
-    [fieldname]: value,
-  })
-  createToast({
-    title: __('Organization updated'),
-    icon: 'check',
-    iconClasses: 'text-ink-green-3',
-  })
-}
+const canDelete = computed(() => permissions.data?.permissions?.delete || false)
 
 const breadcrumbs = computed(() => {
   let items = [{ label: __('Organizations'), route: { name: 'Organizations' } }]
@@ -263,13 +253,6 @@ usePageMeta(() => {
   }
 })
 
-function validateFile(file) {
-  let extn = file.name.split('.').pop().toLowerCase()
-  if (!['png', 'jpg', 'jpeg'].includes(extn)) {
-    return __('Only PNG and JPG images are allowed')
-  }
-}
-
 async function changeOrganizationImage(file) {
   await call('frappe.client.set_value', {
     doctype: 'CRM Organization',
@@ -303,18 +286,13 @@ async function deleteOrganization() {
 }
 
 function openWebsite() {
-  if (!organization.doc.website)
-    createToast({
-      title: __('Website not found'),
-      icon: 'x',
-      iconClasses: 'text-ink-red-4',
-    })
-  else window.open(organization.doc.website, '_blank')
-}
+  if (!organization.doc.website) {
+    toast.error(__('No website found'))
+    return
+  }
 
-const showAddressModal = ref(false)
-const _organization = ref({})
-const _address = ref({})
+  openExternalWebsite(organization.doc.website)
+}
 
 const sections = createResource({
   url: 'crm.fcrm.doctype.crm_fields_layout.crm_fields_layout.get_sidepanel_sections',
@@ -332,18 +310,10 @@ function getParsedSections(_sections) {
           return {
             ...field,
             create: (value, close) => {
-              _organization.value.address = value
-              _address.value = {}
-              showAddressModal.value = true
+              openAddressModal()
               close()
             },
-            edit: async (addr) => {
-              _address.value = await call('frappe.client.get', {
-                doctype: 'Address',
-                name: addr,
-              })
-              showAddressModal.value = true
-            },
+            edit: (address) => openAddressModal(address),
           }
         } else {
           return field
@@ -549,4 +519,12 @@ const contactColumns = [
     width: '8rem',
   },
 ]
+
+function openAddressModal(_address) {
+  showAddressModal.value = true
+  addressProps.value = {
+    doctype: 'Address',
+    address: _address,
+  }
+}
 </script>

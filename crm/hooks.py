@@ -22,6 +22,8 @@ add_to_apps_screen = [
 	}
 ]
 
+export_python_type_annotations = True
+
 # Includes in <head>
 # ------------------
 
@@ -167,23 +169,28 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# "all": [
-# "crm.tasks.all"
-# ],
-# "daily": [
-# "crm.tasks.daily"
-# ],
-# "hourly": [
-# "crm.tasks.hourly"
-# ],
-# "weekly": [
-# "crm.tasks.weekly"
-# ],
-# "monthly": [
-# "crm.tasks.monthly"
-# ],
-# }
+scheduler_events = {
+	"daily_long": [
+		"crm.lead_syncing.background_sync.sync_leads_from_sources_daily"
+	],
+	"hourly_long": [
+		"crm.lead_syncing.background_sync.sync_leads_from_sources_hourly"
+	],
+	"monthly_long": [
+		"crm.lead_syncing.background_sync.sync_leads_from_sources_monthly"
+	],
+    "cron": {
+        "*/5 * * * *": [
+            "crm.lead_syncing.background_sync.sync_leads_from_sources_5_minutes"
+		],
+        "*/10 * * * *": [
+			"crm.lead_syncing.background_sync.sync_leads_from_sources_10_minutes"
+		],
+        "*/15 * * * *": [
+			"crm.lead_syncing.background_sync.sync_leads_from_sources_15_minutes"
+		],
+	}
+}
 
 # Testing
 # -------
@@ -211,7 +218,7 @@ doc_events = {
 # Ignore links to specified DocTypes when deleting documents
 # -----------------------------------------------------------
 
-# ignore_links_on_delete = ["Communication", "ToDo"]
+ignore_links_on_delete = ["Failed Lead Sync Log"]
 
 # Request Events
 # ----------------
@@ -265,22 +272,6 @@ standard_dropdown_items = [
 		"is_standard": 1,
 	},
 	{
-		"name1": "support_link",
-		"label": "Support",
-		"type": "Route",
-		"icon": "life-buoy",
-		"route": "https://t.me/frappecrm",
-		"is_standard": 1,
-	},
-	{
-		"name1": "docs_link",
-		"label": "Docs",
-		"type": "Route",
-		"icon": "book-open",
-		"route": "https://docs.frappe.io/crm",
-		"is_standard": 1,
-	},
-	{
 		"name1": "toggle_theme",
 		"label": "Toggle theme",
 		"type": "Route",
@@ -300,6 +291,14 @@ standard_dropdown_items = [
 		"name1": "login_to_fc",
 		"label": "Login to Frappe Cloud",
 		"type": "Route",
+		"route": "#",
+		"is_standard": 1,
+	},
+	{
+		"name1": "about",
+		"label": "About",
+		"type": "Route",
+		"icon": "info",
 		"route": "#",
 		"is_standard": 1,
 	},
