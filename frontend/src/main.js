@@ -1,5 +1,5 @@
 import './index.css'
-// GitHub Actions test
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createDialog } from './utils/dialogs'

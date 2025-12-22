@@ -80,6 +80,12 @@ export default defineConfig(async ({ mode }) => {
         'interactjs',
       ],
     },
+    build: {
+      rollupOptions: {
+        // Ignore Frappe bench-specific imports that don't exist in standalone builds
+        external: [/common_site_config\.json/],
+      },
+    },
   }
 
   // Add local frappe-ui alias only in development if the local frappe-ui exists
