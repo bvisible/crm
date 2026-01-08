@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "[ -f ../crm/public/frontend/index.html ] && echo 'Assets already built - skipping (use build:force to rebuild)' || (cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" vite build --base=/assets/crm/frontend/ && yarn copy-html-entry)",
+    "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" vite build --base=/assets/crm/frontend/ && yarn copy-html-entry",
     "build:force": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" vite build --base=/assets/crm/frontend/ && yarn copy-html-entry",
     "copy-html-entry": "cp ../crm/public/frontend/index.html ../crm/www/crm.html",
     "serve": "vite preview"
