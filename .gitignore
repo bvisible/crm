@@ -6,10 +6,6 @@ __pycache__
 dev-dist
 tags
 node_modules
+crm/public/frontend
+crm/www/crm.html
 build
-
-# Ignore public folder EXCEPT frontend (pre-built assets)
-crm/public/*
-!crm/public/frontend/
-!crm/public/js/
-!crm/public/.gitkeep

@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "po-translation": {
+      "command": "node",
+      "args": [
+        "/Users/jeremy/mcp/po-mcp/dist/index.js"
+      ]
+    },
+    "poeditor": {
+      "command": "python3",
+      "args": [
+        "-m",
+        "mcp_poeditor"
+      ],
+      "cwd": "/Users/jeremy/mcp/poeditor-mcp",
+      "env": {
+        "POEDITOR_API_TOKEN": "your_token_here_if_you_use_poeditor_com"
+      }
+    }
+  }
+}

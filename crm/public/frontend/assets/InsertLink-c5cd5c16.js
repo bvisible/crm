@@ -1,1 +1,0 @@
-import{j as t,A as s,S as i,T as a}from"./index-f1e98677.js";import"../../../../sites/common_site_config.json";import"../../../frappe/frappe/public/js/lib/posthog.js";const u=t({__name:"InsertLink",props:{editor:{}},setup(o){const r=o;function e(){r.editor.commands.openLinkEditor()}return(n,p)=>s(n.$slots,"default",i(a({onClick:e})))}});export{u as default};
