@@ -53,21 +53,22 @@ for (let key in globalComponents) {
 
 app.config.globalProperties.$dialog = createDialog
 
-let socket
 if (import.meta.env.DEV) {
   frappeRequest({ url: '/api/method/crm.www.crm.get_context_for_dev' }).then(
     (values) => {
       for (let key in values) {
         window[key] = values[key]
       }
-      socket = initSocket()
-      app.config.globalProperties.$socket = socket
+      initSocket().then((socket) => {
+        app.config.globalProperties.$socket = socket
+      })
       app.mount('#app')
     },
   )
 } else {
-  socket = initSocket()
-  app.config.globalProperties.$socket = socket
+  initSocket().then((socket) => {
+    app.config.globalProperties.$socket = socket
+  })
   app.mount('#app')
 }
 

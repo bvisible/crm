@@ -1,0 +1,1 @@
+import{j as n,A as s,S as a,T as d}from"./index-17e18d90.js";import"../../../frappe/frappe/public/js/lib/posthog.js";const l=n({__name:"InsertVideo",props:{editor:{}},setup(e){const o=e;function r(){o.editor.chain().focus().selectAndUploadVideo().run()}return(t,i)=>s(t.$slots,"default",a(d({onClick:r})))}});export{l as default};
