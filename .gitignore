@@ -6,7 +6,9 @@ __pycache__
 dev-dist
 tags
 node_modules
-crm/public/frontend
-crm/www/crm.html
+# 2026-05-07 (NORA #28) — build outputs are committed on this branch.
+# See docs/COMMIT-BUILD-PATTERN.md in neoffice-devops.
+# crm/public/frontend
+# crm/www/crm.html
 build
 CLAUDE.md
