@@ -1,5 +1,10 @@
-import '../../../frappe/frappe/public/js/lib/posthog.js'
 import { createResource } from 'frappe-ui'
+
+// NOTE: the legacy `import '../../../frappe/frappe/public/js/lib/posthog.js'`
+// was removed because the externalised path 404s in production (the
+// frappe public assets are not served at /assets/frappe/frappe/public/...).
+// Posthog is now expected to be loaded by the host page (Frappe core injects
+// window.posthog via the desk-side bundle); when absent, telemetry is a no-op.
 
 declare global {
   interface Window {
