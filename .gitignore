@@ -11,4 +11,4 @@ node_modules
 # crm/public/frontend
 # crm/www/crm.html
 build
-CLAUDE.md
+# CLAUDE.md  # 2026-05-07 unshipped to document commit-the-build pipeline
