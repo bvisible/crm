@@ -199,6 +199,8 @@ declare module 'vue' {
     MultiSelectEmailInput: typeof import('./src/components/Controls/MultiSelectEmailInput.vue')['default']
     MultiSelectUserInput: typeof import('./src/components/Controls/MultiSelectUserInput.vue')['default']
     MuteIcon: typeof import('./src/components/Icons/MuteIcon.vue')['default']
+    NeoCockpitBridge: typeof import('./src/components/NeoCockpitBridge.vue')['default']
+    NeoCockpitCRMSidebar: typeof import('./src/components/Layouts/NeoCockpitCRMSidebar.vue')['default']
     NewEmailTemplate: typeof import('./src/components/Settings/EmailTemplate/NewEmailTemplate.vue')['default']
     NoteArea: typeof import('./src/components/Activities/NoteArea.vue')['default']
     NoteIcon: typeof import('./src/components/Icons/NoteIcon.vue')['default']

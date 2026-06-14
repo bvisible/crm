@@ -22,3 +22,26 @@
 			prose-th:relative;
 	}
 }
+
+/* === Neoffice Design System — recolor the frappe-ui blue accent to clay
+   #D68A59. Override the semantic --*-blue-* tokens so links, active states,
+   focus rings and accent surfaces become warm clay instead of frappe blue,
+   in light AND dark. Primary buttons stay ink (frappe-ui solid = gray-900). */
+:root {
+	--outline-blue-1: 221 164 121; /* clay-300 (was blue-300) */
+	--outline-blue-2: 214 138 89; /* clay-400 (was blue-500) */
+	--surface-blue-1: 243 222 204; /* clay-100 (was blue-100) */
+	--surface-blue-2: 214 138 89; /* clay-400 (was blue-500) */
+	--text-ink-blue-1: 250 239 230; /* clay-50 */
+	--text-ink-blue-2: 194 114 63; /* clay-500 */
+	--text-ink-blue-3: 161 90 46; /* clay-600 */
+	--text-ink-blue-4: 126 69 35; /* clay-700 */
+}
+[data-theme="dark"] {
+	--outline-blue-1: 194 114 63; /* clay-500 */
+	--outline-blue-2: 194 114 63;
+	--surface-blue-1: 126 69 35; /* clay-700 */
+	--surface-blue-2: 214 138 89;
+	--text-ink-blue-2: 221 164 121; /* clay-300 */
+	--text-ink-blue-3: 233 197 164; /* clay-200 */
+}
