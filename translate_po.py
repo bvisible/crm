@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+#//// Neoffice — added file (no upstream equivalent): one-off script that
+#//// translates the empty msgstr entries (placeholders and HTML preserved) of
+#//// crm/locale/fr.po. It hardcodes /Users/jeremy/GitHub/crm, so it only ever ran on
+#//// one machine, and it rewrites the PO by regex instead of going through
+#//// bench generate-pot-file / update-po-files / compile-po-to-mo. It is not
+#//// imported by the app: nothing but apply_translations.py reads it.
+#//// TO REVIEW: origin unknown — commit 5afea979 ("Remove pre-built frontend assets and auto-build workflow")
+#//// added it at the repo root without saying why, so it ships to every
+#//// instance with the app. Delete rather than merge.
 """
 Script to translate empty msgstr entries in a PO file to French.
 Preserves all placeholders, HTML tags, and formatting.

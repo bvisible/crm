@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+#//// Neoffice — added file (no upstream equivalent): one-off script that
+#//// applies the 'final batch of 457 strings' dictionary to
+#//// crm/locale/fr.po. It hardcodes /Users/jeremy/GitHub/crm, so it only ever ran on
+#//// one machine, and it rewrites the PO by regex instead of going through
+#//// bench generate-pot-file / update-po-files / compile-po-to-mo. It is not
+#//// imported by the app: nothing but apply_translations.py reads it.
+#//// TO REVIEW: origin unknown — commit aecf7240 ("Update FR")
+#//// added it at the repo root without saying why, so it ships to every
+#//// instance with the app. Delete rather than merge.
 """
 Final batch of translations for remaining 457 strings
 """
