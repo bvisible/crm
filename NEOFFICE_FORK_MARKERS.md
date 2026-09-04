@@ -40,7 +40,7 @@ fixture, no permission rule. There is nothing of ours in the CRM backend.
 | `.mcp.json` | **Added file, no upstream equivalent.** Declares two local MCP servers (`po-translation`, `poeditor`) by absolute path under `/Users/jeremy/mcp/`. Machine-specific; the `POEDITOR_API_TOKEN` value is the placeholder `your_token_here_if_you_use_poeditor_com`, not a secret. Added by commit `5afea979` without a word about it in the message. **TO REVIEW: it should probably be deleted** — it is dead on every machine but one and ships to every instance. | Delete rather than merge. |
 | `frappe-ui` (git submodule pointer) | Bumped `c9a0fc93` → `3423aa5b` by commit `aecf7240` ("Update FR"), which says nothing about it. **TO REVIEW: origin unknown.** The submodule is only an alias source for local dev (`vite.config.js` adds it only when `isDev`); the shipped build uses the npm `frappe-ui@0.1.201`. | Take upstream's pointer unless local dev needs ours. |
 | `crm/locale/fr.po`, `crm/locale/main.pot` | Our French pass (+1893 / −1634 on `fr.po`). See "Known defects". | Merge with the PO tooling (`bench generate-pot-file` / `update-po-files`), never by hand. |
-| `crm/locale/fr.mo` | **Added binary — upstream commits no `.mo`.** It is a build output of `bench compile-po-to-mo`. **Defect, see below.** | Delete; let `compile-po-to-mo` produce it. |
+| `crm/locale/fr.mo` | **Added binary — upstream commits no `.mo`.** Build output of `bench compile-po-to-mo`, and one Frappe never reads. **Deleted 2026-09-04**; `crm/locale/*.mo` is now gitignored. | Nothing to merge. |
 | `frontend/yarn.lock` | Adds `cross-env@10.1.0` + `@epic-web/invariant@1.0.0`, and pins `frappe-ui@0.1.201`. Follows `frontend/package.json`. | Regenerate from the merged `package.json`, never merge by hand. |
 | `crm/public/frontend/**` (149 files) + `crm/public/frontend/index.html` | The committed vite build (JS/CSS chunks, Inter woff2, PWA manifest, `sw.js`, `workbox-*.js`, images). Upstream gitignores all of it. | Never merge: take upstream's sources, then rebuild. |
 | `.github/workflows/build-frontend.yml`, `tests.yml`, `upstream-preview.yml`, `fork-markers.yml` | **Added, no upstream equivalent** — the commit-the-build bot and the fleet CI (`bvisible/neoffice-ci`). Upstream's own workflows as of v1.56.3 (`ci.yml`, `builds.yml`, `generate-pot-file.yml`, `on_release.yml`, `release_notes.yml`) are untouched. | Keep ours, take upstream's. Note that upstream has since **dropped `ci.yml`** and split it into `frontend-tests.yml`, `linters.yml`, `migration-test.yml`, `server-tests.yml`, `ui-tests.yml`: at the merge `ci.yml` disappears and five files arrive. No name collides with ours. |
@@ -108,10 +108,20 @@ new files, not a divergence.
 
 ### Known defects found while marking — NOT fixed here
 
-1. **`crm/locale/fr.mo` is committed and stale.** `fr.po` holds **1338** translated entries;
-   the committed `fr.mo` holds **877**. Frappe serves the compiled `.mo` when it is present,
-   so ~460 French strings that exist in the PO never reach the screen on an instance that
-   pulls the app without running `bench compile-po-to-mo`. A `.mo` does not belong in git.
+1. ~~**`crm/locale/fr.mo` is committed and stale.**~~ **Fixed 2026-09-04 — and the
+   diagnosis above it was wrong.** The file was real (877 entries against 1338 in `fr.po`)
+   but it was **never read**: `frappe/gettext/translate.py` resolves catalogues through
+   `get_translations_from_mo()` -> `gettext.find(app, get_locale_dir(), (lang,))`, and
+   `get_locale_dir()` is `<bench>/sites/assets/locale`, *not* the app directory. The MO the
+   fleet actually serves is `sites/assets/locale/fr/LC_MESSAGES/crm.mo`, written by
+   `compile_translations()` — which `bench compile-po-to-mo` runs, and which `bench build`
+   also runs at the end of every build, so `bench get-app` (-> `build_assets()` ->
+   `bench build --app crm`) already produces it on a fresh install. Verified on osiris:
+   that MO holds the full 1338 entries, and msgids absent from the committed `fr.mo`
+   (e.g. `File "{0}" was skipped because of invalid file type`) resolve in French through
+   `frappe.translate.get_all_translations("fr")`. No French string was ever missing.
+   The file was deleted and `crm/locale/*.mo` gitignored: a committed build artifact that
+   nothing reads can only drift and mislead, as this one did.
 2. **`frontend/src/telemetry.ts:56` and `:78`** — `posthog.init(…)` and
    `window.posthog.capture(…)` are unguarded, while `posthog` is bound once at module load
    from `window.posthog`. Commit `c23157ba` removed the only import that defined
