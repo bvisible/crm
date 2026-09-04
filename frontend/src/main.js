@@ -53,12 +53,18 @@ for (let key in globalComponents) {
 
 app.config.globalProperties.$dialog = createDialog
 
+//// Neoffice — initSocket() is async now (see socket.js), so upstream's
+//// module-level `let socket` binding and its two synchronous assignments
+//// below were replaced by `.then()`. Commit a274058b.
+
 if (import.meta.env.DEV) {
   frappeRequest({ url: '/api/method/crm.www.crm.get_context_for_dev' }).then(
     (values) => {
       for (let key in values) {
         window[key] = values[key]
       }
+      //// Neoffice — upstream: socket = initSocket(); then a direct assignment.
+      //// initSocket() is async now. Commit a274058b.
       initSocket().then((socket) => {
         app.config.globalProperties.$socket = socket
       })
@@ -66,6 +72,8 @@ if (import.meta.env.DEV) {
     },
   )
 } else {
+  //// Neoffice — same as the DEV branch above: initSocket() is async now.
+  //// Commit a274058b.
   initSocket().then((socket) => {
     app.config.globalProperties.$socket = socket
   })

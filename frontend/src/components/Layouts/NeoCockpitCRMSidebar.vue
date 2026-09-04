@@ -1,3 +1,8 @@
+<!-- //// Neoffice — added file (no upstream equivalent): the CRM flavour of the
+//// shared Neoffice chrome (NeoCockpit). DesktopLayout mounts it in place of
+//// upstream's AppSidebar; it maps CRM's fixed links into contextNav and falls
+//// back to AppSidebar on its own when the cockpit bundle cannot load.
+//// Commit b4be8086. -->
 <template>
   <AppSidebar v-if="failed" />
   <NeoCockpitBridge

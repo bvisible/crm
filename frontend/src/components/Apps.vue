@@ -56,6 +56,11 @@ const apps = createResource({
   cache: 'apps',
   auto: true,
   transform: (data) => {
+    //// Neoffice — the "Desk" tile is gone from the app switcher. Upstream seeds
+    //// _apps with a hardcoded entry {name:'frappe', route:'/app'}, so every CRM
+    //// user saw Desk whatever App Customization says, and a portal user with no
+    //// desk role landed on a dead end. We keep only what frappe.apps.get_apps
+    //// returns, which already honours the per-user whitelist. Commit c4a8d946.
     // Use apps from API directly (respects App Customization)
     let _apps = []
     data.map((app) => {

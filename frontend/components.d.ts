@@ -8,6 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+  //// Neoffice — GENERATED FILE (unplugin-vue-components), committed by upstream
+  //// but stale at v1.56.3: it still listed the deleted Settings/LeadSyncing
+  //// components and was missing AssignmentRules/*, ConditionsFilter/* and
+  //// SettingsIcon2. Our tree regenerated it (commit 8fe6cd00), which is what most
+  //// of the hunks below are; only the NeoCockpit pair is ours. At the merge: take
+  //// upstream's file and let the vite plugin regenerate it — these markers go
+  //// with it.
     AboutModal: typeof import('./src/components/Modals/AboutModal.vue')['default']
     Activities: typeof import('./src/components/Activities/Activities.vue')['default']
     ActivityHeader: typeof import('./src/components/Activities/ActivityHeader.vue')['default']
@@ -23,9 +30,11 @@ declare module 'vue' {
     AppSidebar: typeof import('./src/components/Layouts/AppSidebar.vue')['default']
     ArrowUpRightIcon: typeof import('./src/components/Icons/ArrowUpRightIcon.vue')['default']
     AscendingIcon: typeof import('./src/components/Icons/AscendingIcon.vue')['default']
+    //// Neoffice — regeneration — upstream component missing from upstream's stale generated file (Settings/AssignmentRules). 8fe6cd00.
     AssigneeRules: typeof import('./src/components/Settings/AssignmentRules/AssigneeRules.vue')['default']
     AssigneeSearch: typeof import('./src/components/Settings/AssignmentRules/AssigneeSearch.vue')['default']
     AssignmentModal: typeof import('./src/components/Modals/AssignmentModal.vue')['default']
+    //// Neoffice — regeneration — upstream component missing from upstream's stale generated file (Settings/AssignmentRules). 8fe6cd00.
     AssignmentRuleListItem: typeof import('./src/components/Settings/AssignmentRules/AssignmentRuleListItem.vue')['default']
     AssignmentRulePage: typeof import('./src/components/Settings/AssignmentRules/AssignmentRulePage.vue')['default']
     AssignmentRules: typeof import('./src/components/Settings/AssignmentRules/AssignmentRules.vue')['default']
@@ -53,6 +62,7 @@ declare module 'vue' {
     CallUI: typeof import('./src/components/Telephony/CallUI.vue')['default']
     CameraIcon: typeof import('./src/components/Icons/CameraIcon.vue')['default']
     CertificateIcon: typeof import('./src/components/Icons/CertificateIcon.vue')['default']
+    //// Neoffice — regeneration — upstream component missing from upstream's stale generated file (ConditionsFilter). 8fe6cd00.
     CFCondition: typeof import('./src/components/ConditionsFilter/CFCondition.vue')['default']
     CFConditions: typeof import('./src/components/ConditionsFilter/CFConditions.vue')['default']
     ChangePasswordModal: typeof import('./src/components/Modals/ChangePasswordModal.vue')['default']
@@ -101,6 +111,7 @@ declare module 'vue' {
     DurationIcon: typeof import('./src/components/Icons/DurationIcon.vue')['default']
     EditEmailTemplate: typeof import('./src/components/Settings/EmailTemplate/EditEmailTemplate.vue')['default']
     EditIcon: typeof import('./src/components/Icons/EditIcon.vue')['default']
+    //// Neoffice — regeneration — the component no longer exists upstream; its stale entry was dropped: Settings/LeadSyncing/EditLeadSyncSource.vue. 8fe6cd00.
     EditValueModal: typeof import('./src/components/Modals/EditValueModal.vue')['default']
     Email2Icon: typeof import('./src/components/Icons/Email2Icon.vue')['default']
     EmailAccountCard: typeof import('./src/components/Settings/EmailAccountCard.vue')['default']
@@ -172,6 +183,7 @@ declare module 'vue' {
     LeadModal: typeof import('./src/components/Modals/LeadModal.vue')['default']
     LeadsIcon: typeof import('./src/components/Icons/LeadsIcon.vue')['default']
     LeadsListView: typeof import('./src/components/ListViews/LeadsListView.vue')['default']
+    //// Neoffice — regeneration — the component no longer exists upstream; its stale entry was dropped: Settings/LeadSyncing/LeadSyncSettings.vue. 8fe6cd00.
     LeadSyncSourceForm: typeof import('./src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue')['default']
     LeadSyncSourcePage: typeof import('./src/components/Settings/LeadSyncing/LeadSyncSourcePage.vue')['default']
     LeadSyncSources: typeof import('./src/components/Settings/LeadSyncing/LeadSyncSources.vue')['default']
@@ -199,9 +211,11 @@ declare module 'vue' {
     MultiSelectEmailInput: typeof import('./src/components/Controls/MultiSelectEmailInput.vue')['default']
     MultiSelectUserInput: typeof import('./src/components/Controls/MultiSelectUserInput.vue')['default']
     MuteIcon: typeof import('./src/components/Icons/MuteIcon.vue')['default']
+    //// Neoffice — ours: the two components of the shared Neoffice chrome mounted in place of AppSidebar. Commit b4be8086.
     NeoCockpitBridge: typeof import('./src/components/NeoCockpitBridge.vue')['default']
     NeoCockpitCRMSidebar: typeof import('./src/components/Layouts/NeoCockpitCRMSidebar.vue')['default']
     NewEmailTemplate: typeof import('./src/components/Settings/EmailTemplate/NewEmailTemplate.vue')['default']
+    //// Neoffice — regeneration — the component no longer exists upstream; its stale entry was dropped: Settings/LeadSyncing/NewLeadSyncSource.vue. 8fe6cd00.
     NoteArea: typeof import('./src/components/Activities/NoteArea.vue')['default']
     NoteIcon: typeof import('./src/components/Icons/NoteIcon.vue')['default']
     NoteModal: typeof import('./src/components/Modals/NoteModal.vue')['default']
@@ -238,6 +252,7 @@ declare module 'vue' {
     SelectIcon: typeof import('./src/components/Icons/SelectIcon.vue')['default']
     Settings: typeof import('./src/components/Settings/Settings.vue')['default']
     SettingsIcon: typeof import('./src/components/Icons/SettingsIcon.vue')['default']
+    //// Neoffice — regeneration — upstream component missing from upstream's stale generated file (Icons/SettingsIcon2). 8fe6cd00.
     SettingsIcon2: typeof import('./src/components/Icons/SettingsIcon2.vue')['default']
     SettingsPage: typeof import('./src/components/Settings/SettingsPage.vue')['default']
     SidebarLink: typeof import('./src/components/SidebarLink.vue')['default']

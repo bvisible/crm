@@ -1,3 +1,9 @@
+//// Neoffice — upstream's first line was
+//// import '../../../frappe/frappe/public/js/lib/posthog.js' — a relative reach
+//// into the frappe app that 404s in production (frappe's public assets are not
+//// served under /assets/frappe/frappe/public/). Removed: posthog is read from
+//// window when the host page provides it, and telemetry is a no-op otherwise.
+//// Commit c23157ba.
 import { createResource } from 'frappe-ui'
 
 // NOTE: the legacy `import '../../../frappe/frappe/public/js/lib/posthog.js'`

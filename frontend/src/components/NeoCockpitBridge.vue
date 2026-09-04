@@ -1,3 +1,8 @@
+<!-- //// Neoffice — added file (no upstream equivalent): mounts the shared
+//// Neoffice chrome bundle (React IIFE, React inlined — no dependency added to
+//// this Vue app) in place of the native frappe-ui Sidebar. Same recipe as the
+//// Drive / LMS / Helpdesk bridges; it emits 'failed' so the host keeps the
+//// native sidebar rather than losing its chrome. Commit b4be8086. -->
 <template>
   <div
     ref="host"

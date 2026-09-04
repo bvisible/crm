@@ -23,6 +23,10 @@
 	}
 }
 
+/* //// Neoffice — Design System retheme: frappe-ui's semantic blue tokens are
+   //// re-pointed to Neoffice clay #D68A59, in light and in dark. Purely
+   //// additive — appended after upstream's @layer block, nothing of upstream's
+   //// is removed. Commit 8fe6cd00. */
 /* === Neoffice Design System — recolor the frappe-ui blue accent to clay
    #D68A59. Override the semantic --*-blue-* tokens so links, active states,
    focus rings and accent surfaces become warm clay instead of frappe blue,

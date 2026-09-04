@@ -18,6 +18,9 @@ export default defineConfig(async ({ mode }) => {
         buildConfig: {
           indexHtmlPath: '../crm/www/crm.html',
           emptyOutDir: true,
+          //// Neoffice — upstream builds with sourcemap: true. This build is committed
+          //// and shipped to every instance, so the maps would travel with it for no
+          //// field use. Set in 037f346f, kept through the upstream/main merge bda25994.
           sourcemap: false,
         },
       }),
@@ -80,6 +83,10 @@ export default defineConfig(async ({ mode }) => {
         'interactjs',
       ],
     },
+    //// Neoffice — added. rollup must not try to resolve the bench-only imports
+    //// (sites/common_site_config.json and the ../../../frappe/ reach-ins), or the
+    //// standalone / CI build fails outside a frappe-bench. Commits de5e9d85 and
+    //// 75d9fb61.
     build: {
       rollupOptions: {
         // Ignore Frappe bench-specific imports that don't exist in standalone builds
