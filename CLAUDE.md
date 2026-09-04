@@ -1,3 +1,9 @@
+<!-- //// Neoffice — added file (no upstream equivalent): repo-local instructions
+     //// for Claude Code — production branch version-15, and the commit-the-build
+     //// pipeline this fork depends on. Ignored between 311c355b and c29f98c6,
+     //// then deliberately shipped so the rule travels with the clone. Commit
+     //// c29f98c6. Nothing to merge from upstream here. -->
+
 # Git Configuration
 
 ## Branch de production

@@ -142,6 +142,11 @@ The script will set up a production-ready instance of Frappe CRM with all the ne
 1. [Setup Bench](https://docs.frappe.io/framework/user/en/installation).
 1. In the frappe-bench directory, run `bench start` and keep it running.
 1. Open a new terminal session and cd into `frappe-bench` directory and run following commands:
+    <!-- //// Neoffice — the get-app line below points at our fork (bvisible/crm)
+    //// instead of upstream's short app name, and the new-site line names the
+    //// fleet site prod.local. Keep ours at the merge: an instance installed from
+    //// the upstream repo would get neither the committed build nor the
+    //// NeoCockpit sidebar. Commits 484c49f1 / 3d81d9e8. -->
     ```sh
     $ bench get-app https://github.com/bvisible/crm.git
     $ bench new-site sitename.localhost --install-app crm or bench --site prod.local install-app crm
