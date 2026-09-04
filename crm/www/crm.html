@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html class="h-full" lang="en">
   <head>
+    <!-- //// Neoffice — commit-the-build: upstream gitignores the vite output and
+    //// rebuilds it on every instance; we commit crm/public/frontend/ and
+    //// crm/www/crm.html (this file, copied from the build by yarn copy-html-entry)
+    //// so no client VM ever runs yarn. The marker is written in
+    //// frontend/index.html so a rebuild keeps it in the copies — never hand-edit
+    //// the copies. Commits d7c4209b and f5abf846. -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
