@@ -122,14 +122,17 @@ new files, not a divergence.
    `frappe.translate.get_all_translations("fr")`. No French string was ever missing.
    The file was deleted and `crm/locale/*.mo` gitignored: a committed build artifact that
    nothing reads can only drift and mislead, as this one did.
-2. **`frontend/src/telemetry.ts:56` and `:78`** — `posthog.init(…)` and
-   `window.posthog.capture(…)` are unguarded, while `posthog` is bound once at module load
-   from `window.posthog`. Commit `c23157ba` removed the only import that defined
-   `window.posthog`, and `posthogPlugin` (`:90`) calls `posthogSettings.fetch()` precisely
-   *because* `window.posthog` is undefined — so on any site where Frappe returns
-   `enable_telemetry` with a project id and host, `initPosthog` throws
-   `TypeError: Cannot read properties of undefined (reading 'init')`. The comment in the file
-   claiming "telemetry is a no-op" is not what the code does.
+2. ~~**`frontend/src/telemetry.ts:56` and `:78`**~~ **Fixed 2026-09-04.** `posthog.init(…)`
+   and `window.posthog.capture(…)` were unguarded while `posthog` was bound once at module
+   load from `window.posthog`. Commit `c23157ba` removed the only import that defined
+   `window.posthog`, and `posthogPlugin` called `posthogSettings.fetch()` precisely *because*
+   `window.posthog` is undefined — so on any site where Frappe returns `enable_telemetry`
+   with a project id and host, `initPosthog` threw
+   `TypeError: Cannot read properties of undefined (reading 'init')`. The file now does what
+   its own note promises: `initPosthog` reads `window.posthog` at call time and returns when
+   there is none, `capture` uses optional chaining, and `posthogPlugin` no longer spends a
+   `crm.api.get_posthog_settings` request per boot when the page carries no posthog at all.
+   A host page that injects posthog later is still honoured.
 3. **Ten one-off PO scripts at the repo root** (`translate_po.py`, `translate_crm_po.py`,
    `complete_translation.py`, `complete_all_translations.py`, `complete_fr_translation.py`,
    `apply_translations.py`, `final_translations.py`, `last_translations.py`,

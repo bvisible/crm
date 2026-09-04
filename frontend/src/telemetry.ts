@@ -50,10 +50,23 @@ let isTelemetryEnabled = () => {
 }
 
 // Posthog Initialization
+//// Neoffice — guard added, and window.posthog is now read at call time.
+//// Upstream could rely on the posthog import at the top of this file having
+//// defined window.posthog; commit c23157ba removed that import (its path
+//// 404s in production) and nothing replaced it, so the module-scope posthog
+//// binding was permanently undefined and this line threw a TypeError
+//// ("Cannot read properties of undefined") on every site whose
+//// get_posthog_settings returns enable_telemetry with a project id and a
+//// host. Doing nothing when posthog is absent is what the note at the top of
+//// the file already promised; reading window at call time still honours a
+//// host page that injects posthog after this module loads.
 function initPosthog(ps: PosthogSettings) {
   if (!isTelemetryEnabled()) return
 
-  posthog.init(ps.posthog_project_id, {
+  const ph = window.posthog
+  if (!ph?.init) return
+
+  ph.init(ps.posthog_project_id, {
     api_host: ps.posthog_host,
     person_profiles: 'identified_only',
     autocapture: false,
@@ -62,9 +75,9 @@ function initPosthog(ps: PosthogSettings) {
     enable_heatmaps: false,
     disable_session_recording: true,
     advanced_disable_decide: true,
-    loaded: (ph: typeof posthog) => {
-      window.posthog = ph
-      ph.identify(window.location.hostname)
+    loaded: (loadedPosthog: typeof window.posthog) => {
+      window.posthog = loadedPosthog
+      loadedPosthog.identify(window.location.hostname)
     },
   })
 }
@@ -75,7 +88,10 @@ function capture(
   options: CaptureOptions = { data: { user: '' } },
 ) {
   if (!isTelemetryEnabled()) return
-  window.posthog.capture(`crm_${event}`, options)
+  //// Neoffice — optional chaining added, same cause as initPosthog above:
+  //// window.posthog is undefined since c23157ba, so this threw instead of
+  //// being the no-op the file documents.
+  window.posthog?.capture?.(`crm_${event}`, options)
 }
 
 function startRecording() {
@@ -87,7 +103,13 @@ function stopRecording() {
 // Posthog Plugin
 function posthogPlugin(app: any) {
   app.config.globalProperties.posthog = posthog
-  if (!window.posthog?.length) posthogSettings.fetch()
+  //// Neoffice — "window.posthog &&" added. Upstream's condition was true on
+  //// every boot here (window.posthog is undefined since c23157ba), so each
+  //// CRM start spent a request on crm.api.get_posthog_settings only to reach
+  //// initPosthog, which cannot do anything without a posthog library. Skip
+  //// the request when the page carries no posthog; the guards above keep it
+  //// harmless either way.
+  if (window.posthog && !window.posthog.length) posthogSettings.fetch()
 }
 
 export {
