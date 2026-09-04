@@ -158,6 +158,11 @@ new files, not a divergence.
    exact match on either name. Checked against all 17 named routes of `router.js` plus the
    unnamed case: exactly one entry lights on each of the 12 routes that should light one,
    none on the other 6.
-7. **`frontend/src/socket.js`** — the dev-only dynamic import uses the deprecated
-   `{ assert: { type: 'json' } }` form; modern runtimes want `{ with: … }`. Harmless under
-   Vite 4 today (and it is inside a `try`), but it is a shape that will break.
+7. **`frontend/src/socket.js`** — **reviewed 2026-09-04, deliberately left as is.** The
+   dev-only dynamic import uses the pre-standard `{ assert: { type: 'json' } }` form where
+   modern runtimes want `{ with: … }`, but switching now would be the wrong way: this app is
+   on Vite 4 (`^4.4.9`, resolved 4.5.14 — esbuild 0.18.20, rollup 3), a toolchain that
+   predates Import Attributes, so `with` is the spelling it does not know. Nothing depends on
+   the attribute in any case — Vite serves `.json` as a JS module, the branch is `DEV`-only
+   and the import sits in a `try`/`catch` that falls back to port 9000. The condition to
+   switch is written next to the code: Vite 5+ / Rollup 4+.

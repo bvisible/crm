@@ -18,6 +18,16 @@ export async function initSocket() {
 
   if (import.meta.env.DEV) {
     try {
+      //// Neoffice — this dynamic import is ours (commit a274058b); `assert`
+      //// is the pre-standard spelling of what is now Import Attributes
+      //// (`with`). It STAYS until this app leaves Vite 4: that toolchain
+      //// (esbuild 0.18, rollup 3) predates import attributes, so `with` is
+      //// the spelling it would not recognise — not the other way round.
+      //// Nothing depends on the attribute today in any case: Vite serves
+      //// `.json` as a JS module, the branch is dev-only, and the import sits
+      //// in a try/catch that falls back to the default port. Remove this note
+      //// and switch to `with: { type: 'json' }` when frontend/package.json
+      //// moves to Vite 5+ / Rollup 4+.
       const cfg = await import('../../../../sites/common_site_config.json', {
         assert: { type: 'json' },
       })
