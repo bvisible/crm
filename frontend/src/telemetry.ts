@@ -63,9 +63,11 @@ let isTelemetryEnabled = () => {
 function initPosthog(ps: PosthogSettings) {
   if (!isTelemetryEnabled()) return
 
+  //// Neoffice — the guard itself (see the block comment above this function).
   const ph = window.posthog
   if (!ph?.init) return
 
+  //// Neoffice — was `posthog.init(...)`, the module-scope binding.
   ph.init(ps.posthog_project_id, {
     api_host: ps.posthog_host,
     person_profiles: 'identified_only',
@@ -75,6 +77,9 @@ function initPosthog(ps: PosthogSettings) {
     enable_heatmaps: false,
     disable_session_recording: true,
     advanced_disable_decide: true,
+    //// Neoffice — the callback parameter was named `ph` and typed
+    //// `typeof posthog` against the module-scope binding; renamed so it does
+    //// not shadow the local `ph` above and no longer depends on that binding.
     loaded: (loadedPosthog: typeof window.posthog) => {
       window.posthog = loadedPosthog
       loadedPosthog.identify(window.location.hostname)

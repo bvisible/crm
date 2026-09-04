@@ -39,10 +39,10 @@ const surfaceApp = {
 }
 
 // fixed links carry icon COMPONENTS in AppSidebar — lucide strings here.
-// `detail` is the router name of the single-record route that belongs to a
-// list entry, so that opening one record keeps its list highlighted. Only the
-// four entries that have such a route in router.js carry it; Dashboard, Notes,
-// Tasks and Call Logs have no detail route.
+//// Neoffice — `detail` added: the router name of the single-record route that
+//// belongs to a list entry, so that opening one record keeps its list
+//// highlighted. Only the four entries that have such a route in router.js
+//// carry it; Dashboard, Notes, Tasks and Call Logs have no detail route.
 const LINKS = [
   { label: 'Dashboard', icon: 'lucide-layout-dashboard', to: 'Dashboard' },
   { label: 'Leads', icon: 'lucide-target', to: 'Leads', detail: 'Lead' },
@@ -72,15 +72,16 @@ const contextNav = computed(() => {
       items: LINKS.map((item) => ({
         label: item.label,
         icon: item.icon,
-        // Match the router name exactly, on the list route or on the detail
-        // route this entry owns. The previous test was
-        // String(currentName).startsWith(item.to) — the wrong way round: the
-        // detail names are shorter than the list names ('Lead'.startsWith(
-        // 'Leads') is false), so opening a record un-highlighted the whole
-        // sidebar instead of keeping its list lit. The currentName guard keeps
-        // an unnamed route (initial navigation) from lighting every entry
-        // whose `detail` is undefined.
+        //// Neoffice — match the router name exactly, on the list route or on
+        //// the detail route this entry owns. The previous test was
+        //// String(currentName).startsWith(item.to) — the wrong way round: the
+        //// detail names are shorter than the list names ('Lead'.startsWith(
+        //// 'Leads') is false), so opening a record un-highlighted the whole
+        //// sidebar instead of keeping its list lit. The currentName guard
+        //// keeps an unnamed route (initial navigation) from lighting every
+        //// entry whose `detail` is undefined.
         active:
+          //// Neoffice — see the note just above.
           !!currentName &&
           (currentName === item.to || currentName === item.detail),
         onClick: () => router.push({ name: item.to }),
