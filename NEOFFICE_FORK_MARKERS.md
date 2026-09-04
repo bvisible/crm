@@ -37,7 +37,7 @@ fixture, no permission rule. There is nothing of ours in the CRM backend.
 |---|---|---|
 | `package.json` | `build` became a guard: skip `yarn build` when `crm/public/frontend/assets` already exists, unless `FORCE_REBUILD=1`; the real build moved to `build:force`. Reason: the artifacts are committed (see below), so an instance must never rebuild. Commit `f303b6ed`. | Keep ours, re-apply upstream's other scripts. |
 | `frontend/package.json` | `build` / `build:force` wrapped in `cross-env NODE_OPTIONS=--max-old-space-size=4096` (the build OOMs on a 4 GB VM); `cross-env ^10.1.0` added to devDependencies; `frappe-ui` pinned to the exact `0.1.201` instead of `^0.1.201` (a floating minor changed the sidebar under us). Commits `d7c4209b`, `9b8eb395`, `aecf7240`. | Keep the pin and the NODE_OPTIONS; take upstream's dependency bumps. |
-| `.mcp.json` | **Added file, no upstream equivalent.** Declares two local MCP servers (`po-translation`, `poeditor`) by absolute path under `/Users/jeremy/mcp/`. Machine-specific; the `POEDITOR_API_TOKEN` value is the placeholder `your_token_here_if_you_use_poeditor_com`, not a secret. Added by commit `5afea979` without a word about it in the message. **TO REVIEW: it should probably be deleted** — it is dead on every machine but one and ships to every instance. | Delete rather than merge. |
+| `.mcp.json` | **Added file, no upstream equivalent.** Declared two local MCP servers (`po-translation`, `poeditor`) by absolute path under `/Users/jeremy/mcp/`. Machine-specific; the `POEDITOR_API_TOKEN` value was the placeholder `your_token_here_if_you_use_poeditor_com`, not a secret. Added by commit `5afea979` without a word about it in the message. **Deleted 2026-09-04** — dead on every machine but one, and it shipped to every instance. | Nothing to merge. |
 | `frappe-ui` (git submodule pointer) | Bumped `c9a0fc93` → `3423aa5b` by commit `aecf7240` ("Update FR"), which says nothing about it. **TO REVIEW: origin unknown.** The submodule is only an alias source for local dev (`vite.config.js` adds it only when `isDev`); the shipped build uses the npm `frappe-ui@0.1.201`. | Take upstream's pointer unless local dev needs ours. |
 | `crm/locale/fr.po`, `crm/locale/main.pot` | Our French pass (+1893 / −1634 on `fr.po`). See "Known defects". | Merge with the PO tooling (`bench generate-pot-file` / `update-po-files`), never by hand. |
 | `crm/locale/fr.mo` | **Added binary — upstream commits no `.mo`.** Build output of `bench compile-po-to-mo`, and one Frappe never reads. **Deleted 2026-09-04**; `crm/locale/*.mo` is now gitignored. | Nothing to merge. |
@@ -133,15 +133,18 @@ new files, not a divergence.
    there is none, `capture` uses optional chaining, and `posthogPlugin` no longer spends a
    `crm.api.get_posthog_settings` request per boot when the page carries no posthog at all.
    A host page that injects posthog later is still honoured.
-3. **Ten one-off PO scripts at the repo root** (`translate_po.py`, `translate_crm_po.py`,
-   `complete_translation.py`, `complete_all_translations.py`, `complete_fr_translation.py`,
-   `apply_translations.py`, `final_translations.py`, `last_translations.py`,
-   `translate_all_with_mcp.py`, `translate_with_mcp.py` — ~5100 lines). They hardcode
-   `/Users/jeremy/GitHub/crm`, rewrite the PO by regex instead of using
-   `generate-pot-file` / `update-po-files` / `compile-po-to-mo`, and ship to every instance
-   with the app. Commit `5afea979` added nine of them under a message about frontend assets.
-4. **`.mcp.json`** — see the table: a repo-root MCP config, auto-loaded by any Claude Code
-   session that clones this repo, pointing at two servers under `/Users/jeremy/mcp/`.
+3. ~~**Ten one-off PO scripts at the repo root**~~ **Deleted 2026-09-04** (`translate_po.py`,
+   `translate_crm_po.py`, `complete_translation.py`, `complete_all_translations.py`,
+   `complete_fr_translation.py`, `apply_translations.py`, `final_translations.py`,
+   `last_translations.py`, `translate_all_with_mcp.py`, `translate_with_mcp.py` — 5193
+   lines). They hardcoded `/Users/jeremy/GitHub/crm`, rewrote the PO by regex instead of
+   using `generate-pot-file` / `update-po-files` / `compile-po-to-mo`, and shipped to every
+   instance with the app. Commit `5afea979` added nine of them under a message about
+   frontend assets. Nothing outside the group referenced them. The supported path is the
+   `/translate` skill in `neoffice-devops`; git history keeps the files.
+4. ~~**`.mcp.json`**~~ **Deleted 2026-09-04** — a repo-root MCP config, auto-loaded by any
+   Claude Code session that clones this repo, pointing at two servers under
+   `/Users/jeremy/mcp/`.
 5. **`NeoCockpitBridge.vue`** — the `watch` on `contextNav` calls `render()` again, i.e.
    `window.NeoCockpit.mount(host, …)` on the same host node without a preceding `unmount`.
    CRM's `contextNav` is a `computed` that changes on **every route change** (the `active`
