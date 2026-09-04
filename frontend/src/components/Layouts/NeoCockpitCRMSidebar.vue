@@ -38,13 +38,22 @@ const surfaceApp = {
   logo: '/assets/crm/images/logo.svg',
 }
 
-// fixed links carry icon COMPONENTS in AppSidebar — lucide strings here
+// fixed links carry icon COMPONENTS in AppSidebar — lucide strings here.
+// `detail` is the router name of the single-record route that belongs to a
+// list entry, so that opening one record keeps its list highlighted. Only the
+// four entries that have such a route in router.js carry it; Dashboard, Notes,
+// Tasks and Call Logs have no detail route.
 const LINKS = [
   { label: 'Dashboard', icon: 'lucide-layout-dashboard', to: 'Dashboard' },
-  { label: 'Leads', icon: 'lucide-target', to: 'Leads' },
-  { label: 'Deals', icon: 'lucide-hand-coins', to: 'Deals' },
-  { label: 'Contacts', icon: 'lucide-contact', to: 'Contacts' },
-  { label: 'Organizations', icon: 'lucide-building', to: 'Organizations' },
+  { label: 'Leads', icon: 'lucide-target', to: 'Leads', detail: 'Lead' },
+  { label: 'Deals', icon: 'lucide-hand-coins', to: 'Deals', detail: 'Deal' },
+  { label: 'Contacts', icon: 'lucide-contact', to: 'Contacts', detail: 'Contact' },
+  {
+    label: 'Organizations',
+    icon: 'lucide-building',
+    to: 'Organizations',
+    detail: 'Organization',
+  },
   { label: 'Notes', icon: 'lucide-sticky-note', to: 'Notes' },
   { label: 'Tasks', icon: 'lucide-check-square', to: 'Tasks' },
   { label: 'Call Logs', icon: 'lucide-phone', to: 'Call Logs' },
@@ -63,9 +72,17 @@ const contextNav = computed(() => {
       items: LINKS.map((item) => ({
         label: item.label,
         icon: item.icon,
+        // Match the router name exactly, on the list route or on the detail
+        // route this entry owns. The previous test was
+        // String(currentName).startsWith(item.to) — the wrong way round: the
+        // detail names are shorter than the list names ('Lead'.startsWith(
+        // 'Leads') is false), so opening a record un-highlighted the whole
+        // sidebar instead of keeping its list lit. The currentName guard keeps
+        // an unnamed route (initial navigation) from lighting every entry
+        // whose `detail` is undefined.
         active:
-          currentName === item.to ||
-          String(currentName || '').startsWith(item.to.replace(/ /g, '')),
+          !!currentName &&
+          (currentName === item.to || currentName === item.detail),
         onClick: () => router.push({ name: item.to }),
       })),
     },

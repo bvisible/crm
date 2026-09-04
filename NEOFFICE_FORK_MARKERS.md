@@ -147,10 +147,14 @@ new files, not a divergence.
    CRM's `contextNav` is a `computed` that changes on **every route change** (the `active`
    flags), so this fires on every navigation. Whether it leaks a React root per navigation
    depends on the bundle (which lives in `frappe`, not here) — **unverified**, worth a look.
-6. **`NeoCockpitCRMSidebar.vue`** — `active` is computed with
-   `String(route.name).startsWith(item.to)`, so a detail route (`Lead`, `Deal`, `Contact`)
-   never highlights its list entry (`Leads`, `Deals`, `Contacts`): the test runs the wrong
-   way round. Cosmetic.
+6. ~~**`NeoCockpitCRMSidebar.vue`**~~ **Fixed 2026-09-04.** `active` was computed with
+   `String(route.name).startsWith(item.to)`, which runs the wrong way round: the detail
+   names are the shorter ones, so `'Lead'.startsWith('Leads')` is false and opening any
+   record un-highlighted the whole sidebar. Each list entry that owns a detail route now
+   names it (`detail: 'Lead'`, `'Deal'`, `'Contact'`, `'Organization'`) and `active` is an
+   exact match on either name. Checked against all 17 named routes of `router.js` plus the
+   unnamed case: exactly one entry lights on each of the 12 routes that should light one,
+   none on the other 6.
 7. **`frontend/src/socket.js`** — the dev-only dynamic import uses the deprecated
    `{ assert: { type: 'json' } }` form; modern runtimes want `{ with: … }`. Harmless under
    Vite 4 today (and it is inside a `try`), but it is a shape that will break.
