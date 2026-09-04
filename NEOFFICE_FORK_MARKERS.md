@@ -145,11 +145,19 @@ new files, not a divergence.
 4. ~~**`.mcp.json`**~~ **Deleted 2026-09-04** — a repo-root MCP config, auto-loaded by any
    Claude Code session that clones this repo, pointing at two servers under
    `/Users/jeremy/mcp/`.
-5. **`NeoCockpitBridge.vue`** — the `watch` on `contextNav` calls `render()` again, i.e.
-   `window.NeoCockpit.mount(host, …)` on the same host node without a preceding `unmount`.
-   CRM's `contextNav` is a `computed` that changes on **every route change** (the `active`
-   flags), so this fires on every navigation. Whether it leaks a React root per navigation
-   depends on the bundle (which lives in `frappe`, not here) — **unverified**, worth a look.
+5. **`NeoCockpitBridge.vue`** — **verified 2026-09-04, not a defect.** The `watch` on
+   `contextNav` does call `render()` again, i.e. `window.NeoCockpit.mount(host, …)` on the
+   same host without a preceding `unmount`, on every route change. It does **not** leak a
+   React root: `mount()` keeps a `WeakMap` of roots keyed by the host element and calls
+   `createRoot()` only when that element has none, otherwise reusing the cached root and
+   calling `root.render()` — a plain re-render. Confirmed in the library source
+   (`frappe-sidebar-react/src/mount.tsx`), in the bundle we ship
+   (`frappe/public/js/lib/neocockpit.global.js`, minified to
+   `let a=As.get(e); a||(a=createRoot(e),As.set(e,a)), a.render(...)`, `As=new WeakMap`),
+   and on screen on osiris: mounting twice on the same host returned the identical `Root`,
+   and eight CRM navigations left the host with exactly one `__reactContainer` key and one
+   child node. Re-mounting IS the update path; unmounting first would throw away React
+   state on every navigation. The reasoning is now a comment next to the `watch`.
 6. ~~**`NeoCockpitCRMSidebar.vue`**~~ **Fixed 2026-09-04.** `active` was computed with
    `String(route.name).startsWith(item.to)`, which runs the wrong way round: the detail
    names are the shorter ones, so `'Lead'.startsWith('Leads')` is false and opening any

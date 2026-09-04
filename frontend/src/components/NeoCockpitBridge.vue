@@ -126,7 +126,23 @@ function emitFailed() {
   emit("failed")
 }
 
-// live updates: route changes (active flags) + badge/teams refreshes
+// Live updates: route changes (active flags) + badge/teams refreshes.
+//
+// Calling render() again means window.NeoCockpit.mount() on a host that is
+// already mounted, with no unmount in between. That is deliberate and it does
+// NOT leak a React root: mount() keeps a WeakMap of Root objects keyed by the
+// host element and only calls createRoot() when the element has none —
+// otherwise it reuses the cached Root and just calls root.render(), which is a
+// plain React re-render. Verified 2026-09-04 both in the library source
+// (frappe-sidebar-react/src/mount.tsx) and in the bundle we actually ship
+// (frappe/public/js/lib/neocockpit.global.js, where it minifies to
+// `let a=As.get(e); a||(a=createRoot(e),As.set(e,a)), a.render(...)` with
+// `As=new WeakMap`), and on screen: mounting twice on the same host returns
+// the identical Root, and eight CRM navigations left the host with exactly one
+// __reactContainer key and one child node throughout.
+//
+// So re-mounting IS the update path here — do not "fix" it by unmounting
+// first, which would throw away React state on every navigation.
 watch(
   () => [props.contextNav, props.contextFooter],
   () => {
