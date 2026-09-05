@@ -6,26 +6,26 @@ __pycache__
 dev-dist
 tags
 node_modules
-#//// Neoffice — commit-the-build. Upstream ignores the vite output
-#//// (crm/public/frontend + crm/www/crm.html) and expects every instance to
-#//// run `bench build`; our fleet runs on 2-vCPU client VMs where that build
-#//// is the slowest step of an update, so the two ignores below are commented
-#//// out and the artifacts are committed (by hand, or by build-frontend.yml).
-#//// Same reason for the CLAUDE.md line further down: it was ignored between
-#//// 311c355b and c29f98c6, then shipped again. Commits d7c4209b / f5abf846 /
-#//// c29f98c6. Re-ignore them only if the fleet goes back to building on the
-#//// instances.
+# //// Neoffice — commit-the-build. Upstream ignores the vite output
+# //// (crm/public/frontend + crm/www/crm.html) and expects every instance to
+# //// run `bench build`; our fleet runs on 2-vCPU client VMs where that build
+# //// is the slowest step of an update, so the two ignores below are commented
+# //// out and the artifacts are committed (by hand, or by build-frontend.yml).
+# //// Same reason for the CLAUDE.md line further down: it was ignored between
+# //// 311c355b and c29f98c6, then shipped again. Commits d7c4209b / f5abf846 /
+# //// c29f98c6. Re-ignore them only if the fleet goes back to building on the
+# //// instances.
 # 2026-05-07 (NORA #28) — build outputs are committed on this branch.
 # See docs/COMMIT-BUILD-PATTERN.md in neoffice-devops.
 # crm/public/frontend
 # crm/www/crm.html
 build
 # CLAUDE.md  # 2026-05-07 unshipped to document commit-the-build pipeline
-#//// Neoffice — never commit a compiled catalogue again. Frappe reads MO files
-#//// only from <bench>/sites/assets/locale/<lang>/LC_MESSAGES/<app>.mo
-#//// (frappe/gettext/translate.py: get_translations_from_mo -> get_locale_dir),
-#//// which `bench build` and `bench compile-po-to-mo` generate on the instance.
-#//// A .mo inside the app is therefore never read: the one we shipped until
-#//// 2026-09-04 had drifted to 877 entries against 1338 in fr.po and made a
-#//// reader believe ~460 French strings were lost. The PO is the source.
+# //// Neoffice — never commit a compiled catalogue again. Frappe reads MO files
+# //// only from <bench>/sites/assets/locale/<lang>/LC_MESSAGES/<app>.mo
+# //// (frappe/gettext/translate.py: get_translations_from_mo -> get_locale_dir),
+# //// which `bench build` and `bench compile-po-to-mo` generate on the instance.
+# //// A .mo inside the app is therefore never read: the one we shipped until
+# //// 2026-09-04 had drifted to 877 entries against 1338 in fr.po and made a
+# //// reader believe ~460 French strings were lost. The PO is the source.
 crm/locale/*.mo
