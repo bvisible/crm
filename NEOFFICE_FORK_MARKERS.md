@@ -174,3 +174,7 @@ new files, not a divergence.
    the attribute in any case — Vite serves `.json` as a JS module, the branch is `DEV`-only
    and the import sits in a `try`/`catch` that falls back to port 9000. The condition to
    switch is written next to the code: Vite 5+ / Rollup 4+.
+
+## Auto-marked (fork-markers workflow)
+
+- `frappe-ui` (git submodule pointer) — restored the gitlink from `3423aa5b` (v0.1.120, 2025-03-24) back to `c9a0fc93` (v0.1.200, 2025-09-22): commit `aecf7240` ("Update FR") had moved it six months backwards and away from the `0.1.201` pin in `frontend/package.json` — a stale local checkout committed alongside a translation pass, not a decision. No production impact (dev-only alias, the shipped build uses the npm package); take upstream's pointer at the next merge (a9295fa5 "fix(submodule): the frappe-ui pointer had moved backwards by accident")
