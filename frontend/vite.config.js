@@ -7,23 +7,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vitejs.dev/config/
 export default defineConfig(async ({ mode }) => {
   const isDev = mode === 'development'
-  const frappeui = await importFrappeUIPlugin(isDev)
-
   const config = {
     plugins: [
-      frappeui({
-        frappeProxy: true,
-        lucideIcons: true,
-        jinjaBootData: true,
-        buildConfig: {
-          indexHtmlPath: '../crm/www/crm.html',
-          emptyOutDir: true,
-          //// Neoffice — upstream builds with sourcemap: true. This build is committed
-          //// and shipped to every instance, so the maps would travel with it for no
-          //// field use. Set in 037f346f, kept through the upstream/main merge bda25994.
-          sourcemap: false,
-        },
-      }),
       vue(),
       vueJsx(),
       VitePWA({
@@ -70,12 +55,38 @@ export default defineConfig(async ({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
+        // point at the package src dir (not index.ts) so subpath imports like
+        // `@framework/ui/components/Notifications` resolve. Importing subpaths avoids the
+        // barrel, which `export *`s components (Grid/Phone/FormLayout) that need a newer
+        // frappe-ui (`frappe-ui/internals`) than this app pins.
+        '@framework/ui': path.resolve(__dirname, '../../frappe/ui/src'),
       },
+      // ensure the linked framework package reuses the host app's single copy of each peer.
+      // `dompurify` is an implicit dep of @framework/ui's sanitize util (not declared in its
+      // package.json); dedupe resolves it to the host's copy since the symlinked source has
+      // no node_modules of its own.
+      // the editor packages must resolve to one copy each: tiptap imports
+      // `@tiptap/pm/model` while prosemirror-state/transform/tables import bare
+      // `prosemirror-model`, so a nested install of either throws "multiple
+      // versions of prosemirror-model were loaded" on mention insert. Unlike
+      // optimizeDeps (dev-only) this also applies to the production build.
+      dedupe: [
+        'vue',
+        'vue-router',
+        'frappe-ui',
+        'dompurify',
+        '@tiptap/core',
+        '@tiptap/pm',
+        '@tiptap/vue-3',
+        'prosemirror-model',
+        'prosemirror-state',
+        'prosemirror-view',
+        'prosemirror-transform',
+      ],
     },
     optimizeDeps: {
       include: [
         'feather-icons',
-        'showdown',
         'tailwind.config.js',
         'prosemirror-state',
         'prosemirror-view',
@@ -83,54 +94,46 @@ export default defineConfig(async ({ mode }) => {
         'interactjs',
       ],
     },
-    //// Neoffice — added. rollup must not try to resolve the bench-only imports
-    //// (sites/common_site_config.json and the ../../../frappe/ reach-ins), or the
-    //// standalone / CI build fails outside a frappe-bench. Commits de5e9d85 and
-    //// 75d9fb61.
-    build: {
-      rollupOptions: {
-        // Ignore Frappe bench-specific imports that don't exist in standalone builds
-        external: [
-          /common_site_config\.json/,
-          /\.\.\/\.\.\/\.\.\/frappe\//,  // Frappe core dependencies
-        ],
+    server: {
+      fs: {
+        // allow the bench `apps/` dir so Vite can serve linked local packages
+        // (frappe-ui, @framework/ui) that live in sibling app repos
+        allow: [path.resolve(__dirname, '../..')],
       },
     },
   }
 
-  // Add local frappe-ui alias only in development if the local frappe-ui exists
-  if (isDev) {
-    try {
-      // Check if the local frappe-ui directory exists
-      const fs = await import('node:fs')
-      const localFrappeUIPath = path.resolve(__dirname, '../frappe-ui')
-      const vitePluginPath = path.resolve(localFrappeUIPath, 'vite.js')
-      
-      if (fs.existsSync(localFrappeUIPath) && fs.existsSync(vitePluginPath)) {
-        config.resolve.alias['frappe-ui'] = localFrappeUIPath
-      } else {
-        console.warn('Local frappe-ui directory not found or incomplete, using npm package')
-      }
-    } catch (error) {
-      console.warn(
-        'Error checking for local frappe-ui, using npm package:',
-        error.message,
-      )
-    }
-  }
+  const frappeui = await importFrappeUIPlugin(isDev, config)
+  config.plugins.unshift(
+    frappeui({
+      frappeProxy: true,
+      lucideIcons: true,
+      jinjaBootData: true,
+      buildConfig: {
+        indexHtmlPath: '../crm/www/crm.html',
+        emptyOutDir: true,
+        //// Neoffice — upstream builds with sourcemap: true. This build is committed
+        //// and shipped to every instance, so the maps would travel with it for no
+        //// field use. Set in 037f346f, kept through the upstream v1.83.0 merge.
+        sourcemap: false,
+      },
+    }),
+  )
 
   return config
 })
 
-async function importFrappeUIPlugin(isDev) {
+async function importFrappeUIPlugin(isDev, config) {
   if (isDev) {
     try {
       // Check if local frappe-ui has the vite plugin file
       const fs = await import('node:fs')
-      const localVitePluginPath = path.resolve(__dirname, '../frappe-ui/vite.js')
-      
+      const localVitePluginPath = path.resolve(__dirname, '../frappe-ui/vite')
+
       if (fs.existsSync(localVitePluginPath)) {
         const module = await import('../frappe-ui/vite')
+        console.info('Local frappe-ui vite plugin found, using local plugin')
+        config.resolve.alias = getAliases(config)
         return module.default
       } else {
         console.warn('Local frappe-ui vite plugin not found, using npm package')
@@ -145,4 +148,34 @@ async function importFrappeUIPlugin(isDev) {
   // Fall back to npm package if local import fails
   const module = await import('frappe-ui/vite')
   return module.default
+}
+
+function getAliases(config) {
+  return {
+    ...config.resolve.alias,
+    'frappe-ui/tailwind': path.resolve(
+      __dirname,
+      '../frappe-ui/tailwind/preset.js',
+    ),
+    'frappe-ui/style.css': path.resolve(
+      __dirname,
+      '../frappe-ui/src/style.css',
+    ),
+    'frappe-ui/frappe': path.resolve(__dirname, '../frappe-ui/frappe/index.js'),
+    // subpath entries must precede the bare `frappe-ui` key: a plain string alias
+    // matches by prefix, so without these subpaths would rewrite under
+    // `.../src/index.ts`. `internals` is pulled in by @framework/ui.
+    'frappe-ui/icons': path.resolve(__dirname, '../frappe-ui/icons/index.ts'),
+    'frappe-ui/editor': path.resolve(
+      __dirname,
+      '../frappe-ui/src/molecules/editor/index.ts',
+    ),
+    'frappe-ui/editor-style.css': path.resolve(
+      __dirname,
+      '../frappe-ui/src/molecules/editor/style.css',
+    ),
+    'frappe-ui/internals': path.resolve(__dirname, '../frappe-ui/internals.ts'),
+    'frappe-ui/icons': path.resolve(__dirname, '../frappe-ui/icons/index.ts'),
+    'frappe-ui': path.resolve(__dirname, '../frappe-ui/src/index.ts'),
+  }
 }

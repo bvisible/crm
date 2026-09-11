@@ -7,7 +7,7 @@
       //// automatic fallback when the cockpit bundle fails. Commit b4be8086. -->
       <NeoCockpitCRMSidebar />
     </div>
-    <div class="flex-1 flex flex-col h-full overflow-auto bg-surface-white">
+    <div class="flex-1 flex flex-col h-full overflow-auto bg-surface-base">
       <AppHeader />
       <slot />
     </div>

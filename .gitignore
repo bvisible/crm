@@ -29,3 +29,20 @@ build
 # //// 2026-09-04 had drifted to 877 entries against 1338 in fr.po and made a
 # //// reader believe ~460 French strings were lost. The PO is the source.
 crm/locale/*.mo
+
+frontend/coverage
+
+e2e/.auth
+test-results
+playwright-report
+package-lock.json
+
+.vscode
+.github/instructions
+.github/skills
+.github/copilot-instructions.md
+
+CLAUDE.md
+AGENTS.md
+.claude
+.pi

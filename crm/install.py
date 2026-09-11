@@ -1,5 +1,7 @@
 # Copyright (c) 2022, Frappe Technologies Pvt. Ltd. and Contributors
 # MIT License. See license.txt
+import json
+
 import click
 import frappe
 from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
@@ -19,9 +21,12 @@ def after_install(force=False):
 	add_default_fields_layout(force)
 	add_property_setter()
 	add_email_template_custom_fields()
+	add_email_account_custom_field()
+	add_web_form_custom_fields()
 	add_default_industries()
 	add_default_lead_sources()
 	add_default_lost_reasons()
+	add_default_quick_filters()
 	add_standard_dropdown_items()
 	add_default_scripts()
 	create_default_manager_dashboard(force)
@@ -34,27 +39,38 @@ def add_default_lead_statuses():
 	statuses = {
 		"New": {
 			"color": "gray",
+			"type": "Open",
 			"position": 1,
 		},
 		"Contacted": {
 			"color": "orange",
+			"type": "Ongoing",
 			"position": 2,
 		},
 		"Nurture": {
 			"color": "blue",
+			"type": "Ongoing",
 			"position": 3,
 		},
 		"Qualified": {
 			"color": "green",
+			"type": "Won",
 			"position": 4,
+		},
+		"Converted": {
+			"color": "teal",
+			"type": "Won",
+			"position": 5,
 		},
 		"Unqualified": {
 			"color": "red",
-			"position": 5,
+			"type": "Lost",
+			"position": 6,
 		},
 		"Junk": {
 			"color": "purple",
-			"position": 6,
+			"type": "Lost",
+			"position": 7,
 		},
 	}
 
@@ -65,6 +81,7 @@ def add_default_lead_statuses():
 		doc = frappe.new_doc("CRM Lead Status")
 		doc.lead_status = status
 		doc.color = statuses[status]["color"]
+		doc.type = statuses[status]["type"]
 		doc.position = statuses[status]["position"]
 		doc.insert()
 
@@ -160,11 +177,19 @@ def add_default_fields_layout(force=False):
 		},
 		"Address-Quick Entry": {
 			"doctype": "Address",
-			"layout": '[{"name": "details_section", "columns": [{"name": "column_uSSG", "fields": ["address_title", "address_type", "address_line1", "address_line2", "city", "state", "country", "pincode"]}]}]',
+			"layout": '[{"name": "details_section", "columns": [{"name": "column_uSSG", "fields": ["address_title", "address_type", "address_line1", "address_line2"]}]}, {"name": "location_section", "hideBorder": true, "columns": [{"name": "column_TCoZ", "fields": ["country", "city"]}, {"name": "column_PqrK", "fields": ["state", "pincode"]}]}]',
 		},
 		"CRM Call Log-Quick Entry": {
 			"doctype": "CRM Call Log",
 			"layout": '[{"name":"details_section","columns":[{"name":"column_uMSG","fields":["type","from","duration"]},{"name":"column_wiZT","fields":["to","status","caller","receiver"]}]}]',
+		},
+		"FCRM Note-Quick Entry": {
+			"doctype": "FCRM Note",
+			"layout": '[{"name":"details_section","columns":[{"name":"column_o2s9","fields":["title", "content"]}]}]',
+		},
+		"CRM Task-Quick Entry": {
+			"doctype": "CRM Task",
+			"layout": '[{"name":"first_tab","sections":[{"name":"details_section","columns":[{"name":"column_X9sG","fields":["title","description"]}]},{"name":"assignment_section","columns":[{"name":"column_9XjK","fields":["priority","due_date"]},{"name":"column_7s8n","fields":["assigned_to","status"]}],"hideBorder":true}]}]',
 		},
 	}
 
@@ -175,7 +200,7 @@ def add_default_fields_layout(force=False):
 		},
 		"CRM Deal-Side Panel": {
 			"doctype": "CRM Deal",
-			"layout": '[{"label": "Contacts", "name": "contacts_section", "opened": true, "editable": false, "contacts": []}, {"label": "Organization Details", "name": "organization_section", "opened": true, "columns": [{"name": "column_na2Q", "fields": ["organization", "website", "territory", "annual_revenue", "close_date", "probability", "next_step", "deal_owner"]}]}]',
+			"layout": '[{"label": "Contacts", "name": "contacts_section", "opened": true, "editable": false, "contacts": []}, {"label": "Organization Details", "name": "organization_section", "opened": true, "columns": [{"name": "column_na2Q", "fields": ["organization", "website", "territory", "annual_revenue", "closed_date", "probability", "next_step", "deal_owner"]}]}]',
 		},
 		"Contact-Side Panel": {
 			"doctype": "Contact",
@@ -250,31 +275,107 @@ def add_property_setter():
 
 
 def add_email_template_custom_fields():
-	if not frappe.get_meta("Email Template").has_field("enabled"):
-		click.secho("* Installing Custom Fields in Email Template")
+	meta = frappe.get_meta("Email Template")
+
+	fields = [
+		{
+			"default": "0",
+			"fieldname": "enabled",
+			"fieldtype": "Check",
+			"label": "Enabled",
+			"insert_after": "",
+		},
+		{
+			"fieldname": "reference_doctype",
+			"fieldtype": "Link",
+			"label": "Doctype",
+			"options": "DocType",
+			"insert_after": "enabled",
+		},
+	]
+
+	fields = [field for field in fields if not meta.has_field(field["fieldname"])]
+	if not fields:
+		return
+
+	click.secho("* Installing Custom Fields in Email Template")
+	create_custom_fields({"Email Template": fields})
+	frappe.clear_cache(doctype="Email Template")
+
+
+def add_email_account_custom_field():
+	if not frappe.get_meta("Email Account").has_field("create_lead_from_incoming_email"):
+		click.secho("* Installing Custom Fields in Email Account")
 
 		create_custom_fields(
 			{
-				"Email Template": [
+				"Email Account": [
 					{
 						"default": "0",
-						"fieldname": "enabled",
+						"fieldname": "create_lead_from_incoming_email",
 						"fieldtype": "Check",
-						"label": "Enabled",
-						"insert_after": "",
-					},
-					{
-						"fieldname": "reference_doctype",
-						"fieldtype": "Link",
-						"label": "Doctype",
-						"options": "DocType",
-						"insert_after": "enabled",
-					},
+						"label": "Create Lead from Incoming Emails",
+						"description": "Automatically create a lead when an incoming email is received from an unknown contact",
+						"insert_after": "create_contact",
+					}
 				]
 			}
 		)
 
-		frappe.clear_cache(doctype="Email Template")
+		frappe.clear_cache(doctype="Email Account")
+
+
+def add_web_form_custom_fields():
+	"""CRM's own fields on the native Web Form.
+
+	- `crm_published`: separate publish flag so CRM forms are served only by the
+	  CRM's own public page (and never rendered by the framework's web form page).
+	  The native `published` is always left 0.
+	- `crm_hidden_defaults`: JSON of doctype-mandatory fields the author removed
+	  from the visible form, with the default value to apply on submission so the
+	  target record can still be created.
+	- `placeholder` on Web Form Field: standard from v16 onwards, absent on v15,
+	  so add it there to keep the builder working on both.
+	"""
+	custom_fields = {}
+
+	meta = frappe.get_meta("Web Form")
+	if not (meta.has_field("crm_published") and meta.has_field("crm_hidden_defaults")):
+		custom_fields["Web Form"] = [
+			{
+				"default": "0",
+				"fieldname": "crm_published",
+				"fieldtype": "Check",
+				"label": "CRM Published",
+				"insert_after": "published",
+				"hidden": 1,
+			},
+			{
+				"fieldname": "crm_hidden_defaults",
+				"fieldtype": "Long Text",
+				"label": "CRM Hidden Field Defaults",
+				"insert_after": "crm_published",
+				"hidden": 1,
+			},
+		]
+
+	if not frappe.get_meta("Web Form Field").has_field("placeholder"):
+		custom_fields["Web Form Field"] = [
+			{
+				"fieldname": "placeholder",
+				"fieldtype": "Data",
+				"label": "Placeholder",
+				"insert_after": "description",
+			}
+		]
+
+	if not custom_fields:
+		return
+
+	click.secho("* Installing Custom Fields in Web Form")
+	create_custom_fields(custom_fields)
+	frappe.clear_cache(doctype="Web Form")
+	frappe.clear_cache(doctype="Web Form Field")
 
 
 def add_default_industries():
@@ -343,6 +444,7 @@ def add_default_industries():
 
 def add_default_lead_sources():
 	lead_sources = [
+		"Email",
 		"Existing Customer",
 		"Reference",
 		"Advertisement",
@@ -353,7 +455,9 @@ def add_default_lead_sources():
 		"Customer's Vendor",
 		"Campaign",
 		"Walk In",
-		"Facebook"
+		"Facebook",
+		"Website",
+		"Web Form",
 	]
 
 	for source in lead_sources:
@@ -400,6 +504,26 @@ def add_default_lost_reasons():
 		doc = frappe.new_doc("CRM Lost Reason")
 		doc.lost_reason = reason["reason"]
 		doc.description = reason["description"]
+		doc.insert()
+
+
+def add_default_quick_filters():
+	quick_filters = {
+		"CRM Lead": ["lead_name", "email", "organization", "status", "source"],
+		"CRM Deal": ["organization", "status", "probability", "email"],
+		"Contact": ["status", "email_id", "phone"],
+		"CRM Organization": ["organization_name", "no_of_employees", "territory", "industry"],
+		"CRM Task": ["title", "priority", "assigned_to", "status", "due_date"],
+		"CRM Call Log": ["telephony_medium", "type", "status", "from", "to"],
+	}
+
+	for quick_filter in quick_filters:
+		if frappe.db.exists("CRM Global Settings", {"dt": quick_filter}):
+			continue
+
+		doc = frappe.new_doc("CRM Global Settings")
+		doc.dt = quick_filter
+		doc.json = json.dumps(quick_filters[quick_filter])
 		doc.insert()
 
 
