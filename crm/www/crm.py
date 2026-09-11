@@ -41,7 +41,13 @@ def redirect_to_set_password():
 		return
 
 	user = frappe.get_doc("User", frappe.session.user)
-	link = user._reset_password()
+	# //// Neoffice — upstream calls user._reset_password(): on frappe/frappe version-15
+	# //// the User method is named _reset_password. Our fork is still at the v15.89.0
+	# //// base, where the same method — same body, same signature — is reset_password,
+	# //// so the bare call raised AttributeError and this redirect crashed the /crm page
+	# //// for every user without a password. Drop this fallback the day our frappe fork
+	# //// is brought up to current version-15.
+	link = (getattr(user, "_reset_password", None) or user.reset_password)()
 
 	# this is a GET request, which is rolled back unless a commit is requested
 	frappe.local.flags.commit = True

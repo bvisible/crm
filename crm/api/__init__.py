@@ -100,7 +100,13 @@ def accept_invitation(key: str | None = None):
 			# a new user has no password yet, send them to the set password page
 			# which logs them in and redirects to /crm once the password is set
 			user = frappe.get_doc("User", invitation.email)
-			frappe.local.response["location"] = user._reset_password()
+			# //// Neoffice — `_reset_password` is the frappe/frappe version-15 name; our fork,
+			# //// still at the v15.89.0 base, names the same method reset_password. The bare
+			# //// call raised AttributeError AFTER the invitation was accepted and committed,
+			# //// so a new user was left with no redirect. Same fallback as crm/www/crm.py.
+			frappe.local.response["location"] = (
+				getattr(user, "_reset_password", None) or user.reset_password
+			)()
 		else:
 			frappe.local.login_manager.login_as(invitation.email)
 			frappe.local.response["location"] = "/crm"
