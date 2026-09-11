@@ -150,7 +150,7 @@ msgstr "Une source de synchronisation de prospects est déjà activée pour ce f
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1089
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1231
 msgid "A section can have up to {0} columns"
-msgstr ""
+msgstr "Une section peut comporter jusqu'à {0} colonnes"
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:257
 msgid "A valid call log is required."
@@ -158,7 +158,7 @@ msgstr "Un journal d'appels valide est requis."
 
 #: frontend/src/components/Settings/Hierarchy/useDragDrop.js:69
 msgid "A {0} cannot report to a {1}"
-msgstr ""
+msgstr "Un(e) {0} ne peut pas relater un(e) {1}"
 
 #. Label of the api_key (Data) field in DocType 'CRM Exotel Settings'
 #. Label of the api_key (Data) field in DocType 'CRM Twilio Settings'
@@ -290,7 +290,7 @@ msgstr "Activité"
 #. 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Activity Timeline"
-msgstr ""
+msgstr "Chronologie des activités"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:37
 #: frontend/src/components/Modals/AddExistingUserModal.vue:53
@@ -300,7 +300,7 @@ msgstr "Ajouter"
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:162
 #: frontend/src/components/Settings/Hierarchy/HierarchyRow.vue:85
 msgid "Add ({0})"
-msgstr ""
+msgstr "Ajouter ({0})"
 
 #: frontend/src/components/Settings/EmailAccountList.vue:19
 msgid "Add Account"
@@ -312,7 +312,7 @@ msgstr "Ajouter un assigné"
 
 #: crm/fcrm/doctype/crm_product/crm_product_list.js:3
 msgid "Add CRM Product"
-msgstr ""
+msgstr "Ajouter un produit CRM"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:2
 msgid "Add Chart"
@@ -404,11 +404,11 @@ msgstr "Ajouter une tâche"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:36
 msgid "Add User"
-msgstr ""
+msgstr "Ajouter un utilisateur"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:159
 msgid "Add Users"
-msgstr ""
+msgstr "Ajouter des utilisateurs"
 
 #. Label of the add_weekly_holidays_section (Section Break) field in DocType
 #. 'CRM Holiday List'
@@ -435,7 +435,7 @@ msgstr "Ajouter une tâche"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:69
 msgid "Add a description to help people fill out this form"
-msgstr ""
+msgstr "Ajouter une description pour aider les utilisateurs à remplir ce formulaire"
 
 #: frontend/src/components/Settings/LeadSyncing/leadSyncSourceConfig.js:25
 msgid "Add a name for your source"
@@ -447,7 +447,7 @@ msgstr "Ajouter une description..."
 
 #: frontend/src/components/Settings/Hierarchy/HierarchyRow.vue:63
 msgid "Add direct reports"
-msgstr ""
+msgstr "Ajouter des rapports directs"
 
 #: frontend/src/components/Modals/AddExistingUserModal.vue:12
 msgid "Add existing system users to this CRM. Assign them a role to grant access with their current credentials."
@@ -455,7 +455,7 @@ msgstr "Ajouter des utilisateurs système existants à ce CRM. Attribuez-leur un
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:634
 msgid "Add fields to see them here."
-msgstr ""
+msgstr "Ajouter des champs pour les voir ici"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRulesList.vue:11
 #: frontend/src/components/Settings/EmailAccountList.vue:51
@@ -521,7 +521,7 @@ msgstr "Toutes les priorités disponibles ont déjà été ajoutées"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:470
 msgid "Allowed domains"
-msgstr ""
+msgstr "Domaines autorisés"
 
 #. Label of the amount (Currency) field in DocType 'CRM Products'
 #: crm/fcrm/doctype/crm_products/crm_products.json
@@ -539,7 +539,7 @@ msgstr "Montant après remise"
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:254
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:385
 msgid "An SLA set as default cannot be disabled"
-msgstr ""
+msgstr "Un SLA défini par défaut ne peut pas être désactivé"
 
 #: frontend/src/components/Modals/FieldLayoutDialog.vue:277
 #: frontend/src/data/script.js:78 frontend/src/data/script.js:79
@@ -580,7 +580,7 @@ msgstr "Le chiffre d'affaires annuel doit être un nombre"
 
 #: frontend/src/pages/PersonaForm.vue:64
 msgid "Another CRM"
-msgstr ""
+msgstr "Un autre CRM"
 
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:69
 msgid "Any failed lead syncs will show up here"
@@ -784,7 +784,7 @@ msgstr "Au moins une priorité est obligatoire"
 
 #: frontend/src/components/Settings/Sla/utils.js:204
 msgid "At least one valid workday with a day, start time, and end time is required"
-msgstr ""
+msgstr "Au moins un jour ouvrable valide avec une date, une heure de début et une heure de fin est requis"
 
 #: frontend/src/components/FilesUploader/FilesUploader.vue:2
 #: frontend/src/components/FilesUploader/FilesUploader.vue:67
@@ -850,11 +850,11 @@ msgstr "Définit automatiquement le statut de communication sur « Répondu » p
 
 #: frontend/src/components/Settings/GeneralSettings.vue:64
 msgid "Automatically sets communication status to “Open” for the lead or deal when a new communication is created. Applies only when SLA is enabled"
-msgstr ""
+msgstr "Définit automatiquement le statut de communication à « Ouvert » pour le prospect ou l'affaire lors de la création d'une nouvelle communication. S'applique seulement quand le SLA est activé"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:42
 msgid "Automatically sets communication status to “Replied” for the lead or deal when a response is received. Applies only when SLA is enabled"
-msgstr ""
+msgstr "Définit automatiquement le statut de communication à « Répondu » pour le prospect ou l'affaire quand une réponse est reçue. S'applique seulement quand le SLA est activé"
 
 #. Description of the 'Auto update Expected Deal Value' (Check) field in
 #. DocType 'FCRM Settings'
@@ -954,7 +954,7 @@ msgstr "Retour au téléversement de fichier"
 
 #: frontend/src/components/Questionnaire.vue:94
 msgid "Back to previous question"
-msgstr ""
+msgstr "Retour à la question précédente"
 
 #. Label of the background_sync_frequency (Select) field in DocType 'Lead Sync
 #. Source'
@@ -970,7 +970,7 @@ msgstr "En attente"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:302
 msgid "Basic settings for this form."
-msgstr ""
+msgstr "Paramètres de base pour ce formulaire"
 
 #: frontend/src/components/Filter.vue:382
 msgid "Between"
@@ -980,7 +980,7 @@ msgstr "Entre"
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.json
 #: frontend/src/components/Settings/ERPNextSettings.vue:216
 msgid "Bidirectional Product Sync"
-msgstr ""
+msgstr "Synchronisation bidirectionnelle des produits"
 
 #: frontend/src/components/Settings/Settings.vue:139
 msgid "Brand"
@@ -1137,7 +1137,7 @@ msgstr "Produit CRM"
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json
 msgid "CRM Product Sync Issue"
-msgstr ""
+msgstr "Problème de synchronisation des produits CRM"
 
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_products/crm_products.json
@@ -1152,7 +1152,7 @@ msgstr "Temps de réponse mobile CRM"
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_sales_hierarchy/crm_sales_hierarchy.json
 msgid "CRM Sales Hierarchy"
-msgstr ""
+msgstr "Hiérarchie commerciale CRM"
 
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_service_day/crm_service_day.json
@@ -1210,7 +1210,7 @@ msgstr "CSV"
 
 #: frontend/src/pages/PersonaForm.vue:81
 msgid "CSV imports"
-msgstr ""
+msgstr "Importations CSV"
 
 #: frontend/src/components/Modals/CallLogDetailModal.vue:9
 msgid "Call Details"
@@ -1300,7 +1300,7 @@ msgstr "Impossible de supprimer les éléments standards {0}"
 
 #: crm/fcrm/doctype/crm_product/crm_product.py:81
 msgid "Cannot delete: linked ERPNext Item {0} is referenced by a Quotation. Remove the reference or delete the Item in ERPNext first."
-msgstr ""
+msgstr "Impossible de supprimer : l'article ERPNext lié {0} est référencé par un devis. Supprimez la référence ou supprimez l'article dans ERPNext d'abord"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleListItem.vue:173
 msgid "Cannot enable rule without adding users in it"
@@ -1312,11 +1312,11 @@ msgstr "Impossible d'inviter pour ce rôle"
 
 #: frontend/src/components/Settings/Hierarchy/useDragDrop.js:73
 msgid "Cannot move a manager under one of their own reports"
-msgstr ""
+msgstr "Impossible de déplacer un responsable sous l'un de ses propres rapports"
 
 #: crm/integrations/erpnext/utils.py:72
 msgid "Cannot rename: an unrelated {0} '{1}' already exists on the other side. Resolve manually first."
-msgstr ""
+msgstr "Impossible de renommer : un {0} non lié « {1} » existe déjà de l'autre côté. Résolvez d'abord manuellement"
 
 #: frontend/src/components/FilesUploader/FilesUploader.vue:85
 msgid "Capture"
@@ -1324,11 +1324,11 @@ msgstr "Capturer"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:11
 msgid "Capture leads and deals from public forms you embed on your website."
-msgstr ""
+msgstr "Capturer les prospects et les affaires depuis les formulaires publics que vous incorporez sur votre site web"
 
 #: frontend/src/pages/PersonaForm.vue:122
 msgid "Capture my first lead"
-msgstr ""
+msgstr "Capturer mon premier prospect"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:675
 msgid "Capturing Leads"
@@ -1350,7 +1350,7 @@ msgstr "Modifier"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1386
 msgid "Change & remove fields"
-msgstr ""
+msgstr "Modifier et supprimer des champs"
 
 #: frontend/src/pages/Contact.vue:47 frontend/src/pages/Lead.vue:92
 #: frontend/src/pages/MobileContact.vue:37
@@ -1379,7 +1379,7 @@ msgstr "Changer le statut de l'affaire"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1378
 msgid "Change form type?"
-msgstr ""
+msgstr "Modifier le type de formulaire ?"
 
 #: frontend/src/components/Settings/PreferencesSettings.vue:60
 msgid "Change language of the application."
@@ -1475,7 +1475,7 @@ msgstr "Effacer le tableau"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:28
 msgid "Click to rename"
-msgstr ""
+msgstr "Cliquer pour renommer"
 
 #: frontend/src/components/Controls/GeolocationControl.vue:60
 #: frontend/src/components/Notifications.vue:27
@@ -1486,7 +1486,7 @@ msgstr "Fermer"
 
 #: frontend/src/pages/PersonaForm.vue:126
 msgid "Close my first deal"
-msgstr ""
+msgstr "Conclure ma première affaire"
 
 #. Label of the closed_date (Date) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
@@ -1495,7 +1495,7 @@ msgstr "Date de clôture"
 
 #: frontend/src/pages/PersonaForm.vue:100
 msgid "Collaborating with my team"
-msgstr ""
+msgstr "Collaborer avec mon équipe"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:138
 #: frontend/src/components/Settings/Forms/FieldCard.vue:63
@@ -1599,7 +1599,7 @@ msgstr "Condition"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:118
 msgid "Conditional logic"
-msgstr ""
+msgstr "Logique conditionnelle"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:188
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:272
@@ -1638,15 +1638,15 @@ msgstr "Configurer le fournisseur de taux de change pour votre CRM"
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:184
 msgid "Configure your Exotel telephony integration settings here"
-msgstr ""
+msgstr "Configurez ici vos paramètres d'intégration téléphonique Exotel"
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:157
 msgid "Configure your Twilio telephony integration settings here"
-msgstr ""
+msgstr "Configurez ici vos paramètres d'intégration téléphonique Twilio"
 
 #: frontend/src/components/Settings/BrandSettings.vue:10
 msgid "Configure your brand name, logo and favicon"
-msgstr ""
+msgstr "Configurer le nom de la marque, le logo et la favicon"
 
 #: frontend/src/composables/demoData.js:26
 #: frontend/src/composables/frappecloud.js:29
@@ -1726,7 +1726,7 @@ msgstr "Image du contact mise à jour"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:99
 msgid "Contact sales"
-msgstr ""
+msgstr "Contacter le service commercial"
 
 #. Label of the contacts_tab (Tab Break) field in DocType 'CRM Deal'
 #. Label of the contacts (Table) field in DocType 'CRM Deal'
@@ -1797,45 +1797,45 @@ msgstr "Copié dans le presse-papiers"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:449
 msgid "Copy"
-msgstr ""
+msgstr "Copier"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:394
 #: frontend/src/components/Settings/Forms/FormsList.vue:271
 msgid "Copy link"
-msgstr ""
+msgstr "Copier le lien"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:228
 msgid "Could not create form"
-msgstr ""
+msgstr "Impossible de créer le formulaire"
 
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:157
 msgid "Could not create the Frappe CRM custom fields on {0} automatically. If it is running the latest ERPNext, enable <b>Frappe CRM Data Synchronization</b> in its CRM Settings, Otherwise check the Error Log."
-msgstr ""
+msgstr "Impossible de créer automatiquement les champs personnalisés Frappe CRM sur {0}. Si ERPNext exécute la dernière version, activez <b>Frappe CRM Data Synchronization</b> dans ses paramètres CRM, sinon vérifiez le journal des erreurs"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:860
 msgid "Could not grant guest access."
-msgstr ""
+msgstr "Impossible d'accorder l'accès invité"
 
 #: frontend/src/components/Settings/Hierarchy/useRemoveNode.js:16
 msgid "Could not remove."
-msgstr ""
+msgstr "Impossible de supprimer"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1521
 msgid "Could not save"
-msgstr ""
+msgstr "Impossible d'enregistrer"
 
 #: frontend/src/components/PrimaryDropdownItem.vue:181
 #: frontend/src/components/PrimaryDropdownItem.vue:188
 msgid "Could not save, try again"
-msgstr ""
+msgstr "Impossible d'enregistrer, veuillez réessayer"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:245
 msgid "Could not update form"
-msgstr ""
+msgstr "Impossible de mettre à jour le formulaire"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:473
 msgid "Could not update report to"
-msgstr ""
+msgstr "Impossible de mettre à jour le rapport à"
 
 #: crm/api/dashboard.py:647 crm/api/dashboard.py:795 crm/api/dashboard.py:852
 #: crm/api/dashboard.py:945
@@ -1885,7 +1885,7 @@ msgstr "Créer une nouvelle liste de congés"
 
 #: frontend/src/components/Modals/WhatsappTemplateSelectorModal.vue:20
 msgid "Create New Template"
-msgstr ""
+msgstr "Créer un nouveau modèle"
 
 #: frontend/src/components/Modals/ViewModal.vue:9
 #: frontend/src/components/ViewControls.vue:708
@@ -1904,17 +1904,17 @@ msgstr "Créer un client lors du changement de statut"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:130
 msgid "Create form"
-msgstr ""
+msgstr "Créer un formulaire"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:38
 msgid "Create one to start capturing leads."
-msgstr ""
+msgstr "Créer un pour commencer à capturer les prospects"
 
 #: crm/fcrm/doctype/crm_product/crm_product.js:12
 #: crm/fcrm/doctype/crm_product/crm_product_list.js:10
 #: frontend/src/composables/document.js:32
 msgid "Create products as Items in ERPNext"
-msgstr ""
+msgstr "Créer les produits comme articles dans ERPNext"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:661
 msgid "Create quotation button on deal page and auto customer creation on deal status change will be disabled. Are you sure?"
@@ -1957,7 +1957,7 @@ msgstr "Mot de passe actuel"
 
 #: frontend/src/components/Modals/ViewModal.vue:35
 msgid "Current icon"
-msgstr ""
+msgstr "Icône actuelle"
 
 #: crm/api/dashboard.py:896
 msgid "Current pipeline distribution"
@@ -2209,7 +2209,7 @@ msgstr "L'accord de niveau de service par défaut existe déjà pour {0}"
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:41
 msgid "Default calling medium for logged-in user"
-msgstr ""
+msgstr "Moyen d'appel par défaut pour l'utilisateur connecté"
 
 #: frontend/src/components/Telephony/CallUI.vue:110
 msgid "Default calling medium set successfully to {0}"
@@ -2222,7 +2222,7 @@ msgstr "Statuts par défaut, champs personnalisés et mises en page restaurés a
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:272
 msgid "Default value"
-msgstr ""
+msgstr "Valeur par défaut"
 
 #: frontend/src/components/Settings/Settings.vue:134
 msgid "Defaults"
@@ -2291,7 +2291,7 @@ msgstr "Supprimer l'élément lié"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:222
 msgid "Delete Only User"
-msgstr ""
+msgstr "Supprimer l'utilisateur uniquement"
 
 #: frontend/src/pages/MobileOrganization.vue:275
 msgid "Delete Organization"
@@ -2356,7 +2356,7 @@ msgstr "Bureau"
 #. Label of the detail (Small Text) field in DocType 'CRM Product Sync Issue'
 #: crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json
 msgid "Detail"
-msgstr ""
+msgstr "Détail"
 
 #. Label of the details (Tab Break) field in DocType 'CRM Lead'
 #. Label of the details (Text Editor) field in DocType 'CRM Lead Source'
@@ -2373,7 +2373,7 @@ msgstr "Détails"
 #. Issue'
 #: crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json
 msgid "Detected On"
-msgstr ""
+msgstr "Détecté le"
 
 #. Label of the call_receiving_device (Select) field in DocType 'CRM Telephony
 #. Agent'
@@ -2398,7 +2398,7 @@ msgstr "Désactiver l'intégration ERPNext"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:310
 msgid "Disable Sales Hierarchy"
-msgstr ""
+msgstr "Désactiver la hiérarchie commerciale"
 
 #. Label of the disabled (Check) field in DocType 'CRM Product'
 #: crm/fcrm/doctype/crm_product/crm_product.json
@@ -2429,7 +2429,7 @@ msgstr "Remise"
 #. Label of the dismissed (Check) field in DocType 'CRM Product Sync Issue'
 #: crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json
 msgid "Dismissed"
-msgstr ""
+msgstr "Rejeté"
 
 #: frontend/src/components/Settings/DefaultsSettings.vue:114
 msgid "Display format for dates across the system"
@@ -2450,7 +2450,7 @@ msgstr "Le DocType est obligatoire"
 
 #: frontend/src/components/Filter.vue:239
 msgid "Document ID, not the full name"
-msgstr ""
+msgstr "Numéro du document, pas le nom complet"
 
 #: frontend/src/pages/MobileLead.vue:204
 msgid "Document Not Found"
@@ -2498,11 +2498,11 @@ msgstr "Télécharger"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:74
 msgid "Draft"
-msgstr ""
+msgstr "Brouillon"
 
 #: crm/www/crm_form.html:176
 msgid "Draft preview — only you can see this. Publish the form to make it public."
-msgstr ""
+msgstr "Aperçu du brouillon — seul vous pouvez voir ceci. Publiez le formulaire pour le rendre public"
 
 #: frontend/src/components/FilesUploader/FilesUploaderArea.vue:24
 msgid "Drag & Drop files here or upload from"
@@ -2518,7 +2518,7 @@ msgstr "Déposez les fichiers ici"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:423
 msgid "Drop the form into your own website."
-msgstr ""
+msgstr "Déposer le formulaire dans votre propre site web"
 
 #. Label of the dropdown_items_tab (Tab Break) field in DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
@@ -2583,7 +2583,7 @@ msgstr "Paramètres ERPNext CRM"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:220
 msgid "ERPNext Items always sync into CRM Products. Turn this on to also sync CRM Product changes back to ERPNext Items."
-msgstr ""
+msgstr "Les articles ERPNext se synchronisent toujours dans les produits CRM. Activez ceci pour aussi synchroniser les modifications de produit CRM vers les articles ERPNext"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:3
 #: frontend/src/components/Settings/ERPNextSettings.vue:9
@@ -2603,15 +2603,15 @@ msgstr "URL du site ERPNext"
 
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:162
 msgid "ERPNext custom fields not created"
-msgstr ""
+msgstr "Champs personnalisés ERPNext non créés"
 
 #: crm/fcrm/doctype/crm_product/crm_product.py:42
 msgid "ERPNext integration is active. Create an Item in ERPNext and it will appear in CRM Product automatically."
-msgstr ""
+msgstr "L'intégration ERPNext est active. Créez un article dans ERPNext et il apparaîtra automatiquement dans le produit CRM"
 
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:221
 msgid "ERPNext integration must be enabled on the same site"
-msgstr ""
+msgstr "L'intégration ERPNext doit être activée sur le même site"
 
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:71
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:88
@@ -2711,7 +2711,7 @@ msgstr "Modifier le jour ouvré"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:63
 msgid "Edit field"
-msgstr ""
+msgstr "Modifier le champ"
 
 #: frontend/src/components/Controls/GridRowModal.vue:8
 msgid "Editing Row {0}"
@@ -2719,7 +2719,7 @@ msgstr "Modification de la ligne {0}"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:714
 msgid "Editor"
-msgstr ""
+msgstr "Éditeur"
 
 #. Label of the email (Data) field in DocType 'CRM Contacts'
 #. Label of the email (Data) field in DocType 'CRM Invitation'
@@ -2809,7 +2809,7 @@ msgstr "E-mails et signature"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:420
 msgid "Embed"
-msgstr ""
+msgstr "Incorporer"
 
 #: frontend/src/components/ListViews/ListRows.vue:12
 msgid "Empty"
@@ -2851,12 +2851,12 @@ msgstr "Activer Sortant"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:62
 msgid "Enable Sales Hierarchy"
-msgstr ""
+msgstr "Activer la hiérarchie commerciale"
 
 #. Label of the enable_sales_hierarchy (Check) field in DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Enable Sales Hierarchy Permissions"
-msgstr ""
+msgstr "Activer les permissions de la hiérarchie commerciale"
 
 #: frontend/src/components/Settings/Telephony/TwilioSettings.vue:119
 msgid "Enable Twilio integration to make and receive calls directly from your CRM"
@@ -2869,7 +2869,7 @@ msgstr "Activer l'enregistrement des appels entrants et sortants"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:440
 msgid "Enable the integration to create quotations and more in ERPNext."
-msgstr ""
+msgstr "Activez l'intégration pour créer des devis et bien d'autres choses dans ERPNext"
 
 #. Label of the enabled (Check) field in DocType 'CRM Exotel Settings'
 #. Label of the enabled (Check) field in DocType 'CRM Form Script'
@@ -2916,19 +2916,19 @@ msgstr "Heure de Fin"
 
 #: frontend/src/components/Settings/Sla/utils.js:172
 msgid "End date cannot be before start date"
-msgstr ""
+msgstr "La date de fin ne peut pas être avant la date de début"
 
 #: frontend/src/components/Settings/Sla/WorkDayModal.vue:189
 msgid "End time is required"
-msgstr ""
+msgstr "L'heure de fin est requise"
 
 #: frontend/src/components/Settings/Sla/WorkDayModal.vue:204
 msgid "End time must be after start time"
-msgstr ""
+msgstr "L'heure de fin doit être après l'heure de début"
 
 #: frontend/src/components/Settings/Sla/utils.js:262
 msgid "End time must be after start time for: {0}"
-msgstr ""
+msgstr "L'heure de fin doit être après l'heure de début pour : {0}"
 
 #: frontend/src/components/Settings/DashboardSettings.vue:160
 msgid "Enter Access Key"
@@ -2948,7 +2948,7 @@ msgstr "Saisir le numéro Exotel"
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:134
 msgid "Enter Personal Mobile Number"
-msgstr ""
+msgstr "Entrer le numéro de téléphone mobile personnel"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:74
 msgid "Enter Source Name"
@@ -2995,7 +2995,7 @@ msgstr "Erreur lors de la conversion en affaire : {0}"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:294
 msgid "Error creating lead sync source"
-msgstr ""
+msgstr "Erreur lors de la création de la source de synchronisation des prospects"
 
 #: frontend/src/components/Modals/CallLogDetailModal.vue:370
 msgid "Error creating lead: {0}"
@@ -3020,7 +3020,7 @@ msgstr "Erreur lors de la mise à jour du champ"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:275
 msgid "Error updating lead sync source"
-msgstr ""
+msgstr "Erreur lors de la mise à jour de la source de synchronisation des prospects"
 
 #. Option for the 'Background Sync Frequency' (Select) field in DocType 'Lead
 #. Sync Source'
@@ -3195,7 +3195,7 @@ msgstr "Page Facebook"
 
 #: frontend/src/pages/PersonaForm.vue:74
 msgid "Facebook/Instagram Ads"
-msgstr ""
+msgstr "Annonces Facebook/Instagram"
 
 #. Option for the 'Status' (Select) field in DocType 'CRM Call Log'
 #. Option for the 'SLA Status' (Select) field in DocType 'CRM Deal'
@@ -3229,7 +3229,7 @@ msgstr "Échec de la capture de l'enregistrement Twilio"
 
 #: frontend/src/components/Settings/EmailAdd.vue:149
 msgid "Failed to create email account: invalid credentials"
-msgstr ""
+msgstr "Impossible de créer le compte e-mail : identifiants invalides"
 
 #: frontend/src/components/Settings/EmailTemplate/NewEmailTemplate.vue:180
 msgid "Failed to create template"
@@ -3237,7 +3237,7 @@ msgstr "Échec de la création du modèle"
 
 #: frontend/src/components/Activities/CommentArea.vue:144
 msgid "Failed to delete comment"
-msgstr ""
+msgstr "Impossible de supprimer le commentaire"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:178
 msgid "Failed to delete lead sync source"
@@ -3257,7 +3257,7 @@ msgstr "Échec de la récupération du taux de change de {0} vers {1} le {2}. Ve
 
 #: frontend/src/components/Activities/Activities.vue:540
 msgid "Failed to load activities"
-msgstr ""
+msgstr "Impossible de charger les activités"
 
 #: frontend/src/components/Modals/FieldLayoutDialog.vue:172
 msgid "Failed to load fields layout"
@@ -3265,7 +3265,7 @@ msgstr "Échec du chargement de la mise en page des champs"
 
 #: frontend/src/data/script.js:150
 msgid "Failed to load file-based form controller: {0}"
-msgstr ""
+msgstr "Impossible de charger le contrôleur de formulaire basé sur fichier : {0}"
 
 #: frontend/src/data/script.js:168
 msgid "Failed to load form controller: {0}"
@@ -3302,7 +3302,7 @@ msgstr "Échec de l'envoi de l'e-mail !"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:501
 msgid "Failed to start sync"
-msgstr ""
+msgstr "Impossible de démarrer la synchronisation"
 
 #: crm/integrations/twilio/api.py:181
 msgid "Failed to update Twilio call status"
@@ -3310,11 +3310,11 @@ msgstr "Échec de la mise à jour du statut d'appel Twilio"
 
 #: frontend/src/components/Activities/CommentArea.vue:130
 msgid "Failed to update comment"
-msgstr ""
+msgstr "Impossible de mettre à jour le commentaire"
 
 #: frontend/src/components/Settings/EmailEdit.vue:216
 msgid "Failed to update email account: invalid credentials"
-msgstr ""
+msgstr "Impossible de mettre à jour le compte e-mail : identifiants invalides"
 
 #: frontend/src/components/Modals/ChangePasswordModal.vue:106
 msgid "Failed to update password"
@@ -3322,7 +3322,7 @@ msgstr "Échec de la mise à jour du mot de passe"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:290
 msgid "Failed to update setting"
-msgstr ""
+msgstr "Impossible de mettre à jour le paramètre"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:163
 msgid "Failed to update source"
@@ -3438,7 +3438,7 @@ msgstr "Précision décimale"
 
 #: frontend/src/pages/PersonaForm.vue:91
 msgid "Following up consistently"
-msgstr ""
+msgstr "Assurer un suivi cohérent"
 
 #: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:47
 #: frontend/src/components/Settings/EmailTemplate/EmailTemplates.vue:83
@@ -3471,41 +3471,41 @@ msgstr "Script de formulaire mis à jour avec succès"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:225
 msgid "Form created"
-msgstr ""
+msgstr "Formulaire créé"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:256
 msgid "Form deleted"
-msgstr ""
+msgstr "Formulaire supprimé"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:299
 msgid "Form details"
-msgstr ""
+msgstr "Détails du formulaire"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:242
 msgid "Form published"
-msgstr ""
+msgstr "Formulaire publié"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:61
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:536
 msgid "Form title"
-msgstr ""
+msgstr "Titre du formulaire"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:242
 msgid "Form unpublished"
-msgstr ""
+msgstr "Formulaire dépublié"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1014
 msgid "Form updated"
-msgstr ""
+msgstr "Formulaire mis à jour"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:7
 #: frontend/src/components/Settings/Settings.vue:200
 msgid "Forms"
-msgstr ""
+msgstr "Formulaires"
 
 #: crm/api/form.py:246 crm/api/form.py:255 crm/api/form.py:440
 msgid "Forms can only map to: {0}"
-msgstr ""
+msgstr "Les formulaires peuvent seulement être mappés à : {0}"
 
 #. Name of a Workspace
 #: crm/fcrm/workspace/frappe_crm/frappe_crm.json
@@ -3621,11 +3621,11 @@ msgstr "Accéder au site web"
 
 #: frontend/src/pages/PersonaForm.vue:75
 msgid "Google Ads"
-msgstr ""
+msgstr "Annonces Google"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:174
 msgid "Grant Access"
-msgstr ""
+msgstr "Accorder l'accès"
 
 #: frontend/src/components/Filter.vue:392
 msgid "Greater than"
@@ -3658,11 +3658,11 @@ msgstr "Grouper par: "
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:857
 msgid "Guests can now select {0} records."
-msgstr ""
+msgstr "Les invités peuvent maintenant sélectionner les {0} enregistrements"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:164
 msgid "Guests can't see {0} records. Grant select access to list them publicly."
-msgstr ""
+msgstr "Les invités ne peuvent pas voir les {0} enregistrements. Accordez l'accès de sélection pour les lister publiquement"
 
 #: frontend/src/components/Telephony/TwilioCallUI.vue:63
 msgid "Hang Up"
@@ -3674,7 +3674,7 @@ msgstr "Aide"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:112
 msgid "Helper text under the field (optional)"
-msgstr ""
+msgstr "Texte d'aide sous le champ (optionnel)"
 
 #: frontend/src/components/CommunicationArea.vue:56
 msgid "Hi John, \\n\\nCan you please provide more details on this..."
@@ -3687,7 +3687,7 @@ msgstr "Caché"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:231
 msgid "Hidden required fields"
-msgstr ""
+msgstr "Champs requis masqués"
 
 #: frontend/src/components/Activities/Activities.vue:246
 msgid "Hide"
@@ -3753,21 +3753,21 @@ msgstr "Horaire"
 
 #: frontend/src/pages/PersonaForm.vue:56
 msgid "How are you managing your sales today?"
-msgstr ""
+msgstr "Comment gérez-vous votre vente aujourd'hui ?"
 
 #: frontend/src/pages/PersonaForm.vue:70
 msgid "How do new leads usually come to you?"
-msgstr ""
+msgstr "Comment les nouveaux prospects vous arrivent-ils généralement ?"
 
 #: frontend/src/pages/PersonaForm.vue:108
 msgid "How many people will use Frappe CRM?"
-msgstr ""
+msgstr "Combien de personnes utiliseront Frappe CRM ?"
 
 #. Description of the 'Timeline Timestamp Format' (Select) field in DocType
 #. 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "How timestamps are shown in the activity timeline for all users"
-msgstr ""
+msgstr "Comment les horodatages sont affichés dans la chronologie des activités pour tous les utilisateurs"
 
 #: frontend/src/pages/PersonaForm.vue:60
 msgid "HubSpot"
@@ -3833,7 +3833,7 @@ msgstr "Importer"
 
 #: frontend/src/pages/PersonaForm.vue:121
 msgid "Import my existing data"
-msgstr ""
+msgstr "Importer mes données existantes"
 
 #: frontend/src/components/Filter.vue:303
 #: frontend/src/components/Filter.vue:324
@@ -4021,11 +4021,11 @@ msgstr "Page invalide ou accès non autorisé"
 #: crm/integrations/api.py:176 crm/integrations/api.py:180
 #: crm/integrations/api.py:218
 msgid "Invalid recording URL"
-msgstr ""
+msgstr "URL d'enregistrement invalide"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:769
 msgid "Invalid site URL"
-msgstr ""
+msgstr "URL du site invalide"
 
 #: frontend/src/components/Settings/InviteUserPage.vue:187
 msgid "Invitations sent successfully"
@@ -4058,7 +4058,7 @@ msgstr "Inviter des utilisateurs"
 
 #: frontend/src/pages/PersonaForm.vue:125
 msgid "Invite my team"
-msgstr ""
+msgstr "Inviter mon équipe"
 
 #: frontend/src/components/Settings/InviteUserPage.vue:10
 msgid "Invite users to access CRM. Specify their roles to control access and permissions"
@@ -4130,7 +4130,7 @@ msgstr "Cela rendra obligatoires la \"Date de clôture attendue\" et la \"Valeur
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:405
 msgid "Item Group"
-msgstr ""
+msgstr "Groupe d'articles"
 
 #: crm/api/doc.py:803
 msgid "Items are required"
@@ -4165,11 +4165,11 @@ msgstr "John, Jane, Doe"
 
 #: frontend/src/pages/PersonaForm.vue:127
 msgid "Just exploring"
-msgstr ""
+msgstr "Juste explorer"
 
 #: frontend/src/pages/PersonaForm.vue:110
 msgid "Just me"
-msgstr ""
+msgstr "Seulement moi"
 
 #. Label of the kanban_tab (Tab Break) field in DocType 'CRM View Settings'
 #: crm/fcrm/doctype/crm_view_settings/crm_view_settings.json
@@ -4198,7 +4198,7 @@ msgstr "Paramètres Kanban"
 
 #: frontend/src/pages/PersonaForm.vue:93
 msgid "Keeping my pipeline organized"
-msgstr ""
+msgstr "Maintenir mon pipeline organisé"
 
 #. Label of the key (Data) field in DocType 'CRM Invitation'
 #. Label of the key (Data) field in DocType 'Facebook Lead Form Question'
@@ -4210,7 +4210,7 @@ msgstr "Clé"
 #. Label of the kind (Select) field in DocType 'CRM Product Sync Issue'
 #: crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json
 msgid "Kind"
-msgstr ""
+msgstr "Genre"
 
 #. Label of the label (Data) field in DocType 'CRM Dropdown Item'
 #. Label of the label (Data) field in DocType 'CRM View Settings'
@@ -4385,7 +4385,7 @@ msgstr "Synchronisation de prospects"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:311
 msgid "Lead and deal visibility will no longer be restricted by the reporting tree. Are you sure?"
-msgstr ""
+msgstr "La visibilité des prospects et des affaires ne sera plus restreinte par l'arbre de rapports. Êtes-vous sûr ?"
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:287
 msgid "Lead from call {0}"
@@ -4401,7 +4401,7 @@ msgstr "Synchronisation de prospects initiée."
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:289
 msgid "Lead sync source created successfully"
-msgstr ""
+msgstr "Source de synchronisation des prospects créée avec succès"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:175
 msgid "Lead sync source deleted successfully"
@@ -4469,7 +4469,7 @@ msgstr "Lien"
 
 #: crm/fcrm/doctype/crm_product/reconcile_job.py:79
 msgid "Linked Item {0} no longer exists"
-msgstr ""
+msgstr "L'article lié {0} n'existe plus"
 
 #. Label of the links (Table) field in DocType 'CRM Call Log'
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.json
@@ -4671,7 +4671,7 @@ msgstr "Responsable"
 
 #: frontend/src/pages/PersonaForm.vue:97
 msgid "Managing contacts and companies"
-msgstr ""
+msgstr "Gestion des contacts et des entreprises"
 
 #: frontend/src/components/Modals/DoctypeModal.vue:122
 #: frontend/src/data/document.js:68
@@ -4689,7 +4689,7 @@ msgstr "Champs obligatoires requis : {0}"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:141
 msgid "Mandatory if"
-msgstr ""
+msgstr "Obligatoire si"
 
 #. Option for the 'Telephony Medium' (Select) field in DocType 'CRM Call Log'
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.json
@@ -4698,7 +4698,7 @@ msgstr "Manuel"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:243
 msgid "Manual Sync"
-msgstr ""
+msgstr "Synchronisation manuelle"
 
 #. Label of the mapped_to_crm_field (Autocomplete) field in DocType 'Facebook
 #. Lead Form Question'
@@ -4710,7 +4710,7 @@ msgstr "Mappé au champ CRM"
 #: frontend/src/components/Settings/Forms/FormsList.vue:44
 #: frontend/src/components/Settings/Forms/FormsList.vue:105
 msgid "Maps to"
-msgstr ""
+msgstr "Correspond à"
 
 #: frontend/src/components/Notifications.vue:21
 #: frontend/src/pages/MobileNotification.vue:13
@@ -4792,7 +4792,7 @@ msgstr "Numéro de mobile manquant"
 #: frontend/src/components/Modals/DealModal.vue:201
 #: frontend/src/components/Modals/LeadModal.vue:144
 msgid "Mobile number should be a number"
-msgstr ""
+msgstr "Le numéro de téléphone mobile doit être un numéro"
 
 #. Option for the 'Weekly Off' (Select) field in DocType 'CRM Holiday List'
 #. Option for the 'Workday' (Select) field in DocType 'CRM Service Day'
@@ -4817,7 +4817,7 @@ msgstr "Plus d'options"
 
 #: frontend/src/pages/PersonaForm.vue:113
 msgid "More than 20"
-msgstr ""
+msgstr "Plus de 20"
 
 #: frontend/src/components/FieldLayoutEditor.vue:614
 msgid "Move Last Column to Next Section"
@@ -4845,11 +4845,11 @@ msgstr "Revenir à l'onglet précédent"
 
 #: frontend/src/components/Settings/Hierarchy/HierarchyRow.vue:160
 msgid "Move to top level"
-msgstr ""
+msgstr "Déplacer au niveau supérieur"
 
 #: frontend/src/components/Settings/Hierarchy/useDragDrop.js:100
 msgid "Move under {0}"
-msgstr ""
+msgstr "Déplacer sous {0}"
 
 #: frontend/src/components/Modals/ViewModal.vue:22
 msgid "My Open Deals"
@@ -4989,7 +4989,7 @@ msgstr "Un nouveau contact sera créé en fonction des détails de la personne"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:92
 msgid "New form"
-msgstr ""
+msgstr "Nouveau formulaire"
 
 #: frontend/src/components/Modals/ConvertToDealModal.vue:42
 msgid "New organization will be created based on the data in details section"
@@ -5012,7 +5012,7 @@ msgstr "Nouveau(elle) {0}"
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 #: frontend/src/components/Settings/GeneralSettings.vue:144
 msgid "Newest First"
-msgstr ""
+msgstr "Plus récent d'abord"
 
 #: frontend/src/components/Filter.vue:739
 msgid "Next 6 Months"
@@ -5041,7 +5041,7 @@ msgstr "L'année prochaine"
 
 #: frontend/src/components/Questionnaire.vue:95
 msgid "Next question"
-msgstr ""
+msgstr "Question suivante"
 
 #. Option for the 'Status' (Select) field in DocType 'CRM Call Log'
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.json
@@ -5125,7 +5125,7 @@ msgstr "Aucune entreprise trouvée sur le site indiqué"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:503
 msgid "No domains added. The embed will only work on this site until you add one."
-msgstr ""
+msgstr "Aucun domaine ajouté. L'incorporation ne fonctionnera que sur ce site jusqu'à ce que vous en ajoutiez un"
 
 #: frontend/src/components/Activities/EventArea.vue:75
 msgid "No events coming up. Create a new one to keep things on track."
@@ -5137,7 +5137,7 @@ msgstr "Aucune liste de congés trouvée"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:107
 msgid "No matching users"
-msgstr ""
+msgstr "Aucun utilisateur correspondant"
 
 #: frontend/src/components/Controls/MultiSelectEmailInput.vue:72
 #: frontend/src/components/Controls/MultiSelectUserInput.vue:72
@@ -5151,15 +5151,15 @@ msgstr "Aucun utilisateur trouvé"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:108
 msgid "No users in hierarchy"
-msgstr ""
+msgstr "Aucun utilisateur dans la hiérarchie"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:112
 msgid "No users match the current filter."
-msgstr ""
+msgstr "Aucun utilisateur ne correspond au filtre actuel"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:37
 msgid "No web forms yet"
-msgstr ""
+msgstr "Pas encore de formulaires web"
 
 #: frontend/src/components/ListViews/EmptyState.vue:37
 #: frontend/src/pages/MobileOrganization.vue:145
@@ -5215,7 +5215,7 @@ msgstr "Non synchronisé"
 
 #: crm/api/form.py:518
 msgid "Not a CRM form"
-msgstr ""
+msgstr "Pas un formulaire CRM"
 
 #: crm/fcrm/doctype/crm_deal/crm_deal.py:361
 msgid "Not allowed to add contact to Deal"
@@ -5383,7 +5383,7 @@ msgstr "Ancien parent"
 #: frontend/src/components/Settings/GeneralSettings.vue:123
 #: frontend/src/components/Settings/GeneralSettings.vue:143
 msgid "Oldest First"
-msgstr ""
+msgstr "Plus ancien d'abord"
 
 #. Option for the 'Type' (Select) field in DocType 'CRM Deal Status'
 #. Option for the 'Type' (Select) field in DocType 'CRM Lead Status'
@@ -5469,7 +5469,7 @@ msgstr "Opérateur"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:105
 msgid "Optional"
-msgstr ""
+msgstr "Optionnel"
 
 #: frontend/src/components/Kanban/KanbanView.vue:231
 #: frontend/src/components/Modals/CallLogDetailModal.vue:16
@@ -5489,13 +5489,13 @@ msgstr "Commandé par"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:111
 msgid "Order of activities, emails, comments and calls in the timeline"
-msgstr ""
+msgstr "Ordre des activités, e-mails, commentaires et appels dans la chronologie"
 
 #. Description of the 'Timeline Sort Order' (Select) field in DocType 'FCRM
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Order of activities, emails, comments and calls in the timeline for all users"
-msgstr ""
+msgstr "Ordre des activités, e-mails, commentaires et appels dans la chronologie pour tous les utilisateurs"
 
 #. Label of the organization (Link) field in DocType 'CRM Deal'
 #. Label of the organization_tab (Tab Break) field in DocType 'CRM Deal'
@@ -5535,7 +5535,7 @@ msgstr "Nom de l'Organisation"
 
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:580
 msgid "Organization or a primary Contact is required to create a customer"
-msgstr ""
+msgstr "Une organisation ou un contact principal est requis pour créer un client"
 
 #. Label of a shortcut in the Frappe CRM Workspace
 #: crm/fcrm/workspace/frappe_crm/frappe_crm.json
@@ -5546,7 +5546,7 @@ msgstr "Organisations"
 
 #: frontend/src/pages/PersonaForm.vue:124
 msgid "Organize my contacts"
-msgstr ""
+msgstr "Organiser mes contacts"
 
 #: frontend/src/pages/PersonaForm.vue:65 frontend/src/pages/PersonaForm.vue:82
 #: frontend/src/pages/PersonaForm.vue:103
@@ -5670,11 +5670,11 @@ msgstr "Personne"
 #. Label of the persona_captured (Check) field in DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Persona Captured"
-msgstr ""
+msgstr "Persona capturée"
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:120
 msgid "Personal Mobile Number"
-msgstr ""
+msgstr "Numéro de téléphone mobile personnel"
 
 #. Label of the phone (Data) field in DocType 'CRM Contacts'
 #. Label of the phone (Data) field in DocType 'CRM Lead'
@@ -5694,7 +5694,7 @@ msgstr "Numéros de téléphone"
 
 #: frontend/src/pages/PersonaForm.vue:78
 msgid "Phone calls"
-msgstr ""
+msgstr "Appels téléphoniques"
 
 #: frontend/src/components/ViewControls.vue:1120
 msgid "Pin View"
@@ -5719,7 +5719,7 @@ msgstr ""
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:104
 msgid "Placeholder"
-msgstr ""
+msgstr "Espace réservé"
 
 #: frontend/src/components/Activities/AudioPlayer.vue:176
 msgid "Playback Speed"
@@ -5751,7 +5751,7 @@ msgstr "Veuillez sélectionner un formulaire de génération de prospects avant 
 
 #: frontend/src/components/Settings/Sla/EditResponseResolutionModal.vue:88
 msgid "Please select a priority"
-msgstr ""
+msgstr "Veuillez sélectionner une priorité"
 
 #: frontend/src/components/Modals/ConvertToDealModal.vue:135
 msgid "Please select an existing contact"
@@ -5815,15 +5815,15 @@ msgstr "Préférences"
 
 #: frontend/src/components/Settings/PreferencesSettings.vue:115
 msgid "Preferences updated successfully"
-msgstr ""
+msgstr "Préférences mises à jour avec succès"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:31
 msgid "Preview"
-msgstr ""
+msgstr "Aperçu"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:530
 msgid "Preview again"
-msgstr ""
+msgstr "Aperçu à nouveau"
 
 #: frontend/src/components/PrimaryDropdownItem.vue:16
 #: frontend/src/pages/Deal.vue:215 frontend/src/pages/MobileDeal.vue:153
@@ -5872,11 +5872,11 @@ msgstr "Priorité"
 
 #: frontend/src/components/Settings/Sla/utils.js:125
 msgid "Priority {0}: priority name is required"
-msgstr ""
+msgstr "Priorité {0} : le nom de la priorité est requis"
 
 #: frontend/src/components/Settings/Sla/utils.js:133
 msgid "Priority {0}: response time is required"
-msgstr ""
+msgstr "Priorité {0} : le temps de réponse est requis"
 
 #. Label of the private (Check) field in DocType 'CRM Dashboard'
 #: crm/fcrm/doctype/crm_dashboard/crm_dashboard.json
@@ -5913,11 +5913,11 @@ msgstr "Nom du produit"
 #. Label of the sync_issues (Table) field in DocType 'ERPNext CRM Settings'
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.json
 msgid "Product Sync Issues"
-msgstr ""
+msgstr "Problèmes de synchronisation des produits"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:497
 msgid "Product sync started."
-msgstr ""
+msgstr "Synchronisation des produits lancée"
 
 #. Label of the products_tab (Tab Break) field in DocType 'CRM Deal'
 #. Label of the products (Table) field in DocType 'CRM Deal'
@@ -5958,11 +5958,11 @@ msgstr "Vues publiques"
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:28
 #: frontend/src/components/Settings/Forms/FormsList.vue:267
 msgid "Publish"
-msgstr ""
+msgstr "Publier"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:74
 msgid "Published"
-msgstr ""
+msgstr "Publié"
 
 #. Label of the qty (Float) field in DocType 'CRM Products'
 #: crm/fcrm/doctype/crm_products/crm_products.json
@@ -6010,7 +6010,7 @@ msgstr "Lire"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:148
 msgid "Read-only if"
-msgstr ""
+msgstr "Lecture seule si"
 
 #: crm/api/dashboard.py:940
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:30
@@ -6036,7 +6036,7 @@ msgstr "URL d'enregistrement"
 
 #: crm/integrations/api.py:184
 msgid "Recording URL is not allowed"
-msgstr ""
+msgstr "L'URL d'enregistrement n'est pas autorisée"
 
 #: crm/integrations/api.py:265
 msgid "Recording URL not found"
@@ -6044,11 +6044,11 @@ msgstr "URL d'enregistrement introuvable"
 
 #: frontend/src/components/Modals/CallLogDetailModal.vue:106
 msgid "Recording not available"
-msgstr ""
+msgstr "Enregistrement non disponible"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:348
 msgid "Redirect URL"
-msgstr ""
+msgstr "URL de redirection"
 
 #. Label of the reference_name (Dynamic Link) field in DocType 'CRM
 #. Notification'
@@ -6090,7 +6090,7 @@ msgstr "Le message WhatsApp référencé n'existe pas."
 
 #: frontend/src/pages/PersonaForm.vue:79
 msgid "Referrals"
-msgstr ""
+msgstr "Recommandations"
 
 #: frontend/src/components/ViewControls.vue:26
 #: frontend/src/components/ViewControls.vue:159
@@ -6120,7 +6120,7 @@ msgstr "Rejeter l'appel"
 #: frontend/src/components/Settings/GeneralSettings.vue:98
 #: frontend/src/components/Settings/GeneralSettings.vue:139
 msgid "Relative"
-msgstr ""
+msgstr "Relatif"
 
 #: frontend/src/components/Kanban/KanbanView.vue:169
 msgid "Reload Columns"
@@ -6180,19 +6180,19 @@ msgstr "Supprimer l'onglet"
 
 #: crm/api/user.py:173
 msgid "Remove this user from the sales hierarchy before changing their role to Sales User"
-msgstr ""
+msgstr "Retirez cet utilisateur de la hiérarchie commerciale avant de modifier son rôle en utilisateur commercial"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:195
 msgid "Remove {0} from the hierarchy. What should happen to their direct reports?"
-msgstr ""
+msgstr "Retirer {0} de la hiérarchie. Que doit-il advenir de ses rapports directs ?"
 
 #: frontend/src/components/Settings/Hierarchy/useRemoveNode.js:13
 msgid "Removed from hierarchy."
-msgstr ""
+msgstr "Retiré de la hiérarchie"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1130
 msgid "Rename"
-msgstr ""
+msgstr "Renommer"
 
 #. Label of the auto_reopen_on_new_communication (Check) field in DocType 'FCRM
 #. Settings'
@@ -6203,11 +6203,11 @@ msgstr "Rouvrir le Lead/l'opportunité lors d'une nouvelle communication"
 
 #: frontend/src/components/Modals/ViewModal.vue:45
 msgid "Replace with an icon..."
-msgstr ""
+msgstr "Remplacer par une icône..."
 
 #: frontend/src/pages/PersonaForm.vue:102
 msgid "Replacing my current CRM"
-msgstr ""
+msgstr "Remplacer mon CRM actuel"
 
 #: frontend/src/components/Activities/EmailArea.vue:30
 #: frontend/src/components/CommunicationArea.vue:9
@@ -6224,7 +6224,7 @@ msgstr "Signaler un problème"
 
 #: frontend/src/pages/PersonaForm.vue:101
 msgid "Reporting & forecasting"
-msgstr ""
+msgstr "Rapports et prévisions"
 
 #. Label of the reports_to (Link) field in DocType 'CRM Sales Hierarchy'
 #: crm/fcrm/doctype/crm_sales_hierarchy/crm_sales_hierarchy.json
@@ -6233,7 +6233,7 @@ msgstr "Rapporte à"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:84
 msgid "Required"
-msgstr ""
+msgstr "Requis"
 
 #. Option for the 'Type' (Select) field in DocType 'CRM Fields Layout'
 #: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.json
@@ -6242,7 +6242,7 @@ msgstr "Champs obligatoires"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:44
 msgid "Required by the record"
-msgstr ""
+msgstr "Requis par l'enregistrement"
 
 #: frontend/src/components/Controls/GridFieldsEditorModal.vue:83
 #: frontend/src/components/Controls/GridRowFieldsModal.vue:30
@@ -6302,7 +6302,7 @@ msgstr "Temps de réponse"
 
 #: frontend/src/components/Settings/Sla/EditResponseResolutionModal.vue:94
 msgid "Response time is required"
-msgstr ""
+msgstr "Le temps de réponse est requis"
 
 #. Description of the 'Rolling Responses' (Check) field in DocType 'CRM Service
 #. Level Agreement'
@@ -6332,15 +6332,15 @@ msgstr "Restaurer les données de démonstration"
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Restrict Lead and Deal visibility based on the Sales Hierarchy tree. Managers can see all records owned by or assigned to their reports."
-msgstr ""
+msgstr "Restreindre la visibilité des prospects et des affaires en fonction de l'arbre de la hiérarchie commerciale. Les responsables peuvent voir tous les enregistrements possédés par ou assignés à leurs rapports"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:20
 msgid "Restrict visibility of Leads and Deals based on a reporting tree."
-msgstr ""
+msgstr "Restreindre la visibilité des prospects et des affaires en fonction d'un arbre de rapports"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:65
 msgid "Restrict visibility using a reporting tree"
-msgstr ""
+msgstr "Restreindre la visibilité à l'aide d'un arbre de rapports"
 
 #: frontend/src/components/FilesUploader/FilesUploader.vue:45
 msgid "Retake"
@@ -6422,11 +6422,11 @@ msgstr "Lignes"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:248
 msgid "Run a manual bi-directional sync between ERPNext Items and CRM Products."
-msgstr ""
+msgstr "Exécuter une synchronisation bidirectionnelle manuelle entre les articles ERPNext et les produits CRM"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:251
 msgid "Run a manual synchronization to pull the latest Items from ERPNext."
-msgstr ""
+msgstr "Exécuter une synchronisation manuelle pour récupérer les derniers articles de ERPNext"
 
 #. Label of the sla_tab (Tab Break) field in DocType 'CRM Deal'
 #. Label of the sla (Link) field in DocType 'CRM Deal'
@@ -6465,27 +6465,27 @@ msgstr "Statut SLA"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:441
 msgid "SLA policy created"
-msgstr ""
+msgstr "Politique SLA créée"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:242
 msgid "SLA policy deleted"
-msgstr ""
+msgstr "Politique SLA supprimée"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:218
 msgid "SLA policy duplicated"
-msgstr ""
+msgstr "Politique SLA dupliquée"
 
 #: frontend/src/components/Settings/Sla/utils.js:106
 msgid "SLA policy name is required"
-msgstr ""
+msgstr "Le nom de la politique SLA est requis"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:264
 msgid "SLA policy status updated"
-msgstr ""
+msgstr "Statut de la politique SLA mis à jour"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:511
 msgid "SLA policy updated"
-msgstr ""
+msgstr "Politique SLA mise à jour"
 
 #: frontend/src/components/EmailEditor.vue:92
 msgid "SUBJECT"
@@ -6494,7 +6494,7 @@ msgstr "SUJET"
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:7
 #: frontend/src/components/Settings/Settings.vue:162
 msgid "Sales Hierarchy"
-msgstr ""
+msgstr "Hiérarchie commerciale"
 
 #. Name of a role
 #. Option for the 'Role' (Select) field in DocType 'CRM Invitation'
@@ -6581,11 +6581,11 @@ msgstr "Utilisateur des ventes"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:323
 msgid "Sales hierarchy disabled"
-msgstr ""
+msgstr "Hiérarchie commerciale désactivée"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:336
 msgid "Sales hierarchy enabled"
-msgstr ""
+msgstr "Hiérarchie commerciale activée"
 
 #: crm/api/dashboard.py:638
 msgid "Sales trend"
@@ -6608,7 +6608,7 @@ msgstr "Civilité"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:435
 msgid "Sandboxed in a frame. Simplest, but a fixed height and its own styling."
-msgstr ""
+msgstr "Encastré dans une cadre. Le plus simple, mais avec une hauteur fixe et son propre style"
 
 #. Option for the 'Weekly Off' (Select) field in DocType 'CRM Holiday List'
 #. Option for the 'Workday' (Select) field in DocType 'CRM Service Day'
@@ -6680,12 +6680,12 @@ msgstr "Rechercher un utilisateur"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:194
 msgid "Search fields…"
-msgstr ""
+msgstr "Rechercher des champs…"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:83
 #: frontend/src/components/Settings/Hierarchy/UserMultiSelect.vue:6
 msgid "Search users"
-msgstr ""
+msgstr "Rechercher des utilisateurs"
 
 #: frontend/src/components/FieldLayoutEditor.vue:454
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1127
@@ -6695,7 +6695,7 @@ msgstr "Section"
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:112
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:126
 msgid "Section title"
-msgstr ""
+msgstr "Titre de la section"
 
 #: frontend/src/components/SidePanelLayout.vue:156
 msgid "Select"
@@ -6707,7 +6707,7 @@ msgstr "Sélectionnez une entreprise"
 
 #: frontend/src/utils/fieldTransforms.js:113
 msgid "Select Country to see state options"
-msgstr ""
+msgstr "Sélectionnez un pays pour voir les options d'état"
 
 #: frontend/src/components/Settings/DashboardSettings.vue:89
 msgid "Select Currency"
@@ -6743,7 +6743,7 @@ msgstr "Sélectionner le jour ouvré"
 
 #: frontend/src/components/Settings/Telephony/TwilioSettings.vue:71
 msgid "Select a Twilio app for your CRM"
-msgstr ""
+msgstr "Sélectionnez une application Twilio pour votre CRM"
 
 #: frontend/src/components/Filter.vue:629
 msgid "Select a Value"
@@ -6751,7 +6751,7 @@ msgstr "Sélectionner une valeur"
 
 #: frontend/src/components/Questionnaire.vue:93
 msgid "Select all that apply"
-msgstr ""
+msgstr "Sélectionnez tout ce qui s'applique"
 
 #: frontend/src/components/Filter.vue:631
 msgid "Select an Option"
@@ -6759,14 +6759,14 @@ msgstr "Sélectionner une option"
 
 #: frontend/src/components/Modals/ViewModal.vue:46
 msgid "Select an icon..."
-msgstr ""
+msgstr "Sélectionnez une icône..."
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:589
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:597
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1149
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1159
 msgid "Select an option"
-msgstr ""
+msgstr "Sélectionnez une option"
 
 #: frontend/src/components/Settings/AssignmentRules/AssigneeRules.vue:84
 msgid "Select the assignees for {0}."
@@ -6814,11 +6814,11 @@ msgstr "Envoyer un e-mail"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:381
 msgid "Send people straight to the hosted form."
-msgstr ""
+msgstr "Envoyer les gens directement vers le formulaire hébergé"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:354
 msgid "Send visitors here after they submit. Leave blank to show the success message."
-msgstr ""
+msgstr "Envoyer les visiteurs ici après la soumission. Laissez vide pour afficher le message de réussite"
 
 #: frontend/src/components/CommunicationArea.vue:297
 msgid "Sending comment..."
@@ -6873,11 +6873,11 @@ msgstr "Définir la localisation"
 
 #: crm/api/form.py:394
 msgid "Set a default value before publishing for: {0}"
-msgstr ""
+msgstr "Définir une valeur par défaut avant la publication pour : {0}"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:284
 msgid "Set a default value for each field to publish this form."
-msgstr ""
+msgstr "Définir une valeur par défaut pour chaque champ pour publier ce formulaire"
 
 #: frontend/src/components/FilesUploader/FilesUploader.vue:60
 msgid "Set all as private"
@@ -6907,7 +6907,7 @@ msgstr "Définir la localisation…"
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Set once the first admin completes the onboarding persona questionnaire"
-msgstr ""
+msgstr "Défini une fois que le premier administrateur a rempli le questionnaire de personnalité d'intégration"
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:102
 msgid "Set the Exotel number to be used for outgoing calls."
@@ -6923,7 +6923,7 @@ msgstr "Définir le nom de votre marque. Apparaît dans la barre latérale gauch
 
 #: frontend/src/pages/PersonaForm.vue:123
 msgid "Set up my sales pipeline"
-msgstr ""
+msgstr "Configurer mon pipeline commercial"
 
 #: frontend/src/components/Settings/Sla/SlaHolidays.vue:9
 msgid "Set working days, hours, and holidays by selecting a predefined schedule or creating a new one"
@@ -6943,7 +6943,7 @@ msgstr "Paramètre activé avec succès"
 
 #: frontend/src/components/Settings/emailConfig.js:158
 msgid "Setting up Frappe Mail requires you to have an API key and API secret for your email account. Read more"
-msgstr ""
+msgstr "La configuration de Frappe Mail nécessite que vous disposiez d'une clé API et d'un secret API pour votre compte e-mail. En savoir plus"
 
 #: frontend/src/components/Settings/emailConfig.js:104
 msgid "Setting up GMail requires you to enable two factor authentication and app specific passwords. Read more"
@@ -6971,7 +6971,7 @@ msgstr "La configuration de Yandex nécessite d'activer l'authentification à de
 
 #: frontend/src/components/Settings/GeneralSettings.vue:161
 msgid "Setting updated successfully"
-msgstr ""
+msgstr "Paramètre mis à jour avec succès"
 
 #. Label of the defaults_tab (Tab Break) field in DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
@@ -7002,7 +7002,7 @@ msgstr "Configurer votre mot de passe"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:716
 msgid "Share"
-msgstr ""
+msgstr "Partager"
 
 #: frontend/src/components/Activities/Activities.vue:246
 msgid "Show"
@@ -7029,11 +7029,11 @@ msgstr "Afficher l'aperçu"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:86
 msgid "Show timestamps in the activity timeline as relative time (5 mins ago) or an exact date & time"
-msgstr ""
+msgstr "Afficher les horodatages dans la chronologie des activités en heure relative (il y a 5 minutes) ou en date et heure exactes"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:341
 msgid "Shown after a successful submission"
-msgstr ""
+msgstr "Affiché après une soumission réussie"
 
 #. Option for the 'Type' (Select) field in DocType 'CRM Fields Layout'
 #: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.json
@@ -7077,15 +7077,15 @@ msgstr "Connexion au site validée"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:474
 msgid "Sites where this form may be embedded, one per line. Browsers block the iframe on any site not listed here."
-msgstr ""
+msgstr "Sites où ce formulaire peut être incorporé, un par ligne. Les navigateurs bloquent l'iframe sur tout site non répertorié ici"
 
 #: frontend/src/components/Questionnaire.vue:97
 msgid "Skip for now"
-msgstr ""
+msgstr "Ignorer pour l'instant"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:451
 msgid "Some error occurred while creating SLA policy"
-msgstr ""
+msgstr "Une erreur est survenue lors de la création de la politique SLA"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:497
 msgid "Some error occurred while renaming SLA policy"
@@ -7105,7 +7105,7 @@ msgstr "Une erreur s'est produite lors de la mise à jour de la règle d'attribu
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:512
 msgid "Some users could not be added"
-msgstr ""
+msgstr "Certains utilisateurs n'ont pas pu être ajoutés"
 
 #: frontend/src/components/Settings/Users.vue:282
 #: frontend/src/components/Settings/Users.vue:295
@@ -7157,7 +7157,7 @@ msgstr "Espaceur"
 
 #: frontend/src/pages/PersonaForm.vue:59
 msgid "Spreadsheets"
-msgstr ""
+msgstr "Feuilles de calcul"
 
 #: crm/api/dashboard.py:790 crm/api/dashboard.py:848
 msgid "Stage"
@@ -7197,11 +7197,11 @@ msgstr "Heure de début"
 
 #: frontend/src/components/Settings/Sla/utils.js:160
 msgid "Start date cannot be after end date"
-msgstr ""
+msgstr "La date de début ne peut pas être après la date de fin"
 
 #: frontend/src/components/Settings/Sla/WorkDayModal.vue:186
 msgid "Start time is required"
-msgstr ""
+msgstr "L'heure de début est requise"
 
 #: frontend/src/pages/Welcome.vue:21
 msgid "Start with sample 10 leads"
@@ -7246,7 +7246,7 @@ msgstr "None est requis"
 
 #: frontend/src/components/Questionnaire.vue:91
 msgid "Step {0} of {1}"
-msgstr ""
+msgstr "Étape {0} sur {1}"
 
 #. Label of the subdomain (Data) field in DocType 'CRM Exotel Settings'
 #: crm/fcrm/doctype/crm_exotel_settings/crm_exotel_settings.json
@@ -7271,15 +7271,15 @@ msgstr "Sujet : {0}"
 #: crm/api/form.py:356
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:646
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:332
 msgid "Submit button label"
-msgstr ""
+msgstr "Étiquette du bouton Soumettre"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:339
 msgid "Success message"
-msgstr ""
+msgstr "Message de réussite"
 
 #. Option for the 'Weekly Off' (Select) field in DocType 'CRM Holiday List'
 #. Option for the 'Workday' (Select) field in DocType 'CRM Service Day'
@@ -7306,7 +7306,7 @@ msgstr "Basculer entre les comptes de messagerie sortants lors de l'envoi d'e-ma
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1379
 msgid "Switching to {0} will remove {1} field(s) that don't exist on {0}. This can't be undone."
-msgstr ""
+msgstr "Passer à {0} supprimera {1} champ(s) qui n'existent pas sur {0}. Cela ne peut pas être annulé"
 
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.js:6
 #: frontend/src/components/Settings/ERPNextSettings.vue:263
@@ -7480,7 +7480,7 @@ msgstr "Nom de la Région"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:528
 msgid "Thank you!"
-msgstr ""
+msgstr "Merci !"
 
 #: crm/fcrm/doctype/crm_service_level_agreement/crm_service_level_agreement.py:72
 msgid "The Condition '{0}' is invalid: {1}"
@@ -7511,7 +7511,7 @@ msgstr "Il ne peut y avoir qu'une seule priorité par défaut dans la table des 
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:236
 msgid "These fields aren't shown to users. Default values are used when the form is submitted."
-msgstr ""
+msgstr "Ces champs ne sont pas affichés aux utilisateurs. Les valeurs par défaut sont utilisées lors de la soumission du formulaire"
 
 #: frontend/src/components/Filter.vue:715
 msgid "This Month"
@@ -7539,11 +7539,11 @@ msgstr "Ce champ est obligatoire"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:368
 msgid "This form isn’t published yet. Turn on Publish to make the link and embeds live."
-msgstr ""
+msgstr "Ce formulaire n'est pas encore publié. Activez la publication pour rendre le lien et les incorporations actifs"
 
 #: frontend/src/pages/PersonaForm.vue:58
 msgid "This is my first CRM"
-msgstr ""
+msgstr "C'est mon premier CRM"
 
 #: crm/www/crm.py:62
 msgid "This method is only meant for developer mode"
@@ -7588,21 +7588,21 @@ msgstr "Format de l'heure"
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Timeline Sort Order"
-msgstr ""
+msgstr "Ordre de tri de la chronologie"
 
 #. Label of the crm_timeline_timestamp_format (Select) field in DocType 'FCRM
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Timeline Timestamp Format"
-msgstr ""
+msgstr "Format d'horodatage de la chronologie"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:107
 msgid "Timeline sort order"
-msgstr ""
+msgstr "Ordre de tri de la chronologie"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:82
 msgid "Timeline timestamp format"
-msgstr ""
+msgstr "Format d'horodatage de la chronologie"
 
 #: frontend/src/components/Filter.vue:383
 msgid "Timespan"
@@ -7628,7 +7628,7 @@ msgstr "Champ Titre"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:212
 msgid "Title and route are required"
-msgstr ""
+msgstr "Le titre et l'itinéraire sont requis"
 
 #. Label of the to (Data) field in DocType 'CRM Status Change Log'
 #: crm/fcrm/doctype/crm_status_change_log/crm_status_change_log.json
@@ -7689,7 +7689,7 @@ msgstr "Trop de tentatives échouées. Veuillez réessayer après un moment."
 
 #: crm/integrations/api.py:247
 msgid "Too many redirects while fetching recording"
-msgstr ""
+msgstr "Trop de redirections lors de la récupération de l'enregistrement"
 
 #. Label of the total (Currency) field in DocType 'CRM Deal'
 #. Label of the total (Currency) field in DocType 'CRM Lead'
@@ -7824,7 +7824,7 @@ msgstr "Type"
 #: frontend/src/components/Controls/MultiSelectEmailInput.vue:73
 #: frontend/src/components/Controls/MultiSelectUserInput.vue:73
 msgid "Type an email address to invite"
-msgstr ""
+msgstr "Tapez une adresse e-mail pour inviter"
 
 #: frontend/src/components/Activities/WhatsAppBox.vue:101
 msgid "Type your message here..."
@@ -7870,7 +7870,7 @@ msgstr "Dissocier et supprimer"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:214
 msgid "Unlink & Delete {0} Users"
-msgstr ""
+msgstr "Délier et supprimer {0} utilisateurs"
 
 #: frontend/src/components/BulkDeleteLinkedDocModal.vue:35
 msgid "Unlink & Delete {0} items"
@@ -7890,7 +7890,7 @@ msgstr "Dissocier {0} élément(s)"
 
 #: crm/api/form.py:413 crm/api/form.py:427
 msgid "Unnamed field"
-msgstr ""
+msgstr "Champ sans nom"
 
 #: frontend/src/components/ViewControls.vue:1120
 msgid "Unpin View"
@@ -7898,7 +7898,7 @@ msgstr "Désépingler la vue"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:267
 msgid "Unpublish"
-msgstr ""
+msgstr "Dépublier"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:570
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1021
@@ -7965,7 +7965,7 @@ msgstr "Mettre à jour {0} enregistrements"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:470
 msgid "Updated reports to"
-msgstr ""
+msgstr "Rapports mis à jour à"
 
 #: frontend/src/components/Controls/ImageUploader.vue:15
 #: frontend/src/components/FilesUploader/FilesUploader.vue:77
@@ -8003,7 +8003,7 @@ msgstr "Envoi de {0}%"
 
 #: crm/fcrm/doctype/crm_product/crm_product.py:45
 msgid "Use ERPNext to Create Products"
-msgstr ""
+msgstr "Utiliser ERPNext pour créer des produits"
 
 #. Label of the user (Link) field in DocType 'CRM Dashboard'
 #. Label of the user (Link) field in DocType 'CRM Sales Hierarchy'
@@ -8031,7 +8031,7 @@ msgstr "Nom d&#39;utilisateur"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:506
 msgid "User added to hierarchy"
-msgstr ""
+msgstr "Utilisateur ajouté à la hiérarchie"
 
 #: crm/api/user.py:203
 msgid "User {0} cannot be removed as it has a Role Profile assigned to it."
@@ -8047,7 +8047,7 @@ msgstr "L'utilisateur {0} a été retiré des rôles CRM."
 
 #: crm/fcrm/doctype/crm_sales_hierarchy/crm_sales_hierarchy.py:43
 msgid "User {0} is already mapped to hierarchy node {1}."
-msgstr ""
+msgstr "L'utilisateur {0} est déjà mappé au nœud de hiérarchie {1}"
 
 #: frontend/src/components/Modals/AddExistingUserModal.vue:20
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:603
@@ -8100,7 +8100,7 @@ msgstr "Nom de la vue"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:9
 msgid "View documentation"
-msgstr ""
+msgstr "Afficher la documentation"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:680
 msgid "Views"
@@ -8108,11 +8108,11 @@ msgstr "Vues"
 
 #: frontend/src/components/Settings/Forms/FieldCard.vue:134
 msgid "Visible if"
-msgstr ""
+msgstr "Visible si"
 
 #: frontend/src/pages/PersonaForm.vue:80
 msgid "Walk-ins"
-msgstr ""
+msgstr "Visites spontanées"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:677
 msgid "Web Form"
@@ -8137,7 +8137,7 @@ msgstr "Site web"
 
 #: frontend/src/pages/PersonaForm.vue:73
 msgid "Website forms"
-msgstr ""
+msgstr "Formulaires de site web"
 
 #. Option for the 'Weekly Off' (Select) field in DocType 'CRM Holiday List'
 #. Option for the 'Workday' (Select) field in DocType 'CRM Service Day'
@@ -8159,7 +8159,7 @@ msgstr "Message de bienvenue"
 
 #: frontend/src/pages/PersonaForm.vue:132
 msgid "Welcome to Frappe CRM"
-msgstr ""
+msgstr "Bienvenue dans Frappe CRM"
 
 #: frontend/src/pages/Welcome.vue:4
 msgid "Welcome {0}, lets add your first lead"
@@ -8167,11 +8167,11 @@ msgstr "Bienvenue {0}, ajoutons votre premier prospect"
 
 #: frontend/src/pages/PersonaForm.vue:87
 msgid "What are your biggest challenges with sales today?"
-msgstr ""
+msgstr "Quels sont vos plus grands défis avec les ventes aujourd'hui ?"
 
 #: frontend/src/pages/PersonaForm.vue:118
 msgid "What would you like to accomplish first?"
-msgstr ""
+msgstr "Qu'aimeriez-vous accomplir en premier ?"
 
 #. Option for the 'Type' (Select) field in DocType 'CRM Notification'
 #: crm/fcrm/doctype/crm_notification/crm_notification.json
@@ -8395,7 +8395,7 @@ msgstr "Commenter"
 
 #: frontend/src/components/Settings/Forms/FormsList.vue:117
 msgid "contact-sales"
-msgstr ""
+msgstr "contacter-service-commercial"
 
 #: crm/api/activities.py:53
 msgid "converted the lead to this deal"
@@ -8499,7 +8499,7 @@ msgstr "ici"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:349
 msgid "https://example.com/thank-you"
-msgstr ""
+msgstr "https://example.com/merci"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:431
 msgid "iframe"
@@ -8567,11 +8567,11 @@ msgstr "dans {0} ans"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:561
 msgid "item"
-msgstr ""
+msgstr "article"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:561
 msgid "items"
-msgstr ""
+msgstr "articles"
 
 #: frontend/src/components/Modals/AddExistingUserModal.vue:29
 msgid "john@doe.com"
@@ -8641,11 +8641,11 @@ msgstr "privé"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:565
 msgid "product"
-msgstr ""
+msgstr "produit"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:565
 msgid "products"
-msgstr ""
+msgstr "produits"
 
 #: frontend/src/components/Activities/AttachmentArea.vue:97
 msgid "public"
@@ -8688,7 +8688,7 @@ msgstr "demain"
 #. Option for the 'Kind' (Select) field in DocType 'CRM Product Sync Issue'
 #: crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json
 msgid "unlinked_orphan"
-msgstr ""
+msgstr "Orphelin non lié"
 
 #: crm/api/activities.py:109 crm/api/activities.py:250
 msgid "value"
@@ -8731,15 +8731,15 @@ msgstr "{0} vous a attribué un(e) {1} {2}"
 
 #: crm/api/form.py:413
 msgid "{0} can't be collected by a form"
-msgstr ""
+msgstr "{0} ne peut pas être collecté par un formulaire"
 
 #: crm/api/form.py:427
 msgid "{0} can't be set as a hidden field"
-msgstr ""
+msgstr "{0} ne peut pas être défini comme un champ masqué"
 
 #: crm/api/form.py:408
 msgid "{0} can't be used as a layout break"
-msgstr ""
+msgstr "{0} ne peut pas être utilisé comme une rupture de mise en page"
 
 #: frontend/src/utils/index.js:158
 msgid "{0} d"
@@ -8771,7 +8771,7 @@ msgstr "None est requis"
 
 #: crm/api/form.py:276
 msgid "{0} isn't a linkable field on a CRM form."
-msgstr ""
+msgstr "{0} n'est pas un champ linkable sur un formulaire CRM"
 
 #: frontend/src/utils/index.js:151
 msgid "{0} m"
@@ -8787,11 +8787,11 @@ msgstr "Il y a {0} mois"
 
 #: frontend/src/components/Settings/ERPNextSettings.vue:569
 msgid "{0} not yet synced"
-msgstr ""
+msgstr "{0} pas encore synchronisé"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:507
 msgid "{0} users added to hierarchy"
-msgstr ""
+msgstr "{0} utilisateurs ajoutés à la hiérarchie"
 
 #: frontend/src/utils/index.js:160
 msgid "{0} w"
@@ -8812,7 +8812,7 @@ msgstr "Il y a {0} ans"
 #: frontend/src/components/Questionnaire.vue:92
 #, python-format
 msgid "{0}% complete"
-msgstr ""
+msgstr "{0} % complété"
 
 #: frontend/src/utils/scriptHelpers.js:43
 msgid "⚠️ Avoid using \"trigger\" as a field name — it conflicts with the built-in trigger() method."

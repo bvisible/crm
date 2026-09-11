@@ -16,7 +16,27 @@ Tooling: `bvisible/neoffice-ci` → `scripts/fork_markers.py`
 Fork `bvisible/crm`, branch `version-15`. Upstream `frappe/crm` (default branch `develop`;
 we track `main`).
 
-### Base and attribution — measured 2026-09-04
+### Merge record — upstream v1.83.0, 2026-09-11
+
+**BASE is now `52c500d6bdac3cd51553f95cfae9c7a940d99f1a`** — upstream `main` at **v1.83.0**
+(*"chore(release): Bumped to Version 1.83.0"*, 2026-09-02), merged by `476f16a4`. It replaces the
+v1.56.3 base described below: 2481 upstream commits, 12 conflicting files — exactly the forecast.
+
+Measure the next merge against this base, and **in a full clone**. The clone `bench get-app`
+leaves on an instance is shallow: there `git merge-base` fails and the fork looks like a copy
+with no shared history. It is not — the full clone finds the base at once.
+
+| | |
+|---|---|
+| **Absorbed upstream — our patch removed** | `frontend/src/socket.js` and `frontend/src/main.js`: upstream no longer imports `sites/common_site_config.json` at module scope (it reads `window.socketio_port`), so `initSocket()` is synchronous again and both files are upstream verbatim. The `build.rollupOptions.external` block of `frontend/vite.config.js` that shielded that import went with them: nothing imports those paths any more. |
+| **Deleted upstream — our change had nothing left to change** | `frontend/src/telemetry.ts` (telemetry moved into frappe-ui), `frontend/src/components/Apps.vue` (app switcher rewritten; the NeoCockpit sidebar replaces it anyway), `frontend/components.d.ts` (generated, no longer committed). |
+| **Kept, still marked** | The NeoCockpit sidebar in `frontend/src/components/Layouts/DesktopLayout.vue` (upstream's `bg-surface-base` taken alongside), `sourcemap: false`, the build guard in `package.json`, `NODE_OPTIONS` + `cross-env` in `frontend/package.json`. `frappe-ui` is now pinned exactly by upstream itself (`1.0.0-beta.29`). |
+| **New shims — our frappe fork is behind version-15** | crm v1.83.0 uses five symbols our frappe fork lacks: `frappe.model.delete_doc.get_linked_docs` / `get_dynamic_linked_docs`, `frappe.desk.form.assign_to._add` and the method `User._reset_password` all exist on `frappe/frappe` version-15 but not at our v15.89.0 base; `frappe.utils.telemetry.is_pulse_enabled` is genuinely v16. Each call site sits behind a `try`/`except` import or a `getattr` fallback, marked, with the condition to drop it. **The day the frappe fork is brought up to current version-15, delete these shims — do not reimplement the functions here.** Files: `crm/api/doc.py`, `crm/fcrm/doctype/crm_deal/crm_deal.py`, `crm/fcrm/doctype/crm_lead/crm_lead.py`, `crm/www/crm.py`, `crm/api/__init__.py`, `crm/telemetry.py`. |
+| **Neutralised** | `setup_wizard_complete = "crm.demo.api.create_demo_data"` in `crm/hooks.py`: it seeds demo users plus leads, deals, notes, tasks and call logs when the Setup Wizard finishes. On a customer site seeded fiction is indistinguishable from real data. Marked in place. |
+| **French catalogue** | Upstream's `crm/locale/fr.po` fills 763 msgids we did not have, but says "Leads" and "Opportunité" where the product says "Prospects" and "Affaire". Both catalogues were aligned on the v1.83.0 `crm/locale/main.pot` and merged ours-first (`msgcat --use-first`, then `msgmerge --no-fuzzy-matching`); a plain `msgmerge` would have turned 488 entries fuzzy. The msgids nobody had were translated and checked mechanically (placeholders, identities, tutoiement, glossary). Result: 1767 translated, 6 left empty on purpose (brand names, `iframe`, `Exact`), no fuzzy entry, no new `msgstr == msgid`. Trap: `{0}% complete` carries a `python-format` flag in the POT (`% c` reads as a printf directive), so its msgstr must keep `% c` — « {0} % complété ». |
+| **How it was verified** | `yarn build`; every crm module imported on osiris (231, none failing); every `frappe.*` attribute chain crm uses resolved against our fork (159, none missing); fleet CI, 330 tests OK. The CI is what caught `User._reset_password` — a method on a returned document, which neither probe could see. |
+
+### Base and attribution — measured 2026-09-04 (the v1.56.3 base, before the merge above)
 
 | | |
 |---|---|
@@ -81,7 +101,7 @@ two files differ by that one comment block; the next `yarn build` makes them ide
   `frontend/src/socket.js`, where upstream had no final newline and we added one; that is
   marked in place.
 
-### Merge forecast — BASE..`upstream/main` touches 651 files, BASE..`upstream/develop` 731
+### Merge forecast for the v1.83.0 merge (record) — BASE..`upstream/main` touched 651 files, BASE..`upstream/develop` 731
 
 Changed on **both** sides (identical list for `main` and `develop`), i.e. where conflicts are
 expected — the 149 committed build files aside:
