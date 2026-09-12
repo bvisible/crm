@@ -81,6 +81,14 @@ two files differ by that one comment block; the next `yarn build` makes them ide
 
 **Never hand-edit `crm/www/crm.html` or anything under `crm/public/frontend/`.**
 
+The guard reads the table below and skips what it lists. Without it, every rebuild went red:
+the bot's copy changes the asset hashes on the `<script>` line of `crm/www/crm.html`, a hunk
+no marker can reach (seen 2026-09-12 on the `#366` pushes).
+
+| Artifact | Why it carries no marker of its own |
+|---|---|
+| `crm/www/crm.html` | copied from the vite build by the build bot on every frontend change; its asset hashes change each time, and a hand-written marker would be overwritten. The marker lives in `frontend/index.html`. |
+
 ### Hunks a comment cannot reach
 
 | Hunk | Why | What to do |
