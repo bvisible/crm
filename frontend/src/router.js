@@ -6,6 +6,12 @@ import { viewsStore } from '@/stores/views'
 
 let personaChecked = false
 export const PERSONA_DONE_KEY = 'crm_persona_captured'
+//// Neoffice — Frappe v15 has no pulse telemetry: `frappe.utils.telemetry.pulse` arrived
+//// with v16, so the boot_config call below answered 417 on every CRM load (#366). The
+//// wizard only feeds that telemetry, so it is skipped outright — exactly what the failing
+//// call already led to through the router's catch. Set it to true, or drop it, once the
+//// fleet runs Frappe v16.
+const PULSE_TELEMETRY_AVAILABLE = false
 
 async function shouldCapturePersona() {
   // Client-side flag guards against re-prompting if the server persist failed.
@@ -15,6 +21,8 @@ async function shouldCapturePersona() {
     field: 'persona_captured',
   })
   if (captured) return false
+  //// Neoffice — see PULSE_TELEMETRY_AVAILABLE above (#366).
+  if (!PULSE_TELEMETRY_AVAILABLE) return false
   // The wizard only feeds telemetry; skip it entirely if the user opted out.
   const { enabled } =
     (await call('frappe.utils.telemetry.pulse.client.boot_config')) || {}
