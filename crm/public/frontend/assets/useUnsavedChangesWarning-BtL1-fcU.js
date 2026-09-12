@@ -1,0 +1,1 @@
+import{a as o,b7 as a}from"./index-Dnnq02ft.js";function u(r){function e(n){r()&&(n.preventDefault(),n.returnValue=!0)}o(()=>addEventListener("beforeunload",e)),a(()=>removeEventListener("beforeunload",e))}export{u};
