@@ -248,6 +248,14 @@ before_tests = "crm.tests.before_tests"
 # "frappe.desk.doctype.event.event.get_events": "crm.event.get_events"
 # }
 #
+# //// Neoffice — frappe.utils.telemetry.pulse is a Frappe v16 module our v15 fork does not
+# //// have: frappe-ui's telemetryPlugin called its boot_config on every CRM load and got 417
+# //// (#366). crm.telemetry.pulse_boot_config answers instead, with pulse disabled. Drop this
+# //// once the fleet runs Frappe v16.
+override_whitelisted_methods = {
+	"frappe.utils.telemetry.pulse.client.boot_config": "crm.telemetry.pulse_boot_config",
+}
+#
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps

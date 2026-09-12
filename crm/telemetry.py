@@ -20,6 +20,17 @@ except ImportError:
 
 
 
+# //// Neoffice — added (no upstream equivalent). Stands in for
+# //// frappe.utils.telemetry.pulse.client.boot_config, a Frappe v16 endpoint our v15 fork
+# //// does not have: frappe-ui's telemetryPlugin (frontend/src/main.js) calls it on every
+# //// CRM load, and each call answered 417 (#366). hooks.py routes the method here through
+# //// override_whitelisted_methods. Pulse is reported disabled, so frappe-ui never loads its
+# //// external telemetry script either. Drop this and the hook once the fleet runs v16.
+@frappe.whitelist(allow_guest=True)
+def pulse_boot_config() -> dict:
+	return {"enabled": False}
+
+
 def capture_feature_state():
 	"""Emit one `crm_feature_state` event per site per day."""
 	if not is_pulse_enabled():
