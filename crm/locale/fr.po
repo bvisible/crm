@@ -1,3 +1,6 @@
+# //// Neoffice — HTML entities (&#39; &quot; &amp;) removed from the French msgstr:
+# //// an old translation import left them, and Frappe escapes a label itself, so
+# //// "Journal d&#39;accès" showed literally. Keep them out on upstream merges.
 msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
@@ -735,7 +738,7 @@ msgstr "Les jours d'affectation sont obligatoires"
 #: frontend/src/components/Layouts/AppSidebar.vue:696
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRulesList.vue:16
 msgid "Assignment Rule"
-msgstr "Règle d&#39;assignation"
+msgstr "Règle d'assignation"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRules.vue:7
 #: frontend/src/components/Settings/Settings.vue:190
@@ -4308,7 +4311,7 @@ msgstr "La semaine dernière"
 
 #: frontend/src/components/Filter.vue:695
 msgid "Last Year"
-msgstr "L&#39;année dernière"
+msgstr "L'année dernière"
 
 #. Label of the last_name (Data) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
@@ -7660,7 +7663,7 @@ msgstr "Type de"
 #. Label of the to_user (Link) field in DocType 'CRM Notification'
 #: crm/fcrm/doctype/crm_notification/crm_notification.json
 msgid "To User"
-msgstr "À l&#39;utilisateur"
+msgstr "À l'utilisateur"
 
 #: frontend/src/components/Settings/EmailEdit.vue:121
 msgid "To know more about setting up email accounts, click"
@@ -8027,7 +8030,7 @@ msgstr "Gestion des utilisateurs"
 #. Label of the user_name (Data) field in DocType 'CRM Telephony Agent'
 #: crm/fcrm/doctype/crm_telephony_agent/crm_telephony_agent.json
 msgid "User Name"
-msgstr "Nom d&#39;utilisateur"
+msgstr "Nom d'utilisateur"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:506
 msgid "User added to hierarchy"
