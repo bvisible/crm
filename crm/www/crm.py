@@ -14,6 +14,19 @@ no_cache = 1
 def get_context():
 	from crm.api import check_app_permission
 
+	# //// Neoffice — a visitor who is not signed in (a session that expired, a link opened in another browser) goes to
+	# //// the login page and comes back here. Upstream answers « not permitted » to a Guest as to a portal account: a
+	# //// dead end, where Helpdesk, Drive and the wiki send the visitor to sign in. A signed-in account without access
+	# //// still gets the refusal below.
+	if frappe.session.user == "Guest":
+		from urllib.parse import quote
+
+		path = frappe.request.path if getattr(frappe, "request", None) is not None else "/crm"
+		frappe.local.flags.redirect_location = "/login?redirect-to=" + quote(path)
+		redirect = frappe.Redirect()
+		redirect.http_status_code = 302
+		raise redirect
+
 	if not check_app_permission():
 		frappe.throw(_("You do not have permission to access Frappe CRM"), frappe.PermissionError)
 
