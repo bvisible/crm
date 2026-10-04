@@ -689,9 +689,11 @@ msgstr "Attribuer À"
 msgid "Assign To Me"
 msgstr "M'affecter"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:430
 msgid "Assign condition is required"
-msgstr "Attribuer None est requis"
+msgstr "La condition d'attribution est obligatoire"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:433
 msgid "Assign conditions are invalid"
@@ -777,9 +779,11 @@ msgstr "Règle d'attribution mise à jour"
 msgid "Assignment rule {0} updated"
 msgstr "Règle d'attribution {0} mise à jour"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Controls/GridFieldsEditorModal.vue:189
 msgid "At least one field is required"
-msgstr "None est requis"
+msgstr "Au moins un champ est obligatoire"
 
 #: frontend/src/components/Settings/Sla/utils.js:116
 msgid "At least one priority is required"
@@ -1755,12 +1759,14 @@ msgstr "Contenu"
 msgid "Content Type"
 msgstr "Type de Contenu"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:155
 #: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:159
 #: frontend/src/components/Settings/EmailTemplate/NewEmailTemplate.vue:162
 #: frontend/src/components/Settings/EmailTemplate/NewEmailTemplate.vue:166
 msgid "Content is required"
-msgstr "None est requis"
+msgstr "Le contenu est obligatoire"
 
 #: frontend/src/components/Settings/DefaultsSettings.vue:75
 msgid "Controls how numbers are displayed (e.g., commas, decimal separators)"
@@ -2348,9 +2354,11 @@ msgstr "Données de démonstration restaurées avec succès."
 msgid "Description"
 msgstr "Description"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:421
 msgid "Description is required"
-msgstr "None est requis"
+msgstr "La description est obligatoire"
 
 #: frontend/src/components/UserDropdown.vue:180
 msgid "Desk"
@@ -2762,9 +2770,11 @@ msgstr "E-mail du Lead"
 msgid "Email ID"
 msgstr "Identifiant e-mail"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/emailConfig.js:181
 msgid "Email ID is required"
-msgstr "None est requis"
+msgstr "L'identifiant e-mail est obligatoire"
 
 #. Label of the email_sent_at (Datetime) field in DocType 'CRM Invitation'
 #: crm/fcrm/doctype/crm_invitation/crm_invitation.json
@@ -4880,11 +4890,13 @@ msgstr "Mes affaires ouvertes"
 msgid "Name"
 msgstr "Nom"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:412
 #: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:147
 #: frontend/src/components/Settings/EmailTemplate/NewEmailTemplate.vue:154
 msgid "Name is required"
-msgstr "None est requis"
+msgstr "Le nom est obligatoire"
 
 #. Label of the naming_series (Select) field in DocType 'CRM Deal'
 #. Label of the naming_series (Select) field in DocType 'CRM Product'
@@ -5333,11 +5345,13 @@ msgstr "DocType de type de notification"
 msgid "Notifications"
 msgstr "Notifications"
 
+# //// Neoffice — upstream "Nombre" (a count) is the bare key every app falls back to, but here "Number" is an identifier
+# //// (the phone number field, the row-number column of the grid): never a count. Bare key = « Numéro ».
 #. Label of the number (Data) field in DocType 'CRM Telephony Phone'
 #: crm/fcrm/doctype/crm_telephony_phone/crm_telephony_phone.json
 #: frontend/src/components/Controls/Grid.vue:27
 msgid "Number"
-msgstr "Nombre"
+msgstr "Numéro"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:15
 #: frontend/src/components/Dashboard/AddChartModal.vue:65
@@ -5607,9 +5621,11 @@ msgstr "Mot de passe mis à jour avec succès"
 msgid "Password cannot be reset by Demo User {}"
 msgstr "Le mot de passe ne peut pas être réinitialisé par l'utilisateur de démonstration {}"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/emailConfig.js:188
 msgid "Password is required"
-msgstr "None est requis"
+msgstr "Le mot de passe est obligatoire"
 
 #: crm/api/user.py:43
 msgid "Password is too weak. {0}"
@@ -7162,9 +7178,10 @@ msgstr "Espaceur"
 msgid "Spreadsheets"
 msgstr "Feuilles de calcul"
 
+# //// Neoffice — accent restored: upstream "Etape" (unaccented) is the bare key every app falls back to.
 #: crm/api/dashboard.py:790 crm/api/dashboard.py:848
 msgid "Stage"
-msgstr "Etape"
+msgstr "Étape"
 
 #: crm/fcrm/doctype/crm_form_script/crm_form_script.js:15
 msgid "Standard Form Scripts can not be modified, duplicate the Form Script instead."
@@ -7242,10 +7259,12 @@ msgstr "Statut"
 msgid "Status Change Log"
 msgstr "Journal de changement de statut"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Modals/DealModal.vue:209
 #: frontend/src/components/Modals/LeadModal.vue:152
 msgid "Status is required"
-msgstr "None est requis"
+msgstr "Le statut est obligatoire"
 
 #: frontend/src/components/Questionnaire.vue:91
 msgid "Step {0} of {1}"
@@ -7262,10 +7281,12 @@ msgstr "Sous-domaine"
 msgid "Subject"
 msgstr "Sujet"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:151
 #: frontend/src/components/Settings/EmailTemplate/NewEmailTemplate.vue:158
 msgid "Subject is required"
-msgstr "None est requis"
+msgstr "L'objet est obligatoire"
 
 #: frontend/src/components/Modals/EmailTemplateSelectorModal.vue:35
 msgid "Subject: {0}"
@@ -8063,9 +8084,11 @@ msgstr "Utilisateurs"
 msgid "Users Added Successfully"
 msgstr "Utilisateurs ajoutés avec succès"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:460
 msgid "Users are required"
-msgstr "None sont requis"
+msgstr "Les utilisateurs sont obligatoires"
 
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:168
 msgid "Valid From"
@@ -8767,10 +8790,12 @@ msgstr "Il y a {0} heures"
 msgid "{0} is an invalid email address"
 msgstr "{0} est une adresse e-mail invalide"
 
+# //// Neoffice — upstream msgstr had lost the field name (a literal "None" in its place: broken translation),
+# //// so every required-field check showed it, whichever app asked. Restored.
 #: crm/api/form.py:555 frontend/src/components/Modals/ContactModal.vue:106
 #: frontend/src/components/Modals/ConvertToDealModal.vue:171
 msgid "{0} is required"
-msgstr "None est requis"
+msgstr "{0} est obligatoire"
 
 #: crm/api/form.py:276
 msgid "{0} isn't a linkable field on a CRM form."
@@ -8927,8 +8952,9 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Assignment condition"
 #~ msgstr "Condition d'attribution"
 
+# //// Neoffice — upstream msgstr had a literal "None" in place of the field name; restored so it cannot come back if the string returns.
 #~ msgid "Assignment days are required"
-#~ msgstr "None sont requis"
+#~ msgstr "Les jours d'affectation sont obligatoires"
 
 #~ msgid "Assignment rule"
 #~ msgstr "Règle d'attribution"
@@ -9236,8 +9262,9 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Error while fetching customer in ERPNext, check error log for more details"
 #~ msgstr "Erreur lors de la récupération du client dans ERPNext, consultez le journal d'erreurs pour plus de détails"
 
+# //// Neoffice — upstream msgstr had a literal "None" in place of the field name; restored so it cannot come back if the string returns.
 #~ msgid "Event ID is required"
-#~ msgstr "None est requis"
+#~ msgstr "L'ID de l'événement est obligatoire"
 
 #~ msgid "Event details"
 #~ msgstr "Détails de l'événement"
@@ -9395,8 +9422,9 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Lost reason"
 #~ msgstr "Raison de perte"
 
+# //// Neoffice — upstream msgstr had a literal "None" in place of the field name; restored so it cannot come back if the string returns.
 #~ msgid "Lost reason is required"
-#~ msgstr "None est requis"
+#~ msgstr "La raison de perte est obligatoire"
 
 #~ msgid "Make a call"
 #~ msgstr "Passer un appel"
@@ -9728,8 +9756,9 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Show preview"
 #~ msgstr "Afficher l'aperçu"
 
+# //// Neoffice — upstream msgstr had a literal "None" in place of the field name; restored so it cannot come back if the string returns.
 #~ msgid "Start and end time are required"
-#~ msgstr "Démarrer None sont requis"
+#~ msgstr "L'heure de début et l'heure de fin sont obligatoires"
 
 #~ msgid "Switch camera"
 #~ msgstr "Changer de caméra"
@@ -9764,8 +9793,9 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Time"
 #~ msgstr "Temps"
 
+# //// Neoffice — upstream msgstr had a literal "None" in place of the field name; restored so it cannot come back if the string returns.
 #~ msgid "Title is required"
-#~ msgstr "None est requis"
+#~ msgstr "Le titre est obligatoire"
 
 #~ msgid "Toggle on for preview"
 #~ msgstr "Activer pour l'aperçu"
