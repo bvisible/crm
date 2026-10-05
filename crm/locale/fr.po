@@ -8862,6 +8862,597 @@ msgstr "⚠️ Aucune donnée trouvée pour le champ parent : {0}"
 msgid "⚠️ No row found for idx: {0} in parent field: {1}"
 msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:52
+msgid "Primary email address updated"
+msgstr "Adresse e-mail principale mise à jour"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:53
+msgid "Primary mobile number updated"
+msgstr "Numéro de mobile principal mis à jour"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:67
+msgid "Email address added"
+msgstr "Adresse e-mail ajoutée"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:68
+msgid "Mobile number added"
+msgstr "Numéro de mobile ajouté"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:88
+msgid "Email address updated"
+msgstr "Adresse e-mail mise à jour"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:89
+msgid "Mobile number updated"
+msgstr "Numéro de mobile mis à jour"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:98
+msgid "Email address removed"
+msgstr "Adresse e-mail supprimée"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/composables/useContactFields.ts:99
+msgid "Mobile number removed"
+msgstr "Numéro de mobile supprimé"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/FieldLayoutEditor.vue:509
+msgid "Remove and move columns to {0} section"
+msgstr "Supprimer et déplacer les colonnes vers la section {0}"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/AssignTo.vue:92
+msgid "Since you added a new assignee, the {0} has been set to {1}."
+msgstr "Comme vous avez ajouté une nouvelle personne attribuée, {0} a été défini sur {1}."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/DeleteLinkedDocModal.vue:55
+msgid "Are you sure you want to delete {0} - {1}?"
+msgstr "Êtes-vous sûr de vouloir supprimer {0} - {1} ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/DeleteLinkedDocModal.vue:275
+msgid "{0} deleted successfully"
+msgstr "{0} supprimé avec succès"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/ViewControls.vue:1156
+msgid "Are you sure you want to delete \"{0}\" view?"
+msgstr "Êtes-vous sûr de vouloir supprimer la vue « {0} » ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/BulkDeleteLinkedDocModal.vue:18
+msgid "Are you sure you want to delete {0} items?"
+msgstr "Êtes-vous sûr de vouloir supprimer {0} éléments ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/BulkDeleteLinkedDocModal.vue:114
+msgid "Are you sure you want to delete {0} linked doc(s)?"
+msgstr "Êtes-vous sûr de vouloir supprimer {0} document(s) lié(s) ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/BulkDeleteLinkedDocModal.vue:125
+msgid "Are you sure you want to unlink {0} linked doc(s)?"
+msgstr "Êtes-vous sûr de vouloir dissocier {0} document(s) lié(s) ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/ListBulkActions.vue:79
+msgid "Are you sure you want to convert {0} lead(s) to deal(s)?"
+msgstr "Êtes-vous sûr de vouloir convertir {0} piste(s) en affaire(s) ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/ListBulkActions.vue:135
+msgid "Are you sure you want to clear assignment for {0} item(s)?"
+msgstr "Êtes-vous sûr de vouloir effacer l'attribution de {0} élément(s) ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/CommunicationArea.vue:56
+msgid "Hi John, \n\nCan you please provide more details on this..."
+msgstr "Bonjour Jean, \n\nPourriez-vous me donner plus de détails à ce sujet..."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/InviteUserPage.vue:128
+msgid "User with email {0} already exists"
+msgstr "Un utilisateur avec l'adresse e-mail {0} existe déjà"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/InviteUserPage.vue:144
+msgid "User with email {0} already invited"
+msgstr "Un utilisateur avec l'adresse e-mail {0} a déjà été invité"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Settings/Users.vue:274
+msgid "{0} has been granted {1} access"
+msgstr "{0} a obtenu l'accès {1}"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/DashboardSettings.vue:139
+msgid "Access key for {0}. Required for fetching exchange rates."
+msgstr "Clé d'accès pour {0}. Nécessaire pour récupérer les taux de change."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/DashboardSettings.vue:217
+msgid "Please enter the {0} access key."
+msgstr "Veuillez saisir la clé d'accès {0}."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/ERPNextSettings.vue:569
+msgid " and "
+msgstr " et "
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:150
+msgid "Choose which {0} are affected by this assignment rule."
+msgstr "Choisissez les {0} concernés par cette règle d'attribution."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/AssignmentRules/AssigneeRules.vue:17
+msgid "{0} routing"
+msgstr "Répartition : {0}"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/AssignmentRules/AssigneeRules.vue:26
+msgid "Choose how {0} are assigned among the selected assignees."
+msgstr "Choisissez comment les {0} sont attribués parmi les personnes sélectionnées."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:493
+msgid "Not a valid domain and will be ignored: {0}"
+msgstr "Domaine non valide, il sera ignoré : {0}"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1339
+msgid "{0} moved to hidden required fields. Set a default value."
+msgstr "{0} déplacé vers les champs obligatoires masqués. Définissez une valeur par défaut."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1445
+msgid "{0} field(s) removed. Not available on {1}."
+msgstr "{0} champ(s) supprimé(s). Non disponible(s) sur {1}."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1463
+msgid "Set a default value for hidden required field(s): {0}"
+msgstr "Définissez une valeur par défaut pour les champs obligatoires masqués : {0}"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FieldCard.vue:54
+msgid "Guests can't see {0} records yet. Open to grant access."
+msgstr "Les invités ne peuvent pas encore voir les enregistrements {0}. Ouvrez pour accorder l'accès."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FieldCard.vue:88
+msgid "This field is required by the record and can't be made optional. Remove it to move it to hidden fields."
+msgstr "Ce champ est requis par l'enregistrement et ne peut pas devenir facultatif. Retirez-le pour le déplacer vers les champs masqués."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Forms/FieldCard.vue:122
+msgid "Frappe expression referencing other fields as doc.<fieldname>, e.g. eval:doc.country == 'India'. Leave blank for no condition."
+msgstr "Expression référençant d'autres champs sous la forme doc.<fieldname>, p. ex. eval:doc.country == 'India'. Laissez vide pour ne définir aucune condition."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:203
+msgid "Are you sure you want to remove {0} from the hierarchy?"
+msgstr "Êtes-vous sûr de vouloir retirer {0} de la hiérarchie ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:94
+msgid "<p>Dear {{ lead_name }},</p>\n\n<p>This is a reminder for the payment of {{ grand_total }}.</p>\n\n<p>Thanks,</p>\n<p>Frappé</p>"
+msgstr "<p>Madame, Monsieur {{ lead_name }},</p>\n\n<p>Ceci est un rappel pour le paiement de {{ grand_total }}.</p>\n\n<p>Meilleures salutations,</p>\n<p>Votre équipe</p>"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Settings/EmailTemplate/EditEmailTemplate.vue:108
+msgid "Dear {{ lead_name }}, \n\nThis is a reminder for the payment of {{ grand_total }}. \n\nThanks, \nFrappé"
+msgstr "Madame, Monsieur {{ lead_name }}, \n\nCeci est un rappel pour le paiement de {{ grand_total }}. \n\nMeilleures salutations, \nVotre équipe"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:26
+msgid "Delete Event"
+msgstr "Supprimer l'événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:34
+msgid "Duplicate Event"
+msgstr "Dupliquer l'événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:39
+msgid "Close Panel"
+msgstr "Fermer le panneau"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:66
+msgid "(No Title)"
+msgstr "(Sans titre)"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:90
+msgid "{0} {1} before{2}"
+msgstr "{0} {1} avant{2}"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:135
+msgid "{0} attendees"
+msgstr "{0} participant(s)"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:146
+msgid "Owner: {0}"
+msgstr "Propriétaire : {0}"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:232
+msgid "See All Participants"
+msgstr "Voir tous les participants"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:240
+msgid "Show Less"
+msgstr "Afficher moins"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:285
+msgid "Event Title"
+msgstr "Titre de l'événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:313
+msgid "May 1, 2025"
+msgstr "1er mai 2025"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:388
+msgid "Add Description"
+msgstr "Ajouter une description"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:429
+msgid "Add Lead or Deal"
+msgstr "Ajouter un prospect ou une affaire"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:487
+msgid "Private or Public"
+msgstr "Privé ou public"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:513
+msgid "Create Event"
+msgstr "Créer un événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:654
+msgid "{0} awaiting"
+msgstr "{0} en attente"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:672
+msgid "Editing Event"
+msgstr "Modification de l'événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:868
+msgid "Attending status updated"
+msgstr "Statut de participation mis à jour"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:873
+msgid "Failed to update attending status"
+msgstr "Échec de la mise à jour du statut de participation"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:910
+msgid "Discard Unsaved Changes?"
+msgstr "Abandonner les modifications non enregistrées ?"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Calendar/CalendarEventPanel.vue:911
+msgid "Are you sure you want to discard unsaved changes to this event?"
+msgstr "Êtes-vous sûr de vouloir abandonner les modifications non enregistrées de cet événement ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/FilesUploader/FilesUploaderArea.vue:340
+msgid "File \"{0}\" was skipped because size exceeds {1} MB"
+msgstr "Le fichier « {0} » a été ignoré car sa taille dépasse {1} Mo"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/EventModal.vue:9
+msgid "Edit an Event"
+msgstr "Modifier un événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/EventModal.vue:11
+msgid "Duplicate an Event"
+msgstr "Dupliquer un événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/EventModal.vue:12
+msgid "Create an Event"
+msgstr "Créer un événement"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/EventModal.vue:63
+msgid "Call with John Doe"
+msgstr "Appel avec John Doe"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/EventModal.vue:178
+msgid "Add Description."
+msgstr "Ajouter une description."
+
+# //// Neoffice — was only in the obsolete `#~` block although the SPA still uses the string: revived with the translation restored there (upstream's had lost the field name, a literal « None » in its place).
+#: frontend/src/components/Modals/EventModal.vue:425
+msgid "Event ID is required"
+msgstr "L'ID de l'événement est obligatoire"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/EventModal.vue:467
+msgid "Are you sure you want to delete this event?"
+msgstr "Êtes-vous sûr de vouloir supprimer cet événement ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Modals/DoctypeModal.vue:125
+msgid "Could not create document"
+msgstr "Impossible de créer le document"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Modals/DoctypeModal.vue:147
+msgid "Could not update document"
+msgstr "Impossible de mettre à jour le document"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Modals/ConvertToDealModal.vue:14
+msgid "Edit deal's mandatory fields layout"
+msgstr "Modifier la disposition des champs obligatoires de l'affaire"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Modals/LostReasonModal.vue:6
+msgid "Please provide a reason for marking this {0} as lost"
+msgstr "Veuillez indiquer la raison de la perte ({0})."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Controls/TableMultiselectInput.vue:93
+msgid "Table MultiSelect requires a Table with at least one Link field"
+msgstr "Une sélection multiple de table requiert une table avec au moins un champ Lien"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Controls/TableMultiselectInput.vue:105
+msgid "Value already exists"
+msgstr "Cette valeur existe déjà"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Telephony/ExotelCallUI.vue:401
+msgid "Call connected, but the call log could not be saved. Please contact your administrator."
+msgstr "Appel connecté, mais il n'a pas pu être enregistré dans le journal d'appels. Veuillez contacter votre administrateur."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/AttachmentArea.vue:99
+msgid "Are you sure you want to make this attachment {0}?"
+msgstr "Êtes-vous sûr de vouloir rendre cette pièce jointe {0} ?"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:727
+msgid "No Activities Found"
+msgstr "Aucune activité trouvée"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:729
+msgid "No Emails Found"
+msgstr "Aucun e-mail trouvé"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:731
+msgid "No Comments Found"
+msgstr "Aucun commentaire trouvé"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:733
+msgid "No Data Fields Added Yet"
+msgstr "Aucun champ de données ajouté pour le moment"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:735
+msgid "No Call History"
+msgstr "Aucun historique d'appels"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:737
+msgid "No Notes Found"
+msgstr "Aucune note trouvée"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:739
+msgid "No Tasks Found"
+msgstr "Aucune tâche trouvée"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:741
+msgid "No Attachments Found"
+msgstr "Aucune pièce jointe trouvée"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:743
+msgid "No WhatsApp Messages Found"
+msgstr "Aucun message WhatsApp trouvé"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:749
+msgid "There are no activities to display here. Go ahead and make some changes."
+msgstr "Il n'y a aucune activité à afficher ici. Faites quelques modifications pour en voir apparaître."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:753
+msgid "No emails found in your inbox. New messages will appear here soon."
+msgstr "Aucun e-mail dans votre boîte de réception. Les nouveaux messages apparaîtront ici bientôt."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:757
+msgid "Be the first to add one."
+msgstr "Soyez le premier à en ajouter un."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:759
+msgid "No data fields have been added yet."
+msgstr "Aucun champ de données n'a encore été ajouté."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:761
+msgid "No recent calls to display. Log a call or call someone now!"
+msgstr "Aucun appel récent à afficher. Enregistrez un appel ou appelez quelqu'un maintenant !"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:765
+msgid "Nothing here for now. Add a note to keep track of things."
+msgstr "Rien ici pour le moment. Ajoutez une note pour garder une trace."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:769
+msgid "Nothing to do at the moment. Start organizing by adding one here."
+msgstr "Rien à faire pour le moment. Commencez à vous organiser en ajoutant une tâche ici."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:773
+msgid "No files have been attached yet. Upload files to see them here."
+msgstr "Aucun fichier n'a encore été joint. Téléversez des fichiers pour les voir ici."
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/components/Activities/Activities.vue:777
+msgid "Start a conversation now!"
+msgstr "Démarrez une conversation maintenant !"
+
+# //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
+#: frontend/src/pages/Deal.vue:454
+msgid "An Error Occurred"
+msgstr "Une erreur s'est produite"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/DoctypeModal.vue:10
+msgid "Create Note"
+msgstr "Créer une note"
+
+# //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
+#: frontend/src/components/Modals/DoctypeModal.vue:10
+msgid "Create Task"
+msgstr "Créer une tâche"
+
+# //// Neoffice — msgid built at runtime ('Create ' + title in DoctypeModal.vue), so no extractor ever listed it: the window title stayed in English.
+#: frontend/src/components/Modals/DoctypeModal.vue:10
+msgid "Create Call Log"
+msgstr "Enregistrer un appel"
+
+# //// Neoffice — msgid built at runtime ('Create ' + title in DoctypeModal.vue), so no extractor ever listed it: the window title stayed in English.
+#: frontend/src/components/Modals/DoctypeModal.vue:10
+msgid "Create Address"
+msgstr "Créer une adresse"
+
+# //// Neoffice — msgid built at runtime ('Create ' + title in DoctypeModal.vue), so no extractor ever listed it: the window title stayed in English.
+#: frontend/src/components/Modals/DoctypeModal.vue:10
+msgid "Edit Address"
+msgstr "Modifier l'adresse"
+
+# //// Neoffice — name of a status record seeded by the fixtures, translated at display through __() but absent from the catalogue.
+msgid "Contacted"
+msgstr "Contacté"
+
+# //// Neoffice — name of a status record seeded by the fixtures, translated at display through __() but absent from the catalogue.
+msgid "Nurture"
+msgstr "À entretenir"
+
+# //// Neoffice — name of a status record seeded by the fixtures, translated at display through __() but absent from the catalogue.
+msgid "Demo/Making"
+msgstr "Démo/Préparation"
+
+# //// Neoffice — name of a status record seeded by the fixtures, translated at display through __() but absent from the catalogue.
+msgid "Proposal/Quotation"
+msgstr "Proposition/Devis"
+
+# //// Neoffice — name of a status record seeded by the fixtures, translated at display through __() but absent from the catalogue.
+msgid "Negotiation"
+msgstr "Négociation"
+
+# //// Neoffice — name of a status record seeded by the fixtures, translated at display through __() but absent from the catalogue.
+msgid "Ready to Close"
+msgstr "Prêt à conclure"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Existing Customer"
+msgstr "Client existant"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Advertisement"
+msgstr "Publicité"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Cold Calling"
+msgstr "Démarchage téléphonique"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Exhibition"
+msgstr "Salon"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Mass Mailing"
+msgstr "Publipostage"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Customer's Vendor"
+msgstr "Fournisseur d'un client"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Competition"
+msgstr "Concurrence"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Budget Constraints"
+msgstr "Contraintes budgétaires"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Missing Features"
+msgstr "Fonctionnalités manquantes"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Long Sales Cycle"
+msgstr "Cycle de vente trop long"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "No Decision-Maker"
+msgstr "Pas de décideur"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Unresponsive Prospect"
+msgstr "Piste injoignable"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Poor Fit"
+msgstr "Besoin non adapté"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Entertainment & Leisure, Executive Search"
+msgstr "Divertissement et loisirs, recherche de cadres"
+
+# //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
+msgid "Beverage & Tobacco"
+msgstr "Boissons et tabac"
+
+# //// Neoffice — server message (crm/integrations), missing from the catalogue.
+msgid "Please setup Exotel integration"
+msgstr "Veuillez configurer l'intégration Exotel"
+
+# //// Neoffice — server message (crm/integrations), missing from the catalogue.
+msgid "Your account is not configured with a phone number. Please contact your administrator."
+msgstr "Votre compte n'a pas de numéro de téléphone configuré. Veuillez contacter votre administrateur."
+
+# //// Neoffice — server message (crm/integrations), missing from the catalogue.
+msgid "We're unable to connect your call right now. Please try again later."
+msgstr "Impossible d'établir votre appel pour le moment. Veuillez réessayer plus tard."
+
 #~ msgid "(No title)"
 #~ msgstr "(Sans titre)"
 
@@ -8882,9 +9473,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Access key for Exchangerate Host. Required for fetching exchange rates."
 #~ msgstr "Clé d'accès pour Exchangerate Host. Requise pour récupérer les taux de change."
-
-#~ msgid "Add Lead or Deal"
-#~ msgstr "Ajouter un prospect ou une affaire"
 
 #~ msgid "Add a condition"
 #~ msgstr "Ajouter une condition"
@@ -8933,12 +9521,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Apps"
 #~ msgstr "Applications"
-
-#~ msgid "Are you sure you want to delete this event?"
-#~ msgstr "Êtes-vous sûr de vouloir supprimer cet événement ?"
-
-#~ msgid "Are you sure you want to discard unsaved changes to this event?"
-#~ msgstr "Êtes-vous sûr de vouloir abandonner les modifications non enregistrées de cet événement ?"
 
 #~ msgid "Assign to"
 #~ msgstr "Attribuer à"
@@ -9022,9 +9604,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Call log"
 #~ msgstr "Journal d'appel"
 
-#~ msgid "Call with John Doe"
-#~ msgstr "Appel avec John Doe"
-
 #~ msgid "Change image"
 #~ msgstr "Changer l'image"
 
@@ -9081,12 +9660,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Copied to clipboard"
 #~ msgstr "Copié dans le presse-papier"
-
-#~ msgid "Create Note"
-#~ msgstr "Créer une note"
-
-#~ msgid "Create Task"
-#~ msgstr "Créer une tâche"
 
 #~ msgid "Create an event"
 #~ msgstr "Créer un événement"
@@ -9262,10 +9835,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Error while fetching customer in ERPNext, check error log for more details"
 #~ msgstr "Erreur lors de la récupération du client dans ERPNext, consultez le journal d'erreurs pour plus de détails"
 
-# //// Neoffice — upstream msgstr had a literal "None" in place of the field name; restored so it cannot come back if the string returns.
-#~ msgid "Event ID is required"
-#~ msgstr "L'ID de l'événement est obligatoire"
-
 #~ msgid "Event details"
 #~ msgstr "Détails de l'événement"
 
@@ -9438,9 +10007,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Make public"
 #~ msgstr "Rendre public"
 
-#~ msgid "May 1, 2025"
-#~ msgstr "1er mai 2025"
-
 #~ msgid "Mobile No"
 #~ msgstr "N° Mobile"
 
@@ -9566,9 +10132,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Other features"
 #~ msgstr "Autres fonctionnalités"
-
-#~ msgid "Owner: {0}"
-#~ msgstr "Propriétaire : {0}"
 
 #~ msgid "Personal Settings"
 #~ msgstr "Paramètres personnels"
@@ -9875,17 +10438,11 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "{0} Attendees"
 #~ msgstr "{0} participants"
 
-#~ msgid "{0} has been granted {1} access"
-#~ msgstr "{0} a obtenu l'accès {1}"
-
 #~ msgid "{0} hrs"
 #~ msgstr "{0} heures"
 
 #~ msgid "{0} mins"
 #~ msgstr "{0} minutes"
-
-#~ msgid "(No Title)"
-#~ msgstr "(Sans titre)"
 
 #~ msgid "08:00 AM"
 #~ msgstr "08:00"
@@ -9895,12 +10452,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Add Attendee"
 #~ msgstr "Ajouter un participant"
-
-#~ msgid "Add Description"
-#~ msgstr "Ajouter une description"
-
-#~ msgid "Add Description."
-#~ msgstr "Ajouter une description."
 
 #~ msgid "Add Location"
 #~ msgstr "Ajouter un lieu"
@@ -9938,9 +10489,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "At least one valid Workday with Workday, Start Time, and End Time is required"
 #~ msgstr "Au moins un jour ouvré valide avec un jour, une heure de début et une heure de fin est requis"
 
-#~ msgid "Attending status updated"
-#~ msgstr "Statut de participation mis à jour"
-
 #~ msgid "Autocomplete"
 #~ msgstr "Saisie automatique"
 
@@ -9952,9 +10500,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Choose the Email Service Provider you want to configure."
 #~ msgstr "Choisissez le fournisseur de service de messagerie que vous souhaitez configurer."
-
-#~ msgid "Close Panel"
-#~ msgstr "Fermer le panneau"
 
 #~ msgid "Configure Telephony Settings for your CRM"
 #~ msgstr "Configurer les paramètres de téléphonie de votre CRM"
@@ -9977,12 +10522,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Contact Updated"
 #~ msgstr "Contact mis à jour"
 
-#~ msgid "Create Event"
-#~ msgstr "Créer un événement"
-
-#~ msgid "Create an Event"
-#~ msgstr "Créer un événement"
-
 #~ msgid "Default Calendar View"
 #~ msgstr "Vue par défaut du calendrier"
 
@@ -9995,29 +10534,11 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Default View"
 #~ msgstr "Vue par défaut"
 
-#~ msgid "Delete Event"
-#~ msgstr "Supprimer l'événement"
-
-#~ msgid "Discard Unsaved Changes?"
-#~ msgstr "Abandonner les modifications non enregistrées ?"
-
 #~ msgid "Dismiss"
 #~ msgstr "Rejeter"
 
-#~ msgid "Duplicate Event"
-#~ msgstr "Dupliquer l'événement"
-
-#~ msgid "Duplicate an Event"
-#~ msgstr "Dupliquer un événement"
-
 #~ msgid "Edit Event"
 #~ msgstr "Modifier l'événement"
-
-#~ msgid "Edit an Event"
-#~ msgstr "Modifier un événement"
-
-#~ msgid "Editing Event"
-#~ msgstr "Modification de l'événement"
 
 #~ msgid "Email Account created successfully"
 #~ msgstr "Compte de messagerie créé avec succès"
@@ -10061,9 +10582,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Event Notifications"
 #~ msgstr "Notifications d'événement"
 
-#~ msgid "Event Title"
-#~ msgstr "Titre de l'événement"
-
 #~ msgid "Event created successfully"
 #~ msgstr "Événement créé avec succès"
 
@@ -10075,9 +10593,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Failed to update Email Account, Invalid credentials"
 #~ msgstr "Échec de la mise à jour du compte de messagerie, identifiants invalides"
-
-#~ msgid "Failed to update attending status"
-#~ msgstr "Échec de la mise à jour du statut de participation"
 
 #~ msgid "For all-day events, <b>set a time</b> to send reminders before the event starts"
 #~ msgstr "Pour les événements sur la journée entière, <b>définissez une heure</b> pour envoyer des rappels avant le début de l'événement"
@@ -10136,9 +10651,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "Priority {0}: Response Time is required"
 #~ msgstr "Priorité {0} : le délai de réponse est obligatoire"
 
-#~ msgid "Private or Public"
-#~ msgstr "Privé ou public"
-
 #~ msgid "Profile Updated Successfully"
 #~ msgstr "Profil mis à jour avec succès"
 
@@ -10169,9 +10681,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "SLA set as default cannot be disabled"
 #~ msgstr "La SLA définie par défaut ne peut pas être désactivée"
 
-#~ msgid "See All Participants"
-#~ msgstr "Voir tous les participants"
-
 #~ msgid "Select Type"
 #~ msgstr "Sélectionner le type"
 
@@ -10186,9 +10695,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "Setting up Frappe Mail requires you to have an API key and API Secret of your email account. Read more"
 #~ msgstr "La configuration de Frappe Mail nécessite une clé API et un secret API de votre compte de messagerie. En savoir plus"
-
-#~ msgid "Show Less"
-#~ msgstr "Afficher moins"
 
 #~ msgid "Some error occurred while creating SLA Policy"
 #~ msgstr "Une erreur s'est produite lors de la création de la politique SLA"
@@ -10283,12 +10789,6 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 #~ msgid "weeks before"
 #~ msgstr "semaines avant"
 
-#~ msgid "{0} attendees"
-#~ msgstr "{0} participant(s)"
-
-#~ msgid "{0} awaiting"
-#~ msgstr "{0} en attente"
-
 #~ msgid "{0} is an Invalid Value"
 #~ msgstr "{0} est une valeur invalide"
 
@@ -10303,3 +10803,4 @@ msgstr "⚠️ Aucune ligne trouvée pour idx : {0} dans le champ parent : {1}"
 
 #~ msgid "{0} yes"
 #~ msgstr "{0} oui"
+
