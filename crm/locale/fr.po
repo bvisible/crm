@@ -8647,10 +8647,11 @@ msgstr "kanban"
 msgid "label"
 msgstr "libellé"
 
+# //// Neoffice — the product says « prospect » for a lead (see NEOFFICE_FORK_MARKERS.md, French catalogue), never « piste ».
 #: frontend/src/components/Settings/AssignmentRules/AssigneeRules.vue:134
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:374
 msgid "leads"
-msgstr "pistes de recherche"
+msgstr "prospects"
 
 #. Option for the 'Type' (Select) field in DocType 'CRM View Settings'
 #: crm/fcrm/doctype/crm_view_settings/crm_view_settings.json
@@ -8976,7 +8977,7 @@ msgstr "Êtes-vous sûr de vouloir dissocier {0} document(s) lié(s) ?"
 # //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
 #: frontend/src/components/ListBulkActions.vue:79
 msgid "Are you sure you want to convert {0} lead(s) to deal(s)?"
-msgstr "Êtes-vous sûr de vouloir convertir {0} piste(s) en affaire(s) ?"
+msgstr "Êtes-vous sûr de vouloir convertir {0} prospect(s) en affaire(s) ?"
 
 # //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
 #: frontend/src/components/ListBulkActions.vue:135
@@ -9458,7 +9459,7 @@ msgstr "Pas de décideur"
 
 # //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
 msgid "Unresponsive Prospect"
-msgstr "Piste injoignable"
+msgstr "Prospect injoignable"
 
 # //// Neoffice — value of a record seeded by the fixtures (lead source, lost reason, industry); the SPA translates it only for a doctype flagged translated_doctype, which is not set: inactive until it is.
 msgid "Poor Fit"
