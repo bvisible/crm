@@ -1678,9 +1678,10 @@ msgstr "Confirmer le mot de passe"
 msgid "Confirm {0}"
 msgstr "Confirmer {0}"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: frontend/src/components/Settings/ERPNextSettings.vue:436
 msgid "Connect ERPNext to Frappe CRM"
-msgstr "Connecter ERPNext à Frappe CRM"
+msgstr "Connecter ERPNext au CRM"
 
 #: frontend/src/pages/Welcome.vue:35
 msgid "Connect your Email"
@@ -1817,9 +1818,10 @@ msgstr "Copier le lien"
 msgid "Could not create form"
 msgstr "Impossible de créer le formulaire"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:157
 msgid "Could not create the Frappe CRM custom fields on {0} automatically. If it is running the latest ERPNext, enable <b>Frappe CRM Data Synchronization</b> in its CRM Settings, Otherwise check the Error Log."
-msgstr "Impossible de créer automatiquement les champs personnalisés Frappe CRM sur {0}. Si ERPNext exécute la dernière version, activez <b>Frappe CRM Data Synchronization</b> dans ses paramètres CRM, sinon vérifiez le journal des erreurs"
+msgstr "Impossible de créer automatiquement les champs personnalisés du CRM sur {0}. Si ERPNext exécute la dernière version, activez <b>Frappe CRM Data Synchronization</b> dans ses paramètres CRM, sinon vérifiez le journal des erreurs"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:860
 msgid "Could not grant guest access."
@@ -3520,14 +3522,16 @@ msgstr "Formulaires"
 msgid "Forms can only map to: {0}"
 msgstr "Les formulaires peuvent seulement être mappés à : {0}"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #. Name of a Workspace
 #: crm/fcrm/workspace/frappe_crm/frappe_crm.json
 msgid "Frappe CRM"
-msgstr "Frappe CRM"
+msgstr "CRM"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: frontend/src/components/Layouts/AppSidebar.vue:722
 msgid "Frappe CRM mobile"
-msgstr "Frappe CRM mobile"
+msgstr "CRM mobile"
 
 #: frontend/src/components/Settings/emailConfig.js:81
 msgid "Frappe Mail Site"
@@ -3772,9 +3776,10 @@ msgstr "Comment gérez-vous votre vente aujourd'hui ?"
 msgid "How do new leads usually come to you?"
 msgstr "Comment les nouveaux prospects vous arrivent-ils généralement ?"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: frontend/src/pages/PersonaForm.vue:108
 msgid "How many people will use Frappe CRM?"
-msgstr "Combien de personnes utiliseront Frappe CRM ?"
+msgstr "Combien de personnes utiliseront le CRM ?"
 
 #. Description of the 'Timeline Timestamp Format' (Select) field in DocType
 #. 'FCRM Settings'
@@ -8183,9 +8188,10 @@ msgstr "Jours de Congé Hebdomadaire"
 msgid "Welcome Message"
 msgstr "Message de bienvenue"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: frontend/src/pages/PersonaForm.vue:132
 msgid "Welcome to Frappe CRM"
-msgstr "Bienvenue dans Frappe CRM"
+msgstr "Bienvenue dans le CRM"
 
 #: frontend/src/pages/Welcome.vue:4
 msgid "Welcome {0}, lets add your first lead"
@@ -8322,17 +8328,19 @@ msgstr "Vous ne pouvez pas vous supprimer vous-même."
 msgid "You do not have Exotel Number set in your Telephony Agent"
 msgstr "Vous n'avez pas de numéro Exotel défini dans votre agent de téléphonie"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: frontend/src/pages/NotPermitted.vue:12
 msgid "You do not have enough permissions to access Frappe CRM. Please contact your administrator if you believe this is an error."
-msgstr "Vous n'avez pas les permissions suffisantes pour accéder à Frappe CRM. Veuillez contacter votre administrateur si vous pensez qu'il s'agit d'une erreur."
+msgstr "Vous n'avez pas les permissions suffisantes pour accéder au CRM. Veuillez contacter votre administrateur si vous pensez qu'il s'agit d'une erreur."
 
 #: crm/integrations/exotel/handler.py:92
 msgid "You do not have mobile number set in your Telephony Agent"
 msgstr "Vous n'avez pas de numéro de mobile défini dans votre agent de téléphonie"
 
+# //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: crm/www/crm.py:18
 msgid "You do not have permission to access Frappe CRM"
-msgstr "Vous n'avez pas la permission d'accéder à Frappe CRM"
+msgstr "Vous n'avez pas la permission d'accéder au CRM"
 
 #: frontend/src/data/document.js:45
 msgid "You do not have permission to access this document"
@@ -10803,4 +10811,3 @@ msgstr "Impossible d'établir votre appel pour le moment. Veuillez réessayer pl
 
 #~ msgid "{0} yes"
 #~ msgstr "{0} oui"
-
