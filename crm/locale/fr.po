@@ -146,9 +146,10 @@ msgstr "@John, peux-tu vérifier ceci ?"
 msgid "A Lead requires either a person's name or an organization's name"
 msgstr "Un responsable requiert le nom d'une personne ou le nom d'une organisation"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.py:49
 msgid "A lead sync source is already enabled for this Facebook Lead Form!"
-msgstr "Une source de synchronisation de prospects est déjà activée pour ce formulaire Facebook Lead !"
+msgstr "Une source de synchronisation de pistes est déjà activée pour ce formulaire de pistes Facebook !"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1089
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1231
@@ -489,9 +490,10 @@ msgstr "Ajouter votre premier commentaire"
 msgid "Add, edit, and manage email templates for various CRM communications"
 msgstr "Ajouter, modifier et gérer les modèles d'e-mail pour diverses communications CRM"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:12
 msgid "Add, edit, and manage sources for automatic lead syncing to your CRM"
-msgstr "Ajouter, modifier et gérer les sources pour la synchronisation automatique des prospects vers votre CRM"
+msgstr "Ajouter, modifier et gérer les sources pour la synchronisation automatique des pistes vers votre CRM"
 
 #. Label of the address (Link) field in DocType 'CRM Organization'
 #: crm/fcrm/doctype/crm_organization/crm_organization.json
@@ -585,9 +587,10 @@ msgstr "Le chiffre d'affaires annuel doit être un nombre"
 msgid "Another CRM"
 msgstr "Un autre CRM"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:69
 msgid "Any failed lead syncs will show up here"
-msgstr "Toutes les synchronisations de prospects échouées apparaîtront ici"
+msgstr "Toutes les synchronisations de pistes échouées apparaîtront ici"
 
 #. Label of the app_name (Data) field in DocType 'CRM Twilio Settings'
 #: crm/fcrm/doctype/crm_twilio_settings/crm_twilio_settings.json
@@ -833,9 +836,10 @@ msgstr "Mise à jour automatique de la valeur prévisionnelle de l'affaire"
 msgid "Auto update Expected Deal Value"
 msgstr "Mettre à jour automatiquement la valeur d'opportunité prévisionnelle"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRules.vue:11
 msgid "Auto-assign leads/deals to the right sales user based on predefined conditions"
-msgstr "Affecter automatiquement les Leads/opportunités au commercial approprié selon des conditions prédéfinies"
+msgstr "Affecter automatiquement les pistes et les affaires au commercial approprié selon des conditions prédéfinies"
 
 #. Description of the 'Condition' (Code) field in DocType 'CRM Service Level
 #. Agreement'
@@ -843,25 +847,29 @@ msgstr "Affecter automatiquement les Leads/opportunités au commercial appropri�
 msgid "Auto-generated from the portal view — do not edit directly unless you know what you're doing! "
 msgstr "Généré automatiquement depuis la vue du portail — ne modifiez pas directement, sauf si vous savez ce que vous faites !"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Description of the 'Reopen lead/deal on new communication' (Check) field in
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Automatically sets Communication Status to “Open” for the lead or deal when a new communication is created. Applies only when SLA is enabled"
-msgstr "Définit automatiquement le statut de communication sur « Ouvert » pour le Lead ou l'opportunité lorsqu'une nouvelle communication est créée. S'applique uniquement si le SLA est activé"
+msgstr "Définit automatiquement le statut de communication sur « Ouvert » pour la piste ou l'affaire lorsqu'une nouvelle communication est créée. S'applique uniquement si le SLA est activé"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Description of the 'Mark lead/deal as replied on response' (Check) field in
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Automatically sets Communication Status to “Replied” for the lead or deal when a response is received. Applies only when SLA is enabled"
-msgstr "Définit automatiquement le statut de communication sur « Répondu » pour le Lead ou l'opportunité lorsqu'une réponse est reçue. S'applique uniquement si le SLA est activé"
+msgstr "Définit automatiquement le statut de communication sur « Répondu » pour la piste ou l'affaire lorsqu'une réponse est reçue. S'applique uniquement si le SLA est activé"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/GeneralSettings.vue:64
 msgid "Automatically sets communication status to “Open” for the lead or deal when a new communication is created. Applies only when SLA is enabled"
-msgstr "Définit automatiquement le statut de communication à « Ouvert » pour le prospect ou l'affaire lors de la création d'une nouvelle communication. S'applique seulement quand le SLA est activé"
+msgstr "Définit automatiquement le statut de communication à « Ouvert » pour la piste ou l'affaire lors de la création d'une nouvelle communication. S'applique seulement quand le SLA est activé"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/GeneralSettings.vue:42
 msgid "Automatically sets communication status to “Replied” for the lead or deal when a response is received. Applies only when SLA is enabled"
-msgstr "Définit automatiquement le statut de communication à « Répondu » pour le prospect ou l'affaire quand une réponse est reçue. S'applique seulement quand le SLA est activé"
+msgstr "Définit automatiquement le statut de communication à « Répondu » pour la piste ou l'affaire quand une réponse est reçue. S'applique seulement quand le SLA est activé"
 
 #. Description of the 'Auto update Expected Deal Value' (Check) field in
 #. DocType 'FCRM Settings'
@@ -890,9 +898,10 @@ msgstr "Valeur moyenne des affaires gagnées"
 msgid "Average time taken from deal creation to deal closure"
 msgstr "Temps moyen entre la création et la clôture d'une affaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:483
 msgid "Average time taken from lead creation to deal closure"
-msgstr "Temps moyen entre la création d'un prospect et la clôture d'une affaire"
+msgstr "Temps moyen entre la création d'une piste et la clôture d'une affaire"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:77
 msgid "Avg Deal Value"
@@ -906,9 +915,10 @@ msgstr "Valeur moy. des opportunités en cours"
 msgid "Avg Time to Close a Deal"
 msgstr "Temps moy. de clôture d'une opportunité"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:79
 msgid "Avg Time to Close a Lead"
-msgstr "Temps moy. de clôture d'un Lead"
+msgstr "Temps moy. de clôture d'une piste"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:76
 msgid "Avg Won Deal Value"
@@ -926,9 +936,10 @@ msgstr "Valeur moy. des affaires en cours"
 msgid "Avg. time to close a deal"
 msgstr "Temps moy. pour conclure une affaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:482
 msgid "Avg. time to close a lead"
-msgstr "Temps moy. pour convertir un prospect"
+msgstr "Temps moy. pour convertir une piste"
 
 #: crm/api/dashboard.py:364
 msgid "Avg. won deal value"
@@ -1101,20 +1112,23 @@ msgstr "Secteur CRM"
 msgid "CRM Invitation"
 msgstr "Invitation CRM"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_lead/crm_lead.json
 msgid "CRM Lead"
-msgstr "Prospect CRM"
+msgstr "Piste CRM"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_lead_source/crm_lead_source.json
 msgid "CRM Lead Source"
-msgstr "Source de prospect CRM"
+msgstr "Source de piste CRM"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_lead_status/crm_lead_status.json
 msgid "CRM Lead Status"
-msgstr "Statut de prospect CRM"
+msgstr "Statut de piste CRM"
 
 #. Name of a DocType
 #: crm/fcrm/doctype/crm_lost_reason/crm_lost_reason.json
@@ -1329,21 +1343,25 @@ msgstr "Impossible de renommer : un {0} non lié « {1} » existe déjà de l'au
 msgid "Capture"
 msgstr "Capturer"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/Forms/FormsList.vue:11
 msgid "Capture leads and deals from public forms you embed on your website."
-msgstr "Capturer les prospects et les affaires depuis les formulaires publics que vous incorporez sur votre site web"
+msgstr "Capturer les pistes et les affaires depuis les formulaires publics que vous incorporez sur votre site web"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/pages/PersonaForm.vue:122
 msgid "Capture my first lead"
-msgstr "Capturer mon premier prospect"
+msgstr "Capturer ma première piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Layouts/AppSidebar.vue:675
 msgid "Capturing Leads"
-msgstr "Capture de Leads"
+msgstr "Capture de pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/pages/PersonaForm.vue:90
 msgid "Capturing leads"
-msgstr "Capture de prospects"
+msgstr "Capture de pistes"
 
 #. Label of the category (Data) field in DocType 'Facebook Page'
 #: crm/lead_syncing/doctype/facebook_page/facebook_page.json
@@ -1441,9 +1459,10 @@ msgstr "Choisissez les jours de la semaine où cette règle doit être active."
 msgid "Choose the email service provider you want to configure."
 msgstr "Choisissez le fournisseur de service de messagerie que vous souhaitez configurer."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:107
 msgid "Choose which leads/deals are affected by this policy."
-msgstr "Choisissez les Leads/opportunités concernés par cette politique."
+msgstr "Choisissez les pistes et les affaires concernées par cette politique."
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:229
 msgid "Choose which {0} are affected by this un-assignment rule."
@@ -1780,10 +1799,11 @@ msgstr "Contrôle la manière dont les nombres sont affichés (ex. : virgules, s
 msgid "Convert"
 msgstr "Convertir"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Layouts/AppSidebar.vue:478
 #: frontend/src/components/Layouts/AppSidebar.vue:486
 msgid "Convert lead to deal"
-msgstr "Convertir le prospect en affaire"
+msgstr "Convertir la piste en affaire"
 
 #: frontend/src/components/ListBulkActions.vue:78
 #: frontend/src/components/ListBulkActions.vue:195
@@ -1874,14 +1894,16 @@ msgstr "Créer"
 msgid "Create Deal"
 msgstr "Créer une affaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #: frontend/src/components/Modals/CallLogDetailModal.vue:163
 #: frontend/src/components/Modals/LeadModal.vue:8
 msgid "Create Lead"
-msgstr "Créer un Lead"
+msgstr "Créer une piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/emailConfig.js:58
 msgid "Create Lead from Incoming Emails"
-msgstr "Créer un Lead à partir des e-mails entrants"
+msgstr "Créer une piste à partir des e-mails entrants"
 
 #: frontend/src/components/Controls/Link.vue:50
 #: frontend/src/components/Modals/EmailTemplateSelectorModal.vue:58
@@ -1917,9 +1939,10 @@ msgstr "Créer un client lors du changement de statut"
 msgid "Create form"
 msgstr "Créer un formulaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/Forms/FormsList.vue:38
 msgid "Create one to start capturing leads."
-msgstr "Créer un pour commencer à capturer les prospects"
+msgstr "Créez-en un pour commencer à capturer des pistes."
 
 #: crm/fcrm/doctype/crm_product/crm_product.js:12
 #: crm/fcrm/doctype/crm_product/crm_product_list.js:10
@@ -1931,9 +1954,10 @@ msgstr "Créer les produits comme articles dans ERPNext"
 msgid "Create quotation button on deal page and auto customer creation on deal status change will be disabled. Are you sure?"
 msgstr "Le bouton de création de devis sur la page d'opportunité et la création automatique de client lors du changement de statut seront désactivés. Êtes-vous sûr(e) ?"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Layouts/AppSidebar.vue:453
 msgid "Create your first lead"
-msgstr "Créer votre premier prospect"
+msgstr "Créer votre première piste"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:527
 msgid "Create your first note"
@@ -2017,9 +2041,10 @@ msgstr "Personnaliser les filtres rapides"
 msgid "Daily"
 msgstr "Quotidien"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:639
 msgid "Daily performance of leads, deals, and wins"
-msgstr "Performance quotidienne des prospects, affaires et gains"
+msgstr "Performance quotidienne des pistes, affaires et gains"
 
 #: frontend/src/components/Settings/ThemeSwitcher.vue:89
 msgid "Dark"
@@ -2764,9 +2789,10 @@ msgstr "Comptes e-mail"
 msgid "Email Communication"
 msgstr "Communication par e-mail"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/EmailEditor.vue:212
 msgid "Email From Lead"
-msgstr "E-mail du Lead"
+msgstr "E-mail de la piste"
 
 #: frontend/src/components/Settings/emailConfig.js:19
 msgid "Email ID"
@@ -3008,34 +3034,39 @@ msgstr "Une erreur s'est produite"
 msgid "Error converting to deal: {0}"
 msgstr "Erreur lors de la conversion en affaire : {0}"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:294
 msgid "Error creating lead sync source"
-msgstr "Erreur lors de la création de la source de synchronisation des prospects"
+msgstr "Erreur lors de la création de la source de synchronisation des pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Modals/CallLogDetailModal.vue:370
 msgid "Error creating lead: {0}"
-msgstr "Erreur lors de la création du Lead : {0}"
+msgstr "Erreur lors de la création de la piste : {0}"
 
 #: frontend/src/pages/MobileDeal.vue:355
 msgid "Error occurred"
 msgstr "Une erreur s'est produite"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:139
 msgid "Error syncing lead"
-msgstr "Erreur lors de la synchronisation du prospect"
+msgstr "Erreur lors de la synchronisation de la piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:386
 msgid "Error syncing leads"
-msgstr "Erreur lors de la synchronisation des prospects"
+msgstr "Erreur lors de la synchronisation des pistes"
 
 #: frontend/src/pages/Deal.vue:767 frontend/src/pages/Lead.vue:499
 #: frontend/src/pages/MobileDeal.vue:623 frontend/src/pages/MobileLead.vue:364
 msgid "Error updating field"
 msgstr "Erreur lors de la mise à jour du champ"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:275
 msgid "Error updating lead sync source"
-msgstr "Erreur lors de la mise à jour de la source de synchronisation des prospects"
+msgstr "Erreur lors de la mise à jour de la source de synchronisation des pistes"
 
 #. Option for the 'Background Sync Frequency' (Select) field in DocType 'Lead
 #. Sync Source'
@@ -3184,22 +3215,25 @@ msgstr "Facebook"
 msgid "Facebook Form ID"
 msgstr "ID du formulaire Facebook"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #. Label of the facebook_lead_form (Link) field in DocType 'Lead Sync Source'
 #: crm/lead_syncing/doctype/facebook_lead_form/facebook_lead_form.json
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.json
 msgid "Facebook Lead Form"
-msgstr "Formulaire de prospect Facebook"
+msgstr "Formulaire de pistes Facebook"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #: crm/lead_syncing/doctype/facebook_lead_form_question/facebook_lead_form_question.json
 msgid "Facebook Lead Form Question"
-msgstr "Question du formulaire de prospect Facebook"
+msgstr "Question du formulaire de pistes Facebook"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Label of the facebook_lead_id (Data) field in DocType 'CRM Lead'
 #: crm/fcrm/doctype/crm_lead/crm_lead.json
 msgid "Facebook Lead ID"
-msgstr "ID du prospect Facebook"
+msgstr "ID de la piste Facebook"
 
 #. Name of a DocType
 #. Label of the facebook_page (Link) field in DocType 'Lead Sync Source'
@@ -3225,10 +3259,11 @@ msgstr "Annonces Facebook/Instagram"
 msgid "Failed"
 msgstr "Échoué"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #: crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.json
 msgid "Failed Lead Sync Log"
-msgstr "Journal de synchronisation de prospects échouée"
+msgstr "Journal des synchronisations de pistes échouées"
 
 #: frontend/src/components/Modals/AddExistingUserModal.vue:109
 msgid "Failed to Add Users"
@@ -3254,9 +3289,10 @@ msgstr "Échec de la création du modèle"
 msgid "Failed to delete comment"
 msgstr "Impossible de supprimer le commentaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:178
 msgid "Failed to delete lead sync source"
-msgstr "Échec de la suppression de la source de synchronisation des Leads"
+msgstr "Échec de la suppression de la source de synchronisation des pistes"
 
 #: frontend/src/components/Activities/NoteArea.vue:75
 msgid "Failed to delete note"
@@ -3772,9 +3808,10 @@ msgstr "Horaire"
 msgid "How are you managing your sales today?"
 msgstr "Comment gérez-vous votre vente aujourd'hui ?"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/pages/PersonaForm.vue:70
 msgid "How do new leads usually come to you?"
-msgstr "Comment les nouveaux prospects vous arrivent-ils généralement ?"
+msgstr "Comment les nouvelles pistes vous arrivent-elles généralement ?"
 
 # //// Neoffice — the product is called Neoffice, never by its engine's name: this line named it (« CRM » is all the user needs).
 #: frontend/src/pages/PersonaForm.vue:108
@@ -3818,9 +3855,10 @@ msgstr "ID"
 msgid "Icon"
 msgstr "Icône"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/emailConfig.js:61
 msgid "If enabled, a lead will be automatically created when an incoming email is received from an unknown contact."
-msgstr "Si cette option est activée, un Lead sera automatiquement créé lors de la réception d'un e-mail provenant d'un contact inconnu."
+msgstr "Si cette option est activée, une piste sera automatiquement créée lors de la réception d'un e-mail provenant d'un contact inconnu."
 
 #: frontend/src/components/Settings/emailConfig.js:53
 msgid "If enabled, all outgoing emails will be sent from this account. Note: Only one account can be default outgoing."
@@ -4023,9 +4061,10 @@ msgstr "Format invalide. Essayez : 1 heure 30 minutes, 2 heures, 45 secondes, 1:
 msgid "Invalid format. Try: 1h 30m 45s, 1:30:45, 90s"
 msgstr "Format invalide. Essayez : 1h 30m 45s, 1:30:45, 90s"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:269
 msgid "Invalid lead details supplied."
-msgstr "Informations du Lead invalides."
+msgstr "Informations de la piste invalides."
 
 #: crm/api/__init__.py:85 crm/api/__init__.py:89
 #: crm/fcrm/doctype/crm_invitation/crm_invitation.py:63
@@ -4344,6 +4383,7 @@ msgstr "Dernier utilisateur attribué par cette règle"
 msgid "Layout"
 msgstr "Disposition"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #. Label of the lead (Link) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
 #: frontend/src/components/Layouts/AppSidebar.vue:664
@@ -4354,95 +4394,114 @@ msgstr "Disposition"
 #: frontend/src/components/Telephony/ExotelCallUI.vue:200
 #: frontend/src/pages/Tasks.vue:133
 msgid "Lead"
-msgstr "Lead"
+msgstr "Piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Label of the lead_data (Code) field in DocType 'Failed Lead Sync Log'
 #: crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.json
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:40
 msgid "Lead Data"
-msgstr "Données du prospect"
+msgstr "Données de la piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #. Label of the lead_details_tab (Tab Break) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
 msgid "Lead Details"
-msgstr "Détails du Lead"
+msgstr "Détails de la piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #. Label of the lead_name (Data) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
 msgid "Lead Name"
-msgstr "Nom du Lead"
+msgstr "Nom de la piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #. Label of the lead_owner (Link) field in DocType 'CRM Lead'
 #: crm/fcrm/doctype/crm_lead/crm_lead.json
 msgid "Lead Owner"
-msgstr "Responsable du Prospect"
+msgstr "Responsable de la piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #: crm/fcrm/doctype/crm_lead/crm_lead.py:150
 msgid "Lead Owner cannot be same as the Lead Email Address"
-msgstr "Le propriétaire du prospect ne peut pas être identique à l'adresse e-mail du prospect"
+msgstr "Le responsable de la piste ne peut pas être identique à l'adresse e-mail de la piste"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Label of a shortcut in the Frappe CRM Workspace
 #: crm/fcrm/workspace/frappe_crm/frappe_crm.json
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:7
 msgid "Lead Sources"
-msgstr "Sources de prospects"
+msgstr "Sources de pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Label of a shortcut in the Frappe CRM Workspace
 #: crm/fcrm/workspace/frappe_crm/frappe_crm.json
 msgid "Lead Statuses"
-msgstr "Statuts de prospects"
+msgstr "Statuts de pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Name of a DocType
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.json
 msgid "Lead Sync Source"
-msgstr "Source de synchronisation de prospects"
+msgstr "Source de synchronisation de pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/Settings.vue:239
 msgid "Lead Syncing"
-msgstr "Synchronisation de prospects"
+msgstr "Synchronisation de pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:311
 msgid "Lead and deal visibility will no longer be restricted by the reporting tree. Are you sure?"
-msgstr "La visibilité des prospects et des affaires ne sera plus restreinte par l'arbre de rapports. Êtes-vous sûr ?"
+msgstr "La visibilité des pistes et des affaires ne sera plus restreinte par l'arbre de rapports. Êtes-vous sûr ?"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:287
 msgid "Lead from call {0}"
-msgstr "Lead issu de l'appel {0}"
+msgstr "Piste issue de l'appel {0}"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:985
 msgid "Lead generation channel analysis"
-msgstr "Analyse des canaux de génération de prospects"
+msgstr "Analyse des canaux de génération de pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.js:8
 msgid "Lead sync initiated."
-msgstr "Synchronisation de prospects initiée."
+msgstr "Synchronisation de pistes initiée."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:289
 msgid "Lead sync source created successfully"
-msgstr "Source de synchronisation des prospects créée avec succès"
+msgstr "Source de synchronisation des pistes créée avec succès"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:175
 msgid "Lead sync source deleted successfully"
-msgstr "Source de synchronisation des Leads supprimée avec succès"
+msgstr "Source de synchronisation des pistes supprimée avec succès"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:788
 msgid "Lead to deal conversion pipeline"
-msgstr "Pipeline de conversion de prospect en affaire"
+msgstr "Pipeline de conversion de piste en affaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #. Label of a shortcut in the Frappe CRM Workspace
 #: crm/fcrm/workspace/frappe_crm/frappe_crm.json
 #: frontend/src/pages/InvalidPage.vue:9 frontend/src/pages/Lead.vue:371
 #: frontend/src/pages/MobileLead.vue:239
 msgid "Leads"
-msgstr "Prospects"
+msgstr "Pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:102
 msgid "Leads by Source"
-msgstr "Leads par source"
+msgstr "Pistes par source"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:984
 msgid "Leads by source"
-msgstr "Prospects par source"
+msgstr "Pistes par source"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:158
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:238
@@ -4736,12 +4795,13 @@ msgstr "Correspond à"
 msgid "Mark all as read"
 msgstr "Tout marquer comme lu"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Label of the auto_mark_replied_on_response (Check) field in DocType 'FCRM
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 #: frontend/src/components/Settings/GeneralSettings.vue:38
 msgid "Mark lead/deal as replied on response"
-msgstr "Marquer le Lead/l'opportunité comme répondu après une réponse"
+msgstr "Marquer la piste ou l'affaire comme répondue après une réponse"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:661
 msgid "Masters"
@@ -4956,9 +5016,10 @@ msgstr "Nouveau contact"
 msgid "New Email"
 msgstr "nouveau courriel"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSourceForm.vue:9
 msgid "New Lead Sync Source"
-msgstr "Nouvelle source de synchronisation de prospects"
+msgstr "Nouvelle source de synchronisation de pistes"
 
 #: frontend/src/components/Activities/ActivityHeader.vue:56
 msgid "New Message"
@@ -5241,9 +5302,10 @@ msgstr "Pas un formulaire CRM"
 msgid "Not allowed to add contact to Deal"
 msgstr "Non autorisé à ajouter un contact à l'affaire"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/fcrm/doctype/crm_lead/crm_lead.py:505
 msgid "Not allowed to convert Lead to Deal"
-msgstr "Non autorisé à convertir un prospect en affaire"
+msgstr "Non autorisé à convertir une piste en affaire"
 
 #: crm/fcrm/doctype/crm_deal/crm_deal.py:372
 msgid "Not allowed to remove contact from Deal"
@@ -5499,9 +5561,10 @@ msgstr "Optionnel"
 msgid "Options"
 msgstr "Options"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/pages/Welcome.vue:40
 msgid "Or create leads manually"
-msgstr "Ou créer des prospects manuellement"
+msgstr "Ou créer des pistes manuellement"
 
 #. Label of the order_by_tab (Tab Break) field in DocType 'CRM View Settings'
 #. Label of the order_by (Code) field in DocType 'CRM View Settings'
@@ -5769,9 +5832,10 @@ msgstr "Veuillez corriger les erreurs dans le formulaire"
 msgid "Please select a currency before saving."
 msgstr "Veuillez sélectionner une devise avant d'enregistrer."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.py:67
 msgid "Please select a lead gen form before syncing!"
-msgstr "Veuillez sélectionner un formulaire de génération de prospects avant la synchronisation !"
+msgstr "Veuillez sélectionner un formulaire de génération de pistes avant la synchronisation !"
 
 #: frontend/src/components/Settings/Sla/EditResponseResolutionModal.vue:88
 msgid "Please select a priority"
@@ -5809,17 +5873,19 @@ msgstr "Veuillez configurer l'intégration Exotel"
 msgid "Please specify a reason for losing the deal."
 msgstr "Veuillez spécifier une raison pour la perte de l'affaire."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/fcrm/doctype/crm_lead/crm_lead.py:158
 msgid "Please specify a reason for losing the lead."
-msgstr "Veuillez indiquer une raison pour la perte du Lead."
+msgstr "Veuillez indiquer une raison pour la perte de la piste."
 
 #: crm/fcrm/doctype/crm_deal/crm_deal.py:269
 msgid "Please specify the reason for losing the deal."
 msgstr "Veuillez spécifier la raison de la perte de l'affaire."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/fcrm/doctype/crm_lead/crm_lead.py:160
 msgid "Please specify the reason for losing the lead."
-msgstr "Veuillez préciser la raison de la perte du Lead."
+msgstr "Veuillez préciser la raison de la perte de la piste."
 
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:62
 msgid "Policy Name"
@@ -6218,12 +6284,13 @@ msgstr "Retiré de la hiérarchie"
 msgid "Rename"
 msgstr "Renommer"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Label of the auto_reopen_on_new_communication (Check) field in DocType 'FCRM
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 #: frontend/src/components/Settings/GeneralSettings.vue:60
 msgid "Reopen lead/deal on new communication"
-msgstr "Rouvrir le Lead/l'opportunité lors d'une nouvelle communication"
+msgstr "Rouvrir la piste ou l'affaire lors d'une nouvelle communication"
 
 #: frontend/src/components/Modals/ViewModal.vue:45
 msgid "Replace with an icon..."
@@ -6352,15 +6419,17 @@ msgstr "Restaurer les valeurs par défaut"
 msgid "Restore Demo Data"
 msgstr "Restaurer les données de démonstration"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Description of the 'Enable Sales Hierarchy Permissions' (Check) field in
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Restrict Lead and Deal visibility based on the Sales Hierarchy tree. Managers can see all records owned by or assigned to their reports."
-msgstr "Restreindre la visibilité des prospects et des affaires en fonction de l'arbre de la hiérarchie commerciale. Les responsables peuvent voir tous les enregistrements possédés par ou assignés à leurs rapports"
+msgstr "Restreindre la visibilité des pistes et des affaires en fonction de l'arbre de la hiérarchie commerciale. Les responsables peuvent voir tous les enregistrements possédés par ou assignés à leurs rapports"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:20
 msgid "Restrict visibility of Leads and Deals based on a reporting tree."
-msgstr "Restreindre la visibilité des prospects et des affaires en fonction d'un arbre de rapports"
+msgstr "Restreindre la visibilité des pistes et des affaires en fonction d'un arbre de rapports"
 
 #: frontend/src/components/Settings/Hierarchy/Hierarchy.vue:65
 msgid "Restrict visibility using a reporting tree"
@@ -7228,9 +7297,10 @@ msgstr "La date de début ne peut pas être après la date de fin"
 msgid "Start time is required"
 msgstr "L'heure de début est requise"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/pages/Welcome.vue:21
 msgid "Start with sample 10 leads"
-msgstr "Commencer avec 10 prospects d'exemple"
+msgstr "Commencer avec 10 pistes d'exemple"
 
 #. Label of the status (Select) field in DocType 'CRM Call Log'
 #. Label of the status (Data) field in DocType 'CRM Communication Status'
@@ -7343,9 +7413,10 @@ msgstr "Passer à {0} supprimera {1} champ(s) qui n'existent pas sur {0}. Cela n
 msgid "Sync Now"
 msgstr "Synchroniser maintenant"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.js:16
 msgid "Sync Successful, CRM Lead: {0}!"
-msgstr "Synchronisation réussie, Lead CRM : {0} !"
+msgstr "Synchronisation réussie, piste CRM : {0} !"
 
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:132
 msgid "Sync successful!"
@@ -7732,9 +7803,10 @@ msgstr "Total"
 msgid "Total Holidays"
 msgstr "Total des vacances"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:72
 msgid "Total Leads"
-msgstr "Total des Leads"
+msgstr "Total des pistes"
 
 #. Description of the 'Net Total' (Currency) field in DocType 'CRM Deal'
 #. Description of the 'Net Total' (Currency) field in DocType 'CRM Lead'
@@ -7743,13 +7815,15 @@ msgstr "Total des Leads"
 msgid "Total after discount"
 msgstr "Total après remise"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:130
 msgid "Total leads"
-msgstr "Total des prospects"
+msgstr "Total des pistes"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/dashboard.py:131
 msgid "Total number of leads"
-msgstr "Nombre total de prospects"
+msgstr "Nombre total de pistes"
 
 #: crm/api/dashboard.py:190
 msgid "Total number of non won/lost deals"
@@ -7971,15 +8045,17 @@ msgstr "Mettre à jour le compte"
 msgid "Update Configuration"
 msgstr "Mettre à jour la configuration"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #. Description of the 'Update timestamp on new communication' (Check) field in
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Update the modified timestamp on new email communication & comment for leads & deals"
-msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les Leads et opportunités"
+msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les pistes et les affaires"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/GeneralSettings.vue:20
 msgid "Update the modified timestamp on new email communication & comments for leads & deals"
-msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les Leads et opportunités"
+msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les pistes et les affaires"
 
 #. Label of the update_timestamp_on_new_communication (Check) field in DocType
 #. 'FCRM Settings'
@@ -8193,9 +8269,10 @@ msgstr "Message de bienvenue"
 msgid "Welcome to Frappe CRM"
 msgstr "Bienvenue dans le CRM"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/pages/Welcome.vue:4
 msgid "Welcome {0}, lets add your first lead"
-msgstr "Bienvenue {0}, ajoutons votre premier prospect"
+msgstr "Bienvenue {0}, ajoutons votre première piste"
 
 #: frontend/src/pages/PersonaForm.vue:87
 msgid "What are your biggest challenges with sales today?"
@@ -8300,9 +8377,10 @@ msgstr "Vous n'êtes pas autorisé(e) à accéder aux ressources CRM."
 msgid "You are not permitted to access this resource."
 msgstr "Vous n'êtes pas autorisé à accéder à cette ressource."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:265
 msgid "You are not permitted to create leads."
-msgstr "Vous n'êtes pas autorisé(e) à créer des Leads."
+msgstr "Vous n'êtes pas autorisé(e) à créer des pistes."
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:262
 msgid "You are not permitted to update this call log."
@@ -8362,9 +8440,10 @@ msgstr "Vous devez être en mode développeur pour modifier un script de formula
 msgid "You will be redirected to invite user page, unsaved changes will be lost."
 msgstr "Vous serez redirigé vers la page d'invitation d'utilisateur, les modifications non enregistrées seront perdues."
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/LeadSyncing/leadSyncSourceConfig.js:8
 msgid "You will need a Meta developer account and an access token to sync leads from Facebook. Read more"
-msgstr "Vous aurez besoin d'un compte développeur Meta et d'un jeton d'accès pour synchroniser les Leads depuis Facebook. En savoir plus"
+msgstr "Vous aurez besoin d'un compte développeur Meta et d'un jeton d'accès pour synchroniser les pistes depuis Facebook. En savoir plus"
 
 #: crm/api/todo.py:110
 msgid "Your assignment on task {0} has been removed by {1}"
@@ -8431,17 +8510,19 @@ msgstr "Commenter"
 msgid "contact-sales"
 msgstr "contacter-service-commercial"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/activities.py:53
 msgid "converted the lead to this deal"
-msgstr "a converti le Lead en opportunité"
+msgstr "a converti la piste en affaire"
 
 #: crm/api/activities.py:50
 msgid "created this deal"
 msgstr "a créé cette opportunité"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/activities.py:205
 msgid "created this lead"
-msgstr "a créé ce Lead"
+msgstr "a créé cette piste"
 
 #. Option for the 'Color' (Select) field in DocType 'CRM Deal Status'
 #. Option for the 'Color' (Select) field in DocType 'CRM Lead Status'
@@ -8624,10 +8705,11 @@ msgstr "kanban"
 msgid "label"
 msgstr "libellé"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/AssignmentRules/AssigneeRules.vue:134
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:374
 msgid "leads"
-msgstr "pistes de recherche"
+msgstr "pistes"
 
 #. Option for the 'Type' (Select) field in DocType 'CRM View Settings'
 #: crm/fcrm/doctype/crm_view_settings/crm_view_settings.json
@@ -9120,10 +9202,11 @@ msgstr "1er mai 2025"
 msgid "Add Description"
 msgstr "Ajouter une description"
 
+# //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 # //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
 #: frontend/src/components/Calendar/CalendarEventPanel.vue:429
 msgid "Add Lead or Deal"
-msgstr "Ajouter un prospect ou une affaire"
+msgstr "Ajouter une piste ou une affaire"
 
 # //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
 #: frontend/src/components/Calendar/CalendarEventPanel.vue:487
