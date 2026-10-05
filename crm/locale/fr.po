@@ -830,11 +830,12 @@ msgstr "Création automatique du client"
 msgid "Auto Update Expected Deal Value"
 msgstr "Mise à jour automatique de la valeur prévisionnelle de l'affaire"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #. Label of the auto_update_expected_deal_value (Check) field in DocType 'FCRM
 #. Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Auto update Expected Deal Value"
-msgstr "Mettre à jour automatiquement la valeur d'opportunité prévisionnelle"
+msgstr "Mettre à jour automatiquement la valeur prévisionnelle de l'affaire"
 
 # //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRules.vue:11
@@ -903,26 +904,30 @@ msgstr "Temps moyen entre la création et la clôture d'une affaire"
 msgid "Average time taken from lead creation to deal closure"
 msgstr "Temps moyen entre la création d'une piste et la clôture d'une affaire"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:77
 msgid "Avg Deal Value"
-msgstr "Valeur moy. des opportunités"
+msgstr "Valeur moy. des affaires"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:74
 msgid "Avg Ongoing Deal Value"
-msgstr "Valeur moy. des opportunités en cours"
+msgstr "Valeur moy. des affaires en cours"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:83
 msgid "Avg Time to Close a Deal"
-msgstr "Temps moy. de clôture d'une opportunité"
+msgstr "Temps moy. de clôture d'une affaire"
 
 # //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:79
 msgid "Avg Time to Close a Lead"
 msgstr "Temps moy. de clôture d'une piste"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:76
 msgid "Avg Won Deal Value"
-msgstr "Valeur moy. des opportunités gagnées"
+msgstr "Valeur moy. des affaires gagnées"
 
 #: crm/api/dashboard.py:418
 msgid "Avg. deal value"
@@ -1650,9 +1655,10 @@ msgstr "Configurez les paramètres par défaut de votre système CRM, notamment 
 msgid "Configure general settings for your application"
 msgstr "Configurer les paramètres généraux de votre application"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Settings/DashboardSettings.vue:10
 msgid "Configure how your dashboard calculates, formats, and displays key metrics, including forecasting, deal values, and currency settings"
-msgstr "Configurez la manière dont votre tableau de bord calcule, formate et affiche les indicateurs clés, notamment les prévisions, les valeurs d'opportunités et les paramètres de devise."
+msgstr "Configurez la manière dont votre tableau de bord calcule, formate et affiche les indicateurs clés, notamment les prévisions, les valeurs des affaires et les paramètres de devise."
 
 #: frontend/src/components/Settings/Telephony/TelephonySettings.vue:18
 msgid "Configure telephony settings for your CRM"
@@ -1925,9 +1931,10 @@ msgstr "Créer un nouveau modèle"
 msgid "Create View"
 msgstr "Créer une vue"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Settings/ERPNextSettings.vue:274
 msgid "Create customer in ERPNext when the deal status is changed"
-msgstr "Créer un client dans ERPNext lors du changement de statut de l'opportunité"
+msgstr "Créer un client dans ERPNext lors du changement de statut de l'affaire"
 
 #. Label of the create_customer_on_status_change (Check) field in DocType
 #. 'ERPNext CRM Settings'
@@ -1950,9 +1957,10 @@ msgstr "Créez-en un pour commencer à capturer des pistes."
 msgid "Create products as Items in ERPNext"
 msgstr "Créer les produits comme articles dans ERPNext"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Settings/ERPNextSettings.vue:661
 msgid "Create quotation button on deal page and auto customer creation on deal status change will be disabled. Are you sure?"
-msgstr "Le bouton de création de devis sur la page d'opportunité et la création automatique de client lors du changement de statut seront désactivés. Êtes-vous sûr(e) ?"
+msgstr "Le bouton de création de devis sur la page d'affaire et la création automatique de client lors du changement de statut seront désactivés. Êtes-vous sûr(e) ?"
 
 # //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: frontend/src/components/Layouts/AppSidebar.vue:453
@@ -2108,13 +2116,14 @@ msgstr "Jour"
 msgid "Deal"
 msgstr "Affaire"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ». Inactive on osiris while the erpnext catalogue, loaded after this one, defines the same msgid: it wins.
 #. Label of the deal_owner (Link) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json frontend/src/pages/Contact.vue:410
 #: frontend/src/pages/MobileContact.vue:402
 #: frontend/src/pages/MobileOrganization.vue:484
 #: frontend/src/pages/Organization.vue:514
 msgid "Deal Owner"
-msgstr "Resp. de l'opportunité"
+msgstr "Resp. de l'affaire"
 
 #. Label of the deal_status (Link) field in DocType 'ERPNext CRM Settings'
 #: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.json
@@ -2136,9 +2145,10 @@ msgstr "Valeur de l'affaire"
 msgid "Deal generation channel analysis"
 msgstr "Analyse des canaux de génération d'affaires"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Settings/ERPNextSettings.vue:796
 msgid "Deal status is required"
-msgstr "Le statut de l'opportunité est obligatoire"
+msgstr "Le statut de l'affaire est obligatoire"
 
 #: crm/api/dashboard.py:1078 crm/api/dashboard.py:1141
 msgid "Deal value"
@@ -2152,25 +2162,30 @@ msgstr "Valeur de l'affaire"
 msgid "Deals"
 msgstr "Affaires"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:93
 msgid "Deals by Ongoing & Won Stage"
-msgstr "Opportunités par étape en cours et gagnées"
+msgstr "Affaires par étape en cours et gagnée"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:96
 msgid "Deals by Salesperson"
-msgstr "Opportunités par commercial"
+msgstr "Affaires par commercial"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:103
 msgid "Deals by Source"
-msgstr "Opportunités par source"
+msgstr "Affaires par source"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:101
 msgid "Deals by Stage"
-msgstr "Opportunités par étape"
+msgstr "Affaires par étape"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:95
 msgid "Deals by Territory"
-msgstr "Opportunités par territoire"
+msgstr "Affaires par territoire"
 
 #: crm/api/dashboard.py:846
 msgid "Deals by ongoing & won stage"
@@ -3167,9 +3182,10 @@ msgstr "Valeur prévisionnelle de l'affaire"
 msgid "Expected closure date is required."
 msgstr "La date de clôture prévisionnelle est obligatoire."
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: crm/fcrm/doctype/crm_deal/crm_deal.py:257
 msgid "Expected deal value is required."
-msgstr "La valeur d'opportunité prévisionnelle est obligatoire."
+msgstr "La valeur prévisionnelle de l'affaire est obligatoire."
 
 #. Option for the 'Status' (Select) field in DocType 'CRM Invitation'
 #: crm/fcrm/doctype/crm_invitation/crm_invitation.json
@@ -4622,9 +4638,10 @@ msgstr "Logo"
 msgid "Lost"
 msgstr "Perdu"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:94
 msgid "Lost Deal Reasons"
-msgstr "Raisons de perte d'opportunité"
+msgstr "Raisons de perte d'affaire"
 
 #. Label of the lost_details_tab (Tab Break) field in DocType 'CRM Deal'
 #. Label of the lost_details_tab (Tab Break) field in DocType 'CRM Lead'
@@ -5483,9 +5500,10 @@ msgstr "En attente"
 msgid "Ongoing"
 msgstr "En cours"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:73
 msgid "Ongoing Deals"
-msgstr "Opportunités en cours"
+msgstr "Affaires en cours"
 
 #: crm/api/dashboard.py:189
 msgid "Ongoing deals"
@@ -6865,9 +6883,10 @@ msgstr "Sélectionnez une option"
 msgid "Select the assignees for {0}."
 msgstr "Sélectionner les assignés pour {0}."
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Settings/ERPNextSettings.vue:304
 msgid "Select the deal status to trigger the auto customer creation in ERPNext"
-msgstr "Sélectionner le statut d'opportunité qui déclenchera la création automatique du client dans ERPNext"
+msgstr "Sélectionner le statut d'affaire qui déclenchera la création automatique du client dans ERPNext"
 
 #: frontend/src/components/Settings/DefaultsSettings.vue:131
 msgid "Select whether to display time with or without seconds"
@@ -7590,10 +7609,11 @@ msgstr "La condition '{0}' est invalide : {1}"
 msgid "The holiday on {0} is not between From Date and To Date"
 msgstr "Le jour de vacances {0} n’est pas compris entre la Date Initiale et la Date Finale"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #. Description of the 'Exchange Rate' (Float) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
 msgid "The rate used to convert the deal’s currency to your crm's base currency (set in CRM Settings). It is set once when the currency is first added and doesn't change automatically."
-msgstr "Le taux utilisé pour convertir la devise de l'opportunité dans la devise de base de votre CRM (définie dans les paramètres CRM). Il est défini une seule fois lors du premier ajout de la devise et ne se met pas à jour automatiquement."
+msgstr "Le taux utilisé pour convertir la devise de l'affaire dans la devise de base de votre CRM (définie dans les paramètres CRM). Il est défini une seule fois lors du premier ajout de la devise et ne se met pas à jour automatiquement."
 
 #. Description of the 'Exchange Rate' (Float) field in DocType 'CRM
 #. Organization'
@@ -8321,9 +8341,10 @@ msgstr "La largeur peut être en nombre, pixel ou rem (ex. 3, 30px, 10rem)"
 msgid "Won"
 msgstr "Gagné"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:75
 msgid "Won Deals"
-msgstr "Opportunités gagnées"
+msgstr "Affaires gagnées"
 
 #: crm/api/dashboard.py:306
 msgid "Won deals"
@@ -8515,9 +8536,10 @@ msgstr "contacter-service-commercial"
 msgid "converted the lead to this deal"
 msgstr "a converti la piste en affaire"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: crm/api/activities.py:50
 msgid "created this deal"
-msgstr "a créé cette opportunité"
+msgstr "a créé cette affaire"
 
 # //// Neoffice — manual vocabulary: a lead is a « piste ». This line said « Lead » (English) or « prospect ».
 #: crm/api/activities.py:205
@@ -8531,10 +8553,11 @@ msgstr "a créé cette piste"
 msgid "cyan"
 msgstr "cyan"
 
+# //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Settings/AssignmentRules/AssigneeRules.vue:135
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:375
 msgid "deals"
-msgstr "opportunités"
+msgstr "affaires"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:190
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:274
