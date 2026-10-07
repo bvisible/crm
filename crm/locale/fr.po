@@ -10835,3 +10835,7 @@ msgstr "Impossible d'établir votre appel pour le moment. Veuillez réessayer pl
 
 #~ msgid "{0} yes"
 #~ msgstr "{0} oui"
+
+#: frontend/src/components/Layouts/NeoCockpitCRMSidebar.vue
+msgid "Call Logs"
+msgstr "Journal d'appels"

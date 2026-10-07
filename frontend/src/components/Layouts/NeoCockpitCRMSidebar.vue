@@ -43,20 +43,28 @@ const surfaceApp = {
 //// belongs to a list entry, so that opening one record keeps its list
 //// highlighted. Only the four entries that have such a route in router.js
 //// carry it; Dashboard, Notes, Tasks and Call Logs have no detail route.
+//// Neoffice — each label is a literal __() call made when the menu is drawn: the
+//// cockpit showed these entries in English (« Leads », « Deals », « Call Logs »…)
+//// under a French page, and a literal is what the catalogue extraction finds (07.10).
 const LINKS = [
-  { label: 'Dashboard', icon: 'lucide-layout-dashboard', to: 'Dashboard' },
-  { label: 'Leads', icon: 'lucide-target', to: 'Leads', detail: 'Lead' },
-  { label: 'Deals', icon: 'lucide-hand-coins', to: 'Deals', detail: 'Deal' },
-  { label: 'Contacts', icon: 'lucide-contact', to: 'Contacts', detail: 'Contact' },
+  { label: () => __('Dashboard'), icon: 'lucide-layout-dashboard', to: 'Dashboard' },
+  { label: () => __('Leads'), icon: 'lucide-target', to: 'Leads', detail: 'Lead' },
+  { label: () => __('Deals'), icon: 'lucide-hand-coins', to: 'Deals', detail: 'Deal' },
   {
-    label: 'Organizations',
+    label: () => __('Contacts'),
+    icon: 'lucide-contact',
+    to: 'Contacts',
+    detail: 'Contact',
+  },
+  {
+    label: () => __('Organizations'),
     icon: 'lucide-building',
     to: 'Organizations',
     detail: 'Organization',
   },
-  { label: 'Notes', icon: 'lucide-sticky-note', to: 'Notes' },
-  { label: 'Tasks', icon: 'lucide-check-square', to: 'Tasks' },
-  { label: 'Call Logs', icon: 'lucide-phone', to: 'Call Logs' },
+  { label: () => __('Notes'), icon: 'lucide-sticky-note', to: 'Notes' },
+  { label: () => __('Tasks'), icon: 'lucide-check-square', to: 'Tasks' },
+  { label: () => __('Call Logs'), icon: 'lucide-phone', to: 'Call Logs' },
 ]
 
 function navigate(r) {
@@ -70,7 +78,8 @@ const contextNav = computed(() => {
   return [
     {
       items: LINKS.map((item) => ({
-        label: item.label,
+        //// Neoffice — translated here, see LINKS.
+        label: item.label(),
         icon: item.icon,
         //// Neoffice — match the router name exactly, on the list route or on
         //// the detail route this entry owns. The previous test was
