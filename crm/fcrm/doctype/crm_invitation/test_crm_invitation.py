@@ -151,3 +151,30 @@ class TestCRMInvitation(FrappeTestCase):
 		user_roles = {r.role for r in user.roles}
 		self.assertIn("Sales Manager", user_roles)
 		self.assertIn("Sales User", user_roles)
+
+	# //// Neoffice — the invitation e-mail names the product the site calls itself, not "Frappe CRM" (15.10).
+	def _sent_invitation(self, app_name):
+		with patch.object(frappe, "sendmail") as sendmail, patch("frappe.get_system_settings", return_value=app_name):
+			frappe.get_doc(doctype="CRM Invitation", email="brand@example.com", role="Sales User").insert(
+				ignore_permissions=True
+			)
+		return sendmail.call_args.kwargs
+
+	def test_invitation_names_neoffice_when_the_site_still_has_a_framework_name(self):
+		for framework_name in ("Frappe", "ERPNext", "", None):
+			with self.subTest(app_name=framework_name):
+				sent = self._sent_invitation(framework_name)
+				self.assertEqual(sent["subject"], "You have been invited to join Neoffice CRM")
+				self.assertEqual(sent["args"]["title"], "Neoffice CRM")
+				frappe.db.delete("CRM Invitation", {"email": "brand@example.com"})
+
+	def test_invitation_names_the_name_the_site_chose(self):
+		sent = self._sent_invitation("Atelier")
+		self.assertEqual(sent["subject"], "You have been invited to join Atelier CRM")
+
+	def test_invitation_body_says_the_title_and_never_frappe(self):
+		html = frappe.get_template("templates/emails/crm_invitation.html").render(
+			{"title": "Neoffice CRM", "invite_link": "https://example.com/accept"}
+		)
+		self.assertIn("You have been invited to join Neoffice CRM", html)
+		self.assertNotIn("Frappe", html)

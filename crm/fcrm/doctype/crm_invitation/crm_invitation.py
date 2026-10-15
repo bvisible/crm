@@ -39,7 +39,13 @@ class CRMInvitation(Document):
 		if frappe.local.dev_server:
 			print(f"Invite link for {self.email}: {invite_link}")  # nosemgrep
 
-		title = "Frappe CRM"
+		# //// Neoffice — the invitation said "Frappe CRM": it reaches our customers' staff, and the product is Neoffice
+		# //// (Jérémy, 15.10). The name is the site's own (System Settings), Neoffice where it is still a framework
+		# //// default. The template writes this `title` as well: it hard-coded the upstream name.
+		app_name = frappe.get_system_settings("app_name")
+		if not app_name or app_name in ("Frappe", "ERPNext"):
+			app_name = "Neoffice"
+		title = f"{app_name} CRM"
 		template = "crm_invitation"
 
 		frappe.sendmail(
