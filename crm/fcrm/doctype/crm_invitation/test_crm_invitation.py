@@ -1,6 +1,7 @@
 # Copyright (c) 2024, Frappe Technologies Pvt. Ltd. and Contributors
 # See license.txt
 
+from contextlib import contextmanager  # //// Neoffice — for the faked site name of the invitation tests (16.10)
 from unittest.mock import patch
 
 import frappe
@@ -153,12 +154,34 @@ class TestCRMInvitation(FrappeTestCase):
 		self.assertIn("Sales User", user_roles)
 
 	# //// Neoffice — the invitation e-mail names the product the site calls itself, not "Frappe CRM" (15.10).
+	@contextmanager
+	def _site_named(self, app_name):
+		"""System Settings.app_name reads `app_name`, and ONLY that key does.
+
+		The framework asks the same function for the time zone and for more: a constant answer for every key made the
+		frappe v16 job of the Server workflow fail on a time zone called "Atelier" (`No module named 'tzdata'`, 16.10).
+		"""
+		real_get_system_settings = frappe.get_system_settings
+
+		def get_system_settings(key):
+			return app_name if key == "app_name" else real_get_system_settings(key)
+
+		with patch("frappe.get_system_settings", side_effect=get_system_settings):
+			yield
+
 	def _sent_invitation(self, app_name):
-		with patch.object(frappe, "sendmail") as sendmail, patch("frappe.get_system_settings", return_value=app_name):
+		# //// Neoffice — the name is faked through `_site_named`, which leaves every other setting alone (16.10).
+		with patch.object(frappe, "sendmail") as sendmail, self._site_named(app_name):
 			frappe.get_doc(doctype="CRM Invitation", email="brand@example.com", role="Sales User").insert(
 				ignore_permissions=True
 			)
 		return sendmail.call_args.kwargs
+
+	# //// Neoffice — pins the fake: while the name is faked, the time zone stays the real one (16.10).
+	def test_a_faked_site_name_does_not_leak_into_the_other_system_settings(self):
+		with self._site_named("Atelier"):
+			self.assertEqual(frappe.get_system_settings("app_name"), "Atelier")
+			self.assertNotEqual(frappe.get_system_settings("time_zone"), "Atelier")
 
 	def test_invitation_names_neoffice_when_the_site_still_has_a_framework_name(self):
 		for framework_name in ("Frappe", "ERPNext", "", None):
@@ -166,7 +189,7 @@ class TestCRMInvitation(FrappeTestCase):
 				sent = self._sent_invitation(framework_name)
 				self.assertEqual(sent["subject"], "You have been invited to join Neoffice CRM")
 				self.assertEqual(sent["args"]["title"], "Neoffice CRM")
-				frappe.db.delete("CRM Invitation", {"email": "brand@example.com"})
+				# //// Neoffice — no row to delete between the rounds: the class is rolled back at its end (16.10).
 
 	def test_invitation_names_the_name_the_site_chose(self):
 		sent = self._sent_invitation("Atelier")
