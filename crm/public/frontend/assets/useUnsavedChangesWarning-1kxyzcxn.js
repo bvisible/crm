@@ -1,0 +1,1 @@
+import{J as e,P as t,q as n}from"./vue.runtime.esm-bundler-jluGaO9U.js";t();function r(t){function r(e){t()&&(e.preventDefault(),e.returnValue=!0)}n(()=>addEventListener(`beforeunload`,r)),e(()=>removeEventListener(`beforeunload`,r))}export{r as t};

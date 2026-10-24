@@ -1,0 +1,1 @@
+import{A as e,P as t}from"./vue.runtime.esm-bundler-jluGaO9U.js";import{A as n}from"./users-FMgVnHbZ.js";t();var r=n(`crm-global`,()=>{let{$dialog:t,$socket:n}=e().appContext.config.globalProperties,r=()=>{};function i(e){r=e}function a(e){r(e)}return{$dialog:t,$socket:n,makeCall:a,setMakeCall:i}});export{r as t};

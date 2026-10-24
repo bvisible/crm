@@ -1,0 +1,1 @@
+import{M as e,P as t}from"./vue.runtime.esm-bundler-jluGaO9U.js";import{t as n}from"./Icon-0VPRasHY.js";t();function r(t){return typeof t==`string`&&t?()=>e(n,{icon:t}):t}export{r as t};
