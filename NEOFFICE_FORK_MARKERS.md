@@ -16,9 +16,23 @@ Tooling: `bvisible/neoffice-ci` → `scripts/fork_markers.py`
 Fork `bvisible/crm`, branch `version-15`. Upstream `frappe/crm` (default branch `develop`;
 we track `main`).
 
+### Merge record — upstream v1.89.1, 2026-10-24
+
+**BASE is now the upstream tag `v1.89.1`** (`5e1df8caa6a94212a169e1e56f3cc4cf9df7de32`), merged on
+top of v1.83.0: 906 upstream commits, 4 conflicting files. Measure the next merge against it.
+
+| | |
+|---|---|
+| **Absorbed upstream — our patch removed** | `setup_wizard_complete = "crm.demo.api.create_demo_data"` is gone from upstream's `crm/hooks.py`, so the comment that disabled it went with it. The persona wizard and its Frappe v16 `pulse.client.boot_config` call are gone from `frontend/src/router.js` (replaced by a `Setup` page that reads `FCRM Settings.setup_completed`), so our `PULSE_TELEMETRY_AVAILABLE` guard went too; the router is upstream verbatim. |
+| **Kept** | The `override_whitelisted_methods` entry in `crm/hooks.py` that answers `frappe.utils.telemetry.pulse.client.boot_config` through `crm.telemetry.pulse_boot_config`: frappe-ui's `telemetryPlugin` (`frontend/src/main.js`) still calls it on every load. The clay retheme block at the end of `frontend/src/index.css`, the NeoCockpit sidebar, `sourcemap: false`, the build guard in `package.json`, `NODE_OPTIONS` + `cross-env` in `frontend/package.json`, and the Frappe v15 shims listed under v1.83.0 (the fleet still runs the older Frappe: drop them when it has moved to 15.124). |
+| **New for the build** | Upstream's frontend links `@framework/ui` to `../../frappe/ui` (`link:` in `frontend/package.json`, alias in `frontend/vite.config.js`): a package only frappe version-16 carries. `.github/workflows/build-frontend.yml` now clones it (sparse, `ui` only, latest version-16 release through upstream's `.github/helper/frappe_ref.sh`) next to the workspace, as upstream's `frontend-tests.yml` does. A local build needs `../frappe/ui` too. Node 24 like upstream. `frappe-ui` is pinned by upstream itself (`1.0.0-rc.2`); our exact pin of the old version went with the merge. |
+| **Dependencies** | `tldextract` and `requests` are new Python dependencies (`pyproject.toml`), for the website enrichment crawler. 8 new patches, 17 DocTypes touched: `bench migrate` is required. |
+| **`frontend/yarn.lock`** | Upstream's, regenerated with `yarn install` from the merged `package.json` (the only difference is `cross-env` and its `@epic-web/invariant`). |
+| **French catalogue** | `crm/locale/fr.po` was not touched upstream, so it merged as ours; the 481 msgids new in `main.pot` were translated by the PO tool (see the `translate` skill). |
+
 ### Merge record — upstream v1.83.0, 2026-09-11
 
-**BASE is now `52c500d6bdac3cd51553f95cfae9c7a940d99f1a`** — upstream `main` at **v1.83.0**
+**BASE was `52c500d6bdac3cd51553f95cfae9c7a940d99f1a`** — upstream `main` at **v1.83.0**
 (*"chore(release): Bumped to Version 1.83.0"*, 2026-09-02), merged by `476f16a4`. It replaces the
 v1.56.3 base described below: 2481 upstream commits, 12 conflicting files — exactly the forecast.
 
