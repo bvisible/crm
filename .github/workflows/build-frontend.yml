@@ -26,9 +26,21 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: ${{ github.ref }}
 
+      # //// Neoffice — upstream's frontend/package.json links `@framework/ui` to a sibling
+      # //// frappe checkout (link:../../frappe/ui, aliased in vite.config.js), a package
+      # //// that only frappe version-16 carries. The same step as upstream's
+      # //// frontend-tests.yml puts it next to the workspace: only `ui`, at the latest
+      # //// version-16 release. The bundle is built once here and runs on v15 and v16.
+      # //// Node 24 like upstream's frontend job (was 20).
+      - name: Clone frappe for @framework/ui
+        run: |
+          git clone --depth 1 --branch "$(bash .github/helper/frappe_ref.sh version-16)" --filter=blob:none --sparse \
+            https://github.com/frappe/frappe "$GITHUB_WORKSPACE/../frappe"
+          git -C "$GITHUB_WORKSPACE/../frappe" sparse-checkout set ui
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
           cache-dependency-path: frontend/yarn.lock
 
