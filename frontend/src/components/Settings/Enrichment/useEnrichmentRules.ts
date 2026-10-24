@@ -28,29 +28,81 @@ export function useEnrichmentRules<R extends BaseRow>({
 }: EnrichmentRulesOptions<R>) {
   // Patterns come with each rule as a child table. refetch is off so it only
   // fetches when load asks.
+  //// Neoffice — upstream asks the list for the child table inline
+  //// (`{ patterns: [...] }`), which only Frappe v16's get_list can serve: on v15
+  //// it dies in sanitize_fields and the v2 API answers 500, so the Rules tab never
+  //// loaded (#1840). The rules are listed without it and their patterns fetched
+  //// by a second get_list on the child doctype (see loadPatterns); the rows
+  //// buildRows receives are exactly the ones upstream got. Drop this, and put the
+  //// inline field back, once the fleet runs Frappe v16.
   const list = useList<RuleDoc>({
     doctype: 'CRM Enrichment Rule',
     filters: { rule_type: ruleType },
-    fields: [
-      'name',
-      'enabled',
-      ...fields,
-      { patterns: ['name', 'pattern', 'is_regex', 'idx'] },
-    ],
+    //// Neoffice — no inline `patterns` field here (#1840).
+    fields: ['name', 'enabled', ...fields],
     orderBy: 'modified desc',
     limit: RULE_LIMIT,
     immediate: false,
     refetch: false,
     // Unsaved edits carry across a reload.
-    onSuccess: buildRows,
+    //// Neoffice — was `onSuccess: buildRows`; the patterns are fetched first (#1840).
+    onSuccess: (rules) => {
+      patternsLoad = loadPatterns(rules)
+    },
   })
+
+  //// Neoffice — see the list above (#1840).
+  let patternsLoad: Promise<void> = Promise.resolve()
+  const loadingPatterns = ref(false)
+  const patternsError = ref<unknown>(null)
+
+  //// Neoffice — see the list above (#1840).
+  async function loadPatterns(rules: RuleDoc[]) {
+    loadingPatterns.value = true
+    patternsError.value = null
+    try {
+      const byRule = new Map<string, PatternDoc[]>()
+      if (rules.length) {
+        const patternRows = await call<(PatternDoc & { parent: string })[]>(
+          'frappe.client.get_list',
+          {
+            doctype: 'CRM Enrichment Rule Pattern',
+            parent: 'CRM Enrichment Rule',
+            fields: ['name', 'parent', 'pattern', 'is_regex', 'idx'],
+            filters: { parent: ['in', rules.map((rule) => rule.name)] },
+            order_by: 'idx asc',
+            limit_page_length: 0,
+          },
+        )
+        patternRows.forEach((patternRow) => {
+          const own = byRule.get(patternRow.parent) || []
+          own.push(patternRow)
+          byRule.set(patternRow.parent, own)
+        })
+      }
+      buildRows(
+        rules.map((rule) => ({
+          ...rule,
+          patterns: byRule.get(rule.name) || [],
+        })),
+      )
+    } catch (err) {
+      patternsError.value = err
+    } finally {
+      loadingPatterns.value = false
+    }
+  }
 
   // Only the first load shows the spinner; reloads keep the rows on screen.
   const loadedOnce = ref(false)
 
-  const loading = computed(() => !loadedOnce.value && list.loading)
+  //// Neoffice — the first load also waits for the patterns (#1840).
+  const loading = computed(
+    () => !loadedOnce.value && (list.loading || loadingPatterns.value),
+  )
 
-  const error = computed(() => list.error)
+  //// Neoffice — a failed pattern fetch is a failed load (#1840).
+  const error = computed(() => list.error || patternsError.value)
 
   const saving = ref(false)
 
@@ -90,7 +142,9 @@ export function useEnrichmentRules<R extends BaseRow>({
 
   async function load() {
     await list.reload()
-    return !list.error
+    //// Neoffice — the patterns arrive after the rules (#1840).
+    await patternsLoad
+    return !list.error && !patternsError.value
   }
 
   // Social edits only the first pattern, so the order can't be left to the
