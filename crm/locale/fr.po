@@ -12731,15 +12731,15 @@ msgstr "Impossible de mettre à jour l'attribution"
 #: frontend/src/components/EnrichFromWebsite.vue:376
 #: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:28
 msgid "Undo"
-msgstr "Annuler"
+msgstr "Défaire"
 
 #: frontend/src/components/EnrichFromWebsite.vue:368
 msgid "Undo enrichment?"
-msgstr "Annuler l'enrichissement ?"
+msgstr "Défaire l'enrichissement ?"
 
 #: frontend/src/components/EnrichFromWebsite.vue:5
 msgid "Undo last enrichment"
-msgstr "Annuler le dernier enrichissement"
+msgstr "Défaire le dernier enrichissement"
 
 #. Label of the undone_by (Link) field in DocType 'CRM Enrichment Run'
 #: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:104
