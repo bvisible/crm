@@ -10839,3 +10839,2150 @@ msgstr "Impossible d'établir votre appel pour le moment. Veuillez réessayer pl
 #: frontend/src/components/Layouts/NeoCockpitCRMSidebar.vue
 msgid "Call Logs"
 msgstr "Journal d'appels"
+
+#: frontend/src/components/Controls/Link.vue:12
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:38
+msgid "(required)"
+msgstr "(obligatoire)"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:175
+#, python-brace-format
+msgid "+{0} more keyword(s) on this rule"
+msgstr "+{0} autre(s) mot(s)-clé(s) sur cette règle"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:66
+#, python-brace-format
+msgid "+{0} more pattern(s) on this rule"
+msgstr "+{0} autre(s) motif(s) sur cette règle"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:10
+msgid "a date field"
+msgstr "un champ de date"
+
+#: frontend/src/pages/Deals.vue:238
+msgid "A deal is a sale you are working on. Create one, or convert a lead into a deal once it looks promising."
+msgstr "Une affaire est une vente en cours. Créez-en une, ou transformez un prospect en affaire lorsqu'il paraît prometteur."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:7
+msgid "a field to watch"
+msgstr "un champ à surveiller"
+
+#: frontend/src/pages/Leads.vue:264
+msgid "A lead is someone who might buy from you. Add one yourself, import a list, or capture them from a web form."
+msgstr "Un prospect est une personne susceptible de vous acheter. Ajoutez-en un vous-même, importez une liste, ou captez-les depuis un formulaire web."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:9
+msgid "a schedule"
+msgstr "un calendrier"
+
+#. Description of the 'Pattern' (Data) field in DocType 'CRM Enrichment Rule
+#. Pattern'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule_pattern/crm_enrichment_rule_pattern.json:14
+msgid "A substring (default) or a regular expression matched against the rule's match scope."
+msgstr "Une sous-chaîne (par défaut) ou une expression régulière, comparée au périmètre de correspondance de la règle."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFilters.vue:39
+msgid "A trigger runs only when these filters match."
+msgstr "Un déclencheur ne s'exécute que lorsque ces filtres correspondent."
+
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.py:78
+#, python-brace-format
+msgid "A {0} rule for {1} already exists"
+msgstr "Une règle {0} pour {1} existe déjà"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:97
+#, python-brace-format
+msgid "Action on {0}"
+msgstr "Action sur {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:215
+msgid "Add block"
+msgstr "Ajouter un bloc"
+
+#: frontend/src/pages/Organization.vue:46
+msgid "Add Contact"
+msgstr "Ajouter un contact"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:62
+msgid "Add field"
+msgstr "Ajouter un champ"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:110
+msgid "Add industry rule"
+msgstr "Ajouter une règle par secteur"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:120
+msgid "Add one to tell enrichment which keywords point at which industry."
+msgstr "Ajoutez-en une pour indiquer à l'enrichissement quels mots-clés renvoient à quel secteur."
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:21
+msgid "Add one to tell enrichment which profile links to look for."
+msgstr "Ajoutez-en une pour indiquer à l'enrichissement les liens de profil à rechercher."
+
+#: frontend/src/components/Settings/Users.vue:11
+msgid "Add or invite users and choose their role to control what they can see and do."
+msgstr "Ajoutez ou invitez des utilisateurs et choisissez leur rôle pour contrôler ce qu'ils peuvent voir et faire."
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:11
+msgid "Add social rule"
+msgstr "Ajouter une règle réseaux sociaux"
+
+#: frontend/src/components/EnrichFromWebsite.vue:12
+msgid "Add website to auto enrich"
+msgstr "Ajouter un site web à enrichir automatiquement"
+
+#: frontend/src/components/Settings/EmailTemplate/EmailTemplates.vue:11
+msgid "Add, edit, and manage email templates for various CRM communications."
+msgstr "Ajoutez, modifiez et gérez les modèles d'e-mail pour les différentes communications du CRM."
+
+#: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:12
+msgid "Add, edit, and manage sources for automatic lead syncing to your CRM."
+msgstr "Ajoutez, modifiez et gérez les sources de synchronisation automatique des prospects vers votre CRM."
+
+#: frontend/src/components/Activities/Activities.vue:579
+msgid "added a note"
+msgstr "a ajouté une note"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:144
+msgid "Advanced"
+msgstr "Avancé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:282
+msgid "After branches"
+msgstr "Après les embranchements"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowConditionEditor.vue:31
+msgid "All filters must match."
+msgstr "Tous les filtres doivent correspondre."
+
+#. Label of the allowed_domains_section (Section Break) field in DocType 'CRM
+#. Enrichment Settings'
+#. Label of the allowed_domains (Table) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:144
+msgid "Allowed Domains"
+msgstr "Domaines autorisés"
+
+#. Description of the 'Allowed Domains' (Table) field in DocType 'CRM
+#. Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json
+msgid "Allowlist (subdomain-aware). If you add any domains here, the crawler may ONLY visit those domains and their subdomains — everything else is rejected by the SSRF guard. Leave empty (the normal case) to allow any public site; this is for locked-down deployments that should reach only specific domains."
+msgstr "Liste d'autorisation (tient compte des sous-domaines). Si vous ajoutez des domaines ici, le robot d'exploration ne peut visiter que ces domaines et leurs sous-domaines ; tout le reste est rejeté par le garde-fou SSRF. Laissez ce champ vide (cas normal) pour autoriser tout site public ; ce réglage sert aux déploiements verrouillés, qui ne doivent atteindre que des domaines précis."
+
+#. Option for the 'Write Policy' (Select) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:70
+msgid "Always refresh"
+msgstr "Toujours actualiser"
+
+#: crm/automation/actions.py:78
+msgid "Amount is required"
+msgstr "Le montant est obligatoire"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:11
+msgid "an event"
+msgstr "un événement"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:146
+msgid "and"
+msgstr "et"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:90
+msgid "Any document"
+msgstr "Tout document"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:471
+msgid "Are you sure you want to delete the trigger and all workflow steps?"
+msgstr "Voulez-vous vraiment supprimer le déclencheur et toutes les étapes du flux de travail ?"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:472
+msgid "Are you sure you want to delete this step?"
+msgstr "Voulez-vous vraiment supprimer cette étape ?"
+
+#: crm/automation/actions.py:299
+msgid "At least one recipient is required"
+msgstr "Au moins un destinataire est obligatoire"
+
+#: frontend/src/components/Settings/AssignmentRules/AssignmentRules.vue:21
+msgid "Auto-assign leads/deals to the right sales user based on predefined conditions."
+msgstr "Attribuez automatiquement les prospects et les affaires au bon utilisateur commercial, selon des conditions prédéfinies."
+
+#. Label of the auto_enrich (Check) field in DocType 'CRM Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:54
+#: frontend/src/components/Settings/Enrichment/GeneralTab.vue:62
+msgid "Auto-enrich new records"
+msgstr "Enrichir automatiquement les nouvelles fiches"
+
+#. Description of the 'Auto-enrich new records' (Check) field in DocType 'CRM
+#. Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:51
+msgid "Automatically enrich a new CRM Lead, Deal or Organization in the background as soon as it is created (requires a website on the record). Only applies to the doctypes enabled above. When off, enrichment is triggered manually with the Enrich button."
+msgstr "Enrichit automatiquement en arrière-plan un nouveau prospect, une nouvelle affaire ou une nouvelle organisation dès sa création (le site web doit être renseigné sur la fiche). S'applique uniquement aux types de documents activés ci-dessus. Désactivé, l'enrichissement se lance manuellement avec le bouton Enrichir."
+
+#: frontend/src/components/Settings/Enrichment/GeneralTab.vue:66
+msgid "Automatically enrich new Leads, Deals and Organizations in the background when they have a website. When off, use the Enrich button on the record."
+msgstr "Enrichit automatiquement en arrière-plan les nouveaux prospects, affaires et organisations qui ont un site web. Désactivé, utilisez le bouton Enrichir sur la fiche."
+
+#. Label of the automation_section (Section Break) field in DocType 'CRM
+#. Enrichment Settings'
+#. Option for the 'Type' (Select) field in DocType 'CRM Notification'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:47
+#: crm/fcrm/doctype/crm_notification/crm_notification.json:37
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationDetail.vue:16
+msgid "Automation"
+msgstr "Automatisation"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:413
+msgid "Automation deleted"
+msgstr "Automatisation supprimée"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:364
+msgid "Automation duplicated"
+msgstr "Automatisation dupliquée"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:522
+msgid "Automation saved"
+msgstr "Automatisation enregistrée"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:29
+msgid "Automation title"
+msgstr "Titre de l'automatisation"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:322
+msgid "Automation updated"
+msgstr "Automatisation mise à jour"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:105
+msgid "Automation User"
+msgstr "Utilisateur de l'automatisation"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:169
+msgid "Available to later steps"
+msgstr "Disponible pour les étapes suivantes"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationDetail.vue:9
+msgid "Back to automations"
+msgstr "Retour aux automatisations"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:235
+msgid "Before the first step"
+msgstr "Avant la première étape"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:65
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:73
+msgid "Belonging to"
+msgstr "Appartient à"
+
+#. Label of the blocked_domains_section (Section Break) field in DocType 'CRM
+#. Enrichment Settings'
+#. Label of the blocked_domains (Table) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:156
+msgid "Blocked Domains"
+msgstr "Domaines bloqués"
+
+#: frontend/src/components/Modals/EditValueModal.vue:218
+msgid "Bulk operation is enqueued in background. Failures, if any, are recorded in Error Log."
+msgstr "L'opération groupée est mise en file d'attente en arrière-plan. Les échecs éventuels sont consignés dans le journal des erreurs."
+
+#: frontend/src/pages/CallLogs.vue:57
+msgid "Calls made through Twilio or Exotel are logged here, along with calls you log by hand on a lead or deal."
+msgstr "Les appels passés via Twilio ou Exotel sont journalisés ici, ainsi que les appels que vous saisissez à la main sur un prospect ou une affaire."
+
+#: crm/fcrm/doctype/crm_lead/crm_lead.py:553
+#, python-brace-format
+msgid "Cannot convert a lead with status {0}"
+msgstr "Impossible de convertir un prospect au statut {0}"
+
+#: frontend/src/pages/Lead.vue:41 frontend/src/pages/MobileLead.vue:55
+msgid "Cannot convert a lost lead to deal"
+msgstr "Impossible de convertir un prospect perdu en affaire"
+
+#: frontend/src/components/Layouts/AppSidebar.vue:498
+msgid "Capture leads with a form"
+msgstr "Capturer des prospects avec un formulaire"
+
+#. Label of the changes_section (Section Break) field in DocType 'CRM
+#. Enrichment Run'
+#. Label of the changes (Table) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:159
+msgid "Changes"
+msgstr "Modifications"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:43
+msgid "Choose a field to set"
+msgstr "Choisissez un champ à définir"
+
+#: crm/automation/actions.py:113
+msgid "Choose a lead temperature"
+msgstr "Choisissez la température du prospect"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:58
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:57
+msgid "Choose an event"
+msgstr "Choisissez un événement"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:16
+msgid "Choose field"
+msgstr "Choisir un champ"
+
+#: frontend/src/components/Settings/DashboardSettings.vue:10
+msgid "Choose how the dashboard forecasts deals and shows currency."
+msgstr "Choisissez comment le tableau de bord prévoit les affaires et affiche les devises."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:41
+msgid "Choose value"
+msgstr "Choisir une valeur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:105
+msgid "Choose what this step does"
+msgstr "Choisissez l'action de cette étape"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:33
+#, python-brace-format
+msgid "Choose {0}"
+msgstr "Choisir {0}"
+
+#: frontend/src/components/ListViews/EmptyState.vue:73
+msgid "Clear the filters to see all records."
+msgstr "Effacez les filtres pour voir tous les enregistrements."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:112
+msgid "Clear to pick a record instead"
+msgstr "Effacez pour choisir un enregistrement à la place"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:120
+msgid "Close inspector"
+msgstr "Fermer l'inspecteur"
+
+#. Option for the 'Lead Temperature' (Select) field in DocType 'CRM Lead'
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:240
+msgid "Cold"
+msgstr "Froid"
+
+#. Label of the company_description (Small Text) field in DocType 'CRM Deal'
+#. Label of the company_description (Small Text) field in DocType 'CRM Lead'
+#. Label of the company_description (Small Text) field in DocType 'CRM
+#. Organization'
+#: crm/domain_enrichment/mapper.py:36
+#: crm/fcrm/doctype/crm_deal/crm_deal.json:489
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:453
+#: crm/fcrm/doctype/crm_organization/crm_organization.json:96
+msgid "Company Description"
+msgstr "Description de l'entreprise"
+
+#. Description of the 'Company Description' (Small Text) field in DocType 'CRM
+#. Deal'
+#. Lead'
+#. Organization'
+#: crm/fcrm/doctype/crm_deal/crm_deal.json:491
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:455
+#: crm/fcrm/doctype/crm_organization/crm_organization.json:98
+msgid "Company description discovered by Domain Enrichment."
+msgstr "Description de l'entreprise trouvée par l'enrichissement par domaine."
+
+#. Description of the 'Organization Logo' (Attach Image) field in DocType 'CRM
+#. Deal'
+#. Lead'
+#: crm/fcrm/doctype/crm_deal/crm_deal.json:484
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:448
+msgid "Company logo discovered by Domain Enrichment."
+msgstr "Logo de l'entreprise trouvé par l'enrichissement par domaine."
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "company_name"
+msgstr "Nom de l'entreprise"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:131
+msgid "Configure action"
+msgstr "Configurer l'action"
+
+#: frontend/src/components/Settings/HomeActions.vue:10
+msgid "Configure actions that appear on the home dropdown."
+msgstr "Configurez les actions affichées dans le menu déroulant de l'accueil."
+
+#: frontend/src/components/Settings/GeneralSettings.vue:8
+msgid "Configure general settings for your application."
+msgstr "Configurez les réglages généraux de votre application."
+
+#: frontend/src/components/Settings/Telephony/TelephonySettings.vue:18
+msgid "Configure telephony settings for your CRM."
+msgstr "Configurez les réglages de téléphonie de votre CRM."
+
+#: frontend/src/components/Settings/BrandSettings.vue:10
+msgid "Configure your brand name, logo and favicon."
+msgstr "Configurez le nom de votre marque, votre logo et votre favicon."
+
+#: frontend/src/components/Settings/EmailAccountList.vue:11
+msgid "Connect email accounts to send and receive emails from CRM. Set one as the default for incoming and outgoing emails."
+msgstr "Connectez des comptes e-mail pour envoyer et recevoir des e-mails depuis le CRM. Définissez-en un comme compte par défaut pour les e-mails entrants et sortants."
+
+#: frontend/src/pages/Contacts.vue:56
+msgid "Contacts are the people you talk to at your leads and customers. They are added when you convert a lead, or you can add them here."
+msgstr "Les contacts sont les personnes avec qui vous échangez chez vos prospects et vos clients. Ils sont ajoutés lors de la conversion d'un prospect, ou vous pouvez les ajouter directement ici."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:61
+msgid "Core"
+msgstr "Cœur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:367
+msgid "Could not duplicate automation"
+msgstr "Impossible de dupliquer l'automatisation"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:115
+msgid "Could not load industry rules"
+msgstr "Impossible de charger les règles par secteur"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:16
+msgid "Could not load social rules"
+msgstr "Impossible de charger les règles réseaux sociaux"
+
+#: frontend/src/components/ViewControls.vue:1277
+msgid "Could not move the card. Reverting."
+msgstr "Impossible de déplacer la carte. Retour à la position précédente."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:614
+msgid "Could not save automation"
+msgstr "Impossible d'enregistrer l'automatisation"
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:199
+msgid "Could not save settings"
+msgstr "Impossible d'enregistrer les réglages"
+
+#: frontend/src/components/EnrichFromWebsite.vue:285
+#: frontend/src/components/EnrichFromWebsite.vue:339
+msgid "Could not start enrichment."
+msgstr "Impossible de lancer l'enrichissement."
+
+#: frontend/src/components/EnrichFromWebsite.vue:416
+msgid "Could not undo enrichment."
+msgstr "Impossible d'annuler l'enrichissement."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:325
+msgid "Could not update automation"
+msgstr "Impossible de mettre à jour l'automatisation"
+
+#. Label of the crawl_tab (Tab Break) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:59
+msgid "Crawl"
+msgstr "Exploration"
+
+#. Label of the tuning_section (Section Break) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:116
+msgid "Crawl Tuning"
+msgstr "Réglage de l'exploration"
+
+#. Description of the 'Link Priority Order' (Table) field in DocType 'CRM
+#. Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:119
+msgid "Crawl-ordering hints (not extraction). Links whose URL path or anchor text contain one of these are fetched first; higher weight = sooner. Lets the crawler spend its page budget on company pages (about/contact/team) before the cap. Defaults are seeded; edit or remove as needed."
+msgstr "Indications d'ordre d'exploration (pas d'extraction). Les liens dont le chemin d'URL ou le texte d'ancre contient l'un de ces termes sont visités en premier ; plus le poids est élevé, plus tôt ils le sont. Permet au robot de consacrer son budget de pages aux pages de l'entreprise (à propos, contact, équipe) avant la limite. Les valeurs par défaut sont préremplies ; modifiez-les ou supprimez-les au besoin."
+
+#: frontend/src/components/Activities/QuotationsList.vue:14
+msgid "Create a quotation from this deal to see it here."
+msgstr "Créez un devis à partir de cette affaire pour le voir ici."
+
+#. Label of the create_missing_link (Check) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:78
+msgid "Create Missing Link"
+msgstr "Créer le lien manquant"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:5
+msgid "Create workflow automations for CRM documents."
+msgstr "Créez des automatisations de flux de travail pour les documents du CRM."
+
+#: frontend/src/components/Modals/DoctypeModal.vue:21
+#, python-brace-format
+msgid "Create {0}"
+msgstr "Créer {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:75
+msgid "Created By"
+msgstr "Créé par"
+
+#: crm/automation/actions.py:190
+#, python-brace-format
+msgid "Created Deal {0}"
+msgstr "Affaire {0} créée"
+
+#: crm/automation/actions.py:166
+#, python-brace-format
+msgid "CRM Deal has no field {0}"
+msgstr "L'affaire CRM n'a pas de champ {0}"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_domain/crm_enrichment_domain.json:26
+msgid "CRM Enrichment Domain"
+msgstr "Domaine d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:93
+msgid "CRM Enrichment Field Mapping"
+msgstr "Correspondance des champs d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_link_priority/crm_enrichment_link_priority.json:35
+msgid "CRM Enrichment Link Priority"
+msgstr "Priorité des liens d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:97
+msgid "CRM Enrichment Rule"
+msgstr "Règle d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_rule_pattern/crm_enrichment_rule_pattern.json:36
+msgid "CRM Enrichment Rule Pattern"
+msgstr "Motif de règle d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:193
+msgid "CRM Enrichment Run"
+msgstr "Exécution d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_run_change/crm_enrichment_run_change.json:42
+msgid "CRM Enrichment Run Change"
+msgstr "Modification d'exécution d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:172
+msgid "CRM Enrichment Settings"
+msgstr "Réglages d'enrichissement CRM"
+
+#. Name of a DocType
+#: crm/domain_enrichment/doctype/crm_enrichment_skip_pattern/crm_enrichment_skip_pattern.json:27
+msgid "CRM Enrichment Skip Pattern"
+msgstr "Motif d'exclusion d'enrichissement CRM"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:30
+msgid "Cron Expression"
+msgstr "Expression cron"
+
+#: frontend/src/components/Settings/DashboardSettings.vue:72
+msgid "Currency for dashboard cards and charts. Can't be changed once set."
+msgstr "Devise des cartes et graphiques du tableau de bord. Elle ne peut plus être modifiée une fois définie."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:68
+msgid "Custom Event"
+msgstr "Événement personnalisé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:92
+msgid "Custom event"
+msgstr "Événement personnalisé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:57
+msgid "Date Direction"
+msgstr "Sens de la date"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:41
+msgid "Date Field"
+msgstr "Champ de date"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:50
+msgid "Date Offset"
+msgstr "Décalage de date"
+
+#: crm/fcrm/doctype/fcrm_note/fcrm_note.py:84
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:161
+msgid "deal"
+msgstr "affaire"
+
+#: crm/automation/actions.py:54
+msgid "Deal field overrides must be a JSON object"
+msgstr "Les remplacements de champs de l'affaire doivent être un objet JSON"
+
+#. Label of the default_values (Small Text) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:85
+msgid "Default Values"
+msgstr "Valeurs par défaut"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:462
+msgid "Delete step"
+msgstr "Supprimer l'étape"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:289
+msgid "Delete this rule?"
+msgstr "Supprimer cette règle ?"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:462
+msgid "Delete trigger"
+msgstr "Supprimer le déclencheur"
+
+#. Description of the 'Blocked Domains' (Table) field in DocType 'CRM
+#. Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json
+msgid "Denylist (subdomain-aware). A host that equals or is a subdomain of any entry is always rejected by the SSRF guard — e.g. blocking \"acme.com\" also blocks \"shop.acme.com\". Use it to permanently exclude internal domains, known-bad hosts, or link shorteners. Always wins over the allowlist."
+msgstr "Liste de refus (tient compte des sous-domaines). Un hôte égal à l'une des entrées, ou sous-domaine de l'une d'elles, est toujours rejeté par le garde-fou SSRF : par exemple, bloquer « acme.com » bloque aussi « shop.acme.com ». Servez-vous-en pour exclure définitivement des domaines internes, des hôtes indésirables ou des raccourcisseurs de liens. Elle prime toujours sur la liste d'autorisation."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:284
+msgid "Discard and exit"
+msgstr "Abandonner et quitter"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTargetPicker.vue:43
+msgid "DocType resolved at runtime"
+msgstr "Type de document déterminé à l'exécution"
+
+#. Label of the domain (Data) field in DocType 'CRM Enrichment Domain'
+#: crm/domain_enrichment/doctype/crm_enrichment_domain/crm_enrichment_domain.json:16
+msgid "Domain"
+msgstr "Domaine"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:22
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:34
+#: crm/public/js/domain_enrichment.js:29 crm/public/js/domain_enrichment.js:42
+msgid "Domain Enrichment"
+msgstr "Enrichissement par domaine"
+
+#: frontend/src/components/ConditionsFilter/CFCondition.vue:231
+msgid "e.g. @gmail.com"
+msgstr "p. ex. @gmail.com"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:53
+msgid "e.g. mastodon\\\\.social/@\\\\w+"
+msgstr "p. ex. mastodon\\\\.social/@\\\\w+"
+
+#: frontend/src/components/ConditionsFilter/CFCondition.vue:232
+msgid "e.g. Open, Replied"
+msgstr "p. ex. Ouvert, Répondu"
+
+#: frontend/src/components/Modals/DoctypeModal.vue:20
+#, python-brace-format
+msgid "Edit {0}"
+msgstr "Modifier {0}"
+
+#: frontend/src/components/Controls/EmailMultiSelect.vue:256
+msgid "Email already exists"
+msgstr "Cette adresse e-mail existe déjà"
+
+#: crm/automation/actions.py:250
+#, python-brace-format
+msgid "Emailed {0}: {1}"
+msgstr "E-mail envoyé à {0} : {1}"
+
+#. Label of the emails_found (Int) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:140
+msgid "Emails Found"
+msgstr "E-mails trouvés"
+
+#: frontend/src/components/Settings/Enrichment/GeneralTab.vue:6
+msgid "Enable enrichment"
+msgstr "Activer l'enrichissement"
+
+#: frontend/src/components/EnrichFromWebsite.vue:14
+#: frontend/src/components/EnrichFromWebsite.vue:119
+#: frontend/src/components/EnrichFromWebsite.vue:310
+msgid "Enrich"
+msgstr "Enrichir"
+
+#: crm/public/js/domain_enrichment.js:12
+msgid "Enrich from Website"
+msgstr "Enrichir depuis le site web"
+
+#: frontend/src/components/EnrichFromWebsite.vue:121
+msgid "Enrich from website"
+msgstr "Enrichir depuis le site web"
+
+#: frontend/src/components/FieldLayout/Field.vue:22
+#: frontend/src/components/FieldLayout/Field.vue:25
+msgid "Enriched from website"
+msgstr "Enrichi depuis le site web"
+
+#: frontend/src/components/EnrichFromWebsite.vue:119
+#: frontend/src/components/EnrichFromWebsite.vue:121
+msgid "Enriching…"
+msgstr "Enrichissement en cours…"
+
+#: frontend/src/components/Settings/Settings.vue:219
+msgid "Enrichment"
+msgstr "Enrichissement"
+
+#: crm/public/js/domain_enrichment.js:52
+msgid "Enrichment complete"
+msgstr "Enrichissement terminé"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:40
+msgid "Enrichment complete — a new run was created"
+msgstr "Enrichissement terminé : une nouvelle exécution a été créée"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:47
+#: crm/public/js/domain_enrichment.js:60
+msgid "Enrichment Failed"
+msgstr "Échec de l'enrichissement"
+
+#: frontend/src/components/EnrichFromWebsite.vue:240
+#: frontend/src/components/EnrichFromWebsite.vue:263
+msgid "Enrichment failed."
+msgstr "L'enrichissement a échoué."
+
+#: crm/domain_enrichment/tasks.py:284
+msgid "Enrichment failed. Check the error log."
+msgstr "L'enrichissement a échoué. Consultez le journal des erreurs."
+
+#: crm/domain_enrichment/api.py:46
+#, python-brace-format
+msgid "Enrichment is not enabled for {0}."
+msgstr "L'enrichissement n'est pas activé pour {0}."
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:7
+msgid "Enrichment is off. These rules apply once it is turned on."
+msgstr "L'enrichissement est désactivé. Ces règles s'appliquent dès qu'il est activé."
+
+#: crm/domain_enrichment/api.py:158
+msgid "Enrichment is still running for this record. Try again once it finishes."
+msgstr "L'enrichissement est encore en cours pour cette fiche. Réessayez lorsqu'il sera terminé."
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:6
+msgid "Enrichment Settings"
+msgstr "Réglages d'enrichissement"
+
+#: frontend/src/components/EnrichFromWebsite.vue:193
+msgid "Enrichment successful"
+msgstr "Enrichissement réussi"
+
+#: frontend/src/components/EnrichFromWebsite.vue:411
+msgid "Enrichment undone"
+msgstr "Enrichissement annulé"
+
+#: frontend/src/components/FieldLayout/Field.vue:326
+#: frontend/src/components/Settings/Telephony/TelephonySettings.vue:88
+#: frontend/src/components/Settings/Telephony/TelephonySettings.vue:119
+#: frontend/src/components/Settings/Telephony/TelephonySettings.vue:150
+msgid "Enter a valid phone number"
+msgstr "Saisissez un numéro de téléphone valide"
+
+#: frontend/src/components/FilesUploader/FilesUploader.vue:192
+#: frontend/src/components/FilesUploader/FilesUploader.vue:215
+msgid "Error Uploading File"
+msgstr "Erreur lors du téléversement du fichier"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:39
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:156
+msgid "Event"
+msgstr "Événement"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowSteps.js:29
+msgid "Event happened"
+msgstr "L'événement s'est produit"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:86
+msgid "Extra check that must also pass; use Expression for Python logic."
+msgstr "Contrôle supplémentaire qui doit aussi réussir ; utilisez Expression pour la logique Python."
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "facebook"
+msgstr "Facebook"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowSteps.js:30
+msgid "False"
+msgstr "Faux"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:40
+msgid "Field value changes"
+msgstr "Modifications des valeurs de champs"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:72
+msgid "Field Values"
+msgstr "Valeurs des champs"
+
+#. Description of the 'Changes' (Table) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:162
+msgid "Field values this run wrote to the reference record, kept so the run can be undone."
+msgstr "Valeurs de champs que cette exécution a écrites sur la fiche de référence, conservées pour pouvoir annuler l'exécution."
+
+#. Label of the fieldname (Data) field in DocType 'CRM Enrichment Run Change'
+#: crm/domain_enrichment/doctype/crm_enrichment_run_change/crm_enrichment_run_change.json:18
+msgid "Fieldname"
+msgstr "Nom du Champ"
+
+#. Option for the 'Write Policy' (Select) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:70
+msgid "Fill if empty"
+msgstr "Remplir si vide"
+
+#. Description of the 'Write Policy' (Select) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:66
+msgid "Fill if empty: only write when the field is blank. Always refresh: overwrite on every run (for fully enrichment-derived fields). Override defaults: write even when the current value is a known default (see Default Values)."
+msgstr "Remplir si vide : n'écrit que si le champ est vide. Toujours actualiser : écrase à chaque exécution (pour les champs entièrement issus de l'enrichissement). Remplacer les valeurs par défaut : écrit même lorsque la valeur actuelle est une valeur par défaut connue (voir Valeurs par défaut)."
+
+#: frontend/src/components/Settings/Enrichment/GeneralTab.vue:10
+msgid "Fill in company details on Leads, Deals and Organizations from their website."
+msgstr "Complétez les informations de l'entreprise sur les prospects, les affaires et les organisations à partir de leur site web."
+
+#: frontend/src/components/EnrichFromWebsite.vue:196
+#, python-brace-format
+msgid "Filled: {0}"
+msgstr "Rempli : {0}"
+
+#. Label of the finished_on (Datetime) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:88
+msgid "Finished On"
+msgstr "Terminé le"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:67
+msgid "Fit entire flow"
+msgstr "Ajuster tout le flux"
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:218
+msgid "Fix the highlighted fields before saving"
+msgstr "Corrigez les champs signalés avant d'enregistrer"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:43
+msgid "Flow"
+msgstr "Flux"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:137
+msgid "Forced"
+msgstr "Forcé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:16
+msgid "From Value"
+msgstr "De la Valeur"
+
+#. Option for the 'Match Scope' (Select) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:78
+msgid "Full Text"
+msgstr "Texte intégral"
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "github"
+msgstr "GitHub"
+
+#: frontend/src/components/CommandPalette/recordCommands.js:187
+#, python-brace-format
+msgid "Go to {0}"
+msgstr "Aller à {0}"
+
+#. Option for the 'Match Scope' (Select) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:78
+msgid "Headline"
+msgstr "Titre"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:59
+msgid "Hide details"
+msgstr "Masquer les Détails"
+
+#. Option for the 'Lead Temperature' (Select) field in DocType 'CRM Lead'
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:240
+msgid "Hot"
+msgstr "Chaud"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:220
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:12
+msgid "If / Else"
+msgstr "Si / Sinon"
+
+#. Description of the 'Create Missing Link' (Check) field in DocType 'CRM
+#. Enrichment Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:75
+msgid "If the value names a missing linked record (e.g. a CRM Industry), create it. Opt-in only."
+msgstr "Si la valeur désigne une fiche liée absente (p. ex. un secteur du CRM), la créer. Option à activer explicitement."
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "industry"
+msgstr "Secteur"
+
+#. Label of the industry_confidence (Float) field in DocType 'CRM Enrichment
+#. Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:129
+msgid "Industry Confidence"
+msgstr "Confiance du secteur"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:109
+msgid "Industry rules"
+msgstr "Règles par secteur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFieldToken.vue:14
+msgid "Insert field"
+msgstr "Insérer un champ"
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "instagram"
+msgstr "Instagram"
+
+#: crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py:403
+msgid "Invalid deal"
+msgstr "Affaire invalide"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.py:60
+msgid "Invalid maximum pages"
+msgstr "Nombre maximal de pages invalide"
+
+#: frontend/src/components/Settings/InviteUserPage.vue:10
+msgid "Invite users to access CRM. Specify their roles to control access and permissions."
+msgstr "Invitez des utilisateurs à accéder au CRM. Précisez leurs rôles pour contrôler les accès et les autorisations."
+
+#. Label of the is_regex (Check) field in DocType 'CRM Enrichment Rule Pattern'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule_pattern/crm_enrichment_rule_pattern.json:27
+msgid "Is Regex"
+msgstr "Est une expression régulière"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:290
+msgid "It will be removed when you click Update."
+msgstr "Il sera supprimé lorsque vous cliquerez sur Mettre à jour."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:282
+msgid "Keep editing"
+msgstr "Continuer la modification"
+
+#. Label of the keyword (Data) field in DocType 'CRM Enrichment Link Priority'
+#: crm/domain_enrichment/doctype/crm_enrichment_link_priority/crm_enrichment_link_priority.json:18
+msgid "Keyword"
+msgstr "Mot-clé"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:111
+msgid "Keywords"
+msgstr "Mots-clés"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:161
+msgid "Keywords, comma separated"
+msgstr "Mots-clés, séparés par des virgules"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:71
+msgid "Launch manually"
+msgstr "Lancer manuellement"
+
+#: crm/fcrm/doctype/fcrm_note/fcrm_note.py:84
+msgid "lead"
+msgstr "prospect"
+
+#: crm/automation/scoring.py:47
+#, python-brace-format
+msgid "Lead is now {0}"
+msgstr "Le prospect est maintenant {0}"
+
+#. Label of the lead_score (Int) field in DocType 'CRM Lead'
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:233
+msgid "Lead Score"
+msgstr "Score du prospect"
+
+#: crm/automation/scoring.py:29
+#, python-brace-format
+msgid "Lead score {0} → {1}{2}"
+msgstr "Score du prospect {0} → {1}{2}"
+
+#. Label of the lead_temperature (Select) field in DocType 'CRM Lead'
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:239
+msgid "Lead Temperature"
+msgstr "Température du prospect"
+
+#: crm/automation/scoring.py:42
+#, python-brace-format
+msgid "Lead temperature must be one of {0}"
+msgstr "La température du prospect doit être l'une de ces valeurs : {0}"
+
+#: crm/fcrm/doctype/crm_lead/crm_lead.py:583
+#, python-brace-format
+msgid "Lead {0} is already converted to Deal {1}"
+msgstr "Le prospect {0} est déjà converti en affaire {1}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:162
+msgid "Lets a later step act on what this one produced."
+msgstr "Permet à une étape ultérieure d'agir sur ce que celle-ci a produit."
+
+#. Label of the link_priority_order (Table) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:122
+msgid "Link Priority Order"
+msgstr "Ordre de priorité des liens"
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "linkedin"
+msgstr "LinkedIn"
+
+#: frontend/src/components/Settings/ERPNextSettings.vue:4
+msgid "Manage ERPNext integration settings."
+msgstr "Gérez les réglages de l'intégration ERPNext."
+
+#: frontend/src/components/Settings/Sla/SlaPolicyList.vue:4
+msgid "Manage your service level agreement policies."
+msgstr "Gérez vos politiques de niveau de service (SLA)."
+
+#. Description of the 'Enabled' (Check) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:39
+msgid "Master switch for the Domain Enrichment feature."
+msgstr "Interrupteur général de la fonctionnalité d'enrichissement par domaine."
+
+#. Label of the match_scope (Select) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:77
+msgid "Match Scope"
+msgstr "Périmètre de correspondance"
+
+#. Label of the max_depth (Int) field in DocType 'CRM Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:73
+msgid "Max Depth"
+msgstr "Profondeur maximale"
+
+#. Label of the max_download_bytes (Int) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:98
+msgid "Max Download Bytes"
+msgstr "Octets téléchargés maximum"
+
+#. Label of the max_pages (Int) field in DocType 'CRM Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:66
+msgid "Max Pages"
+msgstr "Pages maximum"
+
+#. Description of the 'Max Download Bytes' (Int) field in DocType 'CRM
+#. Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:95
+msgid "Maximum bytes downloaded per page (the stream is capped)."
+msgstr "Nombre maximal d'octets téléchargés par page (le flux est plafonné)."
+
+#. Description of the 'Max Depth' (Int) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:70
+msgid "Maximum link depth followed from the homepage."
+msgstr "Profondeur maximale des liens suivis depuis la page d'accueil."
+
+#. Description of the 'Max Pages' (Int) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:63
+msgid "Maximum number of pages crawled per enrichment."
+msgstr "Nombre maximal de pages explorées par enrichissement."
+
+#: frontend/src/components/Settings/Enrichment/GeneralTab.vue:33
+msgid "Maximum number of pages that can be crawled during a single enrichment run."
+msgstr "Nombre maximal de pages pouvant être explorées lors d'une même exécution d'enrichissement."
+
+#: frontend/src/components/Settings/Enrichment/GeneralTab.vue:29
+msgid "Maximum pages"
+msgstr "Pages maximum"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.py:59
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:175
+#, python-brace-format
+msgid "Maximum pages must be a whole number between 1 and {0}"
+msgstr "Le nombre maximal de pages doit être un nombre entier compris entre 1 et {0}"
+
+#: crm/fcrm/doctype/fcrm_note/fcrm_note.py:84
+#, python-brace-format
+msgid "mentioned you in a note on {0}"
+msgstr "vous a mentionné dans une note sur {0}"
+
+#: crm/automation/actions.py:81
+msgid "Minimum score is above the maximum"
+msgstr "Le score minimum est supérieur au maximum"
+
+#: frontend/src/components/ViewControls.vue:1292
+msgid "Move cancelled: a lost reason is required for this status."
+msgstr "Déplacement annulé : un motif de perte est obligatoire pour ce statut."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:160
+msgid "Name the result"
+msgstr "Nommez le résultat"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:153
+msgid "Names this step in run logs and in its result path."
+msgstr "Nomme cette étape dans les journaux d'exécution et dans son chemin de résultat."
+
+#: frontend/src/pages/Contact.vue:16 frontend/src/pages/Organization.vue:23
+msgid "New Deal"
+msgstr "Nouvelle affaire"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:154
+msgid "New industry, created on save"
+msgstr "Nouveau secteur, créé à l'enregistrement"
+
+#. Label of the new_value (Small Text) field in DocType 'CRM Enrichment Run
+#. Change'
+#: crm/domain_enrichment/doctype/crm_enrichment_run_change/crm_enrichment_run_change.json:33
+msgid "New Value"
+msgstr "Nouvelle Valeur"
+
+#. Description of the 'Default Values' (Small Text) field in DocType 'CRM
+#. Enrichment Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:82
+msgid "Newline-separated values treated as \"unset\" defaults that may be overwritten, in addition to a truly empty field."
+msgstr "Valeurs séparées par un saut de ligne, considérées comme non renseignées et pouvant être remplacées, en plus d'un champ réellement vide."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:295
+msgid "No"
+msgstr "Non"
+
+#: frontend/src/pages/CallLogs.vue:55
+msgid "No call logs yet"
+msgstr "Aucun appel enregistré pour le moment"
+
+#: frontend/src/pages/Contacts.vue:54
+msgid "No contacts yet"
+msgstr "Aucun contact pour le moment"
+
+#: frontend/src/pages/Deals.vue:236
+msgid "No deals yet"
+msgstr "Aucune affaire pour le moment"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:118
+msgid "No industry rules yet"
+msgstr "Aucune règle par secteur pour l'instant"
+
+#: frontend/src/pages/Leads.vue:262
+msgid "No leads yet"
+msgstr "Aucun prospect pour le moment"
+
+#: frontend/src/pages/Notes.vue:116
+msgid "No notes yet"
+msgstr "Aucune note pour le moment"
+
+#: frontend/src/pages/Organizations.vue:54
+msgid "No organizations yet"
+msgstr "Aucune organisation pour le moment"
+
+#: frontend/src/components/FieldLayout/Field.vue:555
+msgid "No priority"
+msgstr "Aucune priorité"
+
+#: frontend/src/components/Activities/QuotationsList.vue:13
+msgid "No quotations yet"
+msgstr "Aucun devis pour le moment"
+
+#: crm/automation/actions.py:307
+msgid "No recipients to notify"
+msgstr "Aucun destinataire à notifier"
+
+#: frontend/src/components/CommandPalette/CommandPalette.vue:173
+#, python-brace-format
+msgid "No results for \"{0}\""
+msgstr "Aucun résultat pour \"{0}\""
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationRuns.vue:10
+msgid "No runs yet"
+msgstr "Aucune exécution pour le moment"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:19
+msgid "No social rules yet"
+msgstr "Aucune règle réseaux sociaux pour l'instant"
+
+#: frontend/src/pages/Tasks.vue:187
+msgid "No tasks yet"
+msgstr "Aucune tâche pour le moment"
+
+#: frontend/src/components/Modals/AddExistingUserModal.vue:41
+msgid "No Users Found"
+msgstr "Aucun utilisateur trouvé"
+
+#: crm/public/js/domain_enrichment.js:16
+msgid "No Website"
+msgstr "Pas de site web"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:59
+msgid "No workflow automations yet"
+msgstr "Aucune automatisation de flux de travail pour le moment"
+
+#: frontend/src/components/Controls/Grid.vue:27
+msgid "No."
+msgstr "N°"
+
+#: frontend/src/components/Filter.vue:415
+msgid "Not Set"
+msgstr "Non défini"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowConditionEditor.vue:37
+msgid "Not something filters can express. Edit it below."
+msgstr "Ce cas ne peut pas être exprimé avec des filtres. Modifiez-le ci-dessous."
+
+#: frontend/src/components/Activities/Activities.vue:213
+msgid "note updates from"
+msgstr "mises à jour de notes de"
+
+#: frontend/src/pages/Notes.vue:118
+msgid "Notes keep what you learned on a call or in a meeting next to the lead or deal it belongs to."
+msgstr "Les notes conservent ce que vous avez appris lors d'un appel ou d'une réunion, à côté du prospect ou de l'affaire concerné."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepSummary.vue:22
+msgid "Nothing here"
+msgstr "Rien ici"
+
+#: frontend/src/components/EnrichFromWebsite.vue:403
+msgid "Nothing to undo, you've edited all enriched fields"
+msgstr "Rien à annuler : vous avez modifié tous les champs enrichis"
+
+#: frontend/src/components/Modals/DoctypeModal.vue:157
+msgid "Nothing to update"
+msgstr "Rien à mettre à jour"
+
+#: crm/automation/actions.py:312
+#, python-brace-format
+msgid "Notified {0}"
+msgstr "{0} notifié"
+
+#. Description of the 'Retry Count' (Int) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:102
+msgid "Number of retries on a failed request."
+msgstr "Nombre de nouvelles tentatives en cas d'échec d'une requête."
+
+#. Label of the old_value (Small Text) field in DocType 'CRM Enrichment Run
+#. Change'
+#: crm/domain_enrichment/doctype/crm_enrichment_run_change/crm_enrichment_run_change.json:26
+msgid "Old Value"
+msgstr "Ancienne valeur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:85
+msgid "On a date"
+msgstr "À une date"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:78
+msgid "On a schedule"
+msgstr "Selon un calendrier"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:55
+#, python-brace-format
+msgid "on {0}"
+msgstr "le {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTargetPicker.vue:42
+#, python-brace-format
+msgid "One {0} record"
+msgstr "Un enregistrement {0}"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.py:58
+msgid "Only a completed enrichment run can be undone."
+msgstr "Seule une exécution d'enrichissement terminée peut être annulée."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:133
+msgid "Only run when"
+msgstr "Exécuter uniquement lorsque"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:120
+msgid "Open inspector"
+msgstr "Ouvrir l'inspecteur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:146
+msgid "or"
+msgstr "ou"
+
+#: frontend/src/pages/Organizations.vue:56
+msgid "Organizations are the companies your contacts and deals belong to."
+msgstr "Les organisations sont les entreprises auxquelles vos contacts et vos affaires sont rattachés."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowCapabilities.js:130
+#, python-brace-format
+msgid "Output of {0}"
+msgstr "Sortie de {0}"
+
+#. Option for the 'Write Policy' (Select) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:70
+msgid "Override defaults"
+msgstr "Remplacer les valeurs par défaut"
+
+#: crm/fcrm/doctype/crm_territory/crm_territory.py:42
+#, python-brace-format
+msgid "Parent Territory {0} is not a group. Only group territories can have children."
+msgstr "Le territoire parent {0} n'est pas un groupe. Seuls les territoires de type groupe peuvent avoir des enfants."
+
+#. Label of the pattern (Data) field in DocType 'CRM Enrichment Rule Pattern'
+#. Label of the pattern (Data) field in DocType 'CRM Enrichment Skip Pattern'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule_pattern/crm_enrichment_rule_pattern.json:18
+#: crm/domain_enrichment/doctype/crm_enrichment_skip_pattern/crm_enrichment_skip_pattern.json:17
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:12
+msgid "Pattern"
+msgstr "Motif"
+
+#. Label of the patterns_section (Section Break) field in DocType 'CRM
+#. Enrichment Rule'
+#. Label of the patterns (Table) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:83
+msgid "Patterns"
+msgstr "Motifs"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:116
+msgid "Pause the run"
+msgstr "Suspendre l'exécution"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:21
+msgid "Pause the run for a fixed amount of time."
+msgstr "Suspendre l'exécution pendant une durée fixe."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:31
+msgid "Pause until an event is raised for this record."
+msgstr "Suspendre jusqu'à ce qu'un événement soit déclenché pour cette fiche."
+
+#. Description of the 'Request Timeout (s)' (Int) field in DocType 'CRM
+#. Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:77
+msgid "Per-request timeout in seconds."
+msgstr "Délai maximal de chaque requête, en secondes."
+
+#. Label of the phones_found (Int) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:147
+msgid "Phones Found"
+msgstr "Téléphones trouvés"
+
+#: crm/automation/actions.py:225
+msgid "Pick a template or write a subject"
+msgstr "Choisissez un modèle ou rédigez un objet"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:12
+#, python-brace-format
+msgid "Pick a {0}"
+msgstr "Sélectionner {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:34
+msgid "Pick an action"
+msgstr "Choisir une action"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:121
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:29
+msgid "Pick an event"
+msgstr "Choisir un événement"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:56
+msgid "Pick initial trigger"
+msgstr "Choisir le déclencheur initial"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:19
+#, python-brace-format
+msgid "Pick {0}"
+msgstr "Sélectionner {0}"
+
+#: frontend/src/components/Activities/NoteArea.vue:22
+msgid "Pin to top"
+msgstr "Épingler en haut"
+
+#. Label of the pinned_by (Link) field in DocType 'FCRM Note'
+#: crm/fcrm/doctype/fcrm_note/fcrm_note.json:58
+msgid "Pinned By"
+msgstr "Épinglé par"
+
+#. Label of the pinned_on (Datetime) field in DocType 'FCRM Note'
+#: crm/fcrm/doctype/fcrm_note/fcrm_note.json:66
+msgid "Pinned On"
+msgstr "Épinglé le"
+
+#: frontend/src/components/Activities/Activities.vue:580
+msgid "pinned the note"
+msgstr "a épinglé la note"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:12
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:38
+msgid "Platform"
+msgstr "Plateforme"
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "primary_email"
+msgstr "E-mail principal"
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "primary_phone"
+msgstr "Téléphone principal"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowConditionEditor.vue:34
+msgid "Python, evaluated against doc, target and context."
+msgstr "Python, évalué sur le document, la cible et le contexte."
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:22
+#: crm/public/js/domain_enrichment.js:29
+msgid "Queued…"
+msgstr "En file d'attente…"
+
+#: frontend/src/pages/Deal.vue:806 frontend/src/pages/MobileDeal.vue:504
+msgid "Quotations"
+msgstr "Devis"
+
+#. Label of the raw_section (Section Break) field in DocType 'CRM Enrichment
+#. Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:172
+msgid "Raw"
+msgstr "Brut"
+
+#. Label of the raw_json (Code) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:177
+msgid "Raw JSON"
+msgstr "JSON brut"
+
+#: frontend/src/components/EnrichFromWebsite.vue:304
+msgid "Re-enrich this record?"
+msgstr "Relancer l'enrichissement de ce dossier ?"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:118
+msgid "Record"
+msgstr "Dossier"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:61
+msgid "Record is cancelled"
+msgstr "Le dossier est annulé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:26
+msgid "Record is created"
+msgstr "Le dossier est créé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:47
+msgid "Record is deleted"
+msgstr "Le dossier est supprimé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:54
+msgid "Record is submitted"
+msgstr "Le dossier est soumis"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:33
+msgid "Record is updated"
+msgstr "Le dossier est mis à jour"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:143
+msgid "Records"
+msgstr "Dossiers"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:35
+msgid "Redo"
+msgstr "Refaire"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:24
+msgid "Remove field"
+msgstr "Supprimer le champ"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:76
+msgid "Remove step"
+msgstr "Supprimer l'étape"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:76
+msgid "Remove trigger"
+msgstr "Supprimer le déclencheur"
+
+#. Label of the request_timeout (Int) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:80
+msgid "Request Timeout (s)"
+msgstr "Délai d'expiration des requêtes (s)"
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentRuleSection.vue:26
+msgid "Retry"
+msgstr "Réessayer"
+
+#. Label of the retry_count (Int) field in DocType 'CRM Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:105
+msgid "Retry Count"
+msgstr "Nombre de nouvelles tentatives"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:14
+msgid "Retry Enrichment"
+msgstr "Relancer l'enrichissement"
+
+#: crm/automation/actions.py:190
+#, python-brace-format
+msgid "Reused Deal {0}"
+msgstr "Affaire réutilisée {0}"
+
+#. Option for the 'Status' (Select) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:64
+msgid "Reverted"
+msgstr "Restauré"
+
+#: crm/api/user.py:235
+msgid "Role Profile Assigned"
+msgstr "Profil de rôles attribué"
+
+#: crm/api/user.py:232
+#, python-brace-format
+msgid "Roles of user {0} are managed by a Role Profile. Update the Role Profile instead."
+msgstr "Les rôles de l'utilisateur {0} sont gérés par un profil de rôles. Modifiez plutôt ce profil."
+
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.py:92
+#, python-brace-format
+msgid "Row #{0}: Not a valid regular expression: {1}"
+msgstr "Ligne n° {0} : expression régulière non valide : {1}"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:258
+#, python-brace-format
+msgid "Row {0}"
+msgstr "Ligne {0}"
+
+#. Label of the rule_name (Data) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:28
+msgid "Rule Name"
+msgstr "Nom de la règle"
+
+#. Label of the rule_type (Select) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:36
+msgid "Rule Type"
+msgstr "Type de règle"
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:96
+msgid "Rules"
+msgstr "Règles"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:98
+msgid "Run As"
+msgstr "Exécuter en tant que"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:86
+msgid "Run before or after a date stored on the record."
+msgstr "Exécuter avant ou après une date enregistrée sur le dossier."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:79
+msgid "Run on a repeating schedule you define with cron."
+msgstr "Exécuter selon une planification récurrente définie avec cron."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:72
+msgid "Run only when someone starts it from a record."
+msgstr "Exécuter uniquement lorsqu'un utilisateur la lance depuis un dossier."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:93
+msgid "Run when the app raises a named event you pick."
+msgstr "Exécuter lorsque l'application déclenche un événement choisi."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:233
+#, python-brace-format
+msgid "Run {0}"
+msgstr "Exécuter {0}"
+
+#. Option for the 'Status' (Select) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:64
+msgid "Running"
+msgstr "En cours"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:89
+msgid "Save the flow before testing it."
+msgstr "Enregistrez le flux avant de le tester."
+
+#: frontend/src/components/EnrichFromWebsite.vue:273
+msgid "Save your changes before enriching"
+msgstr "Enregistrez vos modifications avant d'enrichir"
+
+#: frontend/src/components/EnrichFromWebsite.vue:364
+msgid "Save your changes before undoing"
+msgstr "Enregistrez vos modifications avant d'annuler"
+
+#. Description of the 'Weight' (Float) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:67
+msgid "Score contributed per matched pattern (Industry classification scoring)."
+msgstr "Score attribué par motif trouvé (classification par secteur d'activité)."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:202
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:247
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:271
+msgid "Search blocks"
+msgstr "Rechercher des blocs"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFieldToken.vue:6
+msgid "Search fields"
+msgstr "Rechercher des champs"
+
+#: frontend/src/components/CommandPalette/CommandPalette.vue:28
+msgid "Search records or type a command..."
+msgstr "Rechercher des dossiers ou saisir une commande…"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:97
+msgid "Search triggers"
+msgstr "Rechercher des déclencheurs"
+
+#: frontend/src/components/CommandPalette/CommandPalette.vue:171
+msgid "Searching..."
+msgstr "Recherche en cours…"
+
+#. Option for the 'Source Key' (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:35
+msgid "secondary_phone"
+msgstr "Téléphone secondaire"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.js:48
+#: crm/public/js/domain_enrichment.js:61
+msgid "See Error Log."
+msgstr "Voir le journal des erreurs."
+
+#. Description of the 'Use Sitemap' (Check) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:84
+msgid "Seed the crawl queue from the site's sitemap (declared in robots.txt, or the conventional /sitemap.xml) so pages not reachable within Max Depth still get a chance to be crawled. This is an addition on top of ordinary link-following, not a replacement -- a site with no sitemap falls straight through to link-following with no error."
+msgstr "Ajoute au parcours d'exploration les pages déclarées dans le plan du site (indiqué dans robots.txt, ou le chemin habituel /sitemap.xml), afin que les pages non atteignables dans la profondeur maximale aient tout de même une chance d'être explorées. C'est un complément à la navigation par liens, pas un remplacement : un site sans plan du site passe directement à la navigation par liens, sans erreur."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:11
+msgid "Select a record"
+msgstr "Sélectionner un dossier"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowUserPicker.vue:8
+msgid "Select users"
+msgstr "Sélectionner des utilisateurs"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:106
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:25
+msgid "Set a condition"
+msgstr "Définir une condition"
+
+#: crm/public/js/domain_enrichment.js:17
+msgid "Set a Website on this record before enriching."
+msgstr "Renseignez un site web sur ce dossier avant d'enrichir."
+
+#: crm/domain_enrichment/api.py:105
+msgid "Set a website on this record before enriching."
+msgstr "Renseignez un site web sur ce dossier avant d'enrichir."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowValidation.js:27
+msgid "Set how long to wait"
+msgstr "Définir la durée d'attente"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowParamEditor.vue:232
+msgid "Set more fields at once as JSON. These are applied together with the Field and Value above, in the same save."
+msgstr "Définissez d'autres champs en une fois au format JSON. Ils sont appliqués avec le champ et la valeur ci-dessus, dans le même enregistrement."
+
+#: frontend/src/pages/Deal.vue:675 frontend/src/pages/Lead.vue:493
+#, python-brace-format
+msgid "Set status: {0}"
+msgstr "Définir le statut : {0}"
+
+#: frontend/src/components/Settings/DefaultsSettings.vue:10
+msgid "Set the currency, number, date and time formats used across your CRM."
+msgstr "Définissez les formats de devise, de nombres, de date et d'heure utilisés dans votre CRM."
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:16
+msgid "Set up enrichment availability and match website data to CRM fields."
+msgstr "Configurez la disponibilité de l'enrichissement et faites correspondre les données du site web aux champs du CRM."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:59
+msgid "Show details"
+msgstr "Afficher les détails"
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentRuleSection.vue:47
+#, python-brace-format
+msgid "Showing the first {0} rules"
+msgstr "Affichage des {0} premières règles"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:18
+msgid "Skip"
+msgstr "Ignorer"
+
+#. Label of the skip_patterns (Table) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:133
+msgid "Skip Patterns"
+msgstr "Motifs à ignorer"
+
+#. Option for the 'Rule Type' (Select) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:37
+msgid "Social"
+msgstr "Réseaux sociaux"
+
+#: frontend/src/components/Settings/Enrichment/RulesTab.vue:10
+msgid "Social profile rules"
+msgstr "Règles des profils de réseaux sociaux"
+
+#. Label of the social_profiles (Small Text) field in DocType 'CRM Enrichment
+#. Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:153
+msgid "Social Profiles"
+msgstr "Profils de réseaux sociaux"
+
+#: frontend/src/components/Settings/Enrichment/EnrichmentSettings.vue:244
+msgid "Some changes could not be saved"
+msgstr "Certaines modifications n'ont pas pu être enregistrées"
+
+#. Label of the source_key (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:34
+msgid "Source Key"
+msgstr "Clé source"
+
+#. Label of the source_website (Data) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:71
+msgid "Source Website"
+msgstr "Site web source"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:13
+msgid "Split the run into two arms on a condition."
+msgstr "Répartir l'exécution en deux branches selon une condition."
+
+#. Label of the ssrf_guard_tab (Tab Break) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:139
+msgid "SSRF Guard"
+msgstr "Protection SSRF"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:48
+msgid "Start a run just after a record is deleted."
+msgstr "Démarrer une exécution juste après la suppression d'un dossier."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:55
+msgid "Start a run when a submittable record is submitted."
+msgstr "Démarrer une exécution lorsqu'un dossier soumissible est soumis."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:62
+msgid "Start a run when a submitted record is cancelled."
+msgstr "Démarrer une exécution lorsqu'un dossier soumis est annulé."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:27
+msgid "Start a run whenever a new record is created."
+msgstr "Démarrer une exécution à chaque création d'un dossier."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:34
+msgid "Start a run whenever an existing record is saved."
+msgstr "Démarrer une exécution à chaque enregistrement d'un dossier existant."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:53
+msgid "Start from scratch"
+msgstr "Repartir de zéro"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:23
+msgid "Start test run"
+msgstr "Lancer le test"
+
+#. Label of the started_on (Datetime) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:82
+msgid "Started On"
+msgstr "Démarré le"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:155
+msgid "Step"
+msgstr "Étape"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:150
+msgid "Step name"
+msgstr "Nom de l'étape"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:7
+msgid "Step Type"
+msgstr "Type d'étape"
+
+#. Description of the 'Keyword' (Data) field in DocType 'CRM Enrichment Link
+#. Priority'
+#: crm/domain_enrichment/doctype/crm_enrichment_link_priority/crm_enrichment_link_priority.json:14
+msgid "Substring matched against a candidate URL/anchor to prioritise crawling it (e.g. \"about\", \"team\", \"contact\")."
+msgstr "Fragment de texte recherché dans l'URL ou l'ancre d'un candidat, pour prioriser son exploration (par ex. « about », « team », « contact »)."
+
+#. Description of the 'Pattern' (Data) field in DocType 'CRM Enrichment Skip
+#. Pattern'
+#: crm/domain_enrichment/doctype/crm_enrichment_skip_pattern/crm_enrichment_skip_pattern.json:13
+msgid "Substring; a candidate URL containing it is skipped during the crawl (e.g. \"/blog/\", \".pdf\", \"?\")."
+msgstr "Fragment de texte ; une URL candidate qui le contient est ignorée pendant l'exploration (par ex. « /blog/ », « .pdf », « ? »)."
+
+#. Description of the 'Skip Patterns' (Table) field in DocType 'CRM Enrichment
+#. Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:130
+msgid "Substrings that exclude a candidate link from the crawl."
+msgstr "Fragments de texte qui excluent un lien candidat de l'exploration."
+
+#. Label of the summary_section (Section Break) field in DocType 'CRM
+#. Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:111
+msgid "Summary"
+msgstr "Résumé"
+
+#. Label of the target_doctype (Link) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:47
+msgid "Target Doctype"
+msgstr "DocType cible"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.py:46
+#, python-brace-format
+msgid "Target Doctype must be one of: {0}"
+msgstr "Le DocType cible doit être l'un des suivants : {0}"
+
+#. Label of the target_fieldname (Data) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:56
+msgid "Target Fieldname"
+msgstr "Nom du champ cible"
+
+#. Label of the target_value (Data) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:56
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.py:72
+msgid "Target Value"
+msgstr "Valeur cible"
+
+#: frontend/src/pages/Tasks.vue:189
+msgid "Tasks are to-dos for you and your team, like a follow-up call or sending a quote. Add them here or from a lead or deal."
+msgstr "Les tâches sont des actions à faire pour vous et votre équipe, comme un appel de suivi ou l'envoi d'un devis. Ajoutez-les ici ou depuis un prospect ou une affaire."
+
+#: crm/fcrm/doctype/crm_territory/crm_territory.py:38
+msgid "Territory cannot be its own parent"
+msgstr "Un territoire ne peut pas être son propre parent"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:211
+msgid "Test Run"
+msgstr "Exécution de test"
+
+#. Description of the 'Source Key' (Select) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:30
+msgid "The enrichment result key to read the value from."
+msgstr "La clé du résultat d'enrichissement dont la valeur est lue."
+
+#. Description of the 'Fieldname' (Data) field in DocType 'CRM Enrichment Run
+#. Change'
+#: crm/domain_enrichment/doctype/crm_enrichment_run_change/crm_enrichment_run_change.json:14
+msgid "The fieldname on the run's reference record that this run wrote to."
+msgstr "Le nom du champ du dossier de référence dans lequel cette exécution a écrit."
+
+#. Description of the 'Target Fieldname' (Data) field in DocType 'CRM
+#. Enrichment Field Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:52
+msgid "The fieldname on the target doctype to write the value to."
+msgstr "Le nom du champ du DocType cible dans lequel écrire la valeur."
+
+#. Description of the 'Target Value' (Data) field in DocType 'CRM Enrichment
+#. Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:52
+msgid "The value this rule resolves to when it matches (e.g. the social network \"linkedin\"). For Industry rules, use the Industry link instead."
+msgstr "La valeur que la règle retient lorsqu'elle correspond (par ex. le réseau social « linkedin »). Pour les règles de secteur d'activité, utilisez plutôt le champ Secteur d'activité."
+
+#: crm/domain_enrichment/api.py:165
+msgid "There is no enrichment to undo for this record."
+msgstr "Il n'y a aucun enrichissement à annuler pour ce dossier."
+
+#: frontend/src/components/EnrichFromWebsite.vue:301
+#, python-brace-format
+msgid "These fields you edited will be replaced: {0}"
+msgstr "Les champs que vous avez modifiés seront remplacés : {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTargetPicker.vue:40
+msgid "This alias is not available at this step"
+msgstr "Cet alias n'est pas disponible à cette étape"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.py:60
+msgid "This enrichment run did not change any fields."
+msgstr "Cette exécution d'enrichissement n'a modifié aucun champ."
+
+#: frontend/src/components/Modals/NoteViewModal.vue:64
+msgid "This note is empty."
+msgstr "Cette note est vide."
+
+#: frontend/src/components/EnrichFromWebsite.vue:295
+msgid "This record was already enriched. Enriching again may update those fields with newer values from the website."
+msgstr "Ce dossier a déjà été enrichi. Un nouvel enrichissement peut mettre à jour ces champs avec des valeurs plus récentes du site web."
+
+#: frontend/src/components/EnrichFromWebsite.vue:369
+msgid "This restores the values these fields had before the last enrichment."
+msgstr "Cela rétablit les valeurs que ces champs avaient avant le dernier enrichissement."
+
+#: crm/domain_enrichment/api.py:135
+msgid "This run has no linked record to re-enrich."
+msgstr "Cette exécution n'est liée à aucun dossier à réenrichir."
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowSteps.js:29
+msgid "Timed out"
+msgstr "Délai dépassé"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:83
+msgid "Timeout"
+msgstr "Délai d'expiration"
+
+#. Label of the timing_section (Section Break) field in DocType 'CRM Enrichment
+#. Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:77
+msgid "Timing"
+msgstr "Délais"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:22
+msgid "To Value"
+msgstr "Vers la valeur"
+
+#. Description of the 'Is Regex' (Check) field in DocType 'CRM Enrichment Rule
+#. Pattern'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule_pattern/crm_enrichment_rule_pattern.json:23
+msgid "Treat the pattern as a regular expression instead of a plain substring."
+msgstr "Traiter le motif comme une expression régulière et non comme un simple fragment de texte."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationInspector.vue:156
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:52
+msgid "Trigger"
+msgstr "Déclencheur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTriggerDetails.vue:8
+msgid "Trigger Field"
+msgstr "Champ déclencheur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowCapabilities.js:90
+msgid "Trigger record"
+msgstr "Dossier déclencheur"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowSteps.js:30
+msgid "True"
+msgstr "Vrai"
+
+#: frontend/src/components/CommandPalette/CommandPalette.vue:174
+msgid "Type to search"
+msgstr "Tapez pour rechercher"
+
+#: frontend/src/composables/useCommandPalette.js:110
+msgid "Unable to run command"
+msgstr "Impossible d'exécuter la commande"
+
+#: frontend/src/components/CommandPalette/recordCommands.js:73
+msgid "Unable to update assignment"
+msgstr "Impossible de mettre à jour l'attribution"
+
+#: frontend/src/components/EnrichFromWebsite.vue:4
+#: frontend/src/components/EnrichFromWebsite.vue:376
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:28
+msgid "Undo"
+msgstr "Annuler"
+
+#: frontend/src/components/EnrichFromWebsite.vue:368
+msgid "Undo enrichment?"
+msgstr "Annuler l'enrichissement ?"
+
+#: frontend/src/components/EnrichFromWebsite.vue:5
+msgid "Undo last enrichment"
+msgstr "Annuler le dernier enrichissement"
+
+#. Label of the undone_by (Link) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:104
+msgid "Undone By"
+msgstr "Annulé par"
+
+#. Label of the undone_on (Datetime) field in DocType 'CRM Enrichment Run'
+#: crm/domain_enrichment/doctype/crm_enrichment_run/crm_enrichment_run.json:98
+msgid "Undone On"
+msgstr "Annulé le"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:43
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:91
+msgid "Unit"
+msgstr "Unité"
+
+#: crm/automation/relationships.py:40
+#, python-brace-format
+msgid "Unknown CRM relationship: {0}"
+msgstr "Relation CRM inconnue : {0}"
+
+#: crm/automation/actions.py:227
+msgid "Unknown Email Template"
+msgstr "Modèle d'e-mail inconnu"
+
+#: frontend/src/components/Activities/NoteArea.vue:22
+msgid "Unpin"
+msgstr "Désépingler"
+
+#: frontend/src/components/Activities/Activities.vue:581
+msgid "unpinned the note"
+msgstr "a désépinglé la note"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:44
+msgid "Unsaved"
+msgstr "Non enregistré"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:278
+msgid "Unsaved changes"
+msgstr "Modifications non enregistrées"
+
+#: crm/automation/actions.py:158
+msgid "Unsupported conversion policy"
+msgstr "Politique de conversion non prise en charge"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:24
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:30
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:543
+msgid "Untitled automation"
+msgstr "Automatisation sans titre"
+
+#: frontend/src/components/FieldLayout/Field.vue:686
+#, python-brace-format
+msgid "Use \"{0}\""
+msgstr "Utiliser « {0} »"
+
+#: frontend/src/components/FieldLayout/Field.vue:684
+msgid "Use custom value"
+msgstr "Utiliser une valeur personnalisée"
+
+#: frontend/src/pages/Contact.vue:157
+msgid "Use New Deal to create a deal for this contact."
+msgstr "Utilisez Nouvelle affaire pour créer une affaire pour ce contact."
+
+#: frontend/src/pages/Organization.vue:194
+msgid "Use New Deal to create a deal for this organization."
+msgstr "Utilisez Nouvelle affaire pour créer une affaire pour cette organisation."
+
+#. Label of the use_sitemap (Check) field in DocType 'CRM Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:87
+msgid "Use Sitemap"
+msgstr "Utiliser le plan du site"
+
+#. Label of the user_agent (Data) field in DocType 'CRM Enrichment Settings'
+#: crm/domain_enrichment/doctype/crm_enrichment_settings/crm_enrichment_settings.json:111
+msgid "User Agent"
+msgstr "Agent utilisateur"
+
+#: frontend/src/components/Activities/QuotationsList.vue:107
+#, python-brace-format
+msgid "Valid till {0}"
+msgstr "Valable jusqu'au {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:35
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:218
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:20
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:95
+msgid "Wait"
+msgstr "Attendre"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:55
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:94
+msgid "Wait for"
+msgstr "Attendre"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:219
+#: frontend/src/components/Settings/WorkflowAutomations/workflowBlocks.js:30
+msgid "Wait for event"
+msgstr "Attendre un événement"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepSummary.vue:72
+#, python-brace-format
+msgid "Wait for {0}"
+msgstr "Attendre {0}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepSummary.vue:69
+#: frontend/src/components/Settings/WorkflowAutomations/workflowGraph.js:115
+#, python-brace-format
+msgid "Wait {0} {1}"
+msgstr "Attendre {0} {1}"
+
+#. Option for the 'Lead Temperature' (Select) field in DocType 'CRM Lead'
+#: crm/fcrm/doctype/crm_lead/crm_lead.json:240
+msgid "Warm"
+msgstr "Tiède"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowTriggers.js:41
+msgid "Watch one field and run when it moves to a new value."
+msgstr "Surveiller un champ et exécuter lorsqu'il prend une nouvelle valeur."
+
+#. Label of the weight (Float) field in DocType 'CRM Enrichment Link Priority'
+#. Label of the weight (Float) field in DocType 'CRM Enrichment Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_link_priority/crm_enrichment_link_priority.json:26
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:70
+msgid "Weight"
+msgstr "Poids"
+
+#. Description of the 'Match Scope' (Select) field in DocType 'CRM Enrichment
+#. Rule'
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.json:74
+msgid "Where the patterns are matched."
+msgstr "Où les motifs sont recherchés."
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:216
+msgid "Workflow Automation"
+msgstr "Automatisation de flux de travail"
+
+#: frontend/src/components/Settings/Settings.vue:198
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:4
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:10
+msgid "Workflow Automations"
+msgstr "Automatisations de flux de travail"
+
+#. Label of the policy_section (Section Break) field in DocType 'CRM Enrichment
+#. Field Mapping'
+#. Label of the write_policy (Select) field in DocType 'CRM Enrichment Field
+#. Mapping'
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.json:62
+msgid "Write Policy"
+msgstr "Politique d'écriture"
+
+#: crm/automation/actions.py:301
+msgid "Write the notification text"
+msgstr "Rédigez le texte de la notification"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:279
+msgid "You have unsaved changes. Do you wish to exit?"
+msgstr "Vous avez des modifications non enregistrées. Voulez-vous quitter ?"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:57
+msgid "Zoom in"
+msgstr "Zoomer"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowFlow.vue:46
+msgid "Zoom out"
+msgstr "Dézoomer"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:159
+#, python-brace-format
+msgid "{0} contains {1}"
+msgstr "{0} contient {1}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:160
+#, python-brace-format
+msgid "{0} does not contain {1}"
+msgstr "{0} ne contient pas {1}"
+
+#: crm/automation/actions.py:235
+#, python-brace-format
+msgid "{0} has no email address"
+msgstr "{0} n'a pas d'adresse e-mail"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_field_mapping/crm_enrichment_field_mapping.py:48
+#, python-brace-format
+msgid "{0} has no field {1}"
+msgstr "{0} n'a pas de champ {1}"
+
+#: frontend/src/components/Controls/EmailMultiSelect.vue:132
+#, python-brace-format
+msgid "{0} is an Invalid Value"
+msgstr "{0} n'est pas une valeur valide"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:168
+#, python-brace-format
+msgid "{0} is empty"
+msgstr "{0} est vide"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:158
+#, python-brace-format
+msgid "{0} is none of {1}"
+msgstr "{0} ne correspond à aucun de {1}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:156
+#, python-brace-format
+msgid "{0} is not {1}"
+msgstr "{0} n'est pas {1}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:157
+#, python-brace-format
+msgid "{0} is one of {1}"
+msgstr "{0} est l'un de {1}"
+
+#: crm/domain_enrichment/doctype/crm_enrichment_rule/crm_enrichment_rule.py:73
+#, python-brace-format
+msgid "{0} is required for {1} rules"
+msgstr "{0} est requis pour les règles {1}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:167
+#, python-brace-format
+msgid "{0} is set"
+msgstr "{0} est renseigné"
+
+#: frontend/src/components/Settings/WorkflowAutomations/workflowConditions.js:155
+#, python-brace-format
+msgid "{0} is {1}"
+msgstr "{0} est {1}"
+
+#: crm/automation/actions.py:31
+#, python-brace-format
+msgid "{0} must act on {1}, not {2}"
+msgstr "{0} doit agir sur {1}, et non sur {2}"
+
+#: frontend/src/components/Settings/WorkflowAutomations/WorkflowTrialRun.vue:46
+#, python-brace-format
+msgid "{0} of {1} steps ran"
+msgstr "{0} étapes sur {1} exécutées"
+
+#: frontend/src/components/CommandPalette/useCRMCommands.js:246
+#, python-brace-format
+msgid "{0} overdue"
+msgstr "{0} en retard"
+
+#: frontend/src/components/EmailEditor.vue:121
+#, python-brace-format
+msgid "{0} unsubscribed from emails for this record, so they won't receive this email."
+msgstr "{0} s'est désabonné des e-mails pour ce dossier : cet e-mail ne lui sera donc pas envoyé."
