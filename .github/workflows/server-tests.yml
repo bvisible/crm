@@ -1,6 +1,10 @@
 name: Server
 
 on:
+    # //// Neoffice — a manual start. The workflow only ran on a schedule, so a repair of the runner
+    # //// (the mariadb client and TLS, neoffice-maintenance#2041) could only be proved the next
+    # //// midnight UTC while the pre-flight of a wave read the last night's red. Drop when upstream's own workflow can be started by hand.
+    workflow_dispatch:
     pull_request:
         paths-ignore:
             - "**.css"
