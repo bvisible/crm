@@ -617,7 +617,7 @@ msgstr "Appliquer"
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:64
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:71
 msgid "Apply On"
-msgstr "Appliquer Sur"
+msgstr "Appliquer sur"
 
 #. Label of the view (Select) field in DocType 'CRM Form Script'
 #: crm/fcrm/doctype/crm_form_script/crm_form_script.json
@@ -1374,7 +1374,7 @@ msgstr "Changer l'image"
 #: frontend/src/components/Modals/ChangePasswordModal.vue:2
 #: frontend/src/components/Settings/Profile/ProfileSettings.vue:121
 msgid "Change Password"
-msgstr "Changez le Mot de Passe"
+msgstr "Changer le mot de passe"
 
 #: frontend/src/components/Settings/Profile/ProfileSettings.vue:162
 msgid "Change Photo"
