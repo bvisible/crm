@@ -49,7 +49,10 @@
                   </div>
                 </template>
               </Popover>
-              <div class="text-ink-gray-9">{{ column.column.name }}</div>
+              <!-- //// Neoffice — the column's name read through the catalogue, as the status menus read it (columnLabel) -->
+              <div class="text-ink-gray-9">
+                {{ columnLabel(column.column.name) }}
+              </div>
             </div>
             <div class="flex">
               <Dropdown :options="actions(column)">
@@ -189,7 +192,13 @@
 <script setup>
 import RefreshIcon from '@/components/Icons/RefreshIcon.vue'
 import IndicatorIcon from '@/components/Icons/IndicatorIcon.vue'
-import { isTouchScreenDevice, colors, parseColor } from '@/utils'
+//// Neoffice — isTranslatable: see columnLabel below
+import {
+  isTouchScreenDevice,
+  colors,
+  parseColor,
+  isTranslatable,
+} from '@/utils'
 import Draggable from 'vuedraggable'
 import { Combobox, Dropdown, Popover } from 'frappe-ui'
 import { computed } from 'vue'
@@ -227,12 +236,28 @@ const columns = computed(() => {
   return _columns
 })
 
+//// Neoffice — upstream drew a column with the raw name of its record: the deal Kanban of a French site read
+//// "Qualification, Negotiation, Ready to Close, Won, Lost" while the status menus of the same deal, which go
+//// through __() when the status doctype is translated, read "Négociation, Prêt à conclure, Gagné, Perdu"
+//// (neoffice-maintenance#1197). The columns follow the same rule: a Select option, or a record of a
+//// translated doctype, is shown through the catalogue; any other record keeps its name.
+const columnLabel = computed(() => {
+  const data = kanban.value?.data || {}
+  const field = (data.fields || []).find(
+    (f) => f.fieldname == data.column_field,
+  )
+  const translated =
+    field?.fieldtype == 'Select' ||
+    (field?.fieldtype == 'Link' && isTranslatable(field.options))
+  return (name) => (translated && name ? __(name) : name)
+})
+
 const deletedColumns = computed(() => {
   const _columns = kanban.value?.data?.kanban_columns || []
   return _columns
     ?.filter((col) => col['delete'])
     .map((col) => {
-      return { label: col.name, value: col.name }
+      return { label: columnLabel.value(col.name), value: col.name } //// Neoffice — columnLabel
     })
 })
 

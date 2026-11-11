@@ -654,3 +654,103 @@ def create_test_contact(**kwargs):
 
 	contact.insert(ignore_permissions=True)
 	return contact
+
+
+# //// Neoffice — added tests (no upstream equivalent): a deal's value follows its products, and a stage moved on
+# //// the Kanban brings its probability (neoffice-maintenance#1197).
+class TestDealValueFollowsItsProducts(FrappeTestCase):
+	def setUp(self):
+		from frappe.tests.roles import as_role
+
+		self.settings_before = frappe.db.get_single_value("FCRM Settings", "auto_update_expected_deal_value")
+		frappe.db.set_single_value("FCRM Settings", "auto_update_expected_deal_value", 1)
+		self.enterContext(as_role("sales_user"))
+
+	def tearDown(self):
+		frappe.set_user("Administrator")
+		frappe.db.rollback()
+
+	def deal_with_products(self, total, **kwargs):
+		# The salesperson owns it, as when they create it in the CRM: a Sales User edits only their own deals
+		return create_test_deal(
+			status=first_deal_status(),
+			deal_owner=frappe.session.user,
+			products=[{"product_name": "Value test product", "qty": 1, "rate": total, "amount": total}],
+			total=total,
+			net_total=total,
+			**kwargs,
+		)
+
+	def test_the_products_set_the_value_of_a_deal_that_had_none(self):
+		deal = self.deal_with_products(40000)
+		self.assertEqual(deal.expected_deal_value, 40000)
+		self.assertEqual(deal.deal_value, 40000)
+
+	def test_a_value_someone_entered_is_kept(self):
+		deal = self.deal_with_products(40000, deal_value=35000)
+		self.assertEqual(deal.deal_value, 35000)
+		self.assertEqual(deal.expected_deal_value, 40000)
+
+	def test_the_value_follows_the_products_it_came_from(self):
+		deal = self.deal_with_products(40000)
+		deal.products[0].rate = deal.products[0].amount = 50000
+		deal.total = deal.net_total = 50000
+		deal.save()
+		self.assertEqual(deal.deal_value, 50000)
+		self.assertEqual(deal.expected_deal_value, 50000)
+
+	def test_the_switch_off_leaves_the_values_alone(self):
+		frappe.db.set_single_value("FCRM Settings", "auto_update_expected_deal_value", 0)
+		deal = self.deal_with_products(40000)
+		self.assertFalse(deal.deal_value)
+		self.assertFalse(deal.expected_deal_value)
+
+
+class TestKanbanMoveBringsTheStageProbability(FrappeTestCase):
+	def setUp(self):
+		from frappe.tests.roles import as_role
+
+		self.enterContext(as_role("sales_user"))
+
+	def tearDown(self):
+		frappe.set_user("Administrator")
+		frappe.db.rollback()
+
+	def two_stages(self):
+		stages = frappe.get_all(
+			"CRM Deal Status",
+			filters={"type": ["not in", ["Won", "Lost"]]},
+			fields=["name", "probability"],
+			order_by="position asc",
+		)
+		first = stages[0]
+		later = next((s for s in stages[1:] if s.probability != first.probability), None)
+		if not later:
+			self.skipTest("this site has no two open stages with different probabilities")
+		return first, later
+
+	def test_a_card_moved_on_the_kanban_takes_the_probability_of_its_new_stage(self):
+		from frappe.client import set_value
+
+		first, later = self.two_stages()
+		deal = create_test_deal(status=first.name, deal_owner=frappe.session.user)
+		# What the Kanban sends when a card is dropped in another column (ViewControls.vue, moveKanbanCard)
+		set_value("CRM Deal", deal.name, {"status": later.name})
+		self.assertEqual(frappe.db.get_value("CRM Deal", deal.name, "probability"), later.probability)
+
+	def test_a_probability_sent_with_the_stage_is_kept(self):
+		from frappe.client import set_value
+
+		first, later = self.two_stages()
+		deal = create_test_deal(status=first.name, deal_owner=frappe.session.user)
+		set_value("CRM Deal", deal.name, {"status": later.name, "probability": 33})
+		self.assertEqual(frappe.db.get_value("CRM Deal", deal.name, "probability"), 33)
+
+
+def first_deal_status():
+	return frappe.get_all(
+		"CRM Deal Status",
+		filters={"type": ["not in", ["Won", "Lost"]]},
+		order_by="position asc",
+		pluck="name",
+	)[0]

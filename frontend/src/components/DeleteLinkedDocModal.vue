@@ -150,6 +150,8 @@
 import { Dialog, createResource, call, toast } from 'frappe-ui'
 import { useRouter } from 'vue-router'
 import { computed, ref } from 'vue'
+//// Neoffice — htmlToText: the delete error below is shown as text (frappe's message carries links)
+import { htmlToText } from '@/utils'
 import {
   markDocumentAsDeleted,
   unmarkDocumentAsDeleted,
@@ -282,7 +284,16 @@ const deleteDoc = async () => {
     })
   } catch (err) {
     unmarkDocumentAsDeleted(props.doctype, props.docname)
-    throw err
+    //// Neoffice — upstream rethrew the error from a click handler: nobody caught it, so a refused delete
+    //// (a lead still linked with a note: LinkExistsError) closed nothing and said nothing
+    //// (neoffice-maintenance#1197). The server's reason is shown (else frappe's "Cannot delete {0}", already
+    //// translated), and the list of linked items reread.
+    toast.error(
+      htmlToText(err?.messages?.[0] || '') ||
+        __('Cannot delete {0}', [props.docname]),
+    )
+    linkedDocsResource.reload()
+    return
   }
   expireDeletionMarker(props.doctype, props.docname)
   const label = props.title

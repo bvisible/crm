@@ -106,6 +106,14 @@ class CRMDeal(Document):
 			add_status_change_log(self)
 			if frappe.db.get_value("CRM Deal Status", self.status, "type") == "Won":
 				self.closed_date = frappe.utils.nowdate()
+			# //// Neoffice — the stage's probability came only from the form's "Forecasting Script" (a
+			# //// client-side `status()` trigger): a card dropped on the Kanban saves the status alone
+			# //// (`frappe.client.set_value`) and kept the old probability (neoffice-maintenance#1197). The
+			# //// server does what the form does, unless the same save sets a probability of its own.
+			if not self.is_new() and not self.has_value_changed("probability"):
+				stage_probability = frappe.db.get_value("CRM Deal Status", self.status, "probability")
+				if stage_probability is not None:
+					self.probability = stage_probability
 		self.validate_forecasting_fields()
 		self.validate_lost_reason()
 		self.update_exchange_rate()
@@ -269,12 +277,22 @@ class CRMDeal(Document):
 		"""
 		Update the expected deal value based on the net total or total.
 		"""
-		if (
-			frappe.db.get_single_value("FCRM Settings", "auto_update_expected_deal_value")
-			and (self.net_total or self.total)
-			and self.expected_deal_value
+		# //// Neoffice — upstream also required an expected value already set (`and self.expected_deal_value`),
+		# //// so the switch filled nothing on a deal that had none: a deal with 40 000 of products stayed at 0.00
+		# //// in the lists and the dashboard, switch on (neoffice-maintenance#1197). The products now set the
+		# //// expected value, and the deal's own value while nobody typed another one: the "Amount" columns and
+		# //// the dashboard read `deal_value`, not the expected value.
+		products_total = self.net_total or self.total
+		if not products_total or not frappe.db.get_single_value(
+			"FCRM Settings", "auto_update_expected_deal_value"
 		):
-			self.expected_deal_value = self.net_total or self.total
+			return
+		# //// Neoffice — a value the products set follows them; one typed by a person stays (see above)
+		before = self.get_doc_before_save()
+		total_before = (before.net_total or before.total) if before else None
+		self.expected_deal_value = products_total
+		if not self.deal_value or (total_before and self.deal_value == total_before):
+			self.deal_value = products_total
 
 	def validate_forecasting_fields(self):
 		self.update_closed_date()
