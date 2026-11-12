@@ -30,9 +30,10 @@ on:
             - "**.csv"
             - "**.po"
             - "**.pot"
-    schedule:
-        # Run everday at midnight UTC / 5:30 IST
-        - cron: "0 0 * * *"
+    # //// Neoffice — no nightly run. This workflow installs upstream frappe, while the fleet runs our frappe fork and
+    # //// our tests act through its frappe.tests.roles (neoffice-maintenance#2125): every test written that way turned
+    # //// the nightly run red and held the pre-flight of a wave. Our tests run nightly in tests.yml (neoffice-ci, on our
+    # //// frappe); upstream compatibility is read in upstream-preview.yml. Upstream: schedule, cron "0 0 * * *".
 env:
     CRM_BRANCH: ${{ github.base_ref || github.ref_name }}
 
