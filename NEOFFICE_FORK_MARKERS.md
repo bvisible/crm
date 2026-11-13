@@ -14,7 +14,21 @@ Tooling: `bvisible/neoffice-ci` → `scripts/fork_markers.py`
 ## crm
 
 Fork `bvisible/crm`, branch `version-15`. Upstream `frappe/crm` (default branch `develop`;
-we track `main`).
+we track its `version-15` branch since 2026-11-13; `main` and its v1.x tags before).
+
+### Merge record — upstream `version-15` (v15.0.1 and its hotfixes), 2026-11-13
+
+**BASE is now upstream `version-15` at `844c00757`** (2026-11-12, "Merge pull request #3429 from
+frappe/version-15-hotfix"), merged by `3275f2b357`: 145 upstream commits since v1.89.1, no conflict.
+**The fork now tracks upstream `version-15`**, the branch frappe/crm keeps for Frappe v15 (tags
+v15.x); its `develop` needs Frappe 16, and the v1.x tags of `main` are no longer followed. Measure
+the next merge with `git merge-tree --write-tree origin/version-15 upstream/version-15`.
+
+| | |
+|---|---|
+| **Frappe Cloud** | `@frappe/cloud-sdk` 0.5.0 joins `frontend/package.json` (trial card, billing dialog). It stays off on our sites: `crm/www/crm.py` answers `cloud_settings.enabled = False` when frappe has no `frappe.integrations.frappe_providers.cloud_settings`, which our frappe fork lacks. Nothing to mark. |
+| **Dependencies** | the frappe dependency becomes upstream's `>=15.0.0,<16.0.0`. |
+| **New** | scheduled sending of e-mails, the command palette searching comments, notes and e-mails, linking an existing contact from an organization, the lead owner kept on conversion, unique fields enforced on save; a comment's owner edits it without write on Comment. |
 
 ### Merge record — upstream v1.89.1, 2026-10-24
 
