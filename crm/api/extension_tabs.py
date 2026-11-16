@@ -43,7 +43,7 @@ def get_tabs(doctype: str) -> list:
 # //// issue the cards there (`crm_extension_pages` in the app's hooks). The page is the app's, shown in a frame like a tab; the menu
 # //// asks here which ones this account may see. Empty on a site where no app declares one.
 @frappe.whitelist()
-def get_pages() -> list:
+def get_pages() -> list:  # permission-check: ok filtered by the roles each page names
 	"""The pages apps add to the CRM's menu, in the order they gave them, that the account may see.
 
 	A page is {name, label, url, icon?, roles?}: `url` is a path of this site, `roles` the roles that see it (everybody who
