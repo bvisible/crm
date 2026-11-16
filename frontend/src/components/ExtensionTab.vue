@@ -2,6 +2,8 @@
 <!-- //// A tab that another app adds to the page of a CRM document (the hub's representatives: their prospect's questions, offer,
      visits and presentation). The app says where its content is (a path of this site, `crm.api.extension_tabs.get_tabs`); the tab
      shows it in a frame of its own, so that no code of the app lives in this public fork, and passes the theme of the CRM. -->
+<!-- //// Neoffice — the frame loads at once: a tab (or a page) is opened to be read, and the browser's lazy loading left a frame blank
+     until something moved (seen on the hub, 16.11). -->
 <template>
   <div class="flex h-full min-h-0 w-full flex-1 flex-col">
     <iframe
@@ -9,7 +11,6 @@
       :src="src"
       :title="tab.label"
       class="h-full min-h-[480px] w-full flex-1 border-0"
-      loading="lazy"
     />
   </div>
 </template>

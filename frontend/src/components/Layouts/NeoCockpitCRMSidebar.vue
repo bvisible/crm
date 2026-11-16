@@ -27,12 +27,15 @@ import NeoCockpitBridge from '@/components/NeoCockpitBridge.vue'
 // //// Neoffice — the entries a sales representative does not have (see `utils/navigation.js`)
 import { HIDDEN_FOR_REPRESENTATIVES } from '@/utils/navigation'
 import { usersStore } from '@/stores/users'
+// //// Neoffice — the pages that apps add to the menu (`crm.api.extension_tabs.get_pages`), in a group after the CRM's own entries
+import { extensionPagesStore } from '@/stores/extensionPages'
 
 import { useRouter, useRoute } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const router = useRouter()
 const { isRepresentative } = usersStore()
+const extensionPages = extensionPagesStore()
 const route = useRoute()
 const failed = ref(false)
 
@@ -97,6 +100,14 @@ const contextNav = computed(() => {
   const links = isRepresentative()
     ? LINKS.filter((item) => !HIDDEN_FOR_REPRESENTATIVES.includes(item.to))
     : LINKS
+  //// Neoffice — the pages an app adds (the hub's funnel and cards, for its managers), each lit on its own route
+  const pages = (extensionPages.pages.data || []).map((page) => ({
+    label: page.label,
+    icon: page.icon || 'lucide-layout-panel-left',
+    active: currentName === 'TeamPage' && route.params.name === page.name,
+    onClick: () =>
+      router.push({ name: 'TeamPage', params: { name: page.name } }),
+  }))
   return [
     {
       items: links.map((item) => ({
@@ -118,6 +129,8 @@ const contextNav = computed(() => {
         onClick: () => router.push({ name: item.to }),
       })),
     },
+    //// Neoffice — a group of their own, only when an app adds a page
+    ...(pages.length ? [{ items: pages }] : []),
   ]
 })
 </script>

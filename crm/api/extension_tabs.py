@@ -37,3 +37,32 @@ def get_tabs(doctype: str) -> list:
 			continue
 		tabs.append({"name": tab["name"], "label": _(tab["label"]), "url": tab["url"]})
 	return tabs
+
+
+# //// The pages that an app adds to the CRM's menu, beside the lists: the hub's managers read the funnel of their representatives' visits and
+# //// issue the cards there (`crm_extension_pages` in the app's hooks). The page is the app's, shown in a frame like a tab; the menu
+# //// asks here which ones this account may see. Empty on a site where no app declares one.
+@frappe.whitelist()
+def get_pages() -> list:
+	"""The pages apps add to the CRM's menu, in the order they gave them, that the account may see.
+
+	A page is {name, label, url, icon?, roles?}: `url` is a path of this site, `roles` the roles that see it (everybody who
+	works the CRM when it is absent). A declaration that is not well formed, or that points at another site, is left out.
+	"""
+	declared = frappe.get_hooks("crm_extension_pages") or []
+	roles = set(frappe.get_roles())
+	pages = []
+	for page in declared:
+		if not isinstance(page, dict) or not page.get("name") or not page.get("label"):
+			continue
+		if not _is_path_of_this_site(page.get("url")) or not _allowed(page, roles):
+			continue
+		pages.append(
+			{
+				"name": page["name"],
+				"label": _(page["label"]),
+				"url": page["url"],
+				"icon": page.get("icon") or "",
+			}
+		)
+	return pages

@@ -109,6 +109,13 @@ const routes = [
     name: 'Call Logs',
     component: () => import('@/pages/CallLogs.vue'),
   },
+  // //// Neoffice — a page that an app adds to the CRM's menu (`crm.api.extension_tabs.get_pages`), shown in a frame
+  {
+    path: '/team/:name',
+    name: 'TeamPage',
+    component: () => import('@/pages/TeamPage.vue'),
+    props: true,
+  },
   {
     alias: '/data-import',
     path: '/data-import/view/:viewType?',

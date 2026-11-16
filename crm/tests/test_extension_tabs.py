@@ -65,5 +65,54 @@ class TestExtensionTabs(unittest.TestCase):
 		self.assertEqual(first["url"], "/representants?embed=questions#/lead/{docname}")
 
 
+PAGES = [
+	{
+		"name": "funnel",
+		"label": "Funnel",
+		"url": "/representants?embed=team#/funnel",
+		"icon": "lucide-filter",
+		"roles": ["Sales Manager"],
+	},
+	{"name": "everyone", "label": "Everyone", "url": "/page"},
+	{"name": "elsewhere", "label": "Elsewhere", "url": "https://example.com/x", "roles": ["Sales Manager"]},
+	{"name": "protocol", "label": "Protocol", "url": "//example.com/x"},
+	{"label": "NoName", "url": "/x"},
+	"not a dict",
+]
+
+
+def run_pages(roles, hooks=PAGES):
+	with (
+		mock.patch.object(frappe, "get_hooks", return_value=hooks),
+		mock.patch.object(frappe, "get_roles", return_value=["All", "Guest", *roles]),
+		mock.patch.object(extension_tabs, "_", side_effect=lambda text: text),
+	):
+		return getattr(extension_tabs.get_pages, "__wrapped__", extension_tabs.get_pages)()
+
+
+class TestExtensionPages(unittest.TestCase):
+	def test_a_manager_sees_the_pages_for_its_role_and_those_for_everybody_in_the_order_given(self):
+		self.assertEqual([p["name"] for p in run_pages(["Sales Manager"])], ["funnel", "everyone"])
+
+	def test_the_others_do_not_see_a_page_kept_for_a_role(self):
+		self.assertEqual([p["name"] for p in run_pages(["Sales User"])], ["everyone"])
+
+	def test_a_page_that_points_at_another_site_or_is_not_well_formed_is_left_out(self):
+		names = [p["name"] for p in run_pages(["Sales Manager"])]
+		for left_out in ("elsewhere", "protocol"):
+			self.assertNotIn(left_out, names)
+		self.assertEqual(len(names), 2)
+
+	def test_a_site_where_no_app_adds_a_page_gets_none(self):
+		self.assertEqual(run_pages(["Sales Manager"], hooks=[]), [])
+		self.assertEqual(run_pages(["Sales Manager"], hooks=None), [])
+
+	def test_the_answer_holds_the_name_the_label_the_path_and_the_icon_and_nothing_else(self):
+		(first, *_rest) = run_pages(["Sales Manager"])
+		self.assertEqual(set(first), {"name", "label", "url", "icon"})
+		self.assertEqual(first["icon"], "lucide-filter")
+		self.assertEqual(run_pages(["Sales Manager"])[1]["icon"], "")
+
+
 if __name__ == "__main__":
 	unittest.main()
