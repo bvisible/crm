@@ -114,6 +114,23 @@ def is_admin(user: str | None = None) -> bool:
 	return user == "Administrator"
 
 
+# //// Neoffice — the hub's commercial representatives hold the role `Sales Representative` (defined by neoffice_devops, which is
+# //// installed on the hub alone). The CRM tests its own three roles by name in several places, and a representative must work
+# //// the CRM as a sales agent limited to the leads they own or are assigned (the CRM's own row rule), WITHOUT the ERPNext
+# //// `Sales User` role: that role reads and writes customers, quotations, orders, items and the chart of accounts. So the role is
+# //// read as `Sales User` here, in `crm_roles`, and the representative's rights are the permission rows the hub writes for the
+# //// role, nothing more. Inert on any site where the role does not exist. Remove only if the hub stops using the role.
+REPRESENTATIVE_ROLE = "Sales Representative"
+
+
+def crm_roles(user: str | None = None) -> set:
+	"""The roles of `user` as the CRM reads them: a sales representative counts as a sales user."""
+	roles = set(frappe.get_roles(user or frappe.session.user))
+	if REPRESENTATIVE_ROLE in roles:
+		roles.add("Sales User")
+	return roles
+
+
 def is_sales_user(user: str | None = None) -> bool:
 	"""
 	Check whether `user` is an agent
@@ -122,7 +139,8 @@ def is_sales_user(user: str | None = None) -> bool:
 	:return: Whether `user` is an agent
 	"""
 	user = user or frappe.session.user
-	return is_admin() or "Sales Manager" in frappe.get_roles(user) or "Sales User" in frappe.get_roles(user)
+	roles = crm_roles(user)  # //// Neoffice — a sales representative is an agent here (see `crm_roles`)
+	return is_admin() or "Sales Manager" in roles or "Sales User" in roles
 
 
 def sales_user_only(fn: callable) -> callable:

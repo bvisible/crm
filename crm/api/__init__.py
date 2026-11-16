@@ -6,7 +6,8 @@ from frappe.rate_limiter import rate_limit
 from frappe.translate import get_all_translations
 from frappe.utils import cstr, split_emails, validate_email_address
 
-from crm.utils import is_frappe_version
+# //// Neoffice — `crm_roles`: a sales representative (the hub's role) opens the CRM, see `crm.utils.crm_roles`
+from crm.utils import crm_roles, is_frappe_version
 
 
 @frappe.whitelist(allow_guest=True)  # nosemgrep: guest-whitelisted-method
@@ -90,7 +91,7 @@ def check_app_permission():
 	if "FCRM" not in allowed_modules:
 		return False
 
-	roles = frappe.get_roles()
+	roles = crm_roles()  # //// Neoffice — a sales representative opens the CRM (see `crm.utils.crm_roles`)
 	if any(role in ["System Manager", "Sales User", "Sales Manager"] for role in roles):
 		return True
 

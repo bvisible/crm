@@ -7,7 +7,9 @@ from frappe.query_builder.functions import Avg, Coalesce, Count, Date, DateForma
 from pypika.functions import Function
 
 from crm.fcrm.doctype.crm_dashboard.crm_dashboard import create_default_manager_dashboard
-from crm.utils import sales_user_only
+
+# //// Neoffice — `crm_roles`: a sales representative sees their own numbers only, see `crm.utils.crm_roles`
+from crm.utils import crm_roles, sales_user_only
 
 
 # Custom function for TIMESTAMPDIFF (MySQL/MariaDB)
@@ -33,7 +35,8 @@ def get_dashboard(from_date: str | None = None, to_date: str | None = None, user
 		from_date = frappe.utils.get_first_day(from_date or frappe.utils.nowdate())
 		to_date = frappe.utils.get_last_day(to_date or frappe.utils.nowdate())
 
-	roles = frappe.get_roles(frappe.session.user)
+	# //// Neoffice — a sales representative sees their own numbers only (see `crm.utils.crm_roles`)
+	roles = crm_roles(frappe.session.user)
 	is_sales_manager = "Sales Manager" in roles or "System Manager" in roles
 	is_sales_user = "Sales User" in roles and not is_sales_manager
 
@@ -73,7 +76,8 @@ def get_chart(
 		from_date = frappe.utils.get_first_day(from_date or frappe.utils.nowdate())
 		to_date = frappe.utils.get_last_day(to_date or frappe.utils.nowdate())
 
-	roles = frappe.get_roles(frappe.session.user)
+	# //// Neoffice — a sales representative sees their own numbers only (see `crm.utils.crm_roles`)
+	roles = crm_roles(frappe.session.user)
 	is_sales_manager = "Sales Manager" in roles or "System Manager" in roles
 	is_sales_user = "Sales User" in roles and not is_sales_manager
 

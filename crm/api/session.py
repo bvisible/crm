@@ -1,11 +1,17 @@
 import frappe
 from frappe import _
 
+# //// Neoffice — the hub's sales representative is a CRM user and a sales agent, see `crm.utils.crm_roles`
+from crm.utils import REPRESENTATIVE_ROLE, crm_roles
+
 CRM_ALLOWED_ROLES = ["System Manager", "Sales Manager", "Sales User"]
+# //// Neoffice — the accounts that hold one of these roles are the CRM's users (a sales representative is one, see `crm.utils.crm_roles`)
+CRM_USER_ROLES = [*CRM_ALLOWED_ROLES, REPRESENTATIVE_ROLE]
 
 
 def get_session_role_flags():
-	roles = set(frappe.get_roles())
+	# //// Neoffice — a sales representative is read as a sales user (see `crm.utils.crm_roles`)
+	roles = crm_roles()
 
 	if not roles.intersection(set(CRM_ALLOWED_ROLES)):
 		frappe.throw(_("You are not permitted to access CRM resources."), frappe.PermissionError)
@@ -61,7 +67,8 @@ def get_users(include_all: bool = False):
 	crm_user_names = set(
 		frappe.get_all(
 			"Has Role",
-			filters={"parenttype": "User", "role": ["in", CRM_ALLOWED_ROLES]},
+			# //// Neoffice — the CRM's users include the sales representatives (CRM_USER_ROLES)
+			filters={"parenttype": "User", "role": ["in", CRM_USER_ROLES]},
 			pluck="parent",
 			distinct=True,
 		)
@@ -122,6 +129,10 @@ def get_users(include_all: bool = False):
 				if role in user.roles:
 					user.role = role
 					break
+			# //// Neoffice — a sales representative is a sales user for the screen (it reads `user.role`), nothing above. `Guest`
+			# //// is the last of `role_priority`, so every account ends with it: it is the absence of a CRM role, not a role.
+			if user.role in ("", "Guest") and REPRESENTATIVE_ROLE in user.roles:
+				user.role = "Sales User"
 
 		user.is_telephony_agent = user.name in telephony_agents
 		user.language = user.language or system_language
