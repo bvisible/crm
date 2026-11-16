@@ -1,0 +1,1 @@
+import{T as e,c as t}from"./vue-router-wk8a_HSX.js";var n=e(`crm-extension-pages`,()=>{let e=t({url:`crm.api.extension_tabs.get_pages`,cache:`crm_extension_pages`,initialData:[],auto:!0});function n(t){return(e.data||[]).find(e=>e.name===t)}return{pages:e,getPage:n}});export{n as t};
