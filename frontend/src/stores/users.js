@@ -159,6 +159,18 @@ export const usersStore = defineStore('crm-users', () => {
     return null
   }
 
+  // //// Neoffice — a sales representative (the hub's role, `crm.utils.crm_roles`) works their own prospects: the screen hides
+  // //// what is not theirs (deals, contacts, organizations). A representative who is also a manager is not one here.
+  function isRepresentative(email) {
+    // read from the CRM users the screen waited for before it drew anything (`isCrmUser`), not from `getUser`, which may still be a stub
+    const name = email && email !== 'sessionUser' ? email : session.user
+    const user = users.data?.crmUsers?.find((u) => u.name === name)
+    return (
+      !!user?.roles?.includes('Sales Representative') &&
+      user.role === 'Sales User'
+    )
+  }
+
   const isCrmUser = (user) => {
     user = user || session.user
     return users.data.crmUsers?.find((u) => u.name === user)
@@ -177,6 +189,8 @@ export const usersStore = defineStore('crm-users', () => {
     getUserRole,
     isWebsiteUser,
     isCrmUser,
+    //// Neoffice — see `isRepresentative` above
+    isRepresentative,
   }
 })
 

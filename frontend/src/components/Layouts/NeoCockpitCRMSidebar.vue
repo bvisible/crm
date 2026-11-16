@@ -24,11 +24,15 @@
  */
 import AppSidebar from '@/components/Layouts/AppSidebar.vue'
 import NeoCockpitBridge from '@/components/NeoCockpitBridge.vue'
+// //// Neoffice — the entries a sales representative does not have (see `utils/navigation.js`)
+import { HIDDEN_FOR_REPRESENTATIVES } from '@/utils/navigation'
+import { usersStore } from '@/stores/users'
 
 import { useRouter, useRoute } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const router = useRouter()
+const { isRepresentative } = usersStore()
 const route = useRoute()
 const failed = ref(false)
 
@@ -47,9 +51,23 @@ const surfaceApp = {
 //// cockpit showed these entries in English (« Leads », « Deals », « Call Logs »…)
 //// under a French page, and a literal is what the catalogue extraction finds (07.10).
 const LINKS = [
-  { label: () => __('Dashboard'), icon: 'lucide-layout-dashboard', to: 'Dashboard' },
-  { label: () => __('Leads'), icon: 'lucide-target', to: 'Leads', detail: 'Lead' },
-  { label: () => __('Deals'), icon: 'lucide-hand-coins', to: 'Deals', detail: 'Deal' },
+  {
+    label: () => __('Dashboard'),
+    icon: 'lucide-layout-dashboard',
+    to: 'Dashboard',
+  },
+  {
+    label: () => __('Leads'),
+    icon: 'lucide-target',
+    to: 'Leads',
+    detail: 'Lead',
+  },
+  {
+    label: () => __('Deals'),
+    icon: 'lucide-hand-coins',
+    to: 'Deals',
+    detail: 'Deal',
+  },
   {
     label: () => __('Contacts'),
     icon: 'lucide-contact',
@@ -75,9 +93,13 @@ function navigate(r) {
 
 const contextNav = computed(() => {
   const currentName = route.name
+  //// Neoffice — a sales representative's menu leaves out what is not theirs (deals, contacts, organizations)
+  const links = isRepresentative()
+    ? LINKS.filter((item) => !HIDDEN_FOR_REPRESENTATIVES.includes(item.to))
+    : LINKS
   return [
     {
-      items: LINKS.map((item) => ({
+      items: links.map((item) => ({
         //// Neoffice — translated here, see LINKS.
         label: item.label(),
         icon: item.icon,

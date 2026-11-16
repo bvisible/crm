@@ -7,6 +7,8 @@ import PhoneIcon from '@/components/Icons/PhoneIcon.vue'
 import TaskIcon from '@/components/Icons/TaskIcon.vue'
 import LucideLayoutDashboard from '~icons/lucide/layout-dashboard'
 import router from '@/router'
+//// Neoffice — the store of the users, for the menu of a sales representative (see below)
+import { usersStore } from '@/stores/users'
 
 export const navigationItems = [
   {
@@ -24,8 +26,19 @@ export const navigationItems = [
   { label: 'Call Logs', icon: PhoneIcon, route: 'Call Logs' },
 ]
 
+// //// Neoffice — a sales representative reaches their prospects, their notes, tasks and calls, and nothing of the house's deals,
+// //// contacts or organizations (the hub gives them no right on those): their entries are left out of the menu and the palette.
+export const HIDDEN_FOR_REPRESENTATIVES = ['Deals', 'Contacts', 'Organizations']
+
 export function getNavigationItems({ mobile = false } = {}) {
+  //// Neoffice — is the account a sales representative? (their menu leaves out `HIDDEN_FOR_REPRESENTATIVES`)
+  const { isRepresentative } = usersStore()
+  const representative = isRepresentative()
+  //// Neoffice — the filter below keeps the entries that are theirs
   return navigationItems.filter(
-    (item) => router.hasRoute(item.route) && (!mobile || !item.desktopOnly),
+    (item) =>
+      router.hasRoute(item.route) &&
+      (!mobile || !item.desktopOnly) &&
+      !(representative && HIDDEN_FOR_REPRESENTATIVES.includes(item.route)),
   )
 }

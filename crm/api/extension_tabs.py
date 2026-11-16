@@ -1,0 +1,39 @@
+# //// Neoffice — added file (no upstream equivalent)
+# //// The tabs that an app adds to the page of a CRM document: the app declares them in its hooks (`crm_extension_tabs`, by
+# //// doctype), and the page of the CRM asks which ones this account may see. The hub's representatives work their prospects in
+# //// the CRM; their questions, offer, visits and presentation are the hub app's, shown in a tab of the prospect's page, so that no
+# //// code of that app lives in this public fork. Empty on a site where no app declares one.
+
+import frappe
+from frappe import _
+
+
+def _allowed(tab: dict, roles: set) -> bool:
+	wanted = tab.get("roles")
+	return not wanted or not roles.isdisjoint(wanted)
+
+
+def _is_path_of_this_site(url) -> bool:
+	return isinstance(url, str) and url.startswith("/") and not url.startswith("//")
+
+
+@frappe.whitelist()
+def get_tabs(doctype: str) -> list:
+	"""The tabs apps add to the page of `doctype`, in the order they gave them, that the account may see.
+
+	A tab is {name, label, url, roles?}: `url` is a path of this site (`{docname}` is replaced by the document's name),
+	`roles` the roles that see it (everybody who may read the document when it is absent). A declaration that is not
+	well formed, or that points at another site, is left out.
+	"""
+	if not frappe.has_permission(doctype, "read"):
+		return []
+	declared = (frappe.get_hooks("crm_extension_tabs") or {}).get(doctype) or []
+	roles = set(frappe.get_roles())
+	tabs = []
+	for tab in declared:
+		if not isinstance(tab, dict) or not tab.get("name") or not tab.get("label"):
+			continue
+		if not _is_path_of_this_site(tab.get("url")) or not _allowed(tab, roles):
+			continue
+		tabs.append({"name": tab["name"], "label": _(tab["label"]), "url": tab["url"]})
+	return tabs

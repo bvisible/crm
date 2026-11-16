@@ -58,7 +58,15 @@
       class="flex flex-1 overflow-hidden flex-col [&_[role='tab']]:px-1 [&_[role='tab']]:shrink-0 [&_[role='tablist']]:px-5 [&_[role='tablist']::-webkit-scrollbar]:h-0 [&_[role='tablist']]:min-h-[45px] [&_[role='tablist']]:gap-[22px] [&>[role='tabpanel']:not([hidden])]:flex [&>[role='tabpanel']:not([hidden])]:grow [&>[data-slot=tab-list]]:overflow-x-auto [&_[data-slot=tab-indicator]]:translate-y-0 [&>[data-slot=tab-panel]]:min-h-0 [&>[data-slot=tab-panel]]:flex-col [&>[data-slot=tab-panel]]:overflow-auto"
     >
       <template #tab-panel>
+        <!-- //// Neoffice — a tab an app added shows its own content; the others stay the CRM's -->
+        <ExtensionTab
+          v-if="extensionTab"
+          :tab="extensionTab"
+          :docname="leadId"
+        />
+        <!-- //// Neoffice — the CRM's own tabs: shown when no tab of an app is -->
         <Activities
+          v-else
           ref="activities"
           v-model:reload="reload"
           v-model:activeTab="activeTab"
@@ -264,6 +272,8 @@ import AttachmentIcon from '@/components/Icons/AttachmentIcon.vue'
 import LostReasonModal from '@/components/Modals/LostReasonModal.vue'
 import LayoutHeader from '@/components/LayoutHeader.vue'
 import Activities from '@/components/Activities/Activities.vue'
+// //// Neoffice — the tabs that apps add to the lead's page (see `ExtensionTab.vue`)
+import ExtensionTab from '@/components/ExtensionTab.vue'
 import AssignTo from '@/components/AssignTo.vue'
 import FilesUploader from '@/components/FilesUploader/FilesUploader.vue'
 import SidePanelLayout from '@/components/SidePanelLayout.vue'
@@ -558,6 +568,14 @@ usePageMeta(() => {
   return { title: title.value, icon: brand.favicon }
 })
 
+// //// Neoffice — the tabs apps add to a lead's page, for this account (empty on a site where no app adds one)
+const extensionTabs = createResource({
+  url: 'crm.api.extension_tabs.get_tabs',
+  params: { doctype: 'CRM Lead' },
+  cache: ['crm_extension_tabs', 'CRM Lead'],
+  auto: true,
+})
+
 const tabs = computed(() => {
   let tabOptions = [
     {
@@ -616,10 +634,27 @@ const tabs = computed(() => {
       condition: () => whatsappEnabled.value,
     },
   ]
-  return tabOptions.filter((tab) => (tab.condition ? tab.condition() : true))
+  // //// Neoffice — the tabs apps add (`crm_extension_tabs` hook), in the order the app gave, right after the activity: the bar of
+  // //// tabs scrolls, and what a representative works with (the questions, the visits, the offer) must not hide at its far end
+  const added = (extensionTabs.data || []).map((tab) => ({
+    name: tab.name,
+    value: tab.name.toLowerCase(),
+    label: __(tab.label),
+    iconLeft: DetailsIcon,
+    extension: tab,
+  }))
+  const own = tabOptions.filter((tab) =>
+    tab.condition ? tab.condition() : true,
+  )
+  return [...own.slice(0, 1), ...added, ...own.slice(1)]
 })
 
 const { activeTab, changeTabTo } = useActiveTabManager(tabs, 'lastLeadTab')
+
+// //// Neoffice — the tab being shown, when an app added it
+const extensionTab = computed(
+  () => tabs.value.find((tab) => tab.value === activeTab.value)?.extension,
+)
 
 const sections = createResource({
   url: 'crm.fcrm.doctype.crm_fields_layout.crm_fields_layout.get_sidepanel_sections',

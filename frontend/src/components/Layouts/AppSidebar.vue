@@ -269,7 +269,9 @@ const isCollapsed = computed(() => isSidebarCollapsed.value && !props.mobile)
 const isFCSite = ref(window.is_fc_site)
 const isDemoSite = ref(window.is_demo_site)
 
-const links = getNavigationItems({ mobile: props.mobile })
+// //// Neoffice — the entries are read again whenever the CRM's users change (a representative's menu leaves out what is not theirs, see
+// //// `utils/navigation.js`): a list taken once at setup could be taken before the users were there
+const links = computed(() => getNavigationItems({ mobile: props.mobile }))
 
 const allViews = computed(() => {
   let _views = [
@@ -277,7 +279,8 @@ const allViews = computed(() => {
       name: 'All Views',
       hideLabel: true,
       opened: true,
-      views: links.map((link) => ({
+      //// Neoffice — `links` is a computed (see its definition above)
+      views: links.value.map((link) => ({
         label: link.label,
         icon: link.icon,
         key: link.route,
