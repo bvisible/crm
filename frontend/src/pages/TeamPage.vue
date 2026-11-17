@@ -22,7 +22,8 @@
 <script setup>
 import LayoutHeader from '@/components/LayoutHeader.vue'
 import ExtensionTab from '@/components/ExtensionTab.vue'
-import { Breadcrumbs } from 'frappe-ui'
+import { Breadcrumbs, usePageMeta } from 'frappe-ui'
+import { getSettings } from '@/stores/settings'
 import { extensionPagesStore } from '@/stores/extensionPages'
 import { computed } from 'vue'
 
@@ -40,4 +41,11 @@ const breadcrumbs = computed(() => [
     route: { name: 'TeamPage', params: { name: props.name } },
   },
 ])
+
+//// Neoffice — the tab of the browser carries the page's name, as the lists and the lead's page carry theirs (it kept the previous page's)
+const { brand } = getSettings()
+usePageMeta(() => ({
+  title: page.value?.label || __('CRM'),
+  icon: brand.favicon,
+}))
 </script>
