@@ -147,6 +147,35 @@ def get_users(include_all: bool = False):
 	return users, crm_users
 
 
+# //// Neoffice — added: the user search of the CRM's assignment box and owner fields. They asked `frappe.desk.search.search_link` for
+# //// the CRM's users, and Frappe answers a desk user who may not read the User doctype with the account itself and nobody else: a
+# //// manager could assign a prospect to no representative (« Attribuer à » listed only the manager, 18.11). The CRM's users are what
+# //// `get_users` already hands every CRM account, so the same list is searched here, in the shape of `search_link`.
+@frappe.whitelist()
+def search_crm_users(  # permission-check: ok the CRM's own role check, `get_session_role_flags`, comes first
+	txt: str = "", filters=None, page_length: int = 20
+) -> list:
+	"""The CRM's users whose name or full name contains `txt`: [{value, description}], as `search_link` answers.
+
+	Only an account of the CRM may ask (`get_users` refuses the others), and `filters` can only narrow the list: a `name in [...]`
+	given by the screen keeps the users named there.
+	"""
+	get_session_role_flags()
+	_users, crm_users = get_users()
+	filters = frappe.parse_json(filters) if filters else {}
+	names = filters.get("name") if isinstance(filters, dict) else None
+	allowed = set(names[1]) if isinstance(names, (list, tuple)) and len(names) == 2 and names[0] == "in" else None
+	query = (txt or "").strip().lower()
+	found = []
+	for user in crm_users:
+		if allowed is not None and user.name not in allowed:
+			continue
+		if query and query not in user.name.lower() and query not in (user.full_name or "").lower():
+			continue
+		found.append({"value": user.name, "description": user.full_name or user.name})
+	return found[: int(page_length or 20)]
+
+
 @frappe.whitelist()
 def get_user_info(users: str | list):
 	"""Resolve display info for a batch of User names.

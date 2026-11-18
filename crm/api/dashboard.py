@@ -786,7 +786,8 @@ def get_funnel_conversion(from_date: str | None = None, to_date: str | None = No
 	total_leads = query.run(as_dict=True)
 	total_leads_count = total_leads[0].count if total_leads else 0
 
-	result.append({"stage": "Leads", "count": total_leads_count})
+	# //// Neoffice — the first stage of the funnel is translated (it printed « Leads » on a French dashboard)
+	result.append({"stage": _("Leads"), "count": total_leads_count})
 
 	result += get_deal_status_change_counts(from_date, to_date, deal_conds, deal_filters)
 

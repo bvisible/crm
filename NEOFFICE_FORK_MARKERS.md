@@ -29,6 +29,7 @@ hunk carries its own `//// Neoffice` comment; what a comment cannot say:
 | **`crm_fields_layout.py`** | the side panel's placeholders and read-only tooltip were built by English concatenation in Python; they are now `_("Add {0}...")` on the translated label. |
 | **Field descriptions** | `Field.vue` hands the control `__(field.description)`; the paragraph at the end of the block already did. |
 | **Dashboard legends** | the API gives each chart series a translated `label` (`crm/api/dashboard.py`), and `toAxisChartProps` passes it to frappe-ui's `seriesConfig`; the legend printed the key (« Won Deals », « Forecasted »). The unit of the average-time cards is translated too. |
+| **The assignment box lists the team** | `Controls/Link.vue` sends a search of the CRM's users (a `name in [...]` filter on the User doctype: « Attribuer à », the owner fields) to `crm.api.session.search_crm_users` (added, with its test). Frappe's `search_link` answers a desk user who may not read the User doctype with the account itself and nobody else: a manager could assign a prospect to no representative. Drop when the User doctype lets the CRM's roles search their colleagues. |
 | **Read-only Select** | the side panel shows a read-only Select field (« Entrée par ») with its option translated. |
 | **Not done** | the editor toolbar's « Heading » and table buttons (frappe-ui's TextEditor), dayjs's English month names in the call log. |
 

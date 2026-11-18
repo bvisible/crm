@@ -142,8 +142,27 @@ watchDebounced(
   { debounce: 300, immediate: true },
 )
 
+// //// Neoffice — a search of the CRM's users (the filter says `name in [the CRM's users]`: the assignment box, the owner fields) goes to
+// //// `crm.api.session.search_crm_users`. Frappe's own `search_link` answers a desk user who may not read the User doctype with the
+// //// account itself and nobody else, so a manager could assign a prospect to no representative (18.11).
+function searchUrl(doctype, filters) {
+  let parsed = filters
+  if (typeof parsed === 'string') {
+    try {
+      parsed = JSON.parse(parsed)
+    } catch (e) {
+      parsed = null
+    }
+  }
+  const name = parsed && !Array.isArray(parsed) ? parsed.name : null
+  return doctype === 'User' && Array.isArray(name) && name[0] === 'in'
+    ? 'crm.api.session.search_crm_users'
+    : 'frappe.desk.search.search_link'
+}
+
 const options = createResource({
-  url: 'frappe.desk.search.search_link',
+  // //// Neoffice — see `searchUrl` above
+  url: searchUrl(props.doctype, props.filters),
   cache: [props.doctype, text.value, props.hideMe, props.filters],
   method: 'POST',
   params: {
@@ -197,6 +216,8 @@ function reload(val, force = false) {
     return
 
   options.update({
+    // //// Neoffice — the search follows the filters (see `searchUrl`)
+    url: searchUrl(props.doctype, props.filters),
     params: {
       txt: val,
       doctype: props.doctype,
