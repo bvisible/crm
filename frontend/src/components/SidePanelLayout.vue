@@ -99,8 +99,15 @@
                           "
                           class="flex h-7 cursor-pointer items-center px-2 py-1 text-ink-gray-5"
                         >
+                          <!-- //// Neoffice — a read-only Select shows its option translated (« Entrée par : Person » stayed English) -->
                           <Tooltip :text="__(field.tooltip)">
-                            <div>{{ doc[field.fieldname] }}</div>
+                            <div>
+                              {{
+                                field.fieldtype === 'Select'
+                                  ? __(doc[field.fieldname])
+                                  : doc[field.fieldname]
+                              }}
+                            </div>
                           </Tooltip>
                         </div>
                         <PrimaryDropdown

@@ -13597,3 +13597,7 @@ msgstr "{0} sur {1}"
 #, python-brace-format
 msgid "{0} {1} already exists"
 msgstr "{0} {1} existe déjà"
+
+#: crm/api/dashboard.py:728
+msgid "Forecasted"
+msgstr "Prévisionnel"

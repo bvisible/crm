@@ -28,7 +28,9 @@ hunk carries its own `//// Neoffice` comment; what a comment cannot say:
 | **Select columns** | the six list views translate the value of a Select field (`getLabel`), as upstream did only for Link fields: « Todo », « Medium » and the entry channel were English. |
 | **`crm_fields_layout.py`** | the side panel's placeholders and read-only tooltip were built by English concatenation in Python; they are now `_("Add {0}...")` on the translated label. |
 | **Field descriptions** | `Field.vue` hands the control `__(field.description)`; the paragraph at the end of the block already did. |
-| **Not done** | dashboard chart legends (« Leads », « Deals », « Won Deals », « Forecasted », « Actual » are the series keys of the API), the editor toolbar's « Heading » and table buttons (frappe-ui's TextEditor), dayjs's English month names in the call log. |
+| **Dashboard legends** | the API gives each chart series a translated `label` (`crm/api/dashboard.py`), and `toAxisChartProps` passes it to frappe-ui's `seriesConfig`; the legend printed the key (« Won Deals », « Forecasted »). The unit of the average-time cards is translated too. |
+| **Read-only Select** | the side panel shows a read-only Select field (« Entrée par ») with its option translated. |
+| **Not done** | the editor toolbar's « Heading » and table buttons (frappe-ui's TextEditor), dayjs's English month names in the call log. |
 
 ### Merge record — upstream `version-15` (v15.0.1 and its hotfixes), 2026-11-13
 

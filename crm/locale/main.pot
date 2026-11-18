@@ -11840,3 +11840,7 @@ msgstr ""
 #: frontend/src/doctypes/crm_task/form.js:11 frontend/src/doctypes/fcrm_note/form.js:11
 msgid "Open deal"
 msgstr ""
+
+#: crm/api/dashboard.py:728
+msgid "Forecasted"
+msgstr ""

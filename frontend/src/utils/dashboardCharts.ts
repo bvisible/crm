@@ -19,6 +19,8 @@ interface ValueAxisConfig {
 
 interface SeriesConfig {
   name: string
+  // //// Neoffice — the legend's text, translated by the API (upstream's legend printed the key: « Won Deals », « Forecasted »)
+  label?: string
   type: 'bar' | 'line' | 'area'
   color?: string
   axis?: 'y' | 'y2'
@@ -114,6 +116,8 @@ export function toAxisChartProps(config: AxisChartConfig): BarChartProps {
   const seriesConfig: Record<string, SeriesStyle> = {}
   series.forEach((s, i) => {
     seriesConfig[s.name] = {
+      // //// Neoffice — the legend's text, see `SeriesConfig.label`
+      label: s.label,
       type: s.type,
       color: s.color || config.colors?.[i],
       showDataLabels: s.showDataLabels,

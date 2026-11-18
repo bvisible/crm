@@ -653,9 +653,10 @@ def get_sales_trend(from_date: str | None = None, to_date: str | None = None, us
 			"title": _("Count"),
 		},
 		"series": [
-			{"name": "leads", "type": "line", "showDataPoints": True},
-			{"name": "deals", "type": "line", "showDataPoints": True},
-			{"name": "won_deals", "type": "line", "showDataPoints": True},
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
+			{"name": "leads", "label": _("Leads"), "type": "line", "showDataPoints": True},
+			{"name": "deals", "label": _("Deals"), "type": "line", "showDataPoints": True},
+			{"name": "won_deals", "label": _("Won Deals"), "type": "line", "showDataPoints": True},
 		],
 	}
 
@@ -733,8 +734,9 @@ def get_forecasted_revenue(from_date: str | None = None, to_date: str | None = N
 			"title": _("Revenue") + f" ({get_base_currency_symbol()})",
 		},
 		"series": [
-			{"name": "forecasted", "type": "line", "showDataPoints": True},
-			{"name": "actual", "type": "line", "showDataPoints": True},
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
+			{"name": "forecasted", "label": _("Forecasted"), "type": "line", "showDataPoints": True},
+			{"name": "actual", "label": _("Actual"), "type": "line", "showDataPoints": True},
 		],
 	}
 
@@ -803,7 +805,9 @@ def get_funnel_conversion(from_date: str | None = None, to_date: str | None = No
 		"swapXY": True,
 		"series": [
 			{
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
 				"name": "count",
+				"label": _("Count"),
 				"type": "bar",
 				"echartOptions": {
 					"colorBy": "data",
@@ -857,7 +861,8 @@ def get_deals_by_stage_axis(
 		},
 		"yAxis": {"title": _("Count")},
 		"series": [
-			{"name": "count", "type": "bar"},
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
+			{"name": "count", "label": _("Count"), "type": "bar"},
 		],
 	}
 
@@ -951,7 +956,8 @@ def get_lost_deal_reasons(from_date: str | None = None, to_date: str | None = No
 			"title": _("Count"),
 		},
 		"series": [
-			{"name": "count", "type": "bar"},
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
+			{"name": "count", "label": _("Count"), "type": "bar"},
 		],
 	}
 
@@ -1084,8 +1090,9 @@ def get_deals_by_territory(from_date: str | None = None, to_date: str | None = N
 			"title": _("Deal value") + f" ({get_base_currency_symbol()})",
 		},
 		"series": [
-			{"name": "deals", "type": "bar"},
-			{"name": "value", "type": "line", "showDataPoints": True, "axis": "y2"},
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
+			{"name": "deals", "label": _("Deals"), "type": "bar"},
+			{"name": "value", "label": _("Value"), "type": "line", "showDataPoints": True, "axis": "y2"},
 		],
 	}
 
@@ -1147,8 +1154,9 @@ def get_deals_by_salesperson(
 			"title": _("Deal value") + f" ({get_base_currency_symbol()})",
 		},
 		"series": [
-			{"name": "deals", "type": "bar"},
-			{"name": "value", "type": "line", "showDataPoints": True, "axis": "y2"},
+			# //// Neoffice — `label` is the legend's text (upstream left the key: « Leads », « Won Deals », « Count » in English)
+			{"name": "deals", "label": _("Deals"), "type": "bar"},
+			{"name": "value", "label": _("Value"), "type": "line", "showDataPoints": True, "axis": "y2"},
 		],
 	}
 
