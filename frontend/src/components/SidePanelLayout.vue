@@ -144,6 +144,8 @@
                           :placeholder="field.placeholder"
                           @update:modelValue="(v) => fieldChange(v, field)"
                         />
+                        <!-- //// Neoffice — the placeholder of the user field: upstream joined `__('Select')` and the field's English
+                             label (« Sélectionner Lead Owner… »); the label is translated and the sentence is one msgid. -->
                         <Link
                           v-else-if="field.fieldtype === 'User'"
                           class="form-control"
@@ -153,9 +155,7 @@
                           "
                           doctype="User"
                           :filters="field.filters"
-                          :placeholder="
-                            __('Select') + ' ' + field.label + '...'
-                          "
+                          :placeholder="__('Select {0}...', [__(field.label)])"
                           :hideMe="true"
                           @change="(v) => fieldChange(v, field)"
                         >

@@ -19,8 +19,9 @@
           :icon="EditIcon"
           @click="showDataFieldsModal = true"
         />
+        <!-- //// Neoffice — the label of the button is translated (« Save » stayed English) -->
         <Button
-          label="Save"
+          :label="__('Save')"
           :disabled="!document.isDirty || document.enriching"
           variant="solid"
           :loading="document.save.loading"

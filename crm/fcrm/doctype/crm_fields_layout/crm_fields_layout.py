@@ -177,16 +177,23 @@ def get_permlevel_access(permission_type="write", doctype=None, parent_doctype=N
 
 
 def get_field_obj(field):
-	field["placeholder"] = field.get("placeholder") or "Add " + field.label + "..."
+	# //// Neoffice — upstream wrote these three texts in English by concatenation ("Add " + label + "..."), so a French desk showed
+	# //// « Add Website… » and « Sélectionner Lead Owner… » (the frontend translates the whole string, which no catalogue holds).
+	# //// They are now built from translatable sentences and the translated label. To drop when upstream translates them.
+	label = _(field.label)
+	field["placeholder"] = field.get("placeholder") or _("Add {0}...").format(label)
 
 	if field.fieldtype == "Link":
-		field["placeholder"] = field.get("placeholder") or "Select " + field.label + "..."
+		# //// Neoffice — translated sentence, see above
+		field["placeholder"] = field.get("placeholder") or _("Select {0}...").format(label)
 	elif field.fieldtype == "Select" and field.options:
-		field["placeholder"] = field.get("placeholder") or "Select " + field.label + "..."
+		# //// Neoffice — translated sentence, see above
+		field["placeholder"] = field.get("placeholder") or _("Select {0}...").format(label)
 		field["options"] = [{"label": _(option), "value": option} for option in field.options.split("\n")]
 
 	if field.read_only:
-		field["tooltip"] = "This field is read only and cannot be edited."
+		# //// Neoffice — the tooltip is translatable (upstream: a bare English string)
+		field["tooltip"] = _("This field is read only and cannot be edited.")
 
 	return field
 

@@ -486,9 +486,10 @@ def get_average_time_to_close_a_lead(
 		"title": _("Avg. time to close a lead"),
 		"tooltip": _("Average time taken from lead creation to deal closure"),
 		"value": current_avg_lead,
-		"suffix": " days",
+		# //// Neoffice — the unit is translated (upstream wrote « days » in English on a French dashboard)
+		"suffix": " " + _("days"),
 		"delta": delta_lead,
-		"deltaSuffix": " days",
+		"deltaSuffix": " " + _("days"),
 		"negativeIsBetter": True,
 	}
 
@@ -549,9 +550,10 @@ def get_average_time_to_close_a_deal(
 		"title": _("Avg. time to close a deal"),
 		"tooltip": _("Average time taken from deal creation to deal closure"),
 		"value": current_avg_deal,
-		"suffix": " days",
+		# //// Neoffice — the unit is translated (upstream wrote « days » in English on a French dashboard)
+		"suffix": " " + _("days"),
 		"delta": delta_deal,
-		"deltaSuffix": " days",
+		"deltaSuffix": " " + _("days"),
 		"negativeIsBetter": True,
 	}
 

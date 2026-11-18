@@ -32,7 +32,8 @@
             </div>
             <div class="flex gap-2">
               <TaskPriorityIcon :priority="task.priority" />
-              {{ task.priority }}
+              <!-- //// Neoffice — the priority is translated (« Medium » stayed English on the card of the task) -->
+              {{ __(task.priority) }}
             </div>
           </div>
         </div>

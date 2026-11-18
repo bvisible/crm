@@ -30,6 +30,7 @@
           class="grid w-full min-w-0 truncate"
           :style="{ gridTemplateColumns: gridTemplateColumns }"
         >
+          <!-- //// Neoffice — the title (tooltip) of a column is translated, as its header is -->
           <div
             v-for="field in fields"
             :key="field.fieldname"
@@ -39,7 +40,7 @@
                 ? 'text-right'
                 : ''
             "
-            :title="field.label"
+            :title="__(field.label)"
           >
             {{ __(field.label) }}
             <span

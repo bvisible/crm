@@ -526,6 +526,11 @@ function getFieldOverrides(fieldname) {
 const field = computed(() => {
   let field = { ...props.field }
 
+  // //// Neoffice — the description under a field is translated once, here: upstream handed the controls the English text
+  // //// (« Company description discovered by Domain Enrichment. », « Total after discount »), and only the paragraph further
+  // //// down translated it.
+  if (field.description) field.description = __(field.description)
+
   // ── Script property overrides ──
   const overrides = getFieldOverrides(field.fieldname)
   if (overrides) {

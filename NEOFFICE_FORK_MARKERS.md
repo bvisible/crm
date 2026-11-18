@@ -16,6 +16,20 @@ Tooling: `bvisible/neoffice-ci` → `scripts/fork_markers.py`
 Fork `bvisible/crm`, branch `version-15`. Upstream `frappe/crm` (default branch `develop`;
 we track its `version-15` branch since 2026-11-13; `main` and its v1.x tags before).
 
+### French pass on the representatives' screens, 2026-11-18
+
+What a French desk still showed in English, or in the wrong words, on the lists, the lead and deal sheets, the tasks and the notes. Every code
+hunk carries its own `//// Neoffice` comment; what a comment cannot say:
+
+| | |
+|---|---|
+| **`crm/locale/fr.po`, `main.pot`** | « Lead » is said « prospect » and « opportunité » « affaire » everywhere (32 msgstr), « note » is said « remarque » (23, the bare `Note` and `FCRM Note` left as they were), `Create {0}` / `Edit {0}` read « Créer : {0} » / « Modifier : {0} » (the noun is a doctype name, no article fits). 142 msgids new in upstream's template were translated by the PO tool; six sentences this fork's code now writes (`Add {0}...`, `Select {0}...`, the read-only tooltip, `{0} of {1}`, `Open lead`, `Open deal`) are appended to `main.pot` by hand (the extractor has not run). No `msgstr == msgid` added. |
+| **`ListFooter.vue`** (added) | frappe-ui's footer writes « of » and « Load More » in its own template; the eight list pages import this wrapper, which draws the `right` slot with translated text. Drop when frappe-ui translates its footer. |
+| **Select columns** | the six list views translate the value of a Select field (`getLabel`), as upstream did only for Link fields: « Todo », « Medium » and the entry channel were English. |
+| **`crm_fields_layout.py`** | the side panel's placeholders and read-only tooltip were built by English concatenation in Python; they are now `_("Add {0}...")` on the translated label. |
+| **Field descriptions** | `Field.vue` hands the control `__(field.description)`; the paragraph at the end of the block already did. |
+| **Not done** | dashboard chart legends (« Leads », « Deals », « Won Deals », « Forecasted », « Actual » are the series keys of the API), the editor toolbar's « Heading » and table buttons (frappe-ui's TextEditor), dayjs's English month names in the call log. |
+
 ### Merge record — upstream `version-15` (v15.0.1 and its hotfixes), 2026-11-13
 
 **BASE is now upstream `version-15` at `844c00757`** (2026-11-12, "Merge pull request #3429 from

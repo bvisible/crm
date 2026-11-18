@@ -188,8 +188,9 @@ import {
   ListHeaderItem,
   ListSelectBanner,
   ListRowItem,
-  ListFooter,
 } from 'frappe-ui/experimental'
+// //// Neoffice — the list footer with its texts translated (frappe-ui's writes « of » and « Load More » in English)
+import ListFooter from '@/components/ListViews/ListFooter.vue'
 import { sessionStore } from '@/stores/session'
 import { ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
@@ -231,6 +232,9 @@ function onColumnWidthUpdated({ width, save }, column) {
 
 function getLabel(label, column) {
   if (column.type === 'Duration') return formatDuration(label)
+  // //// Neoffice — the options of a Select field (task status and priority, the entry channel…) are translated as the field's
+  // //// own sheet does; upstream translated only the values of a Link field, so « Todo » and « Medium » stayed English.
+  if (column.type === 'Select') return __(label)
   if (column.options && isTranslatable(column.options)) return __(label)
   return label
 }

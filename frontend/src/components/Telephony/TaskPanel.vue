@@ -15,9 +15,10 @@
     />
     <div class="flex flex-col gap-2">
       <div class="flex gap-2">
+        <!-- //// Neoffice — the status and the priority are shown translated (`__(task.status)`), as the menus that set them are -->
         <Dropdown :options="taskStatusOptions(updateTaskStatus)">
           <Button
-            :label="task.status"
+            :label="__(task.status)"
             class="bg-surface-gray-9 text-ink-base hover:bg-surface-gray-8"
           >
             <template #prefix>
@@ -25,9 +26,10 @@
             </template>
           </Button>
         </Dropdown>
+        <!-- //// Neoffice — the priority is shown translated, as the status above -->
         <Dropdown :options="taskPriorityOptions(updateTaskPriority)">
           <Button
-            :label="task.priority"
+            :label="__(task.priority)"
             class="bg-surface-gray-9 text-ink-base hover:bg-surface-gray-8"
           >
             <template #prefix>

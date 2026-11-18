@@ -148,7 +148,7 @@ msgstr "Un responsable requiert le nom d'une personne ou le nom d'une organisati
 
 #: crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.py:49
 msgid "A lead sync source is already enabled for this Facebook Lead Form!"
-msgstr "Une source de synchronisation de prospects est déjà activée pour ce formulaire Facebook Lead !"
+msgstr "Une source de synchronisation de prospects est déjà activée pour ce formulaire de prospect Facebook !"
 
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1089
 #: frontend/src/components/Settings/Forms/FormBuilderPanel.vue:1231
@@ -371,7 +371,7 @@ msgstr "Ajouter un numéro de mobile..."
 
 #: frontend/src/components/Modals/CallLogDetailModal.vue:20
 msgid "Add Note"
-msgstr "Ajouter une note"
+msgstr "Ajouter une remarque"
 
 #: frontend/src/pages/Contact.vue:353
 msgid "Add Organization..."
@@ -430,7 +430,7 @@ msgstr "Ajouter une condition personnalisée"
 #: frontend/src/components/Telephony/ExotelCallUI.vue:183
 #: frontend/src/components/Telephony/TwilioCallUI.vue:57
 msgid "Add a Note"
-msgstr "Ajouter une note"
+msgstr "Ajouter une remarque"
 
 #: frontend/src/components/Telephony/ExotelCallUI.vue:191
 msgid "Add a Task"
@@ -836,7 +836,7 @@ msgstr "Mettre à jour automatiquement la valeur prévisionnelle de l'affaire"
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRules.vue:11
 msgid "Auto-assign leads/deals to the right sales user based on predefined conditions"
-msgstr "Affecter automatiquement les Leads/opportunités au commercial approprié selon des conditions prédéfinies"
+msgstr "Affecter automatiquement les prospects/affaires au commercial approprié selon des conditions prédéfinies"
 
 #. Description of the 'Condition' (Code) field in DocType 'CRM Service Level
 #. Agreement'
@@ -848,13 +848,13 @@ msgstr "Généré automatiquement depuis la vue du portail — ne modifiez pas d
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Automatically sets Communication Status to “Open” for the lead or deal when a new communication is created. Applies only when SLA is enabled"
-msgstr "Définit automatiquement le statut de communication sur « Ouvert » pour le Lead ou l'opportunité lorsqu'une nouvelle communication est créée. S'applique uniquement si le SLA est activé"
+msgstr "Définit automatiquement le statut de communication sur « Ouvert » pour le prospect ou l'affaire lorsqu'une nouvelle communication est créée. S'applique uniquement si le SLA est activé"
 
 #. Description of the 'Mark lead/deal as replied on response' (Check) field in
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Automatically sets Communication Status to “Replied” for the lead or deal when a response is received. Applies only when SLA is enabled"
-msgstr "Définit automatiquement le statut de communication sur « Répondu » pour le Lead ou l'opportunité lorsqu'une réponse est reçue. S'applique uniquement si le SLA est activé"
+msgstr "Définit automatiquement le statut de communication sur « Répondu » pour le prospect ou l'affaire lorsqu'une réponse est reçue. S'applique uniquement si le SLA est activé"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:64
 msgid "Automatically sets communication status to “Open” for the lead or deal when a new communication is created. Applies only when SLA is enabled"
@@ -912,7 +912,7 @@ msgstr "Temps moy. de clôture d'une affaire"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:79
 msgid "Avg Time to Close a Lead"
-msgstr "Temps moy. de clôture d'un Lead"
+msgstr "Temps moy. de clôture d'un prospect"
 
 # //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: frontend/src/components/Dashboard/AddChartModal.vue:76
@@ -1344,7 +1344,7 @@ msgstr "Capturer mon premier prospect"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:675
 msgid "Capturing Leads"
-msgstr "Capture de Leads"
+msgstr "Capture de prospects"
 
 #: frontend/src/pages/PersonaForm.vue:90
 msgid "Capturing leads"
@@ -1448,7 +1448,7 @@ msgstr "Choisissez le fournisseur de service de messagerie que vous souhaitez co
 
 #: frontend/src/components/Settings/Sla/SlaPolicyView.vue:107
 msgid "Choose which leads/deals are affected by this policy."
-msgstr "Choisissez les Leads/opportunités concernés par cette politique."
+msgstr "Choisissez les prospects/affaires concernés par cette politique."
 
 #: frontend/src/components/Settings/AssignmentRules/AssignmentRuleView.vue:229
 msgid "Choose which {0} are affected by this un-assignment rule."
@@ -1883,11 +1883,11 @@ msgstr "Créer une affaire"
 #: frontend/src/components/Modals/CallLogDetailModal.vue:163
 #: frontend/src/components/Modals/LeadModal.vue:8
 msgid "Create Lead"
-msgstr "Créer un Lead"
+msgstr "Créer un prospect"
 
 #: frontend/src/components/Settings/emailConfig.js:58
 msgid "Create Lead from Incoming Emails"
-msgstr "Créer un Lead à partir des e-mails entrants"
+msgstr "Créer un prospect à partir des e-mails entrants"
 
 #: frontend/src/components/Controls/Link.vue:50
 #: frontend/src/components/Modals/EmailTemplateSelectorModal.vue:58
@@ -1945,7 +1945,7 @@ msgstr "Créer votre premier prospect"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:527
 msgid "Create your first note"
-msgstr "Créer votre première note"
+msgstr "Créer votre première remarque"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:506
 msgid "Create your first task"
@@ -2350,7 +2350,7 @@ msgstr "Supprimer {0} éléments"
 
 #: frontend/src/components/Activities/NoteArea.vue:73
 msgid "Deleting note..."
-msgstr "Suppression de la note..."
+msgstr "Suppression de la remarque..."
 
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.js:58
 msgid "Demo data restored successfully."
@@ -2711,7 +2711,7 @@ msgstr "Modifier la disposition des champs de ligne de grille"
 
 #: frontend/src/components/Modals/CallLogDetailModal.vue:20
 msgid "Edit Note"
-msgstr "Modifier la note"
+msgstr "Modifier la remarque"
 
 #: frontend/src/components/Modals/QuickEntryModal.vue:7
 msgid "Edit Quick Entry Layout"
@@ -2781,7 +2781,7 @@ msgstr "Communication par e-mail"
 
 #: frontend/src/components/EmailEditor.vue:212
 msgid "Email From Lead"
-msgstr "E-mail du Lead"
+msgstr "E-mail du prospect"
 
 #: frontend/src/components/Settings/emailConfig.js:19
 msgid "Email ID"
@@ -3029,7 +3029,7 @@ msgstr "Erreur lors de la création de la source de synchronisation des prospect
 
 #: frontend/src/components/Modals/CallLogDetailModal.vue:370
 msgid "Error creating lead: {0}"
-msgstr "Erreur lors de la création du Lead : {0}"
+msgstr "Erreur lors de la création du prospect : {0}"
 
 #: frontend/src/pages/MobileDeal.vue:355
 msgid "Error occurred"
@@ -3272,11 +3272,11 @@ msgstr "Impossible de supprimer le commentaire"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:178
 msgid "Failed to delete lead sync source"
-msgstr "Échec de la suppression de la source de synchronisation des Leads"
+msgstr "Échec de la suppression de la source de synchronisation des prospects"
 
 #: frontend/src/components/Activities/NoteArea.vue:75
 msgid "Failed to delete note"
-msgstr "Échec de la suppression de la note"
+msgstr "Échec de la suppression de la remarque"
 
 #: frontend/src/components/Settings/EmailTemplate/EmailTemplates.vue:217
 msgid "Failed to delete template"
@@ -3836,7 +3836,7 @@ msgstr "Icône"
 
 #: frontend/src/components/Settings/emailConfig.js:61
 msgid "If enabled, a lead will be automatically created when an incoming email is received from an unknown contact."
-msgstr "Si cette option est activée, un Lead sera automatiquement créé lors de la réception d'un e-mail provenant d'un contact inconnu."
+msgstr "Si cette option est activée, un prospect sera automatiquement créé lors de la réception d'un e-mail provenant d'un contact inconnu."
 
 #: frontend/src/components/Settings/emailConfig.js:53
 msgid "If enabled, all outgoing emails will be sent from this account. Note: Only one account can be default outgoing."
@@ -4041,7 +4041,7 @@ msgstr "Format invalide. Essayez : 1h 30m 45s, 1:30:45, 90s"
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:269
 msgid "Invalid lead details supplied."
-msgstr "Informations du Lead invalides."
+msgstr "Informations du prospect invalides."
 
 #: crm/api/__init__.py:85 crm/api/__init__.py:89
 #: crm/fcrm/doctype/crm_invitation/crm_invitation.py:63
@@ -4370,7 +4370,7 @@ msgstr "Disposition"
 #: frontend/src/components/Telephony/ExotelCallUI.vue:200
 #: frontend/src/pages/Tasks.vue:133
 msgid "Lead"
-msgstr "Lead"
+msgstr "Prospect"
 
 #. Label of the lead_data (Code) field in DocType 'Failed Lead Sync Log'
 #: crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.json
@@ -4381,12 +4381,12 @@ msgstr "Données du prospect"
 #. Label of the lead_details_tab (Tab Break) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
 msgid "Lead Details"
-msgstr "Détails du Lead"
+msgstr "Détails du prospect"
 
 #. Label of the lead_name (Data) field in DocType 'CRM Deal'
 #: crm/fcrm/doctype/crm_deal/crm_deal.json
 msgid "Lead Name"
-msgstr "Nom du Lead"
+msgstr "Nom du prospect"
 
 #. Label of the lead_owner (Link) field in DocType 'CRM Lead'
 #: crm/fcrm/doctype/crm_lead/crm_lead.json
@@ -4423,7 +4423,7 @@ msgstr "La visibilité des prospects et des affaires ne sera plus restreinte par
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:287
 msgid "Lead from call {0}"
-msgstr "Lead issu de l'appel {0}"
+msgstr "Prospect issu de l'appel {0}"
 
 #: crm/api/dashboard.py:985
 msgid "Lead generation channel analysis"
@@ -4439,7 +4439,7 @@ msgstr "Source de synchronisation des prospects créée avec succès"
 
 #: frontend/src/components/Settings/LeadSyncing/LeadSyncSources.vue:175
 msgid "Lead sync source deleted successfully"
-msgstr "Source de synchronisation des Leads supprimée avec succès"
+msgstr "Source de synchronisation des prospects supprimée avec succès"
 
 #: crm/api/dashboard.py:788
 msgid "Lead to deal conversion pipeline"
@@ -4454,7 +4454,7 @@ msgstr "Prospects"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:102
 msgid "Leads by Source"
-msgstr "Leads par source"
+msgstr "Prospects par source"
 
 #: crm/api/dashboard.py:984
 msgid "Leads by source"
@@ -4597,11 +4597,11 @@ msgstr "Détails de la perte"
 #: crm/fcrm/doctype/crm_lead/crm_lead.json
 #: frontend/src/components/Modals/LostReasonModal.vue:28
 msgid "Lost Notes"
-msgstr "Notes de perte"
+msgstr "Remarques de perte"
 
 #: frontend/src/components/Modals/LostReasonModal.vue:84
 msgid "Lost Notes are required when Lost Reason is \"Other\""
-msgstr "Les notes de perte sont obligatoires lorsque la raison de perte est « Autre »"
+msgstr "Les remarques de perte sont obligatoires lorsque la raison de perte est « Autre »"
 
 #. Label of the lost_reason (Link) field in DocType 'CRM Deal'
 #. Label of the lost_reason (Link) field in DocType 'CRM Lead'
@@ -4758,7 +4758,7 @@ msgstr "Tout marquer comme lu"
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 #: frontend/src/components/Settings/GeneralSettings.vue:38
 msgid "Mark lead/deal as replied on response"
-msgstr "Marquer le Lead/l'opportunité comme répondu après une réponse"
+msgstr "Marquer le prospect/l'affaire comme répondu après une réponse"
 
 #: frontend/src/components/Layouts/AppSidebar.vue:661
 msgid "Masters"
@@ -4984,7 +4984,7 @@ msgstr "Nouveau message"
 #: frontend/src/components/Activities/ActivityHeader.vue:31
 #: frontend/src/pages/Deals.vue:509 frontend/src/pages/Leads.vue:543
 msgid "New Note"
-msgstr "Nouvelle note"
+msgstr "Nouvelle remarque"
 
 #: frontend/src/components/Modals/OrganizationModal.vue:8
 msgid "New Organization"
@@ -5328,7 +5328,7 @@ msgstr "Note"
 
 #: frontend/src/components/Activities/NoteArea.vue:74
 msgid "Note deleted"
-msgstr "Note supprimée"
+msgstr "Remarque supprimée"
 
 #: frontend/src/pages/Deal.vue:597 frontend/src/pages/Lead.vue:449
 #: frontend/src/pages/MobileDeal.vue:472 frontend/src/pages/MobileLead.vue:319
@@ -5337,7 +5337,7 @@ msgstr "Remarques"
 
 #: frontend/src/pages/Notes.vue:23
 msgid "Notes View"
-msgstr "Vue des notes"
+msgstr "Vue des remarques"
 
 #: frontend/src/components/Activities/EmailArea.vue:15
 #: frontend/src/components/Layouts/AppSidebar.vue:697
@@ -5829,7 +5829,7 @@ msgstr "Veuillez spécifier une raison pour la perte de l'affaire."
 
 #: crm/fcrm/doctype/crm_lead/crm_lead.py:158
 msgid "Please specify a reason for losing the lead."
-msgstr "Veuillez indiquer une raison pour la perte du Lead."
+msgstr "Veuillez indiquer une raison pour la perte du prospect."
 
 #: crm/fcrm/doctype/crm_deal/crm_deal.py:269
 msgid "Please specify the reason for losing the deal."
@@ -5837,7 +5837,7 @@ msgstr "Veuillez spécifier la raison de la perte de l'affaire."
 
 #: crm/fcrm/doctype/crm_lead/crm_lead.py:160
 msgid "Please specify the reason for losing the lead."
-msgstr "Veuillez préciser la raison de la perte du Lead."
+msgstr "Veuillez préciser la raison de la perte du prospect."
 
 #: frontend/src/components/Settings/Sla/SlaPolicyList.vue:62
 msgid "Policy Name"
@@ -6241,7 +6241,7 @@ msgstr "Renommer"
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 #: frontend/src/components/Settings/GeneralSettings.vue:60
 msgid "Reopen lead/deal on new communication"
-msgstr "Rouvrir le Lead/l'opportunité lors d'une nouvelle communication"
+msgstr "Rouvrir le prospect/l'affaire lors d'une nouvelle communication"
 
 #: frontend/src/components/Modals/ViewModal.vue:45
 msgid "Replace with an icon..."
@@ -7364,7 +7364,7 @@ msgstr "Synchroniser maintenant"
 
 #: crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.js:16
 msgid "Sync Successful, CRM Lead: {0}!"
-msgstr "Synchronisation réussie, Lead CRM : {0} !"
+msgstr "Synchronisation réussie, prospect CRM : {0} !"
 
 #: frontend/src/components/Settings/LeadSyncing/FailureLogs.vue:132
 msgid "Sync successful!"
@@ -7443,7 +7443,7 @@ msgstr "À"
 
 #: frontend/src/components/Telephony/ExotelCallUI.vue:148
 msgid "Take a note..."
-msgstr "Prendre une note..."
+msgstr "Prendre une remarque..."
 
 #. Option for the 'Type' (Select) field in DocType 'CRM Notification'
 #: crm/fcrm/doctype/crm_notification/crm_notification.json
@@ -7754,7 +7754,7 @@ msgstr "Total des vacances"
 
 #: frontend/src/components/Dashboard/AddChartModal.vue:72
 msgid "Total Leads"
-msgstr "Total des Leads"
+msgstr "Total des prospects"
 
 #. Description of the 'Net Total' (Currency) field in DocType 'CRM Deal'
 #. Description of the 'Net Total' (Currency) field in DocType 'CRM Lead'
@@ -7995,11 +7995,11 @@ msgstr "Mettre à jour la configuration"
 #. DocType 'FCRM Settings'
 #: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json
 msgid "Update the modified timestamp on new email communication & comment for leads & deals"
-msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les Leads et opportunités"
+msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les prospects et affaires"
 
 #: frontend/src/components/Settings/GeneralSettings.vue:20
 msgid "Update the modified timestamp on new email communication & comments for leads & deals"
-msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les Leads et opportunités"
+msgstr "Mettre à jour l'horodatage de modification lors de nouvelles communications par e-mail et commentaires pour les prospects et affaires"
 
 #. Label of the update_timestamp_on_new_communication (Check) field in DocType
 #. 'FCRM Settings'
@@ -8323,7 +8323,7 @@ msgstr "Vous n'êtes pas autorisé à accéder à cette ressource."
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:265
 msgid "You are not permitted to create leads."
-msgstr "Vous n'êtes pas autorisé(e) à créer des Leads."
+msgstr "Vous n'êtes pas autorisé(e) à créer des prospects."
 
 #: crm/fcrm/doctype/crm_call_log/crm_call_log.py:262
 msgid "You are not permitted to update this call log."
@@ -8385,7 +8385,7 @@ msgstr "Vous serez redirigé vers la page d'invitation d'utilisateur, les modifi
 
 #: frontend/src/components/Settings/LeadSyncing/leadSyncSourceConfig.js:8
 msgid "You will need a Meta developer account and an access token to sync leads from Facebook. Read more"
-msgstr "Vous aurez besoin d'un compte développeur Meta et d'un jeton d'accès pour synchroniser les Leads depuis Facebook. En savoir plus"
+msgstr "Vous aurez besoin d'un compte développeur Meta et d'un jeton d'accès pour synchroniser les prospects depuis Facebook. En savoir plus"
 
 #: crm/api/todo.py:110
 msgid "Your assignment on task {0} has been removed by {1}"
@@ -8454,7 +8454,7 @@ msgstr "contacter-service-commercial"
 
 #: crm/api/activities.py:53
 msgid "converted the lead to this deal"
-msgstr "a converti le Lead en opportunité"
+msgstr "a converti le prospect en affaire"
 
 # //// Neoffice — manual vocabulary: a deal is an « affaire », not an « opportunité ».
 #: crm/api/activities.py:50
@@ -8463,7 +8463,7 @@ msgstr "a créé cette affaire"
 
 #: crm/api/activities.py:205
 msgid "created this lead"
-msgstr "a créé ce Lead"
+msgstr "a créé ce prospect"
 
 #. Option for the 'Color' (Select) field in DocType 'CRM Deal Status'
 #. Option for the 'Color' (Select) field in DocType 'CRM Lead Status'
@@ -9297,7 +9297,7 @@ msgstr "Aucun historique d'appels"
 # //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
 #: frontend/src/components/Activities/Activities.vue:737
 msgid "No Notes Found"
-msgstr "Aucune note trouvée"
+msgstr "Aucune remarque trouvée"
 
 # //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
 #: frontend/src/components/Activities/Activities.vue:739
@@ -9342,7 +9342,7 @@ msgstr "Aucun appel récent à afficher. Enregistrez un appel ou appelez quelqu'
 # //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
 #: frontend/src/components/Activities/Activities.vue:765
 msgid "Nothing here for now. Add a note to keep track of things."
-msgstr "Rien ici pour le moment. Ajoutez une note pour garder une trace."
+msgstr "Rien ici pour le moment. Ajoutez une remarque pour garder une trace."
 
 # //// Neoffice — missing from the French catalogue, so the SPA showed it in English.
 #: frontend/src/components/Activities/Activities.vue:769
@@ -9367,7 +9367,7 @@ msgstr "Une erreur s'est produite"
 # //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
 #: frontend/src/components/Modals/DoctypeModal.vue:10
 msgid "Create Note"
-msgstr "Créer une note"
+msgstr "Créer une remarque"
 
 # //// Neoffice — was only in the obsolete `#~` block of this catalogue although the SPA still uses the string: revived with its upstream translation.
 #: frontend/src/components/Modals/DoctypeModal.vue:10
@@ -10941,7 +10941,7 @@ msgstr "Ajoutez, modifiez et gérez les sources de synchronisation automatique d
 
 #: frontend/src/components/Activities/Activities.vue:579
 msgid "added a note"
-msgstr "a ajouté une note"
+msgstr "a ajouté une remarque"
 
 #: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepEditor.vue:144
 msgid "Advanced"
@@ -11299,7 +11299,7 @@ msgstr "Créez des automatisations de flux de travail pour les documents du CRM.
 #: frontend/src/components/Modals/DoctypeModal.vue:21
 #, python-brace-format
 msgid "Create {0}"
-msgstr "Créer {0}"
+msgstr "Créer : {0}"
 
 #: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationPage.vue:75
 msgid "Created By"
@@ -11455,7 +11455,7 @@ msgstr "p. ex. Ouvert, Répondu"
 #: frontend/src/components/Modals/DoctypeModal.vue:20
 #, python-brace-format
 msgid "Edit {0}"
-msgstr "Modifier {0}"
+msgstr "Modifier : {0}"
 
 #: frontend/src/components/Controls/EmailMultiSelect.vue:256
 msgid "Email already exists"
@@ -11878,7 +11878,7 @@ msgstr "Le nombre maximal de pages doit être un nombre entier compris entre 1 e
 #: crm/fcrm/doctype/fcrm_note/fcrm_note.py:84
 #, python-brace-format
 msgid "mentioned you in a note on {0}"
-msgstr "vous a mentionné dans une note sur {0}"
+msgstr "vous a mentionné dans une remarque sur {0}"
 
 #: crm/automation/actions.py:81
 msgid "Minimum score is above the maximum"
@@ -11942,7 +11942,7 @@ msgstr "Aucun prospect pour le moment"
 
 #: frontend/src/pages/Notes.vue:116
 msgid "No notes yet"
-msgstr "Aucune note pour le moment"
+msgstr "Aucune remarque pour le moment"
 
 #: frontend/src/pages/Organizations.vue:54
 msgid "No organizations yet"
@@ -12003,11 +12003,11 @@ msgstr "Ce cas ne peut pas être exprimé avec des filtres. Modifiez-le ci-desso
 
 #: frontend/src/components/Activities/Activities.vue:213
 msgid "note updates from"
-msgstr "mises à jour de notes de"
+msgstr "mises à jour de remarques de"
 
 #: frontend/src/pages/Notes.vue:118
 msgid "Notes keep what you learned on a call or in a meeting next to the lead or deal it belongs to."
-msgstr "Les notes conservent ce que vous avez appris lors d'un appel ou d'une réunion, à côté du prospect ou de l'affaire concerné."
+msgstr "Les remarques conservent ce que vous avez appris lors d'un appel ou d'une réunion, à côté du prospect ou de l'affaire concerné."
 
 #: frontend/src/components/Settings/WorkflowAutomations/WorkflowStepSummary.vue:22
 msgid "Nothing here"
@@ -12173,7 +12173,7 @@ msgstr "Épinglé le"
 
 #: frontend/src/components/Activities/Activities.vue:580
 msgid "pinned the note"
-msgstr "a épinglé la note"
+msgstr "a épinglé la remarque"
 
 #: frontend/src/components/Settings/Enrichment/RulesTab.vue:12
 #: frontend/src/components/Settings/Enrichment/RulesTab.vue:38
@@ -12660,7 +12660,7 @@ msgstr "Cette exécution d'enrichissement n'a modifié aucun champ."
 
 #: frontend/src/components/Modals/NoteViewModal.vue:64
 msgid "This note is empty."
-msgstr "Cette note est vide."
+msgstr "Cette remarque est vide."
 
 #: frontend/src/components/EnrichFromWebsite.vue:295
 msgid "This record was already enriched. Enriching again may update those fields with newer values from the website."
@@ -12771,7 +12771,7 @@ msgstr "Désépingler"
 
 #: frontend/src/components/Activities/Activities.vue:581
 msgid "unpinned the note"
-msgstr "a désépinglé la note"
+msgstr "a désépinglé la remarque"
 
 #: frontend/src/components/Settings/WorkflowAutomations/WorkflowAutomationBuilder.vue:44
 msgid "Unsaved"
@@ -12986,3 +12986,614 @@ msgstr "{0} en retard"
 #, python-brace-format
 msgid "{0} unsubscribed from emails for this record, so they won't receive this email."
 msgstr "{0} s'est désabonné des e-mails pour ce dossier : cet e-mail ne lui sera donc pas envoyé."
+
+#. Option for the 'Category' (Select) field in DocType 'CRM Availability
+#. Status'
+#: crm/fcrm/doctype/crm_availability_status/crm_availability_status.json:32
+msgid "Active"
+msgstr "Actif"
+
+#: frontend/src/components/Setup/SetupInvite.vue:49
+msgid "Add more"
+msgstr "Ajouter"
+
+#: frontend/src/components/Layouts/AppSidebar.vue:500
+msgid "Add your first lead"
+msgstr "Ajoutez votre premier prospect"
+
+#: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py:182
+#, python-brace-format
+msgid "Add {0}..."
+msgstr "Ajouter {0}..."
+
+#: frontend/src/components/ScheduleSendButton.vue:83
+msgid "Afternoon"
+msgstr "Après-midi"
+
+#: frontend/src/components/Setup/SetupFeedback.vue:19
+msgid "Anything we could do better? (optional)"
+msgstr "Qu'est-ce qu'on pourrait améliorer ? (facultatif)"
+
+#: frontend/src/components/Setup/SetupEmail.vue:61
+msgid "API key"
+msgstr "Clé API"
+
+#: frontend/src/components/Setup/SetupEmail.vue:62
+msgid "API secret"
+msgstr "Secret de l'API"
+
+#: frontend/src/components/Setup/SetupEmail.vue:64
+msgid "App password"
+msgstr "Mot de passe d'application"
+
+#. Description of the 'Category' (Select) field in DocType 'CRM Availability
+#. Status'
+#: crm/fcrm/doctype/crm_availability_status/crm_availability_status.json:27
+msgid "Assignment rules prefer Active users, then Away, and use Unavailable users only when no one else is in the rule."
+msgstr "Les règles d'attribution privilégient les utilisateurs actifs, puis les absents, et n'utilisent les utilisateurs indisponibles que si personne d'autre ne figure dans la règle."
+
+#: frontend/src/components/Settings/Profile/ProfileSettings.vue:101
+msgid "Availability"
+msgstr "Disponibilité"
+
+#. Option for the 'Category' (Select) field in DocType 'CRM Availability
+#. Status'
+#: crm/fcrm/doctype/crm_availability_status/crm_availability_status.json:32
+msgid "Away"
+msgstr "Absent"
+
+#: frontend/src/components/Setup/SetupFeedback.vue:6
+msgid "Before you dive in, tell us how setup went."
+msgstr "Avant de commencer, dites-nous comment s'est passée la configuration."
+
+#: frontend/src/components/Setup/SetupLeads.vue:10
+msgid "Bring in your leads"
+msgstr "Importez vos prospects"
+
+#: frontend/src/utils/trialCard.js:21 frontend/src/utils/trialCard.js:40
+msgid "Choose a plan"
+msgstr "Choisissez un plan"
+
+#: frontend/src/utils/trialCard.js:20
+msgid "Choose a plan to keep using your site."
+msgstr "Choisissez un plan pour continuer à utiliser votre site."
+
+#: frontend/src/utils/trialCard.js:39
+msgid "Choose a plan to keep your site after the trial."
+msgstr "Choisissez un plan pour conserver votre site après l'essai."
+
+#: frontend/src/components/Setup/SetupImportUpload.vue:35
+msgid "choose one from your device"
+msgstr "choisissez-en un sur votre appareil"
+
+#: frontend/src/components/Setup/SetupImportMap.vue:10
+msgid "Column in file"
+msgstr "Colonne dans le fichier"
+
+#: frontend/src/components/Setup/SetupEmail.vue:124
+msgid "Connect account"
+msgstr "Connecter le compte"
+
+#: frontend/src/components/Setup/SetupEmail.vue:150
+msgid "Connect email"
+msgstr "Connecter l'e-mail"
+
+#: frontend/src/components/Layouts/AppSidebar.vue:512
+#: frontend/src/components/Setup/SetupEmail.vue:4
+msgid "Connect your email"
+msgstr "Connectez votre e-mail"
+
+#: frontend/src/pages/Organization.vue:503
+#, python-brace-format
+msgid "Contact added to {0}"
+msgstr "Contact ajouté à {0}"
+
+#: frontend/src/components/Setup/SetupEmail.vue:132
+#: frontend/src/components/Setup/SetupImportMap.vue:60
+#: frontend/src/components/Setup/SetupImportReview.vue:70
+#: frontend/src/components/Setup/SetupLeads.vue:51
+msgid "Continue"
+msgstr "Continuer"
+
+#: frontend/src/components/Setup/SetupEmail.vue:237
+msgid "Could not connect: check your credentials"
+msgstr "Connexion impossible : vérifiez vos identifiants"
+
+#: frontend/src/components/Setup/SetupLeads.vue:127
+msgid "Could not load sample data"
+msgstr "Impossible de charger les données d'exemple"
+
+#: frontend/src/composables/cloudSettings.js:48
+msgid "Could not open Cloud Settings"
+msgstr "Impossible d'ouvrir les paramètres cloud"
+
+#: frontend/src/components/Setup/SetupTelemetryConsent.vue:44
+msgid "Could not save your preference. Please try again."
+msgstr "Impossible d'enregistrer votre préférence. Veuillez réessayer."
+
+#: frontend/src/components/Setup/SetupInvite.vue:147
+msgid "Could not send invites"
+msgstr "Impossible d'envoyer les invitations"
+
+#: frontend/src/components/Setup/SetupImportUpload.vue:118
+msgid "Could not upload the file."
+msgstr "Impossible d'importer le fichier."
+
+#: frontend/src/components/ScheduleSendButton.vue:115
+msgid "Custom date & time…"
+msgstr "Date et heure personnalisées…"
+
+#: frontend/src/pages/DataImport.vue:96
+msgid "Data Imports"
+msgstr "Imports de données"
+
+#: frontend/src/components/Activities/EmailArea.vue:189
+msgid "Delete scheduled email?"
+msgstr "Supprimer l'e-mail programmé ?"
+
+#: frontend/src/components/Setup/SetupFeedback.vue:11
+msgid "Difficult"
+msgstr "Difficile"
+
+#: frontend/src/components/Setup/SetupImportMap.vue:108
+msgid "Don't import"
+msgstr "Ne pas importer"
+
+#: frontend/src/components/Setup/SetupImportUpload.vue:47
+msgid "Download CSV template"
+msgstr "Télécharger le modèle CSV"
+
+#: frontend/src/components/Setup/SetupImportUpload.vue:29
+msgid "Drag and drop a CSV file, or"
+msgstr "Glissez-déposez un fichier CSV, ou"
+
+#: frontend/src/components/Setup/SetupFeedback.vue:13
+msgid "Easy"
+msgstr "Facile"
+
+#: frontend/src/components/Setup/SetupEmail.vue:226
+msgid "Email account connected"
+msgstr "Compte e-mail connecté"
+
+#: frontend/src/components/Setup/SetupEmail.vue:52
+msgid "Email address"
+msgstr "Adresse e-mail"
+
+#: frontend/src/components/Setup/SetupEmail.vue:19
+msgid "Email provider"
+msgstr "Fournisseur de messagerie"
+
+#: frontend/src/components/CommunicationArea.vue:371
+#, python-brace-format
+msgid "Email scheduled for {0}"
+msgstr "E-mail programmé pour le {0}"
+
+#: frontend/src/components/Setup/SetupInvite.vue:43
+msgid "Enter a valid email address"
+msgstr "Saisissez une adresse e-mail valide"
+
+#: frontend/src/components/ScheduleSendButton.vue:84
+msgid "Evening"
+msgstr "Soir"
+
+#: frontend/src/components/Setup/SetupLeads.vue:102
+msgid "Explore with sample leads, deals and tasks. Clear them anytime."
+msgstr "Explorez l'outil avec des prospects, des affaires et des tâches d'exemple. Vous pourrez les supprimer à tout moment."
+
+#: frontend/src/components/Activities/EmailArea.vue:196
+msgid "Failed to delete scheduled email"
+msgstr "Échec de la suppression de l'e-mail programmé"
+
+#: frontend/src/components/Activities/EmailArea.vue:182
+msgid "Failed to edit scheduled email"
+msgstr "Échec de la modification de l'e-mail programmé"
+
+#: frontend/src/utils/setup.js:48
+msgid "Failed to import"
+msgstr "Échec de l'import"
+
+#: frontend/src/components/CommunicationArea.vue:372
+msgid "Failed to schedule email!"
+msgstr "Échec de la programmation de l'e-mail !"
+
+#: frontend/src/components/Activities/EmailArea.vue:168
+msgid "Failed to send email"
+msgstr "Échec de l'envoi de l'e-mail"
+
+#: frontend/src/components/Setup/SetupEmail.vue:58
+msgid "Frappe Mail site"
+msgstr "Site Neoffice Messagerie"
+
+#: frontend/src/components/ViewControls.vue:447
+msgid "From import"
+msgstr "Depuis un import"
+
+#: frontend/src/components/Setup/SetupLeads.vue:91
+msgid "Import from CSV"
+msgstr "Importer depuis un CSV"
+
+#: frontend/src/components/Setup/SetupImport.vue:4
+msgid "Import leads from CSV"
+msgstr "Importer des prospects depuis un CSV"
+
+#: frontend/src/components/Setup/SetupImport.vue:13
+msgid "Import steps"
+msgstr "Étapes de l'import"
+
+#: frontend/src/components/Setup/SetupImportReview.vue:62
+#, python-brace-format
+msgid "Import {0} leads"
+msgstr "Importer {0} prospects"
+
+#: frontend/src/components/Setup/SetupImportReview.vue:117
+msgid "Importing leads..."
+msgstr "Importation des prospects..."
+
+#: frontend/src/pages/DataImport.vue:97
+#, python-brace-format
+msgid "Importing {0}"
+msgstr "Importation de {0}"
+
+#: frontend/src/components/Setup/SetupImportReview.vue:118
+#, python-brace-format
+msgid "Importing {0} of {1} leads..."
+msgstr "Importation de {0} prospects sur {1}..."
+
+#: frontend/src/pages/DataImports.vue:64
+msgid "Imports you start from a list appear here."
+msgstr "Les imports lancés depuis une liste apparaissent ici."
+
+#: frontend/src/components/Setup/SetupInvite.vue:13
+msgid "Invite your whole team."
+msgstr "Invitez toute votre équipe."
+
+#: frontend/src/components/CommunicationArea.vue:352
+#, python-brace-format
+msgid "It will be sent on {0}."
+msgstr "Il sera envoyé le {0}."
+
+#: frontend/src/components/Activities/EmailArea.vue:162
+#, python-brace-format
+msgid "It will be sent right away instead of on {0}."
+msgstr "Il sera envoyé tout de suite au lieu du {0}."
+
+#: frontend/src/components/Activities/EmailArea.vue:190
+msgid "It won't be sent. This can't be undone."
+msgstr "Il ne sera pas envoyé. Cette action est irréversible."
+
+#: crm/fcrm/doctype/crm_availability_status/crm_availability_status.py:68
+msgid "Keep at least one enabled status in the Active category."
+msgstr "Gardez au moins un statut activé dans la catégorie Actif."
+
+#: frontend/src/components/Setup/SetupImportMap.vue:11
+msgid "Lead field"
+msgstr "Champ prospect"
+
+#: frontend/src/components/Setup/SetupImportMap.vue:32
+#, python-brace-format
+msgid "Lead field for {0}"
+msgstr "Champ prospect pour {0}"
+
+#: frontend/src/components/UserDropdown.vue:152
+msgid "Manage Billing"
+msgstr "Gérer la facturation"
+
+#: frontend/src/utils/trialCard.js:32
+msgid "Manage billing"
+msgstr "Gérer la facturation"
+
+#: frontend/src/components/Setup/SetupImportMap.vue:44
+msgid "Map a column to First Name to continue."
+msgstr "Associez une colonne au prénom pour continuer."
+
+#: frontend/src/components/Setup/SetupImport.vue:59
+msgid "Map columns"
+msgstr "Associer les colonnes"
+
+#: frontend/src/components/Setup/SetupImportMap.vue:4
+msgid "Match each column in your file to a lead field."
+msgstr "Associez chaque colonne de votre fichier à un champ prospect."
+
+#: frontend/src/components/ScheduleSendButton.vue:82
+msgid "Morning"
+msgstr "Matin"
+
+#: frontend/src/components/Activities/EmailArea.vue:181
+msgid "Moved to the composer. Schedule it again when ready."
+msgstr "Déplacé dans le rédacteur. Reprogrammez-le quand il sera prêt."
+
+#: frontend/src/components/Setup/SetupInvite.vue:11
+msgid "No per-user pricing."
+msgstr "Pas de tarification par utilisateur."
+
+#: frontend/src/components/Setup/SetupFeedback.vue:26
+msgid "Not now"
+msgstr "Pas maintenant"
+
+#: frontend/src/doctypes/crm_task/form.js:11
+#: frontend/src/doctypes/fcrm_note/form.js:11
+msgid "Open deal"
+msgstr "Ouvrir l'affaire"
+
+#: frontend/src/doctypes/crm_task/form.js:12
+#: frontend/src/doctypes/fcrm_note/form.js:12
+msgid "Open lead"
+msgstr "Ouvrir le prospect"
+
+#: frontend/src/components/ScheduleSendButton.vue:34
+msgid "Pick a time in the future"
+msgstr "Choisissez une heure future"
+
+#: frontend/src/components/ScheduleSendButton.vue:28
+msgid "Pick date & time"
+msgstr "Choisir la date et l'heure"
+
+#: frontend/src/components/Setup/SetupImportUpload.vue:104
+msgid "Please upload a CSV file."
+msgstr "Veuillez importer un fichier CSV."
+
+#: frontend/src/components/Setup/SetupEmail.vue:99
+msgid "Pull replies into lead and deal timelines"
+msgstr "Intégrer les réponses dans l'historique des prospects et des affaires"
+
+#: frontend/src/utils/trialCard.js:29
+msgid "Raise the limit or choose a smaller plan to end your trial."
+msgstr "Augmentez la limite ou choisissez un plan plus petit pour terminer votre essai."
+
+#: frontend/src/components/Setup/SetupEmail.vue:98
+msgid "Receive email"
+msgstr "Recevoir des e-mails"
+
+#: frontend/src/components/Setup/SetupEmail.vue:105
+msgid "Reply and send from the CRM"
+msgstr "Répondez et envoyez depuis le CRM"
+
+#: frontend/src/components/Setup/SetupImport.vue:60
+msgid "Review"
+msgstr "Revoir"
+
+#: frontend/src/components/Setup/SetupInvite.vue:37
+#, python-brace-format
+msgid "Role for teammate {0}"
+msgstr "Rôle du collaborateur {0}"
+
+#: frontend/src/components/CommunicationArea.vue:355
+msgid "Schedule"
+msgstr "Programmer"
+
+#: frontend/src/components/Layouts/AppSidebar.vue:566
+msgid "Schedule a follow-up task"
+msgstr "Programmer une tâche de suivi"
+
+#: frontend/src/components/CommunicationArea.vue:351
+msgid "Schedule email?"
+msgstr "Programmer l'e-mail ?"
+
+#: frontend/src/components/ScheduleSendButton.vue:6
+#: frontend/src/components/ScheduleSendButton.vue:7
+#: frontend/src/components/ScheduleSendButton.vue:15
+#: frontend/src/components/ScheduleSendButton.vue:19
+msgid "Schedule send"
+msgstr "Programmer l'envoi"
+
+#: frontend/src/components/Activities/EmailArea.vue:36
+msgid "Scheduled email actions"
+msgstr "Actions sur l'e-mail programmé"
+
+#: frontend/src/components/Activities/EmailArea.vue:195
+msgid "Scheduled email deleted"
+msgstr "E-mail programmé supprimé"
+
+#: frontend/src/components/CommunicationArea.vue:370
+msgid "Scheduling email..."
+msgstr "Programmation de l'e-mail..."
+
+#: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py:185
+#: frontend/src/components/SidePanelLayout.vue:158
+#, python-brace-format
+msgid "Select {0}..."
+msgstr "Sélectionner {0}..."
+
+#: frontend/src/components/Setup/SetupEmail.vue:8
+msgid "Send and receive email from the CRM, and keep every conversation on the right lead or deal."
+msgstr "Envoyez et recevez des e-mails depuis le CRM, et gardez chaque échange sur le bon prospect ou la bonne affaire."
+
+#: frontend/src/components/Setup/SetupFeedback.vue:29
+msgid "Send feedback"
+msgstr "Envoyer un retour"
+
+#: frontend/src/components/Setup/SetupInvite.vue:67
+msgid "Send invites"
+msgstr "Envoyer les invitations"
+
+#: frontend/src/components/Activities/EmailArea.vue:114
+#: frontend/src/components/Activities/EmailArea.vue:163
+msgid "Send now"
+msgstr "Envoyer maintenant"
+
+#: frontend/src/components/Activities/EmailArea.vue:161
+msgid "Send now?"
+msgstr "Envoyer maintenant ?"
+
+#: frontend/src/components/Activities/EmailArea.vue:176
+msgid "Send or discard the email you are writing first"
+msgstr "Envoyez ou supprimez d'abord l'e-mail que vous rédigez"
+
+#. Description of the 'Setup Completed' (Check) field in DocType 'FCRM
+#. Settings'
+#: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json:182
+msgid "Set once the first admin finishes or skips the setup flow"
+msgstr "Définie une fois que le premier administrateur termine ou ignore la configuration"
+
+#: frontend/src/components/Settings/Profile/AvailabilitySelect.vue:5
+msgid "Set status"
+msgstr "Définir le statut"
+
+#: frontend/src/pages/Setup.vue:206
+msgid "Set up Frappe CRM"
+msgstr "Configurer Frappe CRM"
+
+#: frontend/src/components/Setup/SetupEmail.vue:116
+msgid "Set up later"
+msgstr "Configurer plus tard"
+
+#: frontend/src/components/Settings/Profile/ProfileSettings.vue:105
+msgid "Set your availability so your team knows when you're reachable."
+msgstr "Indiquez votre disponibilité pour que votre équipe sache quand vous êtes joignable."
+
+#. Label of the setup_completed (Check) field in DocType 'FCRM Settings'
+#: crm/fcrm/doctype/fcrm_settings/fcrm_settings.json:186
+msgid "Setup Completed"
+msgstr "Configuration terminée"
+
+#: frontend/src/components/Setup/SetupFeedback.vue:12
+msgid "Setup rating"
+msgstr "Évaluation de la configuration"
+
+#: frontend/src/components/Setup/SetupTelemetryConsent.vue:6
+msgid "Share usage data"
+msgstr "Partager les données d'utilisation"
+
+#: frontend/src/components/Setup/SetupFeedback.vue:20
+msgid "Share what was confusing or missing"
+msgstr "Partagez ce qui était peu clair ou manquant"
+
+#: frontend/src/components/ViewControls.vue:29
+#: frontend/src/components/ViewControls.vue:182
+msgid "Show all records"
+msgstr "Afficher tous les enregistrements"
+
+#: frontend/src/components/Setup/SetupEmail.vue:155
+msgid "Skip anyway"
+msgstr "Ignorer quand même"
+
+#: frontend/src/components/Setup/SetupEmail.vue:142
+msgid "Skip email for now?"
+msgstr "Ignorer l'e-mail pour l'instant ?"
+
+#: frontend/src/pages/Setup.vue:16 frontend/src/pages/Setup.vue:161
+msgid "Skip setup"
+msgstr "Ignorer la configuration"
+
+#: frontend/src/pages/Setup.vue:154
+msgid "Skip setup?"
+msgstr "Ignorer la configuration ?"
+
+#: frontend/src/components/Setup/SetupImportReview.vue:55
+msgid "Start over"
+msgstr "Recommencer"
+
+#: frontend/src/components/Setup/SetupLeads.vue:14
+msgid "Start with the leads you already have, or explore the CRM with sample data first."
+msgstr "Commencez avec les prospects que vous avez déjà, ou explorez d'abord le CRM avec des données d'exemple."
+
+#: frontend/src/components/Setup/SetupEmail.vue:80
+msgid "Sync options"
+msgstr "Options de synchronisation"
+
+#: frontend/src/components/Setup/SetupInvite.vue:28
+#, python-brace-format
+msgid "Teammate email {0}"
+msgstr "E-mail du collaborateur {0}"
+
+#: frontend/src/components/Setup/SetupInvite.vue:7
+msgid "The CRM works best when your whole sales team is in it."
+msgstr "Le CRM fonctionne mieux lorsque toute votre équipe commerciale y travaille."
+
+#: frontend/src/components/Setup/SetupImportUpload.vue:39
+msgid "The first row should contain column names."
+msgstr "La première ligne doit contenir les noms des colonnes."
+
+#: frontend/src/components/Setup/SetupImportResult.vue:53
+msgid "The import did not go through. Fix the issues below and try again."
+msgstr "L'import n'a pas abouti. Corrigez les problèmes ci-dessous et réessayez."
+
+#: crm/api/email.py:91
+msgid "This email is already being sent"
+msgstr "Cet e-mail est déjà en cours d'envoi"
+
+#: crm/api/email.py:79
+msgid "This email is no longer scheduled"
+msgstr "Cet e-mail n'est plus programmé"
+
+#: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py:191
+msgid "This field is read only and cannot be edited."
+msgstr "Ce champ est en lecture seule et ne peut pas être modifié."
+
+#: frontend/src/components/Setup/SetupLeads.vue:101
+msgid "Try with sample data"
+msgstr "Essayer avec des données d'exemple"
+
+#. Option for the 'Category' (Select) field in DocType 'CRM Availability
+#. Status'
+#: crm/fcrm/doctype/crm_availability_status/crm_availability_status.json:32
+msgid "Unavailable"
+msgstr "Indisponible"
+
+#: frontend/src/components/Setup/SetupLeads.vue:92
+msgid "Upload a spreadsheet of your existing leads."
+msgstr "Importez un tableur de vos prospects existants."
+
+#: crm/api/email.py:76
+msgid "You can only change emails you scheduled"
+msgstr "Vous ne pouvez modifier que les e-mails que vous avez programmés"
+
+#: frontend/src/pages/Setup.vue:155
+msgid "You won't see this guided setup again. You can still connect email, import leads and invite your team from Settings."
+msgstr "Vous ne reverrez pas cette configuration guidée. Vous pourrez toujours connecter votre e-mail, importer des prospects et inviter votre équipe depuis les Paramètres."
+
+#: frontend/src/utils/trialCard.js:28
+msgid "Your plan is over your spending limit"
+msgstr "Votre plan dépasse votre limite de dépenses"
+
+#: frontend/src/utils/trialCard.js:18
+#, python-brace-format
+msgid "Your site will be deleted on {0}. Choose a plan to keep it."
+msgstr "Votre site sera supprimé le {0}. Choisissez un plan pour le conserver."
+
+#: frontend/src/utils/trialCard.js:8
+#, python-brace-format
+msgid "Your trial ends in {0} days"
+msgstr "Votre essai se termine dans {0} jours"
+
+#: frontend/src/utils/trialCard.js:6
+msgid "Your trial ends today"
+msgstr "Votre essai se termine aujourd'hui"
+
+#: frontend/src/utils/trialCard.js:7
+msgid "Your trial ends tomorrow"
+msgstr "Votre essai se termine demain"
+
+#: frontend/src/utils/trialCard.js:15
+msgid "Your trial has ended"
+msgstr "Votre essai est terminé"
+
+#: frontend/src/components/AssignToBody.vue:133
+#, python-brace-format
+msgid "{0} is away right now"
+msgstr "{0} est absent pour le moment"
+
+#: crm/api/availability.py:13
+#, python-brace-format
+msgid "{0} is not an enabled availability status."
+msgstr "{0} n'est pas un statut de disponibilité activé."
+
+#: frontend/src/components/AssignToBody.vue:135
+#, python-brace-format
+msgid "{0} is unavailable right now"
+msgstr "{0} est indisponible pour le moment"
+
+#: frontend/src/components/Setup/SetupImportResult.vue:39
+#, python-brace-format
+msgid "{0} leads imported."
+msgstr "{0} prospects importés."
+
+#: frontend/src/components/ListViews/ListFooter.vue:13
+#, python-brace-format
+msgid "{0} of {1}"
+msgstr "{0} sur {1}"
+
+#: crm/fcrm/doctype/crm_lead/crm_lead.py:167
+#, python-brace-format
+msgid "{0} {1} already exists"
+msgstr "{0} {1} existe déjà"

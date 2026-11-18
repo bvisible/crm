@@ -11813,3 +11813,30 @@ msgstr ""
 msgid "⚠️ No row found for idx: {0} in parent field: {1}"
 msgstr ""
 
+
+#: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py:182
+#, python-brace-format
+msgid "Add {0}..."
+msgstr ""
+
+#: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py:185 frontend/src/components/SidePanelLayout.vue:158
+#, python-brace-format
+msgid "Select {0}..."
+msgstr ""
+
+#: crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py:191
+msgid "This field is read only and cannot be edited."
+msgstr ""
+
+#: frontend/src/components/ListViews/ListFooter.vue:13
+#, python-brace-format
+msgid "{0} of {1}"
+msgstr ""
+
+#: frontend/src/doctypes/crm_task/form.js:12 frontend/src/doctypes/fcrm_note/form.js:12
+msgid "Open lead"
+msgstr ""
+
+#: frontend/src/doctypes/crm_task/form.js:11 frontend/src/doctypes/fcrm_note/form.js:11
+msgid "Open deal"
+msgstr ""
