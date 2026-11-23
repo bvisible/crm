@@ -199,7 +199,19 @@
       href="/assets/crm/manifest/apple-splash-1136-640.jpg"
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
-    <script type="module" crossorigin src="/assets/crm/frontend/assets/index-BeJIOwf9.js"></script>
+    <!-- //// Neoffice — the accent of frappe-ui (its blue scale) is repainted with the Neoffice signal by one sheet
+         //// that neoffice_theme serves to every Vue app. It replaces the block each app copied into src/index.css,
+         //// which set RGB triplets where frappe-ui reads colours and so never applied (measured 23.11.2026).
+         //// A script and not a <link>: the build would try to resolve a sheet another app serves. -->
+    <script>
+      (function () {
+        var l = document.createElement("link");
+        l.rel = "stylesheet";
+        l.href = "/assets/neoffice_theme/css/spa_accent.css";
+        document.head.appendChild(l);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/crm/frontend/assets/index-Cbnt-P8U.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/rolldown-runtime-B0Z9INg1.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/vue.runtime.esm-bundler-jluGaO9U.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/vue-router-wk8a_HSX.js">
@@ -207,34 +219,34 @@
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Switch-BCRyPrml.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Dropdown-DpRYRfJk.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/documentResource-CVmamz5d.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/users-B7alEQmq.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Icon-C2KeFy9C.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Tooltip-CSU_TnyW.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/users-DMvnCMVY.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Icon-CfMiCDij.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Tooltip-C-VizYCJ.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Dialog-7qF5SVwR.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/RovingFocusItem-DiH2_KEk.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/nativeElements-BooGLUz0.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Tabs-i0FF81nQ.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/FormControl-CUc5iLXG.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/ErrorMessage-C_09WPbK.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/dialog-DEjildkD.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/FormControl-DjKeWPOJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/ErrorMessage-TFuikdHz.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/dialog-Dcsm3s9o.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/statusIcon-yo4LIyH2.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/useColorScheme-CzHJAfNT.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/warnDeprecated-CEAsOWbc.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/useFileUpload-iovFvu8t.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/vuedraggable.umd-dLfnvVBW.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/vuedraggable.umd-CiARHI2P.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/global-BvZvtkso.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/document-0FX_A7Re.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/spriteIcon-CPwnODw6.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/dialogs-COUheYU4.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/NotPermitted-DS-1HPfK.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Link-ByYlckdV.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/document-tijhXBIu.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/spriteIcon-BwhZp4TE.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/dialogs-CtFKebTY.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/NotPermitted-Ds9YFMlz.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Link-D9Km7dS2.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/Progress-Xhmztt_-.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/ButtonControl-B6dWvhMB.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/UserAvatar-CpKrwE9W.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/DurationInput--pF1KhFQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/ButtonControl-BZKrw_sx.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/UserAvatar-auW1YpUu.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/DurationInput-nw2GY0kc.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/ArrowUpRightIcon-DXsQzWWU.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/telemetry-CcU1Z4sx.js">
-    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/FieldLayout-D6ll1OMT.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/telemetry-DPK6QNeS.js">
+    <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/FieldLayout-BSI_Fj1N.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/modals-D5pxAmeG.js">
     <link rel="modulepreload" crossorigin href="/assets/crm/frontend/assets/doctypeModal-DPYmbDJz.js">
     <link rel="stylesheet" crossorigin href="/assets/crm/frontend/assets/Switch-BVkV0Lbx.css">
@@ -244,7 +256,7 @@
     <link rel="stylesheet" crossorigin href="/assets/crm/frontend/assets/vuedraggable-Zf7Qbc9C.css">
     <link rel="stylesheet" crossorigin href="/assets/crm/frontend/assets/document-BUU9lMXo.css">
     <link rel="stylesheet" crossorigin href="/assets/crm/frontend/assets/FieldLayout-FmAWRI40.css">
-    <link rel="stylesheet" crossorigin href="/assets/crm/frontend/assets/index-0bHv7GQA.css">
+    <link rel="stylesheet" crossorigin href="/assets/crm/frontend/assets/index-BG0hfix4.css">
   <link rel="manifest" href="/assets/crm/frontend/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/assets/crm/frontend/registerSW.js"></script></head>
   <body class="sm:overscroll-y-none no-scrollbar">
     <div id="app" class="h-full"></div>
