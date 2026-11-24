@@ -19,40 +19,9 @@ export default defineConfig(() => {
         devOptions: {
           enabled: true,
         },
-        manifest: {
-          display: 'standalone',
-          name: 'Frappe CRM',
-          short_name: 'Frappe CRM',
-          start_url: '/crm',
-          description:
-            'Modern & 100% Open-source CRM tool to supercharge your sales operations',
-          icons: [
-            {
-              src: '/assets/crm/manifest/manifest-icon-192.maskable.png',
-              sizes: '192x192',
-              type: 'image/png',
-              purpose: 'any',
-            },
-            {
-              src: '/assets/crm/manifest/manifest-icon-192.maskable.png',
-              sizes: '192x192',
-              type: 'image/png',
-              purpose: 'maskable',
-            },
-            {
-              src: '/assets/crm/manifest/manifest-icon-512.maskable.png',
-              sizes: '512x512',
-              type: 'image/png',
-              purpose: 'any',
-            },
-            {
-              src: '/assets/crm/manifest/manifest-icon-512.maskable.png',
-              sizes: '512x512',
-              type: 'image/png',
-              purpose: 'maskable',
-            },
-          ],
-        },
+        //// Neoffice — upstream's manifest (its brand's name and icons) is not built: the page names the one
+        //// neoffice_theme serves, with our icons and the name in the reader's language (neoffice_theme/home_screen.py).
+        manifest: false,
       }),
     ],
     resolve: {
