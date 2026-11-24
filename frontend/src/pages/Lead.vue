@@ -36,7 +36,9 @@
           </Button>
         </template>
       </Dropdown>
+      <!-- //// Neoffice — a sales representative has no deal (`isRepresentative`): the button led to a refusal (neoffice-maintenance#3359) -->
       <Tooltip
+        v-if="!isRepresentative()"
         :disabled="!isLeadConversionDisabled"
         :text="__('Cannot convert a lost lead to deal')"
       >
@@ -290,6 +292,8 @@ import {
 } from '@/utils'
 import { getView } from '@/utils/view'
 import { getSettings } from '@/stores/settings'
+// //// Neoffice — see isRepresentative
+import { usersStore } from '@/stores/users'
 import { globalStore } from '@/stores/global'
 import { statusesStore } from '@/stores/statuses'
 import { getMeta } from '@/stores/meta'
@@ -350,6 +354,8 @@ const {
 const canDelete = computed(() => permissions.data?.permissions?.delete || false)
 
 const doc = computed(() => document.doc || {})
+// //// Neoffice — whether the reader is a sales representative, who has no deal (see the convert button)
+const { isRepresentative } = usersStore()
 const isLeadConversionDisabled = computed(
   () => doc.value.status && getLeadStatus(doc.value.status)?.type === 'Lost',
 )
@@ -448,7 +454,8 @@ function leadCommands() {
     ...communicationCommands(),
   ]
   commands.push(...scriptCommands())
-  if (!isLeadConversionDisabled.value)
+  // //// Neoffice — nor in the palette for a sales representative
+  if (!isLeadConversionDisabled.value && !isRepresentative())
     commands.push({
       id: 'lead-convert',
       title: 'Convert to deal',

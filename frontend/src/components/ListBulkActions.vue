@@ -35,6 +35,8 @@ import EditValueModal from '@/components/Modals/EditValueModal.vue'
 import AssignmentModal from '@/components/Modals/AssignmentModal.vue'
 import { setupListCustomizations } from '@/utils'
 import { globalStore } from '@/stores/global'
+// //// Neoffice — see « Convert to Deal » below
+import { usersStore } from '@/stores/users'
 import { useTelemetry } from '@framework/ui/telemetry'
 import { call, toast } from 'frappe-ui'
 import { createToast, scriptToast } from '@/utils/scriptToast'
@@ -191,7 +193,8 @@ function bulkActions(selections, unselectAll) {
     })
   }
 
-  if (props.doctype === 'CRM Lead') {
+  // //// Neoffice — a sales representative has no deal (neoffice-maintenance#3359)
+  if (props.doctype === 'CRM Lead' && !usersStore().isRepresentative()) {
     actions.push({
       label: __('Convert to Deal'),
       onClick: () => convertToDeal(selections, unselectAll),

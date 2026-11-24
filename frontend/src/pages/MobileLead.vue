@@ -50,7 +50,9 @@
         v-if="document.actions?.length"
         :actions="document.actions"
       />
+      <!-- //// Neoffice — a sales representative has no deal (`isRepresentative`): the button led to a refusal (neoffice-maintenance#3359) -->
       <Tooltip
+        v-if="!isRepresentative()"
         :disabled="!isLeadConversionDisabled"
         :text="__('Cannot convert a lost lead to deal')"
       >
@@ -155,6 +157,8 @@ import CustomActions from '@/components/CustomActions.vue'
 import { setupCustomizations, isTranslatable } from '@/utils'
 import { getView } from '@/utils/view'
 import { getSettings } from '@/stores/settings'
+// //// Neoffice — see isRepresentative
+import { usersStore } from '@/stores/users'
 import { globalStore } from '@/stores/global'
 import { statusesStore } from '@/stores/statuses'
 import { getMeta } from '@/stores/meta'
@@ -202,6 +206,8 @@ const {
 } = useDocument('CRM Lead', props.leadId)
 
 const doc = computed(() => document.doc || {})
+// //// Neoffice — whether the reader is a sales representative, who has no deal (see the convert button)
+const { isRepresentative } = usersStore()
 const isLeadConversionDisabled = computed(
   () => doc.value.status && getLeadStatus(doc.value.status)?.type === 'Lost',
 )
