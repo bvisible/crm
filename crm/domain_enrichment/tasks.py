@@ -179,6 +179,40 @@ def auto_enrich_on_create(doc, method=None):
 		frappe.log_error(title="Domain Enrichment: auto_enrich_on_create failed")
 
 
+# //// Neoffice — how many times a record that changed between our read and our save is read and mapped again. A lead
+# the representative keeps typing in moves while its site is crawled: the save died on TimestampMismatchError, the run
+# was Failed and the lead got no logo (maintenance#3399). Read again, the mapping decides on what the record holds now,
+# so « Fill if empty » keeps what was typed meanwhile.
+SAVE_TRIES = 3
+
+
+def _map_and_save(reference_doctype: str, reference_name: str, result, cfg):
+	"""//// Neoffice — map ``result`` onto the origin record and save it; read again and mapped again when the record
+	was saved by someone else between the read and the save. Returns the changes saved; raises after SAVE_TRIES."""
+	for attempt in range(SAVE_TRIES):
+		doc = frappe.get_doc(reference_doctype, reference_name)
+		doc.check_permission("write")
+		# Drop changes that only differ in type (9000 vs "9000"), so the toast's
+		# filled fields, which decide whether Undo shows, match the stored rows.
+		changes = [
+			change
+			for change in apply_to_document(doc, result, cfg)
+			if frappe.utils.cstr(change.old_value) != frappe.utils.cstr(change.new_value)
+		]
+		if not changes:
+			return changes
+		try:
+			doc.save()
+			return changes
+		except frappe.TimestampMismatchError:
+			if attempt == SAVE_TRIES - 1:
+				raise
+			# The transaction's snapshot still holds the record as first read: ended, so the next read sees the one
+			# saved meanwhile. Nothing of the run is written before this point (the Run comes after the save).
+			frappe.db.rollback()
+	return []
+
+
 def run_enrichment(
 	reference_doctype: str,
 	reference_name: str,
@@ -212,17 +246,9 @@ def run_enrichment(
 
 		result = run_pipeline(website, cfg=cfg, progress=progress)
 
-		doc = frappe.get_doc(reference_doctype, reference_name)
-		doc.check_permission("write")
-		# Drop changes that only differ in type (9000 vs "9000"), so the toast's
-		# filled fields, which decide whether Undo shows, match the stored rows.
-		changes = [
-			change
-			for change in apply_to_document(doc, result, cfg)
-			if frappe.utils.cstr(change.old_value) != frappe.utils.cstr(change.new_value)
-		]
-		if changes:
-			doc.save()
+		# //// Neoffice — the read, the mapping and the save in one helper that reads the record again when it moved
+		# meanwhile (maintenance#3399); upstream read, mapped and saved it once, here.
+		changes = _map_and_save(reference_doctype, reference_name, result, cfg)
 		filled_fields = filled_labels(changes)
 
 		write_run(

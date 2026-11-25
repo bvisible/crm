@@ -380,3 +380,80 @@ def fetch(url: str, cfg, session=None, html_only: bool = True):
 	finally:
 		if own_session:
 			session.close()
+
+
+# //// Neoffice — added (no upstream equivalent): an image fetched through the crawler's own guard. Our hub gives a
+# prospect's demo instance the logo the enrichment found (maintenance#3399): the mapper stores the logo's address, which
+# File.get_content cannot read, and that address comes from a site the prospect controls. The same guard as ``fetch``
+# (public addresses only, every redirect checked again, the connection pinned to the address checked), bytes instead of
+# text, and an image bigger than ``max_bytes`` is refused rather than cut (a cut image is a broken one).
+IMAGE_CONTENT_TYPES = ("image/", "application/octet-stream")
+IMAGE_ACCEPT = "image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5"
+
+
+def fetch_image(url: str, max_bytes: int, cfg=None, session=None):
+	"""//// Neoffice — ``(content, error)`` of the image at ``url``; ``content`` is ``b""`` when ``error`` says why.
+
+	Never raises. A body whose Content-Type is not an image (an error page, a login wall) is refused; one without a
+	Content-Type is read, and the caller judges its bytes."""
+	import requests
+
+	timeout = int(cfg.setting("request_timeout")) if cfg else 10
+	retries = int(cfg.setting("retry_count")) if cfg else 2
+
+	own_session = session is None
+	session = session or build_session(cfg)
+	if own_session:
+		session.headers.update(
+			{"Accept": IMAGE_ACCEPT, "Sec-Fetch-Dest": "image", "Sec-Fetch-Mode": "no-cors"}
+		)
+	current = url
+	try:
+		for _hop in range(MAX_REDIRECTS + 1):
+			try:
+				ips = _validated_ips(current, cfg)
+			except SSRFError as exc:
+				return b"", f"blocked by SSRF guard: {exc}"
+
+			resp = _pinned_get(session, current, ips[0], timeout, retries)
+
+			if resp.is_redirect or resp.is_permanent_redirect:
+				location = resp.headers.get("Location")
+				resp.close()
+				if not location:
+					return b"", "redirect without Location header"
+				current = requests.compat.urljoin(current, location)
+				continue
+
+			status = resp.status_code
+			content_type = resp.headers.get("Content-Type", "").lower()
+			if status != 200:
+				resp.close()
+				return b"", f"status {status}"
+			if content_type and not content_type.startswith(IMAGE_CONTENT_TYPES):
+				resp.close()
+				return b"", f"not an image: {content_type}"
+
+			chunks = []
+			total = 0
+			for chunk in resp.iter_content(chunk_size=16_384):
+				if not chunk:
+					continue
+				total += len(chunk)
+				if total > max_bytes:
+					resp.close()
+					return b"", f"bigger than {max_bytes} bytes"
+				chunks.append(chunk)
+			resp.close()
+			return b"".join(chunks), ""
+
+		return b"", "too many redirects"
+	except requests.exceptions.Timeout:
+		return b"", f"timeout after {timeout}s"
+	except requests.exceptions.RequestException as exc:
+		return b"", f"request error: {exc}"
+	except Exception as exc:  # pragma: no cover - last-resort guard
+		return b"", f"unexpected error: {exc}"
+	finally:
+		if own_session:
+			session.close()
